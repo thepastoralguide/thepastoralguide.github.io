@@ -656,6 +656,24 @@
     .site-footer{ padding-top: 14px; padding-bottom: 14px; }
     .footer-inner{ gap: 12px; }
   }
+
+  /* Homepage phone layout. Olivia, 11 Sep: "On the main page on mobile, there is
+     a big gap between the top section and the books. The logo and title at the
+     top can be brought down slightly, and more spacing before and after the
+     'start here' button. That should reduce the spacing between the top section
+     and the books."
+     The gap was the generic `section{ margin-top: 52px }` from the spacing block
+     landing on .shelf, which is a <section>. That space is given back to the
+     hero: above the emblem, and either side of the button. The 30px that used to
+     sit on .screen sat ABOVE the top bar, which since the bar went sticky reads
+     as a stray band across the top of the page, and no other page has one, so it
+     moves inside the hero where it was always meant to be. */
+  @media (max-width: 700px){
+    .screen{ padding-top: 0; }
+    .hero{ padding-top: 34px; }
+    .cta{ margin-top: 16px; margin-bottom: 12px; }
+    .shelf{ margin-top: 16px; }
+  }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 </head>

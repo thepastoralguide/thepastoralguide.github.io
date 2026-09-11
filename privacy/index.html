@@ -39,7 +39,7 @@
   }
 
   *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
+  html{ scroll-behavior: smooth; scroll-padding-top: 76px; }
   html, body{ margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
   body{
     font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -187,7 +187,11 @@
   }
 
   /* ---------- SLIM TOP BAR (sitewide) ---------- */
-  .topbar{ width: 100%; background: var(--bg); border-bottom: 2px solid rgba(46,68,54,0.22); flex: none; }
+  /* Sticky so the back link is reachable from anywhere on the page. The bar
+     already had an opaque background, which is what stops content showing
+     through it; z-index 50 clears everything else on the site (max 5). */
+  .topbar{ width: 100%; background: var(--bg); border-bottom: 2px solid rgba(46,68,54,0.22); flex: none;
+    position: sticky; top: 0; z-index: 50; }
   .topbar-inner{
     max-width: var(--max-width, 1265px); margin: 0 auto;
     padding: 11px clamp(16px, 3vw, 40px);
@@ -286,6 +290,46 @@
   section > p{ margin-bottom: 11px; }
   main > section > h2{ max-width: 980px; font-size: 21px; margin: 16px auto 6px; }
   main h2:first-child{ margin-top: 0; }
+
+  /* Phone spacing. Everything on this site was spaced at desktop widths, where
+     the clamps open out; on a phone the small end of each clamp and the fixed
+     gaps left it feeling cramped. Olivia, 11 Sep: "the content on the mobile
+     version still feels vertically cramped. Spread it out a bit and increase
+     spacing between everything slightly." Appended last so it wins on ties. */
+  @media (max-width: 700px){
+    /* the rhythm every page shares */
+    .page-header{ padding-top: 28px; padding-bottom: 28px; }
+    .page-title{ margin-bottom: 18px; }
+    .jump-link{ margin-top: 26px; }
+    section{ margin-top: 52px; }
+    section > h2{ margin-bottom: 18px; }
+    section > p{ margin-bottom: 18px; }
+    .lede{ margin-bottom: 24px; }
+
+    /* resource pages: the repeated blocks are what felt tightest */
+    .sample-card{ padding: 28px 22px; }
+    .sample-caption{ margin-bottom: 22px; }
+    .steps{ gap: 16px; }
+    .step{ padding: 18px; gap: 14px; }
+    .callout{ padding: 20px 18px; margin-top: 10px; margin-bottom: 24px; }
+    .downloads-grid{ gap: 16px; }
+    .download-card{ padding: 20px 18px 18px; gap: 12px; }
+    .more-grid{ gap: 14px; }
+    .more-card{ padding: 18px; }
+    .more-all{ margin-top: 18px; }
+
+    /* homepage: the hero was the tightest part of the phone layout */
+    .hero{ gap: 14px; padding-bottom: 20px; }
+    .facts{ row-gap: 13px; }
+    .shelf-heading{ margin: 10px 0 16px; }
+
+    /* category pages: the notes on the board */
+    .scrapbook-folders{ row-gap: 34px; }
+
+    /* and a little more air in the footer */
+    .site-footer{ padding-top: 14px; padding-bottom: 14px; }
+    .footer-inner{ gap: 12px; }
+  }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 </head>

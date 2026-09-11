@@ -211,13 +211,22 @@
   .btn--solid{ color: #fff; background: var(--ink); border: 1.5px solid var(--ink); }
   .btn--solid:hover{ background: #23352a; }
   @media (max-width: 700px){
-    .topbar-inner{ padding: 9px 14px; gap: 10px; }
-    .brand img{ height: 28px; }
+    .topbar-inner{ padding: 10px 16px; gap: 12px; }
+    .brand{ gap: 9px; }
+    .brand img{ height: 36px; }
+    /* The name is hidden on inner pages, where the back link sits in its place;
+       on the homepage there is no back link, so the name fills the bar and both
+       ends of the bar are the same 36px height. */
     .brand span{ display: none; }
+    .topbar--home .brand span{ display: inline; font-size: 18px; }
     .topbar .back-link{ padding-left: 12px; font-size: 12.5px; }
+    /* "Back to Morning Registration Activities" takes most of a phone bar, so
+       on a phone the link is just the arrow and the category name. */
+    .back-word{ display: none; }
     .btn{ padding: 7px 11px; font-size: 13px; }
     .btn--ghost span{ display: none; }
-    .btn--ghost{ padding: 7px 9px; }
+    .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn--ghost svg{ width: 17px; height: 17px; }
   }
   /* ---------- FOOTER ---------- */
   .site-footer{

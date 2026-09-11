@@ -139,7 +139,7 @@
 
   /* ---------- SCRAPBOOK ---------- */
   .scrapbook-wrap{
-    margin-bottom: 18px;
+    margin-bottom: 6px;
     max-width: var(--max-width);
     flex: 1;
     width: 100%;
@@ -330,10 +330,14 @@
 
 
   /* ---------- FOOTER ---------- */
+  /* The bottom padding here was 0, so on a category page (which is pinned to
+     exactly one screen) the footer text sat flush against the bottom edge of
+     the window. It now matches the 12px every other page on the site uses, and
+     the 12px is taken back out of .scrapbook-wrap's margin-bottom below so the
+     page still comes to one screen. */
   .site-footer{
     margin-top: auto;
-    padding-top: 14px;
-    padding: 14px clamp(16px, 3vw, 40px) 0;
+    padding: 14px clamp(16px, 3vw, 40px) 12px;
     border-top: 2px solid rgba(46,68,54,0.22);
   }
   .footer-inner{
@@ -408,7 +412,7 @@
     .tape--left{ left: 24px; }
     .tape--right{ right: 30px; }
     .scrapbook-empty{ padding: clamp(20px, 4vh, 36px) 18px; }
-    .folder-note{ width: 200px; padding: 22px 14px 16px; }
+    .folder-note{ width: min(100%, 268px); padding: 22px 16px 16px; }
   }
 
   /* ---------- SLIM TOP BAR (sitewide) ---------- */
@@ -436,13 +440,22 @@
   .btn--solid{ color: #fff; background: var(--ink); border: 1.5px solid var(--ink); }
   .btn--solid:hover{ background: #23352a; }
   @media (max-width: 700px){
-    .topbar-inner{ padding: 9px 14px; gap: 10px; }
-    .brand img{ height: 28px; }
+    .topbar-inner{ padding: 10px 16px; gap: 12px; }
+    .brand{ gap: 9px; }
+    .brand img{ height: 36px; }
+    /* The name is hidden on inner pages, where the back link sits in its place;
+       on the homepage there is no back link, so the name fills the bar and both
+       ends of the bar are the same 36px height. */
     .brand span{ display: none; }
+    .topbar--home .brand span{ display: inline; font-size: 18px; }
     .topbar .back-link{ padding-left: 12px; font-size: 12.5px; }
+    /* "Back to Morning Registration Activities" takes most of a phone bar, so
+       on a phone the link is just the arrow and the category name. */
+    .back-word{ display: none; }
     .btn{ padding: 7px 11px; font-size: 13px; }
     .btn--ghost span{ display: none; }
-    .btn--ghost{ padding: 7px 9px; }
+    .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn--ghost svg{ width: 17px; height: 17px; }
   }
 
   .folder-note-new{ position:absolute; top:10px; right:10px; font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:3px 7px; border-radius:10px; background:var(--ink); color:#fff; }

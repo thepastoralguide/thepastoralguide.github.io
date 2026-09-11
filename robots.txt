@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thepastoralguide.com/sitemap.xml

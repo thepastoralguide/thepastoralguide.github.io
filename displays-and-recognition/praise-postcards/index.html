@@ -432,6 +432,27 @@
   @media (max-width: 720px){
     .more-grid{ grid-template-columns:1fr; }
   }
+  /* Email sign-up, under the downloads */
+  .signup{
+    grid-column: 1 / -1; margin-top: 6px; background: var(--accent); border: 1px solid rgba(46,68,54,0.10);
+    border-radius: 10px; padding: 18px 20px 16px;
+  }
+  .signup p{ margin: 0 0 12px; font-size: 14.5px; line-height: 1.5; color: var(--ink); max-width: 640px; }
+  .signup form{ display: flex; flex-wrap: wrap; gap: 10px; }
+  .signup input{
+    flex: 1 1 220px; min-width: 0; font: inherit; font-size: 14.5px; padding: 10px 14px;
+    border: 1px solid rgba(46,68,54,0.2); border-radius: 20px; background: var(--card); color: var(--ink);
+  }
+  .signup input:focus{ outline: 2px solid var(--accent-deep); outline-offset: 1px; }
+  .signup button{
+    font: inherit; font-size: 13.5px; font-weight: 700; letter-spacing: 0.01em; cursor: pointer;
+    padding: 10px 20px; border: 0; border-radius: 20px; background: var(--accent-deep); color: var(--bg);
+    box-shadow: 0 6px 14px -6px rgba(46,68,54,0.4); transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .signup button:hover, .signup button:focus-visible{ transform: translateY(2px); box-shadow: 0 3px 8px -4px rgba(46,68,54,0.4); }
+  .signup button:disabled{ opacity: 0.6; cursor: default; }
+  .signup .signup-note{ margin: 10px 0 0; font-size: 13px; color: var(--ink-soft); }
+  .signup .signup-done, .signup .signup-err{ margin: 0; font-size: 14.5px; font-weight: 600; }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 </head>
@@ -491,6 +512,16 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
         </span>
       </a>
+      <div class="signup">
+        <p>New resources go up as they are made, and Volume Two is on the way for the activities that have one. Leave your email and you will get one message when it lands, and nothing else.</p>
+        <form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
+          <input type="email" name="email_address" placeholder="Your email address" aria-label="Your email address" required autocomplete="email">
+          <button type="submit" data-umami-event="signup">Keep me posted</button>
+        </form>
+        <p class="signup-done" hidden>Thank you. There is a confirmation email on its way to you; click the link in it and you are on the list.</p>
+        <p class="signup-err" hidden>That did not send. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
+        <p class="signup-note">No newsletters and no sharing your address. <a href="/privacy/">How your details are handled</a>.</p>
+      </div>
     </div>
   </section>
 
@@ -519,5 +550,19 @@
 </footer>
 
 
+<script>
+  document.querySelectorAll('.signup form').forEach(function(f){
+    f.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var b = f.querySelector('button'), box = f.parentNode; b.disabled = true;
+      box.querySelector('.signup-err').hidden = true;
+      try{
+        var r = await fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } });
+        if(!r.ok) throw new Error(r.status);
+        f.hidden = true; box.querySelector('.signup-done').hidden = false;
+      }catch(err){ box.querySelector('.signup-err').hidden = false; b.disabled = false; }
+    });
+  });
+</script>
 </body>
 </html>

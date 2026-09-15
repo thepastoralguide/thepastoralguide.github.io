@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Self-Care Menu: three printable self care menus for students</title>
-<meta name="description" content="Three free printable self care menus of small resets a student can choose from, sized to keep in a planner rather than used once and thrown away.">
+<title>Tell Me Later: a printable way for a student to ask to talk</title>
+<meta name="description" content="Free printable slips, a box label and a wall notice, so a student can ask to talk to their form tutor without saying so in front of the form.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/">
-<link rel="canonical" href="https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/">
-<meta property="og:image" content="https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/og.jpg">
+<meta property="og:url" content="https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/">
+<link rel="canonical" href="https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/">
+<meta property="og:image" content="https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Self-Care Menu: three printable self care menus for students">
+<meta property="og:image:alt" content="Tell Me Later: a printable way for a student to ask to talk">
 <meta property="og:site_name" content="The Pastoral Guide">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/og.jpg">
-<meta property="og:title" content="Self-Care Menu: three printable self care menus for students">
-<meta property="og:description" content="Three free printable self care menus of small resets a student can choose from, sized to keep in a planner rather than used once and thrown away.">
+<meta name="twitter:image" content="https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/og.jpg">
+<meta property="og:title" content="Tell Me Later: a printable way for a student to ask to talk">
+<meta property="og:description" content="Free printable slips, a box label and a wall notice, so a student can ask to talk to their form tutor without saying so in front of the form.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Karla:wght@400;500;600;700&display=swap">
@@ -28,15 +28,13 @@
     --ink-soft: #5c6552;
     --ink-faint: #8b9179;
 
-    /* Self-Care Menu's own identity: sand/tan, not green. Conversation
-       Starters already owns this category's moss and Mood Scale already
-       owns its own honey/beige, so this resource takes a third colour
-       distinct from both -- borrowed from the Tutor Time family, already
-       used and contrast-checked for Certificate Templates. */
-    --accent: #e8ddc7;
-    --accent-deep: #4e4222;
-    --accent-spine: #a9895a;
-    --accent-light: #f0e6d2;
+    --accent: #f7f0f5;
+    --accent-deep: #6e3f5e;
+    --accent-spine: #965a81;
+    --accent-light: #c6a9bc;
+
+    --terracotta: #6e3f5e;
+    --terracotta-tint: #f7f0f5;
 
     --card: #fffdf7;
     --max-width: 1265px;
@@ -236,96 +234,13 @@
     background: var(--accent-spine);
   }
 
-  /* ---------- MENU PREVIEWS ---------- */
-  /* Three menu cards, each carrying its own colour (rose / orange / slate)
-     rather than the resource's shared sand identity -- the same "each
-     variant gets its own colour" idea already used for Certificate
-     Templates' eight certificates. Nothing in the markup names who a menu
-     is "for"; only a plain "Menu I / II / III" label, matching the
-     printable pages, so the three stay tellable apart without saying so. */
-  /* The three menus sit side by side at the full 1080px content width,
-     so the page reads as one row of menus rather than three long screens. */
-  .menu-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-bottom: 18px;
-  }
+  /* ---------- VALUES ---------- */
 
-  .menu-card{
-    --card-fill: var(--accent);
-    --card-border: var(--accent-spine);
-    --card-text: var(--accent-deep);
-    --card-soft: var(--ink-soft);
-    background: var(--card-fill);
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 10px;
-    padding: clamp(16px, 2vw, 22px) clamp(12px, 1.6vw, 18px);
-  }
+  /* Each chip carries the same colour as its certificate in the PDF, so the
+     grid previews the finished set rather than reading as eight identical
+     pills -- the same "preview mirrors the printable" idea Mood Scale's own
+     gradient chips used. */
 
-  .menu-card--rose{ --card-fill: #f2dcdd; --card-border: #a9737c; --card-text: #7a4550; --card-soft: #a25c67; }
-  .menu-card--orange{ --card-fill: #f9f0e6; --card-border: #d38055; --card-text: #7a3d1e; --card-soft: #c55c26; }
-  .menu-card--slate{ --card-fill: #e3e5e8; --card-border: #7c8fa6; --card-text: #303c4a; --card-soft: #455568; }
-
-  .menu-card-kicker{
-    text-align: center;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    color: var(--card-soft);
-    margin-bottom: 12px;
-  }
-
-  .menu-course + .menu-course{ margin-top: 18px; }
-
-  .menu-course-title{
-    text-align: center;
-    font-size: 12.5px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--card-text);
-    margin-bottom: 2px;
-  }
-
-  .menu-course-sub{
-    text-align: center;
-    font-size: 12px;
-    font-style: italic;
-    color: var(--card-soft);
-    margin-bottom: 12px;
-  }
-
-  .menu-items{
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
-  .menu-item{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14.5px;
-    color: var(--card-text);
-  }
-
-  .menu-item svg{
-    width: 20px;
-    height: 20px;
-    flex: none;
-    color: var(--card-border);
-  }
-
-  .menu-divider{
-    text-align: center;
-    color: var(--card-border);
-    letter-spacing: 0.4em;
-    font-size: 11px;
-    margin: 14px 0 0;
-  }
 
   /* ---------- STEPS ---------- */
   .steps{
@@ -371,13 +286,13 @@
 
   /* ---------- CALLOUT ---------- */
   .callout{
-    background: var(--accent);
-    border-left: 4px solid var(--accent-deep);
+    background: var(--terracotta-tint);
+    border-left: 4px solid var(--terracotta);
     border-radius: 4px;
     padding: 16px 18px;
     font-size: 14.5px;
     font-style: italic;
-    color: var(--accent-deep);
+    color: var(--terracotta);
     font-weight: 600;
     margin: 4px auto 18px;
     max-width: var(--measure);
@@ -386,6 +301,8 @@
   }
 
   /* ---------- DOWNLOADS ---------- */
+  /* One file this time -- a single centred card, matching Praise Postcards'
+     own downloads-section pattern for a single-file resource. */
   .downloads-grid{
     display: grid;
     grid-template-columns: minmax(240px, 400px);
@@ -448,12 +365,11 @@
 
 
   /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 860px){
-    .menu-grid{ grid-template-columns: 1fr; max-width: var(--measure); margin-left: auto; margin-right: auto; }
-  }
-
   @media (max-width: 720px){
     .downloads-grid{ grid-template-columns: 1fr; justify-content: stretch; }
+  }
+
+  @media (max-width: 560px){
   }
 
   /* ---------- SLIM TOP BAR (sitewide) ---------- */
@@ -623,7 +539,7 @@
   }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/#resource","url":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/","name":"Self-Care Menu","description":"Three printable menus of small resets a student can choose from when they need one. Each one is a single sheet, meant to be kept in a pencil case or planner rather than used once and thrown away. It teaches self-care in the most practical way: a small thing to do, chosen by the student.","inLanguage":"en-GB","learningResourceType":"Printable","educationalLevel":["Key Stage 3","Key Stage 4","Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Wellbeing Check-Ins","item":"https://thepastoralguide.com/wellbeing-check-ins/"},{"@type":"ListItem","position":3,"name":"Self-Care Menu","item":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/#resource","url":"https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/","name":"Tell Me Later","description":"A small printed slip a student can fill in and post in a box when they want to talk to you but cannot say so out loud in front of the form. They write their name, tick how soon, and say as much or as little as they like about what it is about. Some students will never come and find you, and a slip and a box give them a way of asking that costs them nothing in front of everybody else.","inLanguage":"en-GB","learningResourceType":"Printable","educationalLevel":["Key Stage 3","Key Stage 4","Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Wellbeing Check-Ins","item":"https://thepastoralguide.com/wellbeing-check-ins/"},{"@type":"ListItem","position":3,"name":"Tell Me Later","item":"https://thepastoralguide.com/wellbeing-check-ins/tell-me-later/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
 </head>
 <body>
 
@@ -641,8 +557,8 @@
 
 <header class="page-header wrap">
   <span class="eyebrow">Wellbeing Check-Ins</span>
-  <h1 class="page-title">Self-Care Menu</h1>
-  <p class="page-sub">Three printable menus of small resets a student can choose from when they need one. Each one is a single sheet, meant to be kept in a pencil case or planner rather than used once and thrown away. It teaches self-care in the most practical way: a small thing to do, chosen by the student.</p>
+  <h1 class="page-title">Tell Me Later</h1>
+  <p class="page-sub">A small printed slip a student can fill in and post in a box when they want to talk to you but cannot say so out loud in front of the form. They write their name, tick how soon, and say as much or as little as they like about what it is about. Some students will never come and find you, and a slip and a box give them a way of asking that costs them nothing in front of everybody else.</p>
   <span class="page-facts">Year 7 to 13 &middot; one to one or small group &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the download
@@ -654,135 +570,31 @@
 
   <section>
     <h2>How it works</h2>
-    <p class="lede">Each menu has nine small resets in three &ldquo;courses&rdquo;: quick ones, ones that take a bit longer, and the familiar things that help. Menu I leans creative, Menu II active and Menu III practical, but none of them says so, so you can hand a student the one you think will suit them without making a thing of it.</p>
-
-    <div class="menu-grid">
-
-      <div class="menu-card menu-card--rose">
-        <p class="menu-card-kicker">MENU I</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Quick Bites</p>
-          <p class="menu-course-sub">two minutes or less</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"/><path d="M7.6 11h8.8"/></svg> A glass of water</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg> Five slow breaths</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg> A moment outside</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Something More</p>
-          <p class="menu-course-sub">a bit more time</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 20 2-6.5L16.5 3l4 4L10 17.5 4 20Z"/></svg> Doodle or draw for a bit</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="17.5" r="2.6"/><path d="M10.1 17.5V5.5l7-1.7v10"/><path d="M17.1 13.8c1.5 0 2.6 1 2.6 2.4s-1.1 2.4-2.6 2.4"/></svg> A favourite song</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5v13"/><path d="M12 6.5C10.5 5 8 4.3 4.5 4.5v12.5c3.5-.2 6 .5 7.5 2 1.5-1.5 4-2.2 7.5-2V4.5C16 4.3 13.5 5 12 6.5Z"/></svg> Flip through a favourite book</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Comfort Food</p>
-          <p class="menu-course-sub">the familiar things that help</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="3.5" width="11" height="12" rx="2.2"/><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"/></svg> Your favourite spot</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"/></svg> Someone you trust</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.8 15.4 3.8 9.6C3.8 6.8 6 4.7 8.6 4.7c1.5 0 2.8.7 3.4 1.9.6-1.2 1.9-1.9 3.4-1.9 2.6 0 4.8 2.1 4.8 4.9 0 5.8-8.2 10.9-8.2 10.9Z"/></svg> Something cosy to wrap up in</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-card menu-card--orange">
-        <p class="menu-card-kicker">MENU II</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Quick Bites</p>
-          <p class="menu-course-sub">two minutes or less</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"/><path d="M7.6 11h8.8"/></svg> A glass of water</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg> Five slow breaths</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 8v6M12 9l-4-4M12 9l4-4M12 14l-3 5M12 14l3 5"/></svg> A big stretch</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Something More</p>
-          <p class="menu-course-sub">a bit more time</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 8v5l-4 6M12 13l4.5 4M8.5 10.5 12 8l5-1.5M8 15l-2.5 2"/></svg> A short walk</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="1.8"/><path d="M13 8l-1.5 5.5M13 9l4-2M13 9l-4 1M11.5 13.5l3 5M11.5 13.5l-4.5 3"/></svg> Get moving for a minute</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8.5c-2.5-2-6-1-6 3 0 4 3 8.5 6 8.5s6-4.5 6-8.5c0-4-3.5-5-6-3Z"/><path d="M12 8.5V5.5"/><path d="M12 6c1-1.2 2.5-1.3 3-1"/></svg> A healthy snack</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Comfort Food</p>
-          <p class="menu-course-sub">the familiar things that help</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="3.5" width="11" height="12" rx="2.2"/><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"/></svg> Your favourite spot</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"/></svg> Someone you trust</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.8 15.4 3.8 9.6C3.8 6.8 6 4.7 8.6 4.7c1.5 0 2.8.7 3.4 1.9.6-1.2 1.9-1.9 3.4-1.9 2.6 0 4.8 2.1 4.8 4.9 0 5.8-8.2 10.9-8.2 10.9Z"/></svg> Something cosy to wrap up in</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-card menu-card--slate">
-        <p class="menu-card-kicker">MENU III</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Quick Bites</p>
-          <p class="menu-course-sub">two minutes or less</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"/><path d="M7.6 11h8.8"/></svg> A glass of water</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg> Five slow breaths</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h16"/><path d="M5.5 9.5 4 17h16l-1.5-7.5"/><path d="M12 9.5V17"/></svg> Clear your workspace for a minute</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Something More</p>
-          <p class="menu-course-sub">a bit more time</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12.5 2.5 2.5 5.5-6"/></svg> Tick off one small job</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h2M8 7h12M4 12h2M8 12h12M4 17h2M8 17h12"/></svg> Write a short list</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h16"/><path d="M5.5 9.5 4 17h16l-1.5-7.5"/><path d="M12 9.5V17"/></svg> Get one thing ready for tomorrow</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Comfort Food</p>
-          <p class="menu-course-sub">the familiar things that help</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="3.5" width="11" height="12" rx="2.2"/><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"/></svg> Your favourite spot</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"/></svg> Someone you trust</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12.5 2.5 2.5 5.5-6"/></svg> The satisfaction of a job well done</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
+    <p class="callout">A slip can carry a disclosure. Empty the box every day without fail, pass anything that needs it to your designated safeguarding lead the same day, and be straight with the form that you cannot promise to keep something to yourself if they or somebody else is not safe.</p>
     <div class="steps">
       <div class="step">
         <span class="step-num">1</span>
-        <div><strong>Notice a student needs a reset.</strong><p>Low energy, overwhelmed, or just having a hard morning, however small the sign.</p></div>
+        <div><strong>Find a box and put it where a student can reach it unwatched.</strong><p>A shoebox with a slot in the lid is enough. Put the label on the box, the notice on the wall beside it, and the slips within reach.</p></div>
       </div>
       <div class="step">
         <span class="step-num">2</span>
-        <div><strong>They choose.</strong><p>Any of the three menus works the same way, so there is no wrong one to reach for, and no correct choice within it.</p></div>
+        <div><strong>Tell the form how it works.</strong><p>Including when you empty the box and what you have to pass on. If a student has to come and ask you for a slip, the point of it has gone.</p></div>
       </div>
       <div class="step">
         <span class="step-num">3</span>
-        <div><strong>They just do it.</strong><p>There is no need to check back afterwards, though you are there if they want to talk.</p></div>
+        <div><strong>Empty the box at the same time every day.</strong><p>Whether or not you are expecting anything. Go and find the student the same day for anything ticked &ldquo;today, please&rdquo;, and inside the week for the rest.</p></div>
       </div>
     </div>
   </section>
 
   <section id="downloads">
-    <h2>Get the activity</h2>
-    <p class="lede">Print a small stack of each in advance. They work best when a student keeps theirs in a pencil case or planner, rather than being handed a fresh one each time. Pairs well with the Mood Scale.</p>
+    <h2>Get the resource</h2>
+    <p class="lede">Say out loud that you empty the box every day, then do it. A box that might not be read is worse than no box, because a student who has used it believes they have asked. A slip with nothing on it but a name is still a student asking.</p>
     <div class="downloads-grid">
-      <a class="download-card" href="downloads/Self_Care_Menu_Resource_Pack.pdf" download data-umami-event="download" data-umami-event-file="Self_Care_Menu_Resource_Pack.pdf">
+      <a class="download-card" href="downloads/Tell_Me_Later_Resource_Pack.pdf" download data-umami-event="download" data-umami-event-file="Tell_Me_Later_Resource_Pack.pdf">
         <span class="file-chip">Printable PDF</span>
         <h3>Teacher resource pack</h3>
-        <p>A one-page teacher guide, plus all three printable Self-Care Menus, ready to print and keep.</p>
+        <p>A one-page teacher guide, six slips to a sheet, a box label and a wall notice.</p>
         <span class="download-cta">Download
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
         </span>
@@ -807,7 +619,7 @@
   <div class="more-grid">
       <a class="more-card" href="../conversation-starters/"><span class="more-title">Conversation Starters</span><span class="more-meta"><span>2 mins or longer</span><span>cut the cards once</span><span>trust</span></span><span class="more-hint">Open the resource &rarr;</span></a>
       <a class="more-card" href="../mood-scale/"><span class="more-title">Mood Scale</span><span class="more-meta"><span>1 minute</span><span>print and laminate</span><span>self-awareness</span></span><span class="more-hint">Open the resource &rarr;</span></a>
-      <a class="more-card" href="../check-in-record-sheet/"><span class="more-title">Check-In Record Sheet</span><span class="more-meta"><span>Seconds a week</span><span>nothing to print</span><span>nobody missed</span></span><span class="more-hint">Open the resource &rarr;</span></a>
+      <a class="more-card" href="../self-care-menu/"><span class="more-title">Self-Care Menu</span><span class="more-meta"><span>Whenever it&rsquo;s needed</span><span>print a stack</span><span>self-care</span></span><span class="more-hint">Open the resource &rarr;</span></a>
   </div>
   <a class="more-all" href="../">See everything in Wellbeing Check-Ins &rarr;</a>
 </section>

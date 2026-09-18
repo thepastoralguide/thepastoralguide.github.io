@@ -703,6 +703,28 @@
   .coming-up-text{ font-weight:600; color:var(--ink); text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(46,68,54,0.3); }
   .coming-up:hover .coming-up-text, .coming-up:focus-visible .coming-up-text{ text-decoration-color:var(--ink); }
   .coming-up[hidden]{ display:none; }
+
+  /* Keep the pills clear of the footer whatever the window height, and tighten the page on the
+     shorter laptop windows Olivia actually uses (18 Sep): the whole shelf should be visible. */
+  .browse-groups{ margin-bottom: 26px; }
+  @media (max-height: 940px) and (min-width: 701px){
+    .hero{ gap: 5px; padding-bottom: 8px; padding-top: 6px; }
+    .brand-emblem{ height: 38px; width: calc(38px * 0.8663); }
+    .site-name{ font-size: clamp(38px, 4.6vw, 46px); }
+    .tagline{ font-size: 17px; }
+    .sub{ font-size: 15px; max-width: 720px; }
+    .cta{ padding: 11px 22px; font-size: 15px; margin-top: 2px; }
+    .coming-up{ margin-top: 4px; margin-bottom: 0; }
+    .facts{ margin-top: 6px; padding-top: 6px; }
+    .facts b{ font-size: 24px; }
+    .facts span{ font-size: 12.5px; }
+    .shelf-row{ padding-top: 12px; }
+    .book--registration{ height: 200px; } .book--lessons{ height: 182px; } .book--projects{ height: 192px; }
+    .book--events{ height: 182px; } .book--checkins{ height: 172px; } .book--recognition{ height: 158px; }
+    .book-desc{ font-size: 12.5px; line-height: 1.35; } .book-title{ font-size: 21px; }
+    .ks-lead{ margin: 24px 0 10px; }
+    .browse-groups{ margin-bottom: 22px; }
+  }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://thepastoralguide.com/#website","url":"https://thepastoralguide.com/","name":"The Pastoral Guide","description":"Free form time and tutor time resources for secondary form tutors: activities, lessons, projects and check-ins, with the PowerPoint and printables made.","inLanguage":"en-GB","publisher":{"@id":"https://thepastoralguide.com/#org"}},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>

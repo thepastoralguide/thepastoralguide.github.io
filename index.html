@@ -435,6 +435,12 @@
     padding: 12px clamp(16px, 3vw, 40px) 12px;
     border-top: 2px solid rgba(46,68,54,0.22);
   }
+  .footer-browse{ max-width: var(--max-width, 1265px); margin: 0 auto 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; font-size: 12.5px; }
+  .footer-browse-lead{ font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-faint); margin-right: 4px; }
+  .footer-browse a{ color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  .footer-browse a:hover, .footer-browse a:focus-visible{ color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .footer-browse-sep{ width: 1px; height: 14px; background: rgba(46,68,54,0.25); }
+  @media (max-width: 700px){ .footer-browse{ gap: 6px 14px; } .footer-browse-sep{ display: none; } }
   .footer-inner{
     max-width: var(--max-width, 1265px);
     margin: 0 auto;
@@ -565,7 +571,7 @@
   .hero{ padding-top: clamp(8px, 1.4vh, 16px); gap: 8px; }
 
   /* ---------- START HERE ---------- */
-  .shelf-row{ position: relative; padding-top: 16px; }
+  .shelf-row{ position: relative; padding-top: 22px; }
   .start-here{
     position: absolute; top: -108px; left: max(0px, calc(8.33% - 168px));
     width: 380px; height: 160px; color: var(--ink); pointer-events: none; z-index: 2;
@@ -599,7 +605,7 @@
   .cta:hover{ transform:translateY(-2px); }
   .cta svg{ width:18px; height:18px; }
   @keyframes cta-pulse{ 0%,100%{ box-shadow:0 8px 18px -10px rgba(46,68,54,0.6);} 50%{ box-shadow:0 8px 18px -10px rgba(46,68,54,0.6), 0 0 0 10px rgba(111,154,102,0.18);} }
-  .facts{ list-style:none; margin:8px 0 0; padding:8px 0 0; width:100%; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid rgba(46,68,54,0.16); }
+  .facts{ list-style:none; margin:10px 0 0; padding:10px 0 0; width:100%; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid rgba(46,68,54,0.16); }
   .facts li{ display:flex; flex-direction:column; align-items:center; gap:2px; padding:2px 10px; border-left:1px solid rgba(46,68,54,0.12); text-align:center; }
   .facts li:first-child{ border-left:0; }
   .facts b{ font-family:'Libre Caslon Display', Georgia, serif; font-weight:400; font-size:27px; line-height:1; -webkit-text-stroke:0.4px currentColor; }
@@ -675,6 +681,28 @@
     .cta{ margin-top: 16px; margin-bottom: 12px; }
     .shelf{ margin-top: 16px; }
   }
+
+  /* ---------- BROWSE BY AGE (under the shelf) ---------- */
+  .ks-lead{ text-align: center; font-size: 12.5px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 700; color: var(--ink-faint); margin: 36px 0 12px; }
+  .browse-groups{ display: flex; justify-content: center; align-items: flex-start; gap: 14px 36px; flex-wrap: wrap; margin: 0 16px; }
+  .browse-group{ display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+  .browse-group-lead{ font-size: 11.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-faint); margin-right: 4px; }
+  .pill{ display: inline-block; padding: 6px 14px; border: 1.5px solid rgba(46,68,54,0.28); border-radius: 18px; background: #fffdf8; color: var(--ink); font-size: 13.5px; font-weight: 600; text-decoration: none; transition: transform .15s, box-shadow .15s; }
+  .pill:hover, .pill:focus-visible{ transform: translateY(-2px); box-shadow: 0 8px 14px -10px rgba(46,68,54,0.5); }
+  .pill--ks3{ border-color: var(--mint-spine); }
+  .pill--ks4{ border-color: var(--sand-spine); }
+  .pill--ks5{ border-color: var(--clay-line); }
+  @media (max-width: 720px){
+    .ks-lead{ margin-top: 26px; }
+    .browse-groups{ flex-direction: column; align-items: stretch; gap: 12px; }
+    .browse-group-lead{ width: 100%; }
+  }
+  /* ---------- COMING UP (a dated nudge under the button; the script below picks the next event) ---------- */
+  .coming-up{ display:inline-flex; align-items:center; gap:8px; font-size:14px; color:var(--ink-soft); text-decoration:none; margin-top:8px; margin-bottom:4px; }
+  .coming-up-lead{ font-size:11.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); }
+  .coming-up-text{ font-weight:600; color:var(--ink); text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(46,68,54,0.3); }
+  .coming-up:hover .coming-up-text, .coming-up:focus-visible .coming-up-text{ text-decoration-color:var(--ink); }
+  .coming-up[hidden]{ display:none; }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://thepastoralguide.com/#website","url":"https://thepastoralguide.com/","name":"The Pastoral Guide","description":"Free form time and tutor time resources for secondary form tutors: activities, lessons, projects and check-ins, with the PowerPoint and printables made.","inLanguage":"en-GB","publisher":{"@id":"https://thepastoralguide.com/#org"}},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
@@ -700,6 +728,7 @@
     <p class="tagline">Values-based resources for your form room</p>
     <p class="sub">Projects, activities and check-ins that build a value rather than just talk about one, with the slides and printables already made.</p>
     <a class="cta cta--big" href="morning-registration-activities/">Start here: a five-minute activity <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="coming-up" id="coming-up" href="assemblies-and-events/world-mental-health-day/"><span class="coming-up-lead">Coming up</span><span class="coming-up-text">World Mental Health Day, 10 October</span><span aria-hidden="true">&rarr;</span></a>
     <ul class="facts">
       <li><b>6</b><span>categories on the shelf</span></li>
       <li><b>30+</b><span>resources, and counting</span></li>
@@ -822,6 +851,12 @@
     </div>
 
     <div class="plank" aria-hidden="true"></div>
+
+    <p class="ks-lead" id="by-age">Or browse by age or time</p>
+    <div class="browse-groups">
+      <nav class="browse-group" aria-label="Browse by age"><span class="browse-group-lead">Age</span><a class="pill pill--ks3" href="key-stage-3/">Year 7 to 9</a><a class="pill pill--ks4" href="key-stage-4/">Year 10 and 11</a><a class="pill pill--ks5" href="sixth-form/">Sixth form</a></nav>
+      <nav class="browse-group" aria-label="Browse by time"><span class="browse-group-lead">Time</span><a class="pill" href="by-time/#five-minutes">Five minutes</a><a class="pill" href="by-time/#an-hour">An hour</a><a class="pill" href="by-time/#a-few-weeks">A few weeks</a><a class="pill" href="by-time/#no-slot-needed">No slot needed</a><a class="pill" href="by-time/#on-a-date">On a date</a></nav>
+    </div>
   </section>
 
 </div>
@@ -841,5 +876,23 @@
 
 </div>
 
+<script>
+  // Coming up: shows a dated page from 30 days before it until it ends, then hides. Only the two big dates in the pastoral year are listed. Anti-Bullying Week moves each year, so its dates are pinned to a year and need updating when the next year's are announced.
+  (function(){
+    var el=document.getElementById('coming-up'); if(!el) return;
+    var t=new Date(); t.setHours(0,0,0,0); var y=t.getFullYear();
+    var ev=[
+      {s:[10,10], e:[10,10], text:'World Mental Health Day, 10 October', href:'assemblies-and-events/world-mental-health-day/'},
+      {s:[11,16], e:[11,20], text:'Anti-Bullying Week, 16 to 20 November', href:'assemblies-and-events/anti-bullying-week/', year:2026}
+    ];
+    var best=null;
+    ev.forEach(function(e){ [y,y+1].forEach(function(yy){
+      if(e.year && e.year!==yy) return;
+      var s=new Date(yy,e.s[0]-1,e.s[1]), en=new Date(yy,e.e[0]-1,e.e[1]); var from=new Date(s); from.setDate(from.getDate()-30);
+      if(t>=from && t<=en && (!best || s<best.s)) best={s:s,e:e};
+    }); });
+    if(best){ el.href=best.e.href; el.querySelector('.coming-up-text').textContent=best.e.text; el.hidden=false; } else { el.hidden=true; }
+  })();
+</script>
 </body>
 </html>

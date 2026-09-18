@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Payday: a budgeting lesson for KS3 and KS4 tutor time</title>
-<meta name="description" content="A free budgeting lesson for KS3 and KS4 tutor time. Groups take a job, plan a month on one wage, then ten unplanned things land. Slides and a pack.">
+<title>Payday: a budgeting lesson for KS4 and sixth form tutor time</title>
+<meta name="description" content="A free budgeting lesson for KS4 and sixth form tutor time. Groups take a job, plan a month on one wage, then ten unplanned things land. Slides and a pack.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/">
 <link rel="canonical" href="https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/">
 <meta property="og:image" content="https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Payday: a budgeting lesson for KS3 and KS4 tutor time">
+<meta property="og:image:alt" content="Payday: a budgeting lesson for KS4 and sixth form tutor time">
 <meta property="og:site_name" content="The Pastoral Guide">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/og.jpg">
-<meta property="og:title" content="Payday: a budgeting lesson for KS3 and KS4 tutor time">
-<meta property="og:description" content="A free budgeting lesson for KS3 and KS4 tutor time. Groups take a job, plan a month on one wage, then ten unplanned things land. Slides and a pack.">
+<meta property="og:title" content="Payday: a budgeting lesson for KS4 and sixth form tutor time">
+<meta property="og:description" content="A free budgeting lesson for KS4 and sixth form tutor time. Groups take a job, plan a month on one wage, then ten unplanned things land. Slides and a pack.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&amp;family=Karla:wght@400;500;600;700&amp;display=swap">
@@ -89,6 +89,8 @@
     max-width: 580px; margin: 0 auto;
   }
 
+  .page-facts a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(46,68,54,0.3); text-underline-offset: 3px; }
+  .page-facts a:hover, .page-facts a:focus-visible{ color: var(--ink-soft); text-decoration-color: var(--ink-soft); }
   .page-facts{
     display: block;
     margin: 14px auto 0;
@@ -197,6 +199,15 @@
     .downloads-grid{ grid-template-columns: 1fr; justify-content: stretch; }
   }
 
+  /* ---------- A LOOK INSIDE (preview images above the downloads) ---------- */
+  .peek{ margin-top: clamp(36px, 5.5vh, 56px); }
+  .peek > h2{ font-size: 24px; margin-bottom: 14px; -webkit-text-stroke: 0.3px currentColor; max-width: var(--measure); margin-left: auto; margin-right: auto; }
+  .peek-row{ display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 18px 22px; max-width: 1000px; margin: 0 auto; }
+  .peek-item{ margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .peek-item img{ display: block; height: 210px; width: auto; max-width: 100%; background: #fff; border: 1px solid rgba(46,68,54,0.14); border-radius: 6px; box-shadow: 0 14px 26px -16px rgba(46,68,54,0.5); }
+  .peek-item figcaption{ font-size: 12.5px; color: var(--ink-soft); font-weight: 600; letter-spacing: 0.01em; }
+  @media (max-width: 720px){ .peek-row{ gap: 14px; } .peek-item img{ height: auto; max-height: 190px; } }
+
   /* ---------- SLIM TOP BAR (sitewide) ---------- */
   /* Sticky so the back link is reachable from anywhere on the page. The bar
      already had an opaque background, which is what stops content showing
@@ -249,6 +260,15 @@
     padding: 12px clamp(16px, 3vw, 40px) 12px;
     border-top: 2px solid rgba(46,68,54,0.22);
   }
+  /* ---------- BROWSE STRIP (above the footer, on every inner page) ---------- */
+  .site-browse{ margin-top: clamp(40px, 7vh, 72px); padding: 18px clamp(16px, 3vw, 40px) 20px; border-top: 1px solid rgba(46,68,54,0.14); }
+  .site-browse-inner{ max-width: var(--max-width, 1265px); margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .site-browse-row{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; font-size: 13.5px; }
+  .site-browse-lead{ font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); min-width: 92px; }
+  .site-browse a{ color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  .site-browse a:hover, .site-browse a:focus-visible{ color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .site-browse + .site-footer{ margin-top: 0; }
+  @media (max-width: 700px){ .site-browse{ padding-top: 16px; padding-bottom: 16px; } .site-browse-row{ gap: 8px 16px; font-size: 13px; } .site-browse-lead{ min-width: 0; width: 100%; } }
   .footer-inner{
     max-width: var(--max-width, 1265px);
     margin: 0 auto;
@@ -364,7 +384,7 @@
   }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/#resource","url":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/","name":"Payday: A Budgeting Lesson","description":"One month, one wage, and everything it has to cover. Groups take a job, plan the month, then ten things happen that nobody planned for. It is a lesson in responsibility: looking at the whole month before you spend any of it.","inLanguage":"en-GB","learningResourceType":"Lesson plan","educationalLevel":["Key Stage 3","Key Stage 4","Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published","timeRequired":"PT1H"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Tutor Time","item":"https://thepastoralguide.com/tutor-time/"},{"@type":"ListItem","position":3,"name":"Payday: A Budgeting Lesson","item":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/#resource","url":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/","name":"Payday: A Budgeting Lesson","description":"One month, one wage, and everything it has to cover. Groups take a job, plan the month, then ten things happen that nobody planned for. It is a lesson in responsibility: looking at the whole month before you spend any of it.","inLanguage":"en-GB","learningResourceType":"Lesson plan","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published","timeRequired":"PT1H"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Tutor Time","item":"https://thepastoralguide.com/tutor-time/"},{"@type":"ListItem","position":3,"name":"Payday: A Budgeting Lesson","item":"https://thepastoralguide.com/tutor-time/payday-budgeting-lesson/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
 </head>
 <body>
 
@@ -384,7 +404,7 @@
   <span class="eyebrow">Tutor Time</span>
   <h1 class="page-title">Payday: A Budgeting Lesson</h1>
   <p class="page-sub">One month, one wage, and everything it has to cover. Groups take a job, plan the month, then ten things happen that nobody planned for. It is a lesson in responsibility: looking at the whole month before you spend any of it.</p>
-  <span class="page-facts">Year 7 to 13 &middot; tutor time or PSHE &middot; free to download</span>
+  <span class="page-facts"><a href="../../key-stage-4/">Year 7 to 13, best from Year 10</a> &middot; tutor time or PSHE &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the downloads
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
@@ -422,6 +442,15 @@
     <p class="callout">Some students in the room will be living the real version of this at home. Keep the discussion about the card in front of them, and do not ask what anything costs at their house.</p>
   </section>
 
+  <section class="peek" aria-label="A look inside">
+    <h2>A look inside</h2>
+    <div class="peek-row">
+      <figure class="peek-item"><img src="preview-slide-1.jpg" alt="Slide one" width="1280" height="720" loading="lazy"><figcaption>Slide one</figcaption></figure>
+      <figure class="peek-item"><img src="preview-slide-2.jpg" alt="Slide 9 of 22" width="1280" height="720" loading="lazy"><figcaption>Slide 9 of 22</figcaption></figure>
+      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="Page one of the pack" width="800" height="1131" loading="lazy"><figcaption>Page one of the pack</figcaption></figure>
+    </div>
+  </section>
+
   <section id="downloads">
     <h2>Get the lesson</h2>
     <p class="lede">You only need three pages: the price list, the six job cards and the budget sheet. The shop cards and printable cash are optional, and turn the hour into something groups walk around and pay for. Change the prices and the currency to suit where you are.</p>
@@ -442,8 +471,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
         </span>
       </a>
-      <div class="signup">
-        <p>New resources go up as they are made, and Volume Two is on the way for the activities that have one. Leave your email and you will get one message when it lands, and nothing else.</p>
+      <div class="signup" id="signup">
+        <p>New resources go up as they are made. Leave your email and you will get one message when something new lands, and nothing else.</p>
         <form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
           <input type="email" name="email_address" placeholder="Your email address" aria-label="Your email address" required autocomplete="email">
           <button type="submit" data-umami-event="signup">Keep me posted</button>
@@ -460,13 +489,20 @@
 <section class="more" aria-label="More from Tutor Time">
   <h2>More from Tutor Time</h2>
   <div class="more-grid">
-      <a class="more-card" href="../the-apology/"><span class="more-title">The Apology</span><span class="more-meta"><span>One hour</span><span>four pages to print</span><span>accountability</span></span><span class="more-hint">Open the lesson &rarr;</span></a>
       <a class="more-card" href="../motivation-comes-second/"><span class="more-title">Motivation Comes Second</span><span class="more-meta"><span>One hour</span><span>four pages to print</span><span>self-motivation</span></span><span class="more-hint">Open the lesson &rarr;</span></a>
       <a class="more-card" href="../fuel-and-focus/"><span class="more-title">Fuel and Focus</span><span class="more-meta"><span>Three lessons</span><span>some shopping to do</span><span>self-care</span></span><span class="more-hint">Open the series &rarr;</span></a>
+      <a class="more-card" href="../movement-and-mental-health/"><span class="more-title">Movement and Mental Health</span><span class="more-meta"><span>Three lessons</span><span>no kit needed</span><span>resilience</span></span><span class="more-hint">Open the series &rarr;</span></a>
   </div>
   <a class="more-all" href="../">See everything in Tutor Time &rarr;</a>
 </section>
 
+<nav class="site-browse" aria-label="Browse the site">
+  <div class="site-browse-inner">
+    <div class="site-browse-row"><span class="site-browse-lead">On the shelf</span><a href="../../morning-registration-activities/">Morning Registration</a><a href="../../tutor-time/">Tutor Time</a><a href="../../pastoral-projects/">Pastoral Projects</a><a href="../../wellbeing-check-ins/">Wellbeing Check-Ins</a><a href="../../displays-and-recognition/">Displays and Recognition</a><a href="../../assemblies-and-events/">Assemblies and Events</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By age</span><a href="../../key-stage-3/">Year 7 to 9</a><a href="../../key-stage-4/">Year 10 and 11</a><a href="../../sixth-form/">Sixth form</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By time</span><a href="../../by-time/#five-minutes">Five minutes</a><a href="../../by-time/#an-hour">An hour</a><a href="../../by-time/#a-few-weeks">A few weeks</a><a href="../../by-time/#no-slot-needed">No slot needed</a><a href="../../by-time/#on-a-date">On a date</a><a href="../../by-time/#first-week">First week of term</a><a href="../../by-time/#mocks-back">Mocks back</a><a href="../../by-time/#exam-season">Exam season</a><a href="../../by-time/#last-week">The last week</a></div>
+  </div>
+</nav>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-left">

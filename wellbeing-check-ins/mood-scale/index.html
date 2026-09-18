@@ -147,6 +147,8 @@
     margin: 0 auto;
   }
 
+  .page-facts a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(46,68,54,0.3); text-underline-offset: 3px; }
+  .page-facts a:hover, .page-facts a:focus-visible{ color: var(--ink-soft); text-decoration-color: var(--ink-soft); }
   .page-facts{
     display: block;
     margin: 14px auto 0;
@@ -409,6 +411,15 @@
     .scale-preview{ grid-template-columns: repeat(3, 1fr); }
   }
 
+  /* ---------- A LOOK INSIDE (preview images above the downloads) ---------- */
+  .peek{ margin-top: clamp(36px, 5.5vh, 56px); }
+  .peek > h2{ font-size: 24px; margin-bottom: 14px; -webkit-text-stroke: 0.3px currentColor; max-width: var(--measure); margin-left: auto; margin-right: auto; }
+  .peek-row{ display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 18px 22px; max-width: 1000px; margin: 0 auto; }
+  .peek-item{ margin: 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .peek-item img{ display: block; height: 210px; width: auto; max-width: 100%; background: #fff; border: 1px solid rgba(46,68,54,0.14); border-radius: 6px; box-shadow: 0 14px 26px -16px rgba(46,68,54,0.5); }
+  .peek-item figcaption{ font-size: 12.5px; color: var(--ink-soft); font-weight: 600; letter-spacing: 0.01em; }
+  @media (max-width: 720px){ .peek-row{ gap: 14px; } .peek-item img{ height: auto; max-height: 190px; } }
+
   /* ---------- SLIM TOP BAR (sitewide) ---------- */
   /* Sticky so the back link is reachable from anywhere on the page. The bar
      already had an opaque background, which is what stops content showing
@@ -461,6 +472,15 @@
     padding: 12px clamp(16px, 3vw, 40px) 12px;
     border-top: 2px solid rgba(46,68,54,0.22);
   }
+  /* ---------- BROWSE STRIP (above the footer, on every inner page) ---------- */
+  .site-browse{ margin-top: clamp(40px, 7vh, 72px); padding: 18px clamp(16px, 3vw, 40px) 20px; border-top: 1px solid rgba(46,68,54,0.14); }
+  .site-browse-inner{ max-width: var(--max-width, 1265px); margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .site-browse-row{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; font-size: 13.5px; }
+  .site-browse-lead{ font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); min-width: 92px; }
+  .site-browse a{ color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  .site-browse a:hover, .site-browse a:focus-visible{ color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .site-browse + .site-footer{ margin-top: 0; }
+  @media (max-width: 700px){ .site-browse{ padding-top: 16px; padding-bottom: 16px; } .site-browse-row{ gap: 8px 16px; font-size: 13px; } .site-browse-lead{ min-width: 0; width: 100%; } }
   .footer-inner{
     max-width: var(--max-width, 1265px);
     margin: 0 auto;
@@ -576,7 +596,7 @@
   }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/#resource","url":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/","name":"Mood Scale","description":"A simple printable scale for a check-in when words don’t come easily. A student points to the number that feels closest to today, and that is where the conversation starts. It helps them put a name to how they are feeling.","inLanguage":"en-GB","learningResourceType":"Printable","educationalLevel":["Key Stage 3","Key Stage 4","Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published","timeRequired":"PT1M"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Wellbeing Check-Ins","item":"https://thepastoralguide.com/wellbeing-check-ins/"},{"@type":"ListItem","position":3,"name":"Mood Scale","item":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/#resource","url":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/","name":"Mood Scale","description":"A simple printable scale for a check-in when words don’t come easily. A student points to the number that feels closest to today, and that is where the conversation starts. It helps them put a name to how they are feeling.","inLanguage":"en-GB","learningResourceType":"Printable","educationalLevel":["Key Stage 3", "Key Stage 4"],"typicalAgeRange":"11-16","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published","timeRequired":"PT1M"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Wellbeing Check-Ins","item":"https://thepastoralguide.com/wellbeing-check-ins/"},{"@type":"ListItem","position":3,"name":"Mood Scale","item":"https://thepastoralguide.com/wellbeing-check-ins/mood-scale/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
 </head>
 <body>
 
@@ -596,7 +616,7 @@
   <span class="eyebrow">Wellbeing Check-Ins</span>
   <h1 class="page-title">Mood Scale</h1>
   <p class="page-sub">A simple printable scale for a check-in when words don&rsquo;t come easily. A student points to the number that feels closest to today, and that is where the conversation starts. It helps them put a name to how they are feeling.</p>
-  <span class="page-facts">Year 7 to 13 &middot; one to one or small group &middot; free to download</span>
+  <span class="page-facts"><a href="../../key-stage-3/">Year 7 to 11, best in Year 7 to 9</a> &middot; one to one or small group &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the download
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
@@ -645,6 +665,14 @@
     </div>
   </section>
 
+  <section class="peek" aria-label="A look inside">
+    <h2>A look inside</h2>
+    <div class="peek-row">
+      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="Page one of the pack" width="800" height="1131" loading="lazy"><figcaption>Page one of the pack</figcaption></figure>
+      <figure class="peek-item"><img src="preview-pack-2.jpg" alt="Page two of 2" width="800" height="566" loading="lazy"><figcaption>Page two of 2</figcaption></figure>
+    </div>
+  </section>
+
   <section id="downloads">
     <h2>Get the activity</h2>
     <p class="lede">Print it once and laminate it, and it will last for years. It works well alongside Conversation Starters, or on its own.</p>
@@ -657,8 +685,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
         </span>
       </a>
-      <div class="signup">
-        <p>New resources go up as they are made, and Volume Two is on the way for the activities that have one. Leave your email and you will get one message when it lands, and nothing else.</p>
+      <div class="signup" id="signup">
+        <p>New resources go up as they are made. Leave your email and you will get one message when something new lands, and nothing else.</p>
         <form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
           <input type="email" name="email_address" placeholder="Your email address" aria-label="Your email address" required autocomplete="email">
           <button type="submit" data-umami-event="signup">Keep me posted</button>
@@ -675,13 +703,20 @@
 <section class="more" aria-label="More from Wellbeing Check-Ins">
   <h2>More from Wellbeing Check-Ins</h2>
   <div class="more-grid">
-      <a class="more-card" href="../conversation-starters/"><span class="more-title">Conversation Starters</span><span class="more-meta"><span>2 mins or longer</span><span>cut the cards once</span><span>trust</span></span><span class="more-hint">Open the resource &rarr;</span></a>
       <a class="more-card" href="../self-care-menu/"><span class="more-title">Self-Care Menu</span><span class="more-meta"><span>Whenever it&rsquo;s needed</span><span>print a stack</span><span>self-care</span></span><span class="more-hint">Open the resource &rarr;</span></a>
+      <a class="more-card" href="../check-in-record-sheet/"><span class="more-title">Check-In Record Sheet</span><span class="more-meta"><span>Seconds a week</span><span>nothing to print</span><span>nobody missed</span></span><span class="more-hint">Open the resource &rarr;</span></a>
       <a class="more-card" href="../tell-me-later/"><span class="more-title">Tell Me Later</span><span class="more-meta"><span>Daily, once it is up</span><span>print, cut, find a box</span><span>asking for help</span></span><span class="more-hint">Open the resource &rarr;</span></a>
   </div>
   <a class="more-all" href="../">See everything in Wellbeing Check-Ins &rarr;</a>
 </section>
 
+<nav class="site-browse" aria-label="Browse the site">
+  <div class="site-browse-inner">
+    <div class="site-browse-row"><span class="site-browse-lead">On the shelf</span><a href="../../morning-registration-activities/">Morning Registration</a><a href="../../tutor-time/">Tutor Time</a><a href="../../pastoral-projects/">Pastoral Projects</a><a href="../../wellbeing-check-ins/">Wellbeing Check-Ins</a><a href="../../displays-and-recognition/">Displays and Recognition</a><a href="../../assemblies-and-events/">Assemblies and Events</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By age</span><a href="../../key-stage-3/">Year 7 to 9</a><a href="../../key-stage-4/">Year 10 and 11</a><a href="../../sixth-form/">Sixth form</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By time</span><a href="../../by-time/#five-minutes">Five minutes</a><a href="../../by-time/#an-hour">An hour</a><a href="../../by-time/#a-few-weeks">A few weeks</a><a href="../../by-time/#no-slot-needed">No slot needed</a><a href="../../by-time/#on-a-date">On a date</a><a href="../../by-time/#first-week">First week of term</a><a href="../../by-time/#mocks-back">Mocks back</a><a href="../../by-time/#exam-season">Exam season</a><a href="../../by-time/#last-week">The last week</a></div>
+  </div>
+</nav>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-left">

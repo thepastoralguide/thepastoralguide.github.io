@@ -271,7 +271,7 @@
     background: #f7ebc4;
   }
   .folder-note--gold .folder-note-title{ color: #6b4f1f; }
-  .folder-note--gold .folder-note-hint, .folder-note--gold .folder-note-meta{ color: #785923; }
+  .folder-note--gold .folder-note-hint, .folder-note--gold .folder-note-meta, .folder-note--gold .folder-note-years{ color: #785923; }
   .folder-note--gold .folder-note-tape{
     background-color: #c2984a;
     background-image: repeating-linear-gradient(45deg,
@@ -287,7 +287,7 @@
     background: #f0e6d2;
   }
   .folder-note--sand .folder-note-title{ color: #4e4222; }
-  .folder-note--sand .folder-note-hint, .folder-note--sand .folder-note-meta{ color: #755c37; }
+  .folder-note--sand .folder-note-hint, .folder-note--sand .folder-note-meta, .folder-note--sand .folder-note-years{ color: #755c37; }
   .folder-note--sand .folder-note-tape{
     background-color: #a9895a;
     background-image: repeating-linear-gradient(45deg,
@@ -298,7 +298,7 @@
     background: #e9eef3;
   }
   .folder-note--steel .folder-note-title{ color: #4c6e86; }
-  .folder-note--steel .folder-note-hint, .folder-note--steel .folder-note-meta{ color: #4c6e86; }
+  .folder-note--steel .folder-note-hint, .folder-note--steel .folder-note-meta, .folder-note--steel .folder-note-years{ color: #4c6e86; }
   .folder-note--steel .folder-note-tape{
     background-color: #6c8ca3;
     background-image: repeating-linear-gradient(45deg,
@@ -309,7 +309,7 @@
     background: #f3e9ef;
   }
   .folder-note--plum .folder-note-title{ color: #6e3f5e; }
-  .folder-note--plum .folder-note-hint, .folder-note--plum .folder-note-meta{ color: #834a70; }
+  .folder-note--plum .folder-note-hint, .folder-note--plum .folder-note-meta, .folder-note--plum .folder-note-years{ color: #834a70; }
   .folder-note--plum .folder-note-tape{
     background-color: #965a81;
     background-image: repeating-linear-gradient(45deg,
@@ -317,6 +317,17 @@
       #c6a9bc 5px, #c6a9bc 10px);
   }
 
+  .folder-note--sea{ background: #edf3f4; }
+  .folder-note--sea .folder-note-title{ color: #355a5f; }
+  .folder-note--sea .folder-note-hint, .folder-note--sea .folder-note-meta, .folder-note--sea .folder-note-years{ color: #355a5f; }
+  .folder-note--sea .folder-note-tape{
+    background-color: #5f8a90;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #bfd3d6 5px, #bfd3d6 10px);
+  }
+
+  .folder-note-years{ font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; margin-top: -2px; }
   .folder-note-tape{
     position: absolute;
     top: -13px;
@@ -371,6 +382,15 @@
     padding: 14px clamp(16px, 3vw, 40px) 12px;
     border-top: 2px solid rgba(46,68,54,0.22);
   }
+  /* ---------- BROWSE STRIP (above the footer, on every inner page) ---------- */
+  .site-browse{ margin-top: clamp(40px, 7vh, 72px); padding: 18px clamp(16px, 3vw, 40px) 20px; border-top: 1px solid rgba(46,68,54,0.14); }
+  .site-browse-inner{ max-width: var(--max-width, 1265px); margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .site-browse-row{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; font-size: 13.5px; }
+  .site-browse-lead{ font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); min-width: 92px; }
+  .site-browse a{ color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  .site-browse a:hover, .site-browse a:focus-visible{ color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .site-browse + .site-footer{ margin-top: 0; }
+  @media (max-width: 700px){ .site-browse{ padding-top: 16px; padding-bottom: 16px; } .site-browse-row{ gap: 8px 16px; font-size: 13px; } .site-browse-lead{ min-width: 0; width: 100%; } }
   .footer-inner{
     max-width: var(--max-width, 1265px);
     margin: 0 auto;
@@ -572,38 +592,57 @@
       <a class="folder-note" href="conversation-starters/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Conversation Starters</span>
+        <span class="folder-note-years">Year 7 to 13</span>
         <span class="folder-note-meta"><span>2 mins or longer</span><span>cut the cards once</span><span>trust</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
       <a class="folder-note folder-note--alt folder-note--gold" href="mood-scale/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Mood Scale</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>1 minute</span><span>print and laminate</span><span>self-awareness</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
       <a class="folder-note folder-note--sand" href="self-care-menu/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Self-Care Menu</span>
+        <span class="folder-note-years">Year 7 to 11</span>
         <span class="folder-note-meta"><span>Whenever it&rsquo;s needed</span><span>print a stack</span><span>self-care</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
       <a class="folder-note folder-note--alt folder-note--steel" href="check-in-record-sheet/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Check-In Record Sheet</span>
+        <span class="folder-note-years">Year 7 to 13</span>
         <span class="folder-note-meta"><span>Seconds a week</span><span>nothing to print</span><span>nobody missed</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
       <a class="folder-note folder-note--plum" href="tell-me-later/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Tell Me Later</span>
+        <span class="folder-note-years">Year 7 to 11</span>
         <span class="folder-note-meta"><span>Daily, once it is up</span><span>print, cut, find a box</span><span>asking for help</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--alt folder-note--sea" href="before-you-go-in/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">Before You Go In</span>
+        <span class="folder-note-years">Year 10 to 13</span>
+        <span class="folder-note-meta"><span>Exam mornings</span><span>two sheets per student</span><span>kindness</span></span>
+        <span class="folder-note-hint">Open the printable &rarr;</span>
       </a>
 
     </div>
   </div>
 </div>
 
+<nav class="site-browse" aria-label="Browse the site">
+  <div class="site-browse-inner">
+    <div class="site-browse-row"><span class="site-browse-lead">On the shelf</span><a href="../morning-registration-activities/">Morning Registration</a><a href="../tutor-time/">Tutor Time</a><a href="../pastoral-projects/">Pastoral Projects</a><a href="../wellbeing-check-ins/">Wellbeing Check-Ins</a><a href="../displays-and-recognition/">Displays and Recognition</a><a href="../assemblies-and-events/">Assemblies and Events</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By age</span><a href="../key-stage-3/">Year 7 to 9</a><a href="../key-stage-4/">Year 10 and 11</a><a href="../sixth-form/">Sixth form</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By time</span><a href="../by-time/#five-minutes">Five minutes</a><a href="../by-time/#an-hour">An hour</a><a href="../by-time/#a-few-weeks">A few weeks</a><a href="../by-time/#no-slot-needed">No slot needed</a><a href="../by-time/#on-a-date">On a date</a><a href="../by-time/#first-week">First week of term</a><a href="../by-time/#mocks-back">Mocks back</a><a href="../by-time/#exam-season">Exam season</a><a href="../by-time/#last-week">The last week</a></div>
+  </div>
+</nav>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-left">
@@ -627,7 +666,9 @@
   (function(){
     var hint = document.querySelector('.scroll-hint');
     function check(){
-      var scrolls = document.documentElement.scrollHeight > window.innerHeight + 8;
+      var sb = document.querySelector('.scrapbook');
+      // The cue is for notes below the fold, not for the browse strip and footer under the board.
+      var scrolls = !!sb && sb.getBoundingClientRect().bottom + window.scrollY > window.innerHeight + 8;
       hint.classList.toggle('is-visible', scrolls && window.scrollY < 24);
     }
     window.addEventListener('load', check);

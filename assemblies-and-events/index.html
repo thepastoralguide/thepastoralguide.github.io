@@ -270,7 +270,7 @@
     background: #f8eef0;
   }
   .folder-note--pink .folder-note-title{ color: #94505f; }
-  .folder-note--pink .folder-note-hint, .folder-note--pink .folder-note-meta{ color: #9e5b68; }
+  .folder-note--pink .folder-note-hint, .folder-note--pink .folder-note-meta, .folder-note--pink .folder-note-years{ color: #9e5b68; }
   .folder-note--pink .folder-note-tape{
     background-color: #c88e9c;
     background-image: repeating-linear-gradient(45deg,
@@ -284,7 +284,7 @@
     background: #f2eff6;
   }
   .folder-note--heather .folder-note-title{ color: #5b4f73; }
-  .folder-note--heather .folder-note-hint, .folder-note--heather .folder-note-meta{ color: #675a80; }
+  .folder-note--heather .folder-note-hint, .folder-note--heather .folder-note-meta, .folder-note--heather .folder-note-years{ color: #675a80; }
   .folder-note--heather .folder-note-tape{
     background-color: #a094b5;
     background-image: repeating-linear-gradient(45deg,
@@ -298,7 +298,7 @@
     background: #ecf4f2;
   }
   .folder-note--sea .folder-note-title{ color: #2c6d5b; }
-  .folder-note--sea .folder-note-hint, .folder-note--sea .folder-note-meta{ color: #327b68; }
+  .folder-note--sea .folder-note-hint, .folder-note--sea .folder-note-meta, .folder-note--sea .folder-note-years{ color: #327b68; }
   .folder-note--sea .folder-note-tape{
     background-color: #68b19d;
     background-image: repeating-linear-gradient(45deg,
@@ -306,6 +306,7 @@
       #bedad3 5px, #bedad3 10px);
   }
 
+  .folder-note-years{ font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; margin-top: -2px; }
   .folder-note-tape{
     position: absolute;
     top: -13px;
@@ -363,6 +364,15 @@
     padding: 14px clamp(16px, 3vw, 40px) 12px;
     border-top: 2px solid rgba(46,68,54,0.22);
   }
+  /* ---------- BROWSE STRIP (above the footer, on every inner page) ---------- */
+  .site-browse{ margin-top: clamp(40px, 7vh, 72px); padding: 18px clamp(16px, 3vw, 40px) 20px; border-top: 1px solid rgba(46,68,54,0.14); }
+  .site-browse-inner{ max-width: var(--max-width, 1265px); margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .site-browse-row{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; font-size: 13.5px; }
+  .site-browse-lead{ font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); min-width: 92px; }
+  .site-browse a{ color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  .site-browse a:hover, .site-browse a:focus-visible{ color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .site-browse + .site-footer{ margin-top: 0; }
+  @media (max-width: 700px){ .site-browse{ padding-top: 16px; padding-bottom: 16px; } .site-browse-row{ gap: 8px 16px; font-size: 13px; } .site-browse-lead{ min-width: 0; width: 100%; } }
   .footer-inner{
     max-width: var(--max-width, 1265px);
     margin: 0 auto;
@@ -564,18 +574,21 @@
       <a class="folder-note folder-note--pink" href="valentines-day-sweet-notes/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Sweet Notes</span>
+        <span class="folder-note-years">Year 7 to 13</span>
         <span class="folder-note-meta"><span>Valentine&rsquo;s Day</span><span>the student council runs it</span><span>kindness</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
       <a class="folder-note folder-note--alt folder-note--heather" href="anti-bullying-week/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Anti-Bullying Week</span>
+        <span class="folder-note-years">Year 7 to 11</span>
         <span class="folder-note-meta"><span>A whole week</span><span>a few things to buy and print</span><span>kindness</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
       <a class="folder-note folder-note--sea" href="world-mental-health-day/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">World Mental Health Day</span>
+        <span class="folder-note-years">Year 7 to 13</span>
         <span class="folder-note-meta"><span>An assembly, then a week</span><span>some printing and a little shopping</span><span>listening</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
@@ -583,6 +596,13 @@
   </div>
 </div>
 
+<nav class="site-browse" aria-label="Browse the site">
+  <div class="site-browse-inner">
+    <div class="site-browse-row"><span class="site-browse-lead">On the shelf</span><a href="../morning-registration-activities/">Morning Registration</a><a href="../tutor-time/">Tutor Time</a><a href="../pastoral-projects/">Pastoral Projects</a><a href="../wellbeing-check-ins/">Wellbeing Check-Ins</a><a href="../displays-and-recognition/">Displays and Recognition</a><a href="../assemblies-and-events/">Assemblies and Events</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By age</span><a href="../key-stage-3/">Year 7 to 9</a><a href="../key-stage-4/">Year 10 and 11</a><a href="../sixth-form/">Sixth form</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By time</span><a href="../by-time/#five-minutes">Five minutes</a><a href="../by-time/#an-hour">An hour</a><a href="../by-time/#a-few-weeks">A few weeks</a><a href="../by-time/#no-slot-needed">No slot needed</a><a href="../by-time/#on-a-date">On a date</a><a href="../by-time/#first-week">First week of term</a><a href="../by-time/#mocks-back">Mocks back</a><a href="../by-time/#exam-season">Exam season</a><a href="../by-time/#last-week">The last week</a></div>
+  </div>
+</nav>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-left">
@@ -606,7 +626,9 @@
   (function(){
     var hint = document.querySelector('.scroll-hint');
     function check(){
-      var scrolls = document.documentElement.scrollHeight > window.innerHeight + 8;
+      var sb = document.querySelector('.scrapbook');
+      // The cue is for notes below the fold, not for the browse strip and footer under the board.
+      var scrolls = !!sb && sb.getBoundingClientRect().bottom + window.scrollY > window.innerHeight + 8;
       hint.classList.toggle('is-visible', scrolls && window.scrollY < 24);
     }
     window.addEventListener('load', check);

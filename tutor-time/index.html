@@ -268,7 +268,7 @@
      the resource pinned there. */
   .folder-note--brick{ background: #faeee9; }
   .folder-note--brick .folder-note-title{ color: #9a4030; }
-  .folder-note--brick .folder-note-hint, .folder-note--brick .folder-note-meta{ color: #a84e3d; }
+  .folder-note--brick .folder-note-hint, .folder-note--brick .folder-note-meta, .folder-note--brick .folder-note-years{ color: #a84e3d; }
   .folder-note--brick .folder-note-tape{
     background-color: #cd8878;
     background-image: repeating-linear-gradient(45deg,
@@ -278,7 +278,7 @@
 
   .folder-note--steel{ background: #edf3f7; }
   .folder-note--steel .folder-note-title{ color: #2f5470; }
-  .folder-note--steel .folder-note-hint, .folder-note--steel .folder-note-meta{ color: #3b657f; }
+  .folder-note--steel .folder-note-hint, .folder-note--steel .folder-note-meta, .folder-note--steel .folder-note-years{ color: #3b657f; }
   .folder-note--steel .folder-note-tape{
     background-color: #7ea6bd;
     background-image: repeating-linear-gradient(45deg,
@@ -288,7 +288,7 @@
 
   .folder-note--marigold{ background: #faf1de; }
   .folder-note--marigold .folder-note-title{ color: #8a6512; }
-  .folder-note--marigold .folder-note-hint, .folder-note--marigold .folder-note-meta{ color: #96701a; }
+  .folder-note--marigold .folder-note-hint, .folder-note--marigold .folder-note-meta, .folder-note--marigold .folder-note-years{ color: #96701a; }
   .folder-note--marigold .folder-note-tape{
     background-color: #e0ae35;
     background-image: repeating-linear-gradient(45deg,
@@ -298,7 +298,7 @@
 
   .folder-note--leaf{ background: #eef3f1; }
   .folder-note--leaf .folder-note-title{ color: #256b4a; }
-  .folder-note--leaf .folder-note-hint, .folder-note--leaf .folder-note-meta{ color: #3f7a5c; }
+  .folder-note--leaf .folder-note-hint, .folder-note--leaf .folder-note-meta, .folder-note--leaf .folder-note-years{ color: #3f7a5c; }
   .folder-note--leaf .folder-note-tape{
     background-color: #69b993;
     background-image: repeating-linear-gradient(45deg,
@@ -308,7 +308,7 @@
 
   .folder-note--iris{ background: #f0e4f5; }
   .folder-note--iris .folder-note-title{ color: #502961; }
-  .folder-note--iris .folder-note-hint, .folder-note--iris .folder-note-meta{ color: #6e4585; }
+  .folder-note--iris .folder-note-hint, .folder-note--iris .folder-note-meta, .folder-note--iris .folder-note-years{ color: #6e4585; }
   .folder-note--iris .folder-note-tape{
     background-color: #a979bd;
     background-image: repeating-linear-gradient(45deg,
@@ -322,7 +322,7 @@
      red, a blue, a green, a gold or a purple. */
   .folder-note--bark{ background: #f0eae3; }
   .folder-note--bark .folder-note-title{ color: #6b4f3e; }
-  .folder-note--bark .folder-note-hint, .folder-note--bark .folder-note-meta{ color: #7d6152; }
+  .folder-note--bark .folder-note-hint, .folder-note--bark .folder-note-meta, .folder-note--bark .folder-note-years{ color: #7d6152; }
   .folder-note--bark .folder-note-tape{
     background-color: #a3897a;
     background-image: repeating-linear-gradient(45deg,
@@ -335,7 +335,7 @@
      and a bark. */
   .folder-note--raspberry{ background: #fbedf3; }
   .folder-note--raspberry .folder-note-title{ color: #b03e72; }
-  .folder-note--raspberry .folder-note-hint, .folder-note--raspberry .folder-note-meta{ color: #9c3765; }
+  .folder-note--raspberry .folder-note-hint, .folder-note--raspberry .folder-note-meta, .folder-note--raspberry .folder-note-years{ color: #9c3765; }
   .folder-note--raspberry .folder-note-tape{
     background-color: #b1517b;
     background-image: repeating-linear-gradient(45deg,
@@ -343,6 +343,27 @@
       #ebccda 5px, #ebccda 10px);
   }
 
+  .folder-note--navy{ background: #eeeff7; }
+  .folder-note--navy .folder-note-title{ color: #2e3570; }
+  .folder-note--navy .folder-note-hint, .folder-note--navy .folder-note-meta, .folder-note--navy .folder-note-years{ color: #2e3570; }
+  .folder-note--navy .folder-note-tape{
+    background-color: #6a70b3;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #c9cce6 5px, #c9cce6 10px);
+  }
+
+  .folder-note--olive{ background: #f3f5e9; }
+  .folder-note--olive .folder-note-title{ color: #5a6428; }
+  .folder-note--olive .folder-note-hint, .folder-note--olive .folder-note-meta, .folder-note--olive .folder-note-years{ color: #5a6428; }
+  .folder-note--olive .folder-note-tape{
+    background-color: #8f9a4e;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #d6dbb6 5px, #d6dbb6 10px);
+  }
+
+  .folder-note-years{ font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; margin-top: -2px; }
   .folder-note-tape{
     position: absolute;
     top: -13px;
@@ -400,6 +421,15 @@
     padding: 14px clamp(16px, 3vw, 40px) 12px;
     border-top: 2px solid rgba(46,68,54,0.22);
   }
+  /* ---------- BROWSE STRIP (above the footer, on every inner page) ---------- */
+  .site-browse{ margin-top: clamp(40px, 7vh, 72px); padding: 18px clamp(16px, 3vw, 40px) 20px; border-top: 1px solid rgba(46,68,54,0.14); }
+  .site-browse-inner{ max-width: var(--max-width, 1265px); margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .site-browse-row{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; font-size: 13.5px; }
+  .site-browse-lead{ font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); min-width: 92px; }
+  .site-browse a{ color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  .site-browse a:hover, .site-browse a:focus-visible{ color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .site-browse + .site-footer{ margin-top: 0; }
+  @media (max-width: 700px){ .site-browse{ padding-top: 16px; padding-bottom: 16px; } .site-browse-row{ gap: 8px 16px; font-size: 13px; } .site-browse-lead{ min-width: 0; width: 100%; } }
   .footer-inner{
     max-width: var(--max-width, 1265px);
     margin: 0 auto;
@@ -602,49 +632,77 @@
       <a class="folder-note folder-note--brick" href="the-apology/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">The Apology</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>One hour</span><span>four pages to print</span><span>accountability</span></span>
         <span class="folder-note-hint">Open the lesson &rarr;</span>
       </a>
       <a class="folder-note folder-note--alt folder-note--steel" href="payday-budgeting-lesson/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Payday</span>
+        <span class="folder-note-years">Year 10 to 13</span>
         <span class="folder-note-meta"><span>One hour</span><span>three pages to print</span><span>responsibility</span></span>
         <span class="folder-note-hint">Open the lesson &rarr;</span>
       </a>
       <a class="folder-note folder-note--marigold" href="motivation-comes-second/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Motivation Comes Second</span>
+        <span class="folder-note-years">Year 10 to 13</span>
         <span class="folder-note-meta"><span>One hour</span><span>four pages to print</span><span>self-motivation</span></span>
         <span class="folder-note-hint">Open the lesson &rarr;</span>
       </a>
       <a class="folder-note folder-note--alt folder-note--leaf" href="fuel-and-focus/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Fuel and Focus</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>Three lessons</span><span>some shopping to do</span><span>self-care</span></span>
         <span class="folder-note-hint">Open the series &rarr;</span>
       </a>
       <a class="folder-note folder-note--iris" href="movement-and-mental-health/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Movement and Mental Health</span>
+        <span class="folder-note-years">Year 7 to 11</span>
         <span class="folder-note-meta"><span>Three lessons</span><span>no kit needed</span><span>resilience</span></span>
         <span class="folder-note-hint">Open the series &rarr;</span>
       </a>
       <a class="folder-note folder-note--bark folder-note--alt" href="bystander-to-upstander/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Bystander to Upstander</span>
+        <span class="folder-note-years">Year 7 to 11</span>
         <span class="folder-note-meta"><span>One hour</span><span>three pages to print</span><span>noticing</span></span>
         <span class="folder-note-hint">Open the lesson &rarr;</span>
       </a>
       <a class="folder-note folder-note--raspberry" href="it-was-just-a-joke/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">It Was Just a Joke</span>
+        <span class="folder-note-years">Year 7 to 11</span>
         <span class="folder-note-meta"><span>One hour</span><span>four pages to print</span><span>honesty</span></span>
+        <span class="folder-note-hint">Open the lesson &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--alt folder-note--navy" href="revision-that-survives-the-week/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">Revision That Survives the Week</span>
+        <span class="folder-note-years">Year 10 to 13</span>
+        <span class="folder-note-meta"><span>One hour</span><span>one sheet per student</span><span>responsibility</span></span>
+        <span class="folder-note-hint">Open the lesson &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--olive" href="after-the-mocks/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">After the Mocks</span>
+        <span class="folder-note-years">Year 10 to 13</span>
+        <span class="folder-note-meta"><span>One hour</span><span>cards and a sheet to print</span><span>resilience</span></span>
         <span class="folder-note-hint">Open the lesson &rarr;</span>
       </a>
     </div>
   </div>
 </div>
 
+<nav class="site-browse" aria-label="Browse the site">
+  <div class="site-browse-inner">
+    <div class="site-browse-row"><span class="site-browse-lead">On the shelf</span><a href="../morning-registration-activities/">Morning Registration</a><a href="../tutor-time/">Tutor Time</a><a href="../pastoral-projects/">Pastoral Projects</a><a href="../wellbeing-check-ins/">Wellbeing Check-Ins</a><a href="../displays-and-recognition/">Displays and Recognition</a><a href="../assemblies-and-events/">Assemblies and Events</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By age</span><a href="../key-stage-3/">Year 7 to 9</a><a href="../key-stage-4/">Year 10 and 11</a><a href="../sixth-form/">Sixth form</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By time</span><a href="../by-time/#five-minutes">Five minutes</a><a href="../by-time/#an-hour">An hour</a><a href="../by-time/#a-few-weeks">A few weeks</a><a href="../by-time/#no-slot-needed">No slot needed</a><a href="../by-time/#on-a-date">On a date</a><a href="../by-time/#first-week">First week of term</a><a href="../by-time/#mocks-back">Mocks back</a><a href="../by-time/#exam-season">Exam season</a><a href="../by-time/#last-week">The last week</a></div>
+  </div>
+</nav>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-left">
@@ -668,7 +726,9 @@
   (function(){
     var hint = document.querySelector('.scroll-hint');
     function check(){
-      var scrolls = document.documentElement.scrollHeight > window.innerHeight + 8;
+      var sb = document.querySelector('.scrapbook');
+      // The cue is for notes below the fold, not for the browse strip and footer under the board.
+      var scrolls = !!sb && sb.getBoundingClientRect().bottom + window.scrollY > window.innerHeight + 8;
       hint.classList.toggle('is-visible', scrolls && window.scrollY < 24);
     }
     window.addEventListener('load', check);

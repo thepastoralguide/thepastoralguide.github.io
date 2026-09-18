@@ -284,7 +284,7 @@
       #cddbca 5px, #cddbca 10px);
   }
 
-  .folder-note--sage .folder-note-hint, .folder-note--sage .folder-note-meta{ color: #537159; }
+  .folder-note--sage .folder-note-hint, .folder-note--sage .folder-note-meta, .folder-note--sage .folder-note-years{ color: #537159; }
 
   /* Mystery Fact of the Day's own colour -- olive/moss, one of the site's
      reserved bookshelf tones, committed to fully on its own page. Same
@@ -302,7 +302,7 @@
       #d3d9b9 5px, #d3d9b9 10px);
   }
 
-  .folder-note--olive .folder-note-hint, .folder-note--olive .folder-note-meta{ color: #48562c; }
+  .folder-note--olive .folder-note-hint, .folder-note--olive .folder-note-meta, .folder-note--olive .folder-note-years{ color: #48562c; }
 
   /* Compliment Chain's own colour -- yellow-beige (lightened from the
      earlier dusty rose in the sitewide "kinder on the eye" pass). Given
@@ -322,7 +322,7 @@
       #d3c8a6 5px, #d3c8a6 10px);
   }
 
-  .folder-note--beige .folder-note-hint, .folder-note--beige .folder-note-meta{ color: #71683d; }
+  .folder-note--beige .folder-note-hint, .folder-note--beige .folder-note-meta, .folder-note--beige .folder-note-years{ color: #71683d; }
 
   /* Weekly Wonder's own colour -- dusty slate-blue, the same family
      computed for Self-Care Menu's Practical Reset menu. First genuinely
@@ -342,7 +342,7 @@
       #d7dce2 5px, #d7dce2 10px);
   }
 
-  .folder-note--slate .folder-note-hint, .folder-note--slate .folder-note-meta{ color: #455568; }
+  .folder-note--slate .folder-note-hint, .folder-note--slate .folder-note-meta, .folder-note--slate .folder-note-years{ color: #455568; }
 
   /* The Two-Minute Interview's own colour -- dusty rose/mauve, the first
      paired-conversation resource in this category. Same independent-of-
@@ -361,7 +361,7 @@
       #dfc3c7 5px, #dfc3c7 10px);
   }
 
-  .folder-note--rose .folder-note-hint, .folder-note--rose .folder-note-meta{ color: #7a4a52; }
+  .folder-note--rose .folder-note-hint, .folder-note--rose .folder-note-meta, .folder-note--rose .folder-note-years{ color: #7a4a52; }
 
   /* The Unfinished Story's own colour -- deep teal, distinct from every
      other tone on this folder including the newly added dusty rose above. */
@@ -378,7 +378,7 @@
       #c3dbde 5px, #c3dbde 10px);
   }
 
-  .folder-note--teal .folder-note-hint, .folder-note--teal .folder-note-meta{ color: #335d63; }
+  .folder-note--teal .folder-note-hint, .folder-note--teal .folder-note-meta, .folder-note--teal .folder-note-years{ color: #335d63; }
 
   /* The Register Reply's own colour -- a muted mulberry, the first purple on
      this folder and clear of the sage, olive, beige, slate, rose and teal
@@ -396,7 +396,7 @@
       #dcc9e0 5px, #dcc9e0 10px);
   }
 
-  .folder-note--mulberry .folder-note-hint, .folder-note--mulberry .folder-note-meta{ color: #6f4a78; }
+  .folder-note--mulberry .folder-note-hint, .folder-note--mulberry .folder-note-meta, .folder-note--mulberry .folder-note-years{ color: #6f4a78; }
 
   /* The Opinion Line's own colour -- coral, the only warm red on this folder,
      which already has a sage, an olive, a beige, a slate, a rose, a teal and a
@@ -414,7 +414,7 @@
       #eccfc4 5px, #eccfc4 10px);
   }
 
-  .folder-note--coral .folder-note-hint, .folder-note--coral .folder-note-meta{ color: #a04a2c; }
+  .folder-note--coral .folder-note-hint, .folder-note--coral .folder-note-meta, .folder-note--coral .folder-note-years{ color: #a04a2c; }
 
   /* Today I Will's own colour -- cornflower, the only true blue on this folder.
      The slate already here reads as a grey card beside it. */
@@ -431,8 +431,29 @@
       #c4d9ee 5px, #c4d9ee 10px);
   }
 
-  .folder-note--cornflower .folder-note-hint, .folder-note--cornflower .folder-note-meta{ color: #2a63a2; }
+  .folder-note--cornflower .folder-note-hint, .folder-note--cornflower .folder-note-meta, .folder-note--cornflower .folder-note-years{ color: #2a63a2; }
 
+  .folder-note--grass{ background: #eef4ea; }
+  .folder-note--grass .folder-note-title{ color: #4a7331; }
+  .folder-note--grass .folder-note-hint, .folder-note--grass .folder-note-meta, .folder-note--grass .folder-note-years{ color: #4a7331; }
+  .folder-note--grass .folder-note-tape{
+    background-color: #7ba060;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #c8dbbb 5px, #c8dbbb 10px);
+  }
+
+  .folder-note--burgundy{ background: #f7ecef; }
+  .folder-note--burgundy .folder-note-title{ color: #843347; }
+  .folder-note--burgundy .folder-note-hint, .folder-note--burgundy .folder-note-meta, .folder-note--burgundy .folder-note-years{ color: #843347; }
+  .folder-note--burgundy .folder-note-tape{
+    background-color: #b0647a;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #e0c3cc 5px, #e0c3cc 10px);
+  }
+
+  .folder-note-years{ font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; margin-top: -2px; }
   .folder-note-tape{
     position: absolute;
     top: -13px;
@@ -487,6 +508,15 @@
     padding: 14px clamp(16px, 3vw, 40px) 12px;
     border-top: 2px solid rgba(46,68,54,0.22);
   }
+  /* ---------- BROWSE STRIP (above the footer, on every inner page) ---------- */
+  .site-browse{ margin-top: clamp(40px, 7vh, 72px); padding: 18px clamp(16px, 3vw, 40px) 20px; border-top: 1px solid rgba(46,68,54,0.14); }
+  .site-browse-inner{ max-width: var(--max-width, 1265px); margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .site-browse-row{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 22px; font-size: 13.5px; }
+  .site-browse-lead{ font-size: 11.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); min-width: 92px; }
+  .site-browse a{ color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  .site-browse a:hover, .site-browse a:focus-visible{ color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+  .site-browse + .site-footer{ margin-top: 0; }
+  @media (max-width: 700px){ .site-browse{ padding-top: 16px; padding-bottom: 16px; } .site-browse-row{ gap: 8px 16px; font-size: 13px; } .site-browse-lead{ min-width: 0; width: 100%; } }
   .footer-inner{
     max-width: var(--max-width, 1265px);
     margin: 0 auto;
@@ -688,61 +718,91 @@
       <a class="folder-note folder-note--sage" href="small-wins-board/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Small Wins Board</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>5&ndash;10 mins</span><span>Post-its and Blu Tack</span><span>confidence</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
       <a class="folder-note folder-note--olive folder-note--alt" href="mystery-fact-of-the-day/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Mystery Fact of the Day</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>5 mins</span><span>nothing to prepare</span><span>curiosity</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
       <a class="folder-note folder-note--beige" href="compliment-chain/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Compliment Chain</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>5&ndash;10 mins</span><span>a few minutes of setup</span><span>kindness</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
       <a class="folder-note folder-note--slate folder-note--alt" href="weekly-wonder/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Weekly Wonder</span>
+        <span class="folder-note-years">Year 7 to 13</span>
         <span class="folder-note-meta"><span>5&ndash;10 mins</span><span>nothing to prepare</span><span>thinking for yourself</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
       <a class="folder-note folder-note--rose" href="two-minute-interview/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">The Two-Minute Interview</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>5 mins</span><span>cut the cards once</span><span>listening</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
       <a class="folder-note folder-note--teal folder-note--alt" href="unfinished-story/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">The Unfinished Story</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>5 mins a week</span><span>nothing to prepare</span><span>integrity</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
       <a class="folder-note folder-note--mulberry" href="register-reply/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">The Register Reply</span>
+        <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>5 mins, inside the register</span><span>nothing to print</span><span>speaking up</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
       <a class="folder-note folder-note--coral folder-note--alt" href="opinion-line/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">The Opinion Line</span>
+        <span class="folder-note-years">Year 7 to 13</span>
         <span class="folder-note-meta"><span>5 mins</span><span>two signs to put up</span><span>open-mindedness</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
       <a class="folder-note folder-note--cornflower" href="today-i-will/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Today I Will</span>
+        <span class="folder-note-years">Year 7 to 11</span>
         <span class="folder-note-meta"><span>4 mins</span><span>nothing to print</span><span>follow-through</span></span>
+        <span class="folder-note-hint">Open the activity &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--alt folder-note--grass" href="open-evening-questions/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">Questions to Ask at an Open Evening</span>
+        <span class="folder-note-years">Year 10 to 11</span>
+        <span class="folder-note-meta"><span>5 mins, five mornings</span><span>one sheet per student</span><span>asking questions</span></span>
+        <span class="folder-note-hint">Open the activity &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--burgundy" href="the-last-five-mornings/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">The Last Five Mornings</span>
+        <span class="folder-note-years">Year 10 to 13</span>
+        <span class="folder-note-meta"><span>5 mins a morning, one week</span><span>one sheet per student</span><span>gratitude</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
     </div>
   </div>
 </div>
 
+<nav class="site-browse" aria-label="Browse the site">
+  <div class="site-browse-inner">
+    <div class="site-browse-row"><span class="site-browse-lead">On the shelf</span><a href="../morning-registration-activities/">Morning Registration</a><a href="../tutor-time/">Tutor Time</a><a href="../pastoral-projects/">Pastoral Projects</a><a href="../wellbeing-check-ins/">Wellbeing Check-Ins</a><a href="../displays-and-recognition/">Displays and Recognition</a><a href="../assemblies-and-events/">Assemblies and Events</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By age</span><a href="../key-stage-3/">Year 7 to 9</a><a href="../key-stage-4/">Year 10 and 11</a><a href="../sixth-form/">Sixth form</a></div>
+    <div class="site-browse-row"><span class="site-browse-lead">By time</span><a href="../by-time/#five-minutes">Five minutes</a><a href="../by-time/#an-hour">An hour</a><a href="../by-time/#a-few-weeks">A few weeks</a><a href="../by-time/#no-slot-needed">No slot needed</a><a href="../by-time/#on-a-date">On a date</a><a href="../by-time/#first-week">First week of term</a><a href="../by-time/#mocks-back">Mocks back</a><a href="../by-time/#exam-season">Exam season</a><a href="../by-time/#last-week">The last week</a></div>
+  </div>
+</nav>
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-left">
@@ -766,7 +826,9 @@
   (function(){
     var hint = document.querySelector('.scroll-hint');
     function check(){
-      var scrolls = document.documentElement.scrollHeight > window.innerHeight + 8;
+      var sb = document.querySelector('.scrapbook');
+      // The cue is for notes below the fold, not for the browse strip and footer under the board.
+      var scrolls = !!sb && sb.getBoundingClientRect().bottom + window.scrollY > window.innerHeight + 8;
       hint.classList.toggle('is-visible', scrolls && window.scrollY < 24);
     }
     window.addEventListener('load', check);

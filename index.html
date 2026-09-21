@@ -569,7 +569,7 @@
   }
 
   .screen-inner{ display: flex; flex-direction: column; width: 100%; flex: 1; }
-  .hero{ padding-top: clamp(8px, 1.4vh, 16px); gap: 8px; }
+  .hero{ padding-top: clamp(16px, 4vh, 72px); gap: 8px; }
 
   /* ---------- START HERE ---------- */
   .shelf-row{ position: relative; padding-top: 22px; }
@@ -709,7 +709,18 @@
      shorter laptop windows Olivia actually uses (18 Sep): the whole shelf should be visible. */
   .browse-groups{ margin-bottom: 26px; }
   @media (max-height: 940px) and (min-width: 701px){
-    .hero{ gap: 5px; padding-bottom: 8px; padding-top: 6px; }
+    .hero{ gap: 5px; padding-bottom: 8px;
+      /* Olivia, 21 Sep: "the whole page starts too high up ... there should be
+         more space between the header and the logo", and the age/time line
+         should sit at the bottom edge of the screen so it is clear there is
+         something below to scroll to.
+         The hero, shelf and the "or browse by age or time" line measure 615px
+         between them, and the top bar is 60px. Anchoring the line 12px above
+         the fold therefore wants a top padding of (viewport - 687px), which
+         leaves the pills themselves just under the fold. Clamped so a short
+         laptop window does not go negative and a tall one does not push the
+         shelf into the middle of the screen. */
+      padding-top: clamp(6px, calc(100vh - 687px), 110px); }
     .brand-emblem{ height: 38px; width: calc(38px * 0.8663); }
     .site-name{ font-size: clamp(38px, 4.6vw, 46px); }
     .tagline{ font-size: 17px; }

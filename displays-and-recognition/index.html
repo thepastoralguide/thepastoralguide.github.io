@@ -295,6 +295,16 @@
   }
 
   .folder-note-years{ font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; margin-top: -2px; }
+  .folder-note--magenta{ background: #f8f3f6; }
+  .folder-note--magenta .folder-note-title{ color: #883a6d; }
+  .folder-note--magenta .folder-note-hint, .folder-note--magenta .folder-note-meta{ color: #883a6d; }
+  .folder-note--magenta .folder-note-tape{
+    background-color: #ac5a8e;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #d2b3c6 5px, #d2b3c6 10px);
+  }
+
   .folder-note-tape{
     position: absolute;
     top: -13px;
@@ -582,6 +592,13 @@
         <span class="folder-note-title">Display Board Pack</span>
         <span class="folder-note-years">Year 7 to 9</span>
         <span class="folder-note-meta"><span>An afternoon to set up</span><span>print, cut and put up</span><span>belonging</span></span>
+        <span class="folder-note-hint">Open the resource &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--magenta" href="noticed-this-week/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">Noticed This Week</span>
+        <span class="folder-note-years">Year 7 to 11</span>
+        <span class="folder-note-meta"><span>Two minutes on a Friday</span><span>print once, then slips</span><span>appreciation</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
 

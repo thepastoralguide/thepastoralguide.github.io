@@ -454,6 +454,26 @@
   }
 
   .folder-note-years{ font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; margin-top: -2px; }
+  .folder-note--indigo{ background: #f3f3f9; }
+  .folder-note--indigo .folder-note-title{ color: #3b368c; }
+  .folder-note--indigo .folder-note-hint, .folder-note--indigo .folder-note-meta{ color: #3b368c; }
+  .folder-note--indigo .folder-note-tape{
+    background-color: #5d58ae;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #b5b3d2 5px, #b5b3d2 10px);
+  }
+
+  .folder-note--forest{ background: #f3f5f2; }
+  .folder-note--forest .folder-note-title{ color: #31511f; }
+  .folder-note--forest .folder-note-hint, .folder-note--forest .folder-note-meta{ color: #31511f; }
+  .folder-note--forest .folder-note-tape{
+    background-color: #527e3a;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #b2bfaa 5px, #b2bfaa 10px);
+  }
+
   .folder-note-tape{
     position: absolute;
     top: -13px;
@@ -707,7 +727,7 @@
 
 <header class="page-header wrap">
   <h1 class="page-title">Morning Registration Activities</h1>
-  <p class="page-intro">Short form time activities for the first few minutes of the day, most of them done in five to ten minutes. A few need Post-its or a set of cards cut once, several need nothing at all, and one runs inside the register while you take it. Every one comes with a PowerPoint and a printable, free to download.</p>
+  <p class="page-intro">Short form time activities for the first few minutes of the day, most of them done in five to ten minutes. A few need Post-its or a set of cards cut once, several need nothing at all, and one runs inside the register while you take it. Most come with a PowerPoint and a printable, two are printables on their own, and all of them are free to download.</p>
 </header>
 
 <div class="scrapbook-wrap wrap">
@@ -790,6 +810,20 @@
         <span class="folder-note-title">The Last Five Mornings</span>
         <span class="folder-note-years">Year 10 to 13</span>
         <span class="folder-note-meta"><span>5 mins a morning, one week</span><span>one sheet per student</span><span>gratitude</span></span>
+        <span class="folder-note-hint">Open the activity &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--alt folder-note--indigo" href="by-half-term/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">By Half Term</span>
+        <span class="folder-note-years">Year 7 to 11</span>
+        <span class="folder-note-meta"><span>Twice a half term</span><span>one sheet per student</span><span>follow-through</span></span>
+        <span class="folder-note-hint">Open the activity &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--forest" href="the-reading-slot/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">The Reading Slot</span>
+        <span class="folder-note-years">Year 7 to 11</span>
+        <span class="folder-note-meta"><span>Twenty minutes a week</span><span>print once for the year</span><span>focus</span></span>
         <span class="folder-note-hint">Open the activity &rarr;</span>
       </a>
     </div>

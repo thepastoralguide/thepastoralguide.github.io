@@ -469,16 +469,97 @@
   }
   /* 22 Sep, second pass. The gap tightening above buys 20px, and between 701px
      and about 755px the bar is 54px over, so the mailto button still ran off the
-     right of every inner page. Below 760px it takes the same circular form it
-     already takes below 701px: the icon stays, the label goes, and the aria-label
-     carries the meaning. Measured at 701, 710, 720, 730 and 760. */
-  @media (max-width: 759px) and (min-width: 701px){
+     right of every inner page. Below this width it takes the same circular form
+     it already takes below 701px: the icon stays, the label goes, and the
+     aria-label carries the meaning.
+
+     22 Sep, corrected. This first went in at 759px, which was measured at 701,
+     710, 720, 730 and 760 but never in between 760 and 860, and the bar was over
+     for that whole band: +69px at 760px on Morning Registration Activities,
+     still +25px at 830px. The full-label button needs the bar to hold the brand,
+     the back link, the search toggle and itself at once, and measured at 1000px
+     that is 890px on the longest category name (Morning Registration
+     Activities), 855 on Displays and Recognition, 840 on Assemblies and Events.
+     So the label comes back at 901px, not 760px. */
+  @media (max-width: 900px) and (min-width: 701px){
     .btn--ghost span{ display: none; }
     .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
     .btn--ghost svg{ width: 17px; height: 17px; }
   }
+  /* 22 Sep, third pass: the phone bar. `.topbar-left{ flex: none }` above exists
+     to stop the field squeezing the brand and the back link, but below 701px the
+     field is absolutely positioned and out of the flex row entirely, so holding
+     that width buys nothing and costs an overflow: at 360px the longest back
+     link ("Morning Registration Activities", with "Back to" already hidden)
+     pushed the mailto button 21px off the right of the bar. Letting the left
+     side flex again and ellipsising the back link keeps every category name
+     inside the bar at any phone width. Measured at 320, 360, 375, 390 and 430
+     on all seven back links. */
+  @media (max-width: 700px){
+    .topbar-left{ flex: 1 1 auto; min-width: 0; }
+    .topbar .back-link{
+      display: block; min-width: 0;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+  }
   /* == sitesearch end == */
 
+  /* == support start == */
+
+  /* The support line under the footer's copyright row. */
+  .footer-support{
+    max-width: var(--max-width, 1265px);
+    margin: 12px auto 0;
+    padding: 10px 14px;
+    background: var(--accent, rgba(46,68,54,0.05));
+    border: 1px solid rgba(46,68,54,0.14);
+    border-radius: 8px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  .footer-support a{
+    color: var(--ink); font-weight: 700;
+    text-decoration: underline; text-underline-offset: 2px;
+    text-decoration-color: rgba(46,68,54,0.35);
+  }
+  .footer-support a:hover, .footer-support a:focus-visible{ text-decoration-color: var(--ink); }
+  @media (max-width: 700px){ .footer-support{ font-size: 12px; padding: 9px 12px; } }
+
+  /* The sign-up panel now carries two asks side by side, split by a hairline. */
+  .signup{ display: flex; align-items: stretch; gap: 0; }
+  .signup-main{ flex: 1 1 56%; min-width: 0; padding-right: 26px; }
+  .signup-divider{ flex: none; width: 1px; background: rgba(46,68,54,0.18); }
+  .signup-support{
+    flex: 1 1 44%; min-width: 0; padding-left: 26px;
+    display: flex; flex-direction: column; justify-content: center; gap: 14px;
+  }
+  .signup-support p{ margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--ink); }
+  /* The two pills are deliberately the same size, and both carry the page's own colour. */
+  .signup button{
+    padding: 10px 20px; font-size: 13.5px; font-weight: 700; line-height: 1.2;
+    border: 1.5px solid var(--accent-deep);
+  }
+  .btn--support{
+    align-self: flex-start;
+    padding: 10px 20px; font-size: 13.5px; font-weight: 700; line-height: 1.2;
+    color: var(--accent-deep); background: transparent;
+    border: 1.5px solid var(--accent-deep); border-radius: 20px;
+  }
+  .btn--support:hover, .btn--support:focus-visible{ background: var(--accent-deep); color: var(--bg); }
+  /* The block is a fixed width; the cards divide it, however many there are. */
+  .downloads-grid{ max-width: 920px; margin-left: auto; margin-right: auto; }
+  @media (min-width: 721px){
+    .downloads-grid{ grid-template-columns: repeat(1, minmax(0, 1fr)); justify-content: stretch; }
+    .download-card--solo{ grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 450px; }
+  }
+  @media (max-width: 860px){
+    .signup{ flex-wrap: wrap; }
+    .signup-main{ flex: 1 1 100%; padding-right: 0; padding-bottom: 18px; }
+    .signup-divider{ width: 100%; height: 1px; }
+    .signup-support{ flex: 1 1 100%; padding-left: 0; padding-top: 18px; }
+  }
+  /* == support end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "LearningResource", "@id": "https://thepastoralguide.com/wellbeing-check-ins/the-repair-sheet/#resource", "url": "https://thepastoralguide.com/wellbeing-check-ins/the-repair-sheet/", "name": "The Repair Sheet", "description": "A student sits down with you after something has gone wrong and works out what happened, who it landed on, and what they will say next. Ten minutes, one sheet each, and a page for you with the four questions to ask. It is not a punishment exercise. It asks for accountability, which is a different thing from being sorry.", "inLanguage": "en-GB", "learningResourceType": "Printable", "educationalLevel": ["Key Stage 3", "Key Stage 4", "Key Stage 5"], "typicalAgeRange": "11-18", "audience": {"@type": "EducationalAudience", "educationalRole": "teacher"}, "isAccessibleForFree": true, "isFamilyFriendly": true, "image": "https://thepastoralguide.com/wellbeing-check-ins/the-repair-sheet/og.jpg", "provider": {"@id": "https://thepastoralguide.com/#org"}, "author": {"@type": "Person", "name": "Olivia"}, "creativeWorkStatus": "Published", "timeRequired": "PT15M"}, {"@type": "BreadcrumbList", "@id": "https://thepastoralguide.com/wellbeing-check-ins/the-repair-sheet/#crumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Pastoral Guide", "item": "https://thepastoralguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Wellbeing Check-Ins", "item": "https://thepastoralguide.com/wellbeing-check-ins/"}, {"@type": "ListItem", "position": 3, "name": "The Repair Sheet", "item": "https://thepastoralguide.com/wellbeing-check-ins/the-repair-sheet/"}]}, {"@type": "Organization", "@id": "https://thepastoralguide.com/#org", "name": "The Pastoral Guide", "url": "https://thepastoralguide.com/", "logo": "https://thepastoralguide.com/logo.png", "email": "thepastoralguide@gmail.com", "sameAs": ["https://www.instagram.com/thepastoralguide/"], "founder": {"@type": "Person", "name": "Olivia"}}]}</script>
@@ -569,7 +650,7 @@
     <h2>Get the resource</h2>
     <p class="lede">Print the sheet once per conversation and the page for you once, and keep that one in a drawer.</p>
     <div class="downloads-grid">
-      <a class="download-card" href="downloads/The_Repair_Sheet_Resource_Pack.pdf" download data-umami-event="download" data-umami-event-file="The_Repair_Sheet_Resource_Pack.pdf">
+      <a class="download-card download-card--solo" href="downloads/The_Repair_Sheet_Resource_Pack.pdf" download data-umami-event="download" data-umami-event-file="The_Repair_Sheet_Resource_Pack.pdf">
         <span class="file-chip">Printable PDF</span>
         <h3>Teacher resource pack</h3>
         <p>Three pages: a one page teacher guide, the repair sheet with a place to write down what you both agreed, and the page for you.</p>
@@ -578,6 +659,7 @@
         </span>
       </a>
       <div class="signup" id="signup">
+        <div class="signup-main">
         <p>New resources go up as they are made. Leave your email and you will get one message when something new lands, and nothing else.</p>
         <form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
           <input type="email" name="email_address" placeholder="Your email address" aria-label="Your email address" required autocomplete="email">
@@ -586,6 +668,14 @@
         <p class="signup-done" hidden>Thank you. There is a confirmation email on its way to you; click the link in it and you are on the list.</p>
         <p class="signup-err" hidden>That did not send. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
         <p class="signup-note">No newsletters and no sharing your address. <a href="/privacy/">How your details are handled</a>.</p>
+        </div>
+        <!-- support panel start -->
+        <div class="signup-divider" aria-hidden="true"></div>
+        <div class="signup-support">
+          <p>This is free to download, the same as everything else here. If it saved you some prep time, you&rsquo;re welcome to leave something toward the site&rsquo;s running costs.</p>
+          <a class="btn btn--support" href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg><span>Support the site</span></a>
+        </div>
+        <!-- support panel end -->
       </div>
     </div>
   </section>
@@ -621,6 +711,9 @@
       <a href="../../privacy/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.4-7 10-4-1.6-7-5.5-7-10V6z"/></svg><span>Privacy</span></a>
     </nav>
   </div>
+  <!-- support footer start -->
+  <p class="footer-support">These resources are free and will stay that way. If one of them saved you some planning time, <a href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support-footer">a small donation</a> helps keep the site going.</p>
+  <!-- support footer end -->
 </footer>
 
 <script>

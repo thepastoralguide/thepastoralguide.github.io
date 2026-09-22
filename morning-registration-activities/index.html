@@ -788,16 +788,63 @@
   }
   /* 22 Sep, second pass. The gap tightening above buys 20px, and between 701px
      and about 755px the bar is 54px over, so the mailto button still ran off the
-     right of every inner page. Below 760px it takes the same circular form it
-     already takes below 701px: the icon stays, the label goes, and the aria-label
-     carries the meaning. Measured at 701, 710, 720, 730 and 760. */
-  @media (max-width: 759px) and (min-width: 701px){
+     right of every inner page. Below this width it takes the same circular form
+     it already takes below 701px: the icon stays, the label goes, and the
+     aria-label carries the meaning.
+
+     22 Sep, corrected. This first went in at 759px, which was measured at 701,
+     710, 720, 730 and 760 but never in between 760 and 860, and the bar was over
+     for that whole band: +69px at 760px on Morning Registration Activities,
+     still +25px at 830px. The full-label button needs the bar to hold the brand,
+     the back link, the search toggle and itself at once, and measured at 1000px
+     that is 890px on the longest category name (Morning Registration
+     Activities), 855 on Displays and Recognition, 840 on Assemblies and Events.
+     So the label comes back at 901px, not 760px. */
+  @media (max-width: 900px) and (min-width: 701px){
     .btn--ghost span{ display: none; }
     .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
     .btn--ghost svg{ width: 17px; height: 17px; }
   }
+  /* 22 Sep, third pass: the phone bar. `.topbar-left{ flex: none }` above exists
+     to stop the field squeezing the brand and the back link, but below 701px the
+     field is absolutely positioned and out of the flex row entirely, so holding
+     that width buys nothing and costs an overflow: at 360px the longest back
+     link ("Morning Registration Activities", with "Back to" already hidden)
+     pushed the mailto button 21px off the right of the bar. Letting the left
+     side flex again and ellipsising the back link keeps every category name
+     inside the bar at any phone width. Measured at 320, 360, 375, 390 and 430
+     on all seven back links. */
+  @media (max-width: 700px){
+    .topbar-left{ flex: 1 1 auto; min-width: 0; }
+    .topbar .back-link{
+      display: block; min-width: 0;
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+  }
   /* == sitesearch end == */
 
+  /* == support start == */
+
+  /* The support line under the footer's copyright row. */
+  .footer-support{
+    max-width: var(--max-width, 1265px);
+    margin: 12px auto 0;
+    padding: 10px 14px;
+    background: var(--accent, rgba(46,68,54,0.05));
+    border: 1px solid rgba(46,68,54,0.14);
+    border-radius: 8px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  .footer-support a{
+    color: var(--ink); font-weight: 700;
+    text-decoration: underline; text-underline-offset: 2px;
+    text-decoration-color: rgba(46,68,54,0.35);
+  }
+  .footer-support a:hover, .footer-support a:focus-visible{ text-decoration-color: var(--ink); }
+  @media (max-width: 700px){ .footer-support{ font-size: 12px; padding: 9px 12px; } }
+  /* == support end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://thepastoralguide.com/morning-registration-activities/#page","url":"https://thepastoralguide.com/morning-registration-activities/","name":"Form time activities: free five minute starters for KS3 to KS5","description":"Free form time activities for morning registration, five to ten minutes each, with slides and printables ready. Made by a secondary form tutor.","inLanguage":"en-GB","isPartOf":{"@id":"https://thepastoralguide.com/#website"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Morning Registration Activities","item":"https://thepastoralguide.com/morning-registration-activities/"}]}},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
@@ -959,6 +1006,9 @@
       <a href="../privacy/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.4-7 10-4-1.6-7-5.5-7-10V6z"/></svg><span>Privacy</span></a>
     </nav>
   </div>
+  <!-- support footer start -->
+  <p class="footer-support">These resources are free and will stay that way. If one of them saved you some planning time, <a href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support-footer">a small donation</a> helps keep the site going.</p>
+  <!-- support footer end -->
 </footer>
 
 </div>

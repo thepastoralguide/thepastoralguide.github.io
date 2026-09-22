@@ -752,12 +752,22 @@
 
   /* == support start == */
 
-  /* The support line under the footer's copyright row. */
+  /* The support line under the footer's copyright row.
+
+     Deliberately NEUTRAL on every page, not var(--accent): the footer is site
+     chrome and should read the same everywhere, whereas the panel up in the
+     downloads is part of the page and takes the resource's own colour. Olivia's
+     call, 22 Sep, after seeing it live.
+
+     The 28px is twice this box's own 14px padding, so the text inside it lines
+     up with the copyright line above rather than sitting indented from it. It
+     only bites on screens wide enough for the 1265px cap to apply; below that
+     the box already fills the footer and nothing moves. */
   .footer-support{
-    max-width: var(--max-width, 1265px);
+    max-width: calc(var(--max-width, 1265px) + 28px);
     margin: 12px auto 0;
     padding: 10px 14px;
-    background: var(--accent, rgba(46,68,54,0.05));
+    background: rgba(46,68,54,0.05);
     border: 1px solid rgba(46,68,54,0.14);
     border-radius: 8px;
     font-size: 12.5px;

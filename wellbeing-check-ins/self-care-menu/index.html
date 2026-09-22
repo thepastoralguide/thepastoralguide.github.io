@@ -1017,6 +1017,7 @@
 
   function score(rec, terms) {
     var title = rec.t.toLowerCase(), cat = rec.c.toLowerCase();
+    var val = (rec.v || '').toLowerCase();
     var rest = (rec.d + ' ' + rec.f).toLowerCase();
     var total = 0;
     for (var i = 0; i < terms.length; i++) {
@@ -1024,6 +1025,12 @@
       if (title.indexOf(q) === 0) s = 100;
       else if (title.indexOf(' ' + q) > -1) s = 70;
       else if (title.indexOf(q) > -1) s = 50;
+      /* the value word: the site's own note of what a resource builds in a
+         student. It is on every card and in no blurb, so search has to carry it
+         or "kindness" and "resilience" find nothing. Ranked above the category
+         and the description, because somebody typing a value means it. */
+      else if (val === q) s = 34;
+      else if (val.indexOf(q) > -1) s = 30;
       else if (cat.indexOf(q) > -1) s = 26;
       else if (rest.indexOf(' ' + q) > -1) s = 14;
       else if (rest.indexOf(q) > -1) s = 8;

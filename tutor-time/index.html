@@ -276,6 +276,16 @@
       #ebc4b6 5px, #ebc4b6 10px);
   }
 
+  .folder-note--claret{ background: #f8eef0; }
+  .folder-note--claret .folder-note-title{ color: #78303c; }
+  .folder-note--claret .folder-note-hint, .folder-note--claret .folder-note-meta, .folder-note--claret .folder-note-years{ color: #8c4250; }
+  .folder-note--claret .folder-note-tape{
+    background-color: #b0707c;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #ddbcc3 5px, #ddbcc3 10px);
+  }
+
   .folder-note--steel{ background: #edf3f7; }
   .folder-note--steel .folder-note-title{ color: #2f5470; }
   .folder-note--steel .folder-note-hint, .folder-note--steel .folder-note-meta, .folder-note--steel .folder-note-years{ color: #3b657f; }
@@ -690,6 +700,16 @@
     .topbar .back-link{ padding-left: 11px; }
     .topbar-actions{ gap: 8px; }
   }
+  /* 22 Sep, second pass. The gap tightening above buys 20px, and between 701px
+     and about 755px the bar is 54px over, so the mailto button still ran off the
+     right of every inner page. Below 760px it takes the same circular form it
+     already takes below 701px: the icon stays, the label goes, and the aria-label
+     carries the meaning. Measured at 701, 710, 720, 730 and 760. */
+  @media (max-width: 759px) and (min-width: 701px){
+    .btn--ghost span{ display: none; }
+    .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn--ghost svg{ width: 17px; height: 17px; }
+  }
   /* == sitesearch end == */
 
 </style>
@@ -808,6 +828,14 @@
         <span class="folder-note-years">Year 10 to 13</span>
         <span class="folder-note-meta"><span>One week at a time</span><span>one sheet per student</span><span>persistence</span></span>
         <span class="folder-note-hint">Open the printable &rarr;</span>
+      </a>
+
+      <a class="folder-note folder-note--claret" href="the-personal-statement/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">The Personal Statement</span>
+        <span class="folder-note-years">Year 12 and 13</span>
+        <span class="folder-note-meta"><span>Five tutor times</span><span>five sheets per student</span><span>ambition</span></span>
+        <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
     </div>
   </div>

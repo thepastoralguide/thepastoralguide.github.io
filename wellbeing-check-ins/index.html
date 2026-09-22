@@ -305,6 +305,17 @@
       transparent 0, transparent 5px,
       #a6b7c3 5px, #a6b7c3 10px);
   }
+  .folder-note--slate{
+    background: #eceef5;
+  }
+  .folder-note--slate .folder-note-title{ color: #45506f; }
+  .folder-note--slate .folder-note-hint, .folder-note--slate .folder-note-meta, .folder-note--slate .folder-note-years{ color: #45506f; }
+  .folder-note--slate .folder-note-tape{
+    background-color: #6a7699;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #a9b2c7 5px, #a9b2c7 10px);
+  }
   .folder-note--plum{
     background: #f3e9ef;
   }
@@ -650,6 +661,16 @@
     .topbar .back-link{ padding-left: 11px; }
     .topbar-actions{ gap: 8px; }
   }
+  /* 22 Sep, second pass. The gap tightening above buys 20px, and between 701px
+     and about 755px the bar is 54px over, so the mailto button still ran off the
+     right of every inner page. Below 760px it takes the same circular form it
+     already takes below 701px: the icon stays, the label goes, and the aria-label
+     carries the meaning. Measured at 701, 710, 720, 730 and 760. */
+  @media (max-width: 759px) and (min-width: 701px){
+    .btn--ghost span{ display: none; }
+    .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn--ghost svg{ width: 17px; height: 17px; }
+  }
   /* == sitesearch end == */
 
 </style>
@@ -747,6 +768,13 @@
         <span class="folder-note-years">Year 7 to 13</span>
         <span class="folder-note-meta"><span>Ten minutes, one to one</span><span>one sheet per conversation</span><span>accountability</span></span>
         <span class="folder-note-hint">Open the printable &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--alt folder-note--slate" href="the-quiet-word/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">The Quiet Word</span>
+        <span class="folder-note-years">Year 7 to 13</span>
+        <span class="folder-note-meta"><span>Five minutes, one to one</span><span>print once for the year</span><span>listening</span></span>
+        <span class="folder-note-hint">Open the guide &rarr;</span>
       </a>
 
     </div>

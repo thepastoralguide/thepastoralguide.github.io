@@ -462,6 +462,16 @@
     .topbar .back-link{ padding-left: 11px; }
     .topbar-actions{ gap: 8px; }
   }
+  /* 22 Sep, second pass. The gap tightening above buys 20px, and between 701px
+     and about 755px the bar is 54px over, so the mailto button still ran off the
+     right of every inner page. Below 760px it takes the same circular form it
+     already takes below 701px: the icon stays, the label goes, and the aria-label
+     carries the meaning. Measured at 701, 710, 720, 730 and 760. */
+  @media (max-width: 759px) and (min-width: 701px){
+    .btn--ghost span{ display: none; }
+    .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn--ghost svg{ width: 17px; height: 17px; }
+  }
   /* == sitesearch end == */
 
 
@@ -485,6 +495,16 @@
   .ks-when a{ color:var(--ink); font-weight:600; text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(46,68,54,0.3); }
   .ks-when a:hover{ text-decoration-color:var(--ink); }
   .ks-when-dot{ color:var(--ink-faint); }
+  /* 22 Sep. On a phone the six dated links wrapped into a four line run of
+     underlined text with middots in it, and names broke across lines
+     ("World Mental Health / Day, October"). Below 560px each one gets its own
+     line and a real tap target instead. */
+  @media (max-width: 560px){
+    .ks-when{ text-align:left; line-height:1.4; margin:2px auto 16px; max-width:320px; }
+    .ks-when-lead{ display:block; text-align:left; margin:0 0 6px; }
+    .ks-when a{ display:block; padding:7px 0; text-decoration-color:rgba(46,68,54,0.22); }
+    .ks-when-dot{ display:none; }
+  }
   .ks-start h2{ font-size:28px; }
   .ks-rest h2{ font-size:22px; }
   .ks-rest .ks-chips{ margin-top:4px; }
@@ -545,7 +565,7 @@
   <span class="eyebrow">Browse by age</span>
   <h1 class="page-title">Year 10 and 11</h1>
   <p class="page-sub">Form time and tutor time resources for Year 10 and 11: the activities that scale with an older room, the lessons on budgeting, procrastination, banter and mental health, and the check-in tools. The note under each one says where it lands best.</p>
-  <span class="page-facts">Key Stage 4 &middot; Year 10 and 11 &middot; 41 resources &middot; all free</span>
+  <span class="page-facts">Key Stage 4 &middot; Year 10 and 11 &middot; 43 resources &middot; all free</span>
 </header>
 
 <main>
@@ -613,6 +633,7 @@
     <div class="ks-paper"><span class="ks-tape ks-tape--l" style="--t:#ecd28c;--s:#c2984a"></span><span class="ks-tape ks-tape--r" style="--t:#ecd28c;--s:#c2984a"></span>
       <div class="ks-flat">
         <a class="ks-fnote" style="--n-bg:#f7ebc4;--n-ink:#6b4f1f;--n-tape:#c2984a;--n-stripe:#e0c073" href="../pastoral-projects/screen-time/"><span class="ks-fnote-title">How Does Screen Time Affect...?</span><span class="ks-fnote-why">Three sessions across a term on what screen time does to sleep and concentration, and a weekly tracker of the whole form. Year 10 and 11 have the phones and the late nights it is about.</span><span class="ks-fnote-hint">Open the project &rarr;</span></a>
+        <a class="ks-fnote" style="--n-bg:#eaf3f6;--n-ink:#1c5a6b;--n-tape:#5f93a3;--n-stripe:#bcd6de" href="../pastoral-projects/the-first-half-term/"><span class="ks-fnote-title">The First Half Term</span><span class="ks-fnote-why">Seven weeks with a Year 10 form: a reset rather than a start, attendance looked at in September rather than February, and a Monday that has a shape. Four pages, and its own pack for Year 10 and 11.</span><span class="ks-fnote-hint">Open the plan &rarr;</span></a>
       </div>
       <p class="ks-chips"><span class="ks-chips-lead">Also works at this age</span><a class="ks-chip" style="--n-bg:#d9e9d6;--n-ink:#5e8b6e;--n-tape:#9ab894;--n-stripe:#d0e4ca" href="../pastoral-projects/the-planting-project/">The Planting Project</a><a class="ks-chip" style="--n-bg:#f9f0e6;--n-ink:#682412;--n-tape:#a3532a;--n-stripe:#d89464" href="../pastoral-projects/values-in-action/">Values in Action</a></p>
     </div>
@@ -628,6 +649,7 @@
         <a class="ks-fnote" style="--n-bg:#e9eef3;--n-ink:#4c6e86;--n-tape:#6c8ca3;--n-stripe:#a6b7c3" href="../wellbeing-check-ins/check-in-record-sheet/"><span class="ks-fnote-title">Check-In Record Sheet</span><span class="ks-fnote-why">Every student across six half terms, amber for anyone unseen. Year 11 is the year the quiet ones get missed.</span><span class="ks-fnote-hint">Open the tracker &rarr;</span></a>
         <a class="ks-fnote" style="--n-bg:#edf3f4;--n-ink:#355a5f;--n-tape:#5f8a90;--n-stripe:#bfd3d6" href="../wellbeing-check-ins/before-you-go-in/"><span class="ks-fnote-title">Before You Go In</span><span class="ks-fnote-why">Cards for the ten minutes before an exam, to yourself and to a friend, and a slip for the friend who is more than nervous.</span><span class="ks-fnote-hint">Open the printable &rarr;</span></a>
         <a class="ks-fnote" style="--n-bg:#f2f6f2;--n-ink:#2a5d28;--n-tape:#4a8747;--n-stripe:#afc5ae" href="../wellbeing-check-ins/the-repair-sheet/"><span class="ks-fnote-title">The Repair Sheet</span><span class="ks-fnote-why">A sheet filled in with you after something has gone wrong: what happened, what they were thinking, who it landed on and what they will say. Ten minutes. By Year 10 it is usually about somebody rather than a rule.</span><span class="ks-fnote-hint">Open the printable &rarr;</span></a>
+        <a class="ks-fnote" style="--n-bg:#eceef5;--n-ink:#45506f;--n-tape:#6a7699;--n-stripe:#a9b2c7" href="../wellbeing-check-ins/the-quiet-word/"><span class="ks-fnote-title">The Quiet Word</span><span class="ks-fnote-why">The five minutes of a one to one, written for you rather than the student: how to open it, what you must not promise, and the point at which it stops being yours. Five pages, printed once. By Year 10 what a student tells you is likelier to be the thing that has to be passed on.</span><span class="ks-fnote-hint">Open the guide &rarr;</span></a>
       </div>
       <p class="ks-chips"><span class="ks-chips-lead">Also works at this age</span><a class="ks-chip" style="--n-bg:#f7ebc4;--n-ink:#6b4f1f;--n-tape:#c2984a;--n-stripe:#e0c073" href="../wellbeing-check-ins/mood-scale/">Mood Scale</a></p>
     </div>
@@ -659,8 +681,8 @@
   <section class="ks-others">
     <h2>The other ages</h2>
     <div class="more-grid more-grid--two">
-      <a class="more-card" href="../key-stage-3/"><span class="more-title">Year 7 to 9</span><span class="ks-why">Key Stage 3 &middot; 40 resources</span><span class="more-hint">Browse Year 7 to 9 &rarr;</span></a>
-      <a class="more-card" href="../sixth-form/"><span class="more-title">Sixth form</span><span class="ks-why">Key Stage 5 &middot; 27 resources</span><span class="more-hint">Browse Sixth form &rarr;</span></a>
+      <a class="more-card" href="../key-stage-3/"><span class="more-title">Year 7 to 9</span><span class="ks-why">Key Stage 3 &middot; 42 resources</span><span class="more-hint">Browse Year 7 to 9 &rarr;</span></a>
+      <a class="more-card" href="../sixth-form/"><span class="more-title">Sixth form</span><span class="ks-why">Key Stage 5 &middot; 30 resources</span><span class="more-hint">Browse Sixth form &rarr;</span></a>
     </div>
   </section>
 

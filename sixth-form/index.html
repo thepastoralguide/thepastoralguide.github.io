@@ -462,6 +462,16 @@
     .topbar .back-link{ padding-left: 11px; }
     .topbar-actions{ gap: 8px; }
   }
+  /* 22 Sep, second pass. The gap tightening above buys 20px, and between 701px
+     and about 755px the bar is 54px over, so the mailto button still ran off the
+     right of every inner page. Below 760px it takes the same circular form it
+     already takes below 701px: the icon stays, the label goes, and the aria-label
+     carries the meaning. Measured at 701, 710, 720, 730 and 760. */
+  @media (max-width: 759px) and (min-width: 701px){
+    .btn--ghost span{ display: none; }
+    .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn--ghost svg{ width: 17px; height: 17px; }
+  }
   /* == sitesearch end == */
 
 
@@ -485,6 +495,16 @@
   .ks-when a{ color:var(--ink); font-weight:600; text-decoration:underline; text-underline-offset:3px; text-decoration-color:rgba(46,68,54,0.3); }
   .ks-when a:hover{ text-decoration-color:var(--ink); }
   .ks-when-dot{ color:var(--ink-faint); }
+  /* 22 Sep. On a phone the six dated links wrapped into a four line run of
+     underlined text with middots in it, and names broke across lines
+     ("World Mental Health / Day, October"). Below 560px each one gets its own
+     line and a real tap target instead. */
+  @media (max-width: 560px){
+    .ks-when{ text-align:left; line-height:1.4; margin:2px auto 16px; max-width:320px; }
+    .ks-when-lead{ display:block; text-align:left; margin:0 0 6px; }
+    .ks-when a{ display:block; padding:7px 0; text-decoration-color:rgba(46,68,54,0.22); }
+    .ks-when-dot{ display:none; }
+  }
   .ks-start h2{ font-size:28px; }
   .ks-rest h2{ font-size:22px; }
   .ks-rest .ks-chips{ margin-top:4px; }
@@ -545,7 +565,7 @@
   <span class="eyebrow">Browse by age</span>
   <h1 class="page-title">Sixth form</h1>
   <p class="page-sub">Tutor time resources for Year 12 and 13: discussion activities with their own sixth form sets, lessons on money, motivation and mental health, and check-in tools. Laid out by the year rather than by category, from September to the last term.</p>
-  <span class="page-facts">Key Stage 5 &middot; Year 12 and 13 &middot; 27 resources &middot; all free</span>
+  <span class="page-facts">Key Stage 5 &middot; Year 12 and 13 &middot; 30 resources &middot; all free</span>
 </header>
 
 <main>
@@ -578,10 +598,13 @@
     <p class="ks-catline">A form that has arrived from different schools, or a Year 13 back after the summer.</p>
     <div class="ks-paper"><span class="ks-tape ks-tape--l" style="--t:#c9dfc5;--s:#6f9a66"></span><span class="ks-tape ks-tape--r" style="--t:#c9dfc5;--s:#6f9a66"></span>
       <div class="ks-flat">
+        <a class="ks-fnote" style="--n-bg:#eaf3f6;--n-ink:#1c5a6b;--n-tape:#5f93a3;--n-stripe:#bcd6de" href="../pastoral-projects/the-first-half-term/"><span class="ks-fnote-title">The First Half Term</span><span class="ks-fnote-why">Seven weeks with a Year 12 form, in order, built out of five and ten minute pieces. Week two is the free period, which is the new problem nobody warns them about.</span><span class="ks-fnote-hint">Open the plan &rarr;</span></a>
         <a class="ks-fnote" style="--n-bg:#f1e3e5;--n-ink:#5c2e36;--n-tape:#9e6169;--n-stripe:#dfc3c7" href="../morning-registration-activities/two-minute-interview/"><span class="ks-fnote-title">The Two-Minute Interview</span><span class="ks-fnote-why">Students pair up, ask each other one question from a card and listen for a full minute before swapping. Five minutes, one sheet of cards.</span><span class="ks-fnote-hint">Open the activity &rarr;</span></a>
         <a class="ks-fnote" style="--n-bg:#e9eef3;--n-ink:#4c6e86;--n-tape:#6c8ca3;--n-stripe:#a6b7c3" href="../wellbeing-check-ins/check-in-record-sheet/"><span class="ks-fnote-title">Check-In Record Sheet</span><span class="ks-fnote-why">Every student across six half terms, amber for anyone unseen. Sixth form tutor time is short, so the sheet does the remembering.</span><span class="ks-fnote-hint">Open the tracker &rarr;</span></a>
+        <a class="ks-fnote" style="--n-bg:#eceef5;--n-ink:#45506f;--n-tape:#6a7699;--n-stripe:#a9b2c7" href="../wellbeing-check-ins/the-quiet-word/"><span class="ks-fnote-title">The Quiet Word</span><span class="ks-fnote-why">The five minutes of a one to one check-in, written for the tutor: how to open it, what you must not promise, and when it stops being yours. Five pages, printed once.</span><span class="ks-fnote-hint">Open the guide &rarr;</span></a>
         <a class="ks-fnote" style="--n-bg:#e6eff9;--n-ink:#2f6fb5;--n-tape:#3d78ba;--n-stripe:#c4d9ee" href="../morning-registration-activities/today-i-will/"><span class="ks-fnote-title">Today I Will</span><span class="ks-fnote-why">Every student names one thing they will do by home time, and you ask about it the next morning. Four minutes, nothing to print.</span><span class="ks-fnote-hint">Open the activity &rarr;</span></a>
         <a class="ks-fnote" style="--n-bg:#eef4ea;--n-ink:#4a7331;--n-tape:#7ba060;--n-stripe:#c8dbbb" href="../morning-registration-activities/open-evening-questions/"><span class="ks-fnote-title">Questions for Open Evenings and Open Days</span><span class="ks-fnote-why">Five mornings of questions for a university open day, and a sheet that goes in the bag. Open days run from June to October.</span><span class="ks-fnote-hint">Open the activity &rarr;</span></a>
+        <a class="ks-fnote" style="--n-bg:#f8eef0;--n-ink:#78303c;--n-tape:#b0707c;--n-stripe:#ddbcc3" href="../tutor-time/the-personal-statement/"><span class="ks-fnote-title">The Personal Statement</span><span class="ks-fnote-why">Five tutor times that get a first draft of all three UCAS personal statement answers out of every student. Applications can be sent from 1 September and the first equal consideration date is 15 October.</span><span class="ks-fnote-hint">Open the resource &rarr;</span></a>
       </div>
     </div>
   </section>
@@ -641,8 +664,8 @@
   <section class="ks-others">
     <h2>The other ages</h2>
     <div class="more-grid more-grid--two">
-      <a class="more-card" href="../key-stage-3/"><span class="more-title">Year 7 to 9</span><span class="ks-why">Key Stage 3 &middot; 40 resources</span><span class="more-hint">Browse Year 7 to 9 &rarr;</span></a>
-      <a class="more-card" href="../key-stage-4/"><span class="more-title">Year 10 and 11</span><span class="ks-why">Key Stage 4 &middot; 41 resources</span><span class="more-hint">Browse Year 10 and 11 &rarr;</span></a>
+      <a class="more-card" href="../key-stage-3/"><span class="more-title">Year 7 to 9</span><span class="ks-why">Key Stage 3 &middot; 42 resources</span><span class="more-hint">Browse Year 7 to 9 &rarr;</span></a>
+      <a class="more-card" href="../key-stage-4/"><span class="more-title">Year 10 and 11</span><span class="ks-why">Key Stage 4 &middot; 43 resources</span><span class="more-hint">Browse Year 10 and 11 &rarr;</span></a>
     </div>
   </section>
 

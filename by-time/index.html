@@ -382,41 +382,6 @@
     .footer-inner{ gap: 12px; }
   }
 
-  /* ---------- KEY STAGE PAGES ---------- */
-  section > h2, .ks-catline, .ks-also{ max-width: none; }
-  section > h2 a{ text-decoration: none; color: inherit; }
-  section > h2 a:hover{ text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--ink-faint); }
-  .ks-catline{ font-size: 14px; color: var(--ink-soft); margin: -6px auto 14px; }
-  .more-grid{ margin: 0 auto; }
-  .ks-why{ font-size: 13.5px; line-height: 1.4; color: var(--ink-soft); }
-  .ks-also{ margin: 12px 0 0; font-size: 13.5px; color: var(--ink-soft); }
-  .ks-also b{ font-weight: 700; color: var(--ink); }
-  .ks-also a{ color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--ink-faint); }
-  .ks-also a:hover{ text-decoration-color: var(--ink); }
-  .more-grid--two{ grid-template-columns: repeat(2, 1fr); }
-  .ks-others{ margin-top: clamp(44px, 7vh, 72px); }
-  @media (max-width: 720px){ .more-grid--two{ grid-template-columns: 1fr; } }
-
-  .ks-jump{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:-6px auto 6px; max-width:900px; }
-  .ks-jump a{ font-size:13px; font-weight:600; text-decoration:none; color:var(--ink); background:#fffdf8; border:1.5px solid rgba(46,68,54,0.28); padding:6px 14px; border-radius:18px; transition:transform .15s, box-shadow .15s; }
-  .ks-jump a:hover, .ks-jump a:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 14px -10px rgba(46,68,54,0.5); }
-  .ks-paper{ position:relative; background:#fffdf7; background-image:radial-gradient(circle at 1px 1px, rgba(46,68,54,0.07) 1px, transparent 0); background-size:16px 16px; border-radius:10px; box-shadow:0 20px 40px -18px rgba(46,68,54,0.28), 0 2px 0 rgba(46,68,54,0.05); padding:26px 28px 18px; }
-  .ks-tape{ position:absolute; top:-12px; width:80px; height:24px; background-color:var(--t); background-image:repeating-linear-gradient(45deg, transparent 0, transparent 6px, rgba(255,255,255,.45) 6px, rgba(255,255,255,.45) 12px); opacity:.9; box-shadow:0 2px 4px rgba(0,0,0,.12); }
-  .ks-tape--l{ left:40px; transform:rotate(-5deg);} .ks-tape--r{ right:48px; transform:rotate(4deg);}
-  .tl-list{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; column-gap:40px; }
-  .tl-list li{ border-bottom:1px solid rgba(46,68,54,0.12); }
-  .tl-list li:last-child{ border-bottom:0; }
-  @media (min-width:721px){ .tl-list li:nth-last-child(2):nth-child(odd){ border-bottom:0; } }
-  .tl-row{ display:grid; grid-template-columns:1fr auto; grid-template-rows:auto auto; column-gap:14px; align-items:center; padding:13px 4px 12px; text-decoration:none; color:var(--ink); border-radius:6px; transition:background .15s; }
-  .tl-row:hover, .tl-row:focus-visible{ background:rgba(46,68,54,0.045); }
-  .tl-title{ font-family:'Libre Caslon Display', Georgia, serif; font-size:18px; line-height:1.2; }
-  .tl-why{ grid-column:1; font-size:13.5px; line-height:1.4; color:var(--ink-soft); margin-top:3px; }
-  .tl-arrow{ grid-column:2; grid-row:1 / span 2; color:var(--ink-faint); font-size:16px; transition:transform .15s, color .15s; }
-  .tl-row:hover .tl-arrow{ transform:translateX(3px); color:var(--ink); }
-  .ks-moments-head{ margin-top: clamp(48px, 8vh, 80px); }
-  .ks-moments-head h2{ font-size: 28px; }
-  @media (max-width:720px){ .tl-list{ grid-template-columns:1fr; } .ks-paper{ padding:22px 14px 14px; } .tl-title{ font-size:17px; } }
-
   /* == sitesearch start == */
   /* Header search, on every page. NN/g: the box belongs at the top of the page
      and on every page, because it is the way out when somebody is stuck. It is a
@@ -497,8 +462,53 @@
     .topbar .back-link{ padding-left: 11px; }
     .topbar-actions{ gap: 8px; }
   }
+  /* 22 Sep, second pass. The gap tightening above buys 20px, and between 701px
+     and about 755px the bar is 54px over, so the mailto button still ran off the
+     right of every inner page. Below 760px it takes the same circular form it
+     already takes below 701px: the icon stays, the label goes, and the aria-label
+     carries the meaning. Measured at 701, 710, 720, 730 and 760. */
+  @media (max-width: 759px) and (min-width: 701px){
+    .btn--ghost span{ display: none; }
+    .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn--ghost svg{ width: 17px; height: 17px; }
+  }
   /* == sitesearch end == */
 
+
+  /* ---------- KEY STAGE PAGES ---------- */
+  section > h2, .ks-catline, .ks-also{ max-width: none; }
+  section > h2 a{ text-decoration: none; color: inherit; }
+  section > h2 a:hover{ text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--ink-faint); }
+  .ks-catline{ font-size: 14px; color: var(--ink-soft); margin: -6px auto 14px; }
+  .more-grid{ margin: 0 auto; }
+  .ks-why{ font-size: 13.5px; line-height: 1.4; color: var(--ink-soft); }
+  .ks-also{ margin: 12px 0 0; font-size: 13.5px; color: var(--ink-soft); }
+  .ks-also b{ font-weight: 700; color: var(--ink); }
+  .ks-also a{ color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--ink-faint); }
+  .ks-also a:hover{ text-decoration-color: var(--ink); }
+  .more-grid--two{ grid-template-columns: repeat(2, 1fr); }
+  .ks-others{ margin-top: clamp(44px, 7vh, 72px); }
+  @media (max-width: 720px){ .more-grid--two{ grid-template-columns: 1fr; } }
+
+  .ks-jump{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:-6px auto 6px; max-width:900px; }
+  .ks-jump a{ font-size:13px; font-weight:600; text-decoration:none; color:var(--ink); background:#fffdf8; border:1.5px solid rgba(46,68,54,0.28); padding:6px 14px; border-radius:18px; transition:transform .15s, box-shadow .15s; }
+  .ks-jump a:hover, .ks-jump a:focus-visible{ transform:translateY(-2px); box-shadow:0 8px 14px -10px rgba(46,68,54,0.5); }
+  .ks-paper{ position:relative; background:#fffdf7; background-image:radial-gradient(circle at 1px 1px, rgba(46,68,54,0.07) 1px, transparent 0); background-size:16px 16px; border-radius:10px; box-shadow:0 20px 40px -18px rgba(46,68,54,0.28), 0 2px 0 rgba(46,68,54,0.05); padding:26px 28px 18px; }
+  .ks-tape{ position:absolute; top:-12px; width:80px; height:24px; background-color:var(--t); background-image:repeating-linear-gradient(45deg, transparent 0, transparent 6px, rgba(255,255,255,.45) 6px, rgba(255,255,255,.45) 12px); opacity:.9; box-shadow:0 2px 4px rgba(0,0,0,.12); }
+  .ks-tape--l{ left:40px; transform:rotate(-5deg);} .ks-tape--r{ right:48px; transform:rotate(4deg);}
+  .tl-list{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; column-gap:40px; }
+  .tl-list li{ border-bottom:1px solid rgba(46,68,54,0.12); }
+  .tl-list li:last-child{ border-bottom:0; }
+  @media (min-width:721px){ .tl-list li:nth-last-child(2):nth-child(odd){ border-bottom:0; } }
+  .tl-row{ display:grid; grid-template-columns:1fr auto; grid-template-rows:auto auto; column-gap:14px; align-items:center; padding:13px 4px 12px; text-decoration:none; color:var(--ink); border-radius:6px; transition:background .15s; }
+  .tl-row:hover, .tl-row:focus-visible{ background:rgba(46,68,54,0.045); }
+  .tl-title{ font-family:'Libre Caslon Display', Georgia, serif; font-size:18px; line-height:1.2; }
+  .tl-why{ grid-column:1; font-size:13.5px; line-height:1.4; color:var(--ink-soft); margin-top:3px; }
+  .tl-arrow{ grid-column:2; grid-row:1 / span 2; color:var(--ink-faint); font-size:16px; transition:transform .15s, color .15s; }
+  .tl-row:hover .tl-arrow{ transform:translateX(3px); color:var(--ink); }
+  .ks-moments-head{ margin-top: clamp(48px, 8vh, 80px); }
+  .ks-moments-head h2{ font-size: 28px; }
+  @media (max-width:720px){ .tl-list{ grid-template-columns:1fr; } .ks-paper{ padding:22px 14px 14px; } .tl-title{ font-size:17px; } }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Form time activities by time: five minutes, an hour, a term", "description": "Free form time and tutor time resources sorted by how long they take: five minute activities, one hour lessons, projects over a few weeks, and printables that need no slot at all.", "url": "https://thepastoralguide.com/by-time/", "inLanguage": "en-GB", "isPartOf": {"@type": "WebSite", "name": "The Pastoral Guide", "url": "https://thepastoralguide.com/"}, "about": {"@type": "EducationalAudience", "educationalRole": "teacher"}, "author": {"@type": "Person", "name": "Olivia"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Pastoral Guide", "item": "https://thepastoralguide.com/"}, {"@type": "ListItem", "position": 2, "name": "How long have you got?", "item": "https://thepastoralguide.com/by-time/"}]}</script>
@@ -573,7 +583,9 @@
         <li><a class="tl-row" href="../morning-registration-activities/open-evening-questions/"><span class="tl-title">Questions for Open Evenings and Open Days</span><span class="tl-why">Five minutes a morning for a week, before the open evenings or open days. A slide set each for Year 10 and 11 and for sixth form.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
         <li><a class="tl-row" href="../morning-registration-activities/the-last-five-mornings/"><span class="tl-title">The Last Five Mornings</span><span class="tl-why">Five minutes a morning for the last week, and a last morning to read them.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
         <li><a class="tl-row" href="../morning-registration-activities/by-half-term/"><span class="tl-title">By Half Term</span><span class="tl-why">Five minutes in the first week of a half term, and five in the last one.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
+        <li><a class="tl-row" href="../pastoral-projects/the-first-half-term/"><span class="tl-title">The First Half Term</span><span class="tl-why">Five minutes a morning for seven weeks, and one trip to the photocopier before term.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
         <li><a class="tl-row" href="../tutor-time/the-week-sheet/"><span class="tl-title">The Week Sheet</span><span class="tl-why">Five minutes on a Monday to plan the week, and a minute on the next one to see what moved.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
+        <li><a class="tl-row" href="../tutor-time/the-personal-statement/"><span class="tl-title">The Personal Statement</span><span class="tl-why">Fifteen minutes a week for five weeks, in the autumn term of Year 13.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
       </ul>
     </div>
   </section>
@@ -625,6 +637,7 @@
         <li><a class="tl-row" href="../displays-and-recognition/display-board-pack/"><span class="tl-title">Display Board Pack</span><span class="tl-why">An afternoon to set up, and the form fills it after that.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
         <li><a class="tl-row" href="../wellbeing-check-ins/before-you-go-in/"><span class="tl-title">Before You Go In</span><span class="tl-why">Fifteen minutes once, then the cards live in a pocket until the corridor.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
         <li><a class="tl-row" href="../wellbeing-check-ins/the-repair-sheet/"><span class="tl-title">The Repair Sheet</span><span class="tl-why">Ten minutes one to one, whenever something has gone wrong.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
+        <li><a class="tl-row" href="../wellbeing-check-ins/the-quiet-word/"><span class="tl-title">The Quiet Word</span><span class="tl-why">Read once before you need it, then it lives in a drawer and on your lanyard.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
         <li><a class="tl-row" href="../displays-and-recognition/noticed-this-week/"><span class="tl-title">Noticed This Week</span><span class="tl-why">Print it once, then two minutes on a Friday for the rest of the year.</span><span class="tl-arrow" aria-hidden="true">&rarr;</span></a></li>
       </ul>
     </div>

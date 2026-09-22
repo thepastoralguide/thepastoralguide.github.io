@@ -737,7 +737,12 @@
   /* Two strips of tape over the top corners, the same device the scrapbook pages use. */
   .noticeboard::before, .noticeboard::after{
     content: ""; position: absolute; top: -13px; width: 94px; height: 26px;
-    background: rgba(214,196,158,0.5);
+    /* 22 Sep: it was flat beige, and read as two grey blocks rather than tape.
+       Every folder note on the site uses this 45 degree stripe, so use it here. */
+    background-color: rgba(214,196,158,0.55);
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      rgba(255,253,247,0.55) 5px, rgba(255,253,247,0.55) 10px);
     border-left: 1px dashed rgba(46,68,54,0.1);
     border-right: 1px dashed rgba(46,68,54,0.1);
   }
@@ -913,6 +918,16 @@
     .topbar .back-link{ padding-left: 11px; }
     .topbar-actions{ gap: 8px; }
   }
+  /* 22 Sep, second pass. The gap tightening above buys 20px, and between 701px
+     and about 755px the bar is 54px over, so the mailto button still ran off the
+     right of every inner page. Below 760px it takes the same circular form it
+     already takes below 701px: the icon stays, the label goes, and the aria-label
+     carries the meaning. Measured at 701, 710, 720, 730 and 760. */
+  @media (max-width: 759px) and (min-width: 701px){
+    .btn--ghost span{ display: none; }
+    .btn--ghost{ width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
+    .btn--ghost svg{ width: 17px; height: 17px; }
+  }
   /* == sitesearch end == */
 
   /* == hero balance start == */
@@ -1022,7 +1037,7 @@
     </div>
     <ul class="facts">
       <li><b>6</b><span>categories on the shelf</span></li>
-      <li><b>40+</b><span>resources, and counting</span></li>
+      <li><b>44</b><span>resources, and counting</span></li>
       <li><b>Free</b><span>for any form tutor</span></li>
       <li><b>One teacher</b><span class="byline">Made by Olivia, a form tutor whose students are still watering their plants.</span></li>
     </ul>

@@ -306,6 +306,19 @@
       #bedad3 5px, #bedad3 10px);
   }
 
+  /* The Assembly Calendar carries its own royal blue. */
+  .folder-note--royal{
+    background: #eef0fa;
+  }
+  .folder-note--royal .folder-note-title{ color: #3447b2; }
+  .folder-note--royal .folder-note-hint, .folder-note--royal .folder-note-meta, .folder-note--royal .folder-note-years{ color: #3447b2; }
+  .folder-note--royal .folder-note-tape{
+    background-color: #6f7fcc;
+    background-image: repeating-linear-gradient(45deg,
+      transparent 0, transparent 5px,
+      #c2c8ea 5px, #c2c8ea 10px);
+  }
+
   .folder-note-years{ font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; margin-top: -2px; }
   .folder-note-tape{
     position: absolute;
@@ -738,21 +751,28 @@
     <div class="tape tape--left" aria-hidden="true"></div>
     <div class="tape tape--right" aria-hidden="true"></div>
     <div class="scrapbook-folders">
-      <a class="folder-note folder-note--pink" href="valentines-day-sweet-notes/">
+      <a class="folder-note folder-note--royal" href="assembly-calendar/">
+        <span class="folder-note-tape" aria-hidden="true"></span>
+        <span class="folder-note-title">The Assembly Calendar 2026 to 2027</span>
+        <span class="folder-note-years">Year 7 to 13</span>
+        <span class="folder-note-meta"><span>All year</span><span>three pages to print</span><span>community</span></span>
+        <span class="folder-note-hint">Open the resource &rarr;</span>
+      </a>
+      <a class="folder-note folder-note--alt folder-note--pink" href="valentines-day-sweet-notes/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Sweet Notes</span>
         <span class="folder-note-years">Year 7 to 13</span>
         <span class="folder-note-meta"><span>Valentine&rsquo;s Day</span><span>the student council runs it</span><span>kindness</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
-      <a class="folder-note folder-note--alt folder-note--heather" href="anti-bullying-week/">
+      <a class="folder-note folder-note--heather" href="anti-bullying-week/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">Anti-Bullying Week</span>
         <span class="folder-note-years">Year 7 to 11</span>
         <span class="folder-note-meta"><span>A whole week</span><span>a few things to buy and print</span><span>kindness</span></span>
         <span class="folder-note-hint">Open the resource &rarr;</span>
       </a>
-      <a class="folder-note folder-note--sea" href="world-mental-health-day/">
+      <a class="folder-note folder-note--alt folder-note--sea" href="world-mental-health-day/">
         <span class="folder-note-tape" aria-hidden="true"></span>
         <span class="folder-note-title">World Mental Health Day</span>
         <span class="folder-note-years">Year 7 to 13</span>

@@ -732,29 +732,22 @@
     border: 1px solid rgba(46,68,54,0.12);
     border-radius: 9px;
     box-shadow: 0 20px 40px -26px rgba(46,68,54,0.6);
-    padding: 4px 22px;
+    padding: 2px 20px;
   }
-  /* Two strips of tape over the top corners, the same device the scrapbook pages use. */
-  .noticeboard::before, .noticeboard::after{
-    content: ""; position: absolute; top: -13px; width: 94px; height: 26px;
-    /* 22 Sep: it was flat beige, and read as two grey blocks rather than tape.
-       Every folder note on the site uses this 45 degree stripe, so use it here. */
-    background-color: rgba(214,196,158,0.55);
-    background-image: repeating-linear-gradient(45deg,
-      transparent 0, transparent 5px,
-      rgba(255,253,247,0.55) 5px, rgba(255,253,247,0.55) 10px);
-    border-left: 1px dashed rgba(46,68,54,0.1);
-    border-right: 1px dashed rgba(46,68,54,0.1);
+  /* Olivia, 24 Sep: the two strips of tape over the top corners are gone from the
+     homepage; on a smaller laptop screen they made the top of the page feel cramped. */
+  /* Also 24 Sep: the board is a little smaller (tighter notes, slightly narrower), and the
+     height it saved goes back as space above and below it, so the shelf does not move. */
+  @media (min-width: 901px){
+    .noticeboard{ max-width: 515px; width: 100%; justify-self: end; margin: 14px 0; }
   }
-  .noticeboard::before{ left: 32px; transform: rotate(-1.4deg); }
-  .noticeboard::after{ right: 32px; transform: rotate(1.2deg); }
 
   .note{
     display: grid;
     grid-template-columns: 4px minmax(0, 1fr) 18px;
     column-gap: 15px;
     margin: 0 -12px;
-    padding: 14px 12px;
+    padding: 11px 12px;
     border-radius: 7px;
     border-top: 1px solid rgba(46,68,54,0.1);
     text-decoration: none;
@@ -774,9 +767,9 @@
   .note-title{
     grid-column: 2; grid-row: 2;
     font-family: 'Libre Caslon Display', Georgia, serif;
-    font-size: 21px; line-height: 1.15; margin-top: 3px;
+    font-size: 19.5px; line-height: 1.15; margin-top: 2px;
   }
-  .note-line{ grid-column: 2; grid-row: 3; font-size: 13.5px; line-height: 1.45; color: var(--ink-soft); margin-top: 4px; }
+  .note-line{ grid-column: 2; grid-row: 3; font-size: 13px; line-height: 1.4; color: var(--ink-soft); margin-top: 3px; }
   .note-arrow{ grid-column: 3; grid-row: 1 / 4; align-self: center; color: var(--ink-faint); font-size: 17px; transition: transform .18s ease, color .18s ease; }
   .note:hover, .note:focus-visible{ background: rgba(111,154,102,0.08); }
   .note:hover .note-arrow, .note:focus-visible .note-arrow{ transform: translateX(3px); color: var(--ink); }
@@ -796,7 +789,6 @@
     .note{ margin: 0 -9px; padding: 12px 9px; }
     .note-title{ font-size: 19px; }
     .note-line{ font-size: 12.5px; }
-    .noticeboard::before, .noticeboard::after{ width: 70px; }
   }
   /* == noticeboard end == */
 
@@ -822,10 +814,10 @@
     .tagline{ font-size: 17px; }
     .sub{ font-size: 15px; max-width: 720px; }
     .cta{ padding: 11px 22px; font-size: 15px; margin-top: 2px; }
-    .noticeboard{ padding: 2px 20px; }
-    .note{ padding: 9px 12px; }
-    .note-title{ font-size: 19.5px; margin-top: 2px; }
-    .note-line{ font-size: 12.8px; margin-top: 3px; }
+    .noticeboard{ padding: 1px 18px; }
+    .note{ padding: 7px 12px; }
+    .note-title{ font-size: 18px; margin-top: 1px; }
+    .note-line{ font-size: 12.4px; margin-top: 2px; }
     .hero-top{ align-items: center; }
     .facts{ margin-top: 6px; padding-top: 6px; }
     .facts b{ font-size: 24px; }

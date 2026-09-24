@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revision That Survives the Week: a revision planning lesson for tutor time</title>
-<meta name="description" content="A free one-hour tutor time lesson on revision planning for Year 10 to 13. Students plan a real week, the slides break it three times, and they repair it. Slides and a printable week sheet.">
+<title>Question the Headline: five critical thinking lessons for tutor time</title>
+<meta name="description" content="Five free one hour tutor time lessons on questioning what you read: a real claim, four rounds of evidence cards, and a front page to rewrite. KS3 to KS5.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/">
-<link rel="canonical" href="https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/">
-<meta property="og:image" content="https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/og.jpg">
+<meta property="og:url" content="https://thepastoralguide.com/tutor-time/question-the-headline/">
+<link rel="canonical" href="https://thepastoralguide.com/tutor-time/question-the-headline/">
+<meta property="og:image" content="https://thepastoralguide.com/tutor-time/question-the-headline/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Revision That Survives the Week: a revision planning lesson for tutor time">
+<meta property="og:image:alt" content="Question the Headline: five critical thinking lessons for tutor time">
 <meta property="og:site_name" content="The Pastoral Guide">
 <meta property="article:author" content="Olivia">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/og.jpg">
-<meta property="og:title" content="Revision That Survives the Week: a revision planning lesson for tutor time">
-<meta property="og:description" content="A free one-hour tutor time lesson on revision planning for Year 10 to 13. Students plan a real week, the slides break it three times, and they repair it. Slides and a printable week sheet.">
+<meta name="twitter:image" content="https://thepastoralguide.com/tutor-time/question-the-headline/og.jpg">
+<meta property="og:title" content="Question the Headline: five critical thinking lessons for tutor time">
+<meta property="og:description" content="Five free one hour tutor time lessons on questioning what you read: a real claim, four rounds of evidence cards, and a front page to rewrite. KS3 to KS5.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&amp;family=Karla:wght@400;500;600;700&amp;display=swap">
@@ -29,11 +29,11 @@
     --ink-soft: #5c6552;
     --ink-faint: #8b9179;
 
-    /* Revision That Survives the Week: navy. Chosen by scoring the colour space against every resource tone on the site and rendering onto its own folder. */
-    --accent: #eeeff7;
-    --accent-deep: #2e3570;
-    --accent-spine: #6a70b3;
-    --accent-light: #c9cce6;
+    /* Question the Headline's own colour: ink, chosen by rendering the folder. */
+    --accent: #efece5;
+    --accent-deep: #34322f;
+    --accent-spine: #857f74;
+    --accent-light: #d7d2c8;
 
     --card: #fffdf7;
     --max-width: 1265px;
@@ -131,9 +131,6 @@
     color: var(--accent-deep); margin: 0 0 16px; text-align: center;
   }
   .sample-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .sample-grid[data-cols="2"]{ grid-template-columns: repeat(2, 1fr); }
-  .sample-grid[data-cols="3"]{ grid-template-columns: repeat(3, 1fr); }
-  .sample-grid[data-cols="5"]{ grid-template-columns: repeat(5, 1fr); }
   .sample-item{ text-align: center; }
   .sample-item .n{
     display: inline-flex; align-items: center; justify-content: center;
@@ -199,8 +196,9 @@
   .download-cta svg{ width: 13px; height: 13px; }
 
   @media (max-width: 720px){
-    .sample-grid, .sample-grid[data-cols]{ grid-template-columns: repeat(2, 1fr); }
-    .downloads-grid{ grid-template-columns: 1fr; justify-content: stretch; }
+    .sample-grid{ grid-template-columns: repeat(2, 1fr); }
+    .downloads-grid{
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-template-columns: 1fr; justify-content: stretch; }
   }
 
   /* ---------- A LOOK INSIDE (preview images above the downloads) ---------- */
@@ -504,6 +502,13 @@
   }
   /* == sitesearch end == */
 
+
+  /* Question the Headline: page-local rules, 24 Sep 2026 */
+  .sample-grid--five{ grid-template-columns: repeat(5, 1fr); }
+  @media (max-width: 900px){ .sample-grid--five{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px){ .sample-grid--five{ grid-template-columns: 1fr; } }
+  /* six download cards read better as two rows of three than one row of six */
+  @media (min-width: 721px){ #downloads .downloads-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   /* == support start == */
 
   /* The support line under the footer's copyright row.
@@ -560,7 +565,7 @@
   /* The block is a fixed width; the cards divide it, however many there are. */
   .downloads-grid{ max-width: 920px; margin-left: auto; margin-right: auto; }
   @media (min-width: 721px){
-    .downloads-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: stretch; }
+    .downloads-grid{ grid-template-columns: repeat(6, minmax(0, 1fr)); justify-content: stretch; }
     .download-card--solo{ grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 450px; }
   }
   @media (max-width: 860px){
@@ -572,7 +577,7 @@
   /* == support end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "LearningResource", "@id": "https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/#resource", "url": "https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/", "name": "Revision That Survives the Week", "description": "Each student plans one real week of revision on a sheet. Then the slides break the plan three times, with a late night, a shift that moves and a friend who needs them, and they repair it each time. It takes an hour and one sheet per student. What they leave with is a plan built for the week they will actually have.", "inLanguage": "en-GB", "learningResourceType": "Lesson", "educationalLevel": ["Key Stage 4", "Key Stage 5"], "typicalAgeRange": "14-18", "audience": {"@type": "EducationalAudience", "educationalRole": "teacher"}, "isAccessibleForFree": true, "isFamilyFriendly": true, "image": "https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/og.jpg", "provider": {"@id": "https://thepastoralguide.com/#org"}, "author": {"@type": "Person", "name": "Olivia"}, "creativeWorkStatus": "Published", "timeRequired": "PT1H"}, {"@type": "BreadcrumbList", "@id": "https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/#crumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Pastoral Guide", "item": "https://thepastoralguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Tutor Time", "item": "https://thepastoralguide.com/tutor-time/"}, {"@type": "ListItem", "position": 3, "name": "Revision That Survives the Week", "item": "https://thepastoralguide.com/tutor-time/revision-that-survives-the-week/"}]}, {"@type": "Organization", "@id": "https://thepastoralguide.com/#org", "name": "The Pastoral Guide", "url": "https://thepastoralguide.com/", "logo": "https://thepastoralguide.com/logo.png", "email": "thepastoralguide@gmail.com", "sameAs": ["https://www.instagram.com/thepastoralguide/"], "founder": {"@type": "Person", "name": "Olivia"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/tutor-time/question-the-headline/#resource","url":"https://thepastoralguide.com/tutor-time/question-the-headline/","name":"Question the Headline","description":"Five lessons of 45 minutes to an hour on questioning what you read, each built around a claim that was once printed as true and later fell apart. Students stand on a line to show how much they believe it, then take the evidence in four rounds, logging each card on their own evidence sheet and working out what the numbers show. They finish by writing the front page the paper should have printed. Each lesson needs a set of evidence cards per group and two sheets per student, and the lessons run in any order.","inLanguage":"en-GB","learningResourceType":"Lesson plan","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"13-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/tutor-time/question-the-headline/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/tutor-time/question-the-headline/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Tutor Time","item":"https://thepastoralguide.com/tutor-time/"},{"@type":"ListItem","position":3,"name":"Question the Headline","item":"https://thepastoralguide.com/tutor-time/question-the-headline/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
 </head>
 <body>
 
@@ -607,9 +612,9 @@
 
 <header class="page-header wrap">
   <span class="eyebrow">Tutor Time</span>
-  <h1 class="page-title">Revision That Survives the Week</h1>
-  <p class="page-sub">Each student plans one real week of revision on a sheet. Then the slides break the plan three times, with a late night, a shift that moves and a friend who needs them, and they repair it each time. It takes an hour and one sheet per student. What they leave with is a plan built for the week they will actually have.</p>
-  <span class="page-facts"><a href="../../key-stage-4/">Year 10 to 13</a> &middot; tutor time or PSHE &middot; free to download</span>
+  <h1 class="page-title">Question the Headline</h1>
+  <p class="page-sub">Five lessons of 45 minutes to an hour on questioning what you read, each built around a claim that was once printed as true and later fell apart. Students stand on a line to show how much they believe it, then take the evidence in four rounds, logging each card on their own evidence sheet and working out what the numbers show. They finish by writing the front page the paper should have printed. Each lesson needs a set of evidence cards per group and two sheets per student, and the lessons run in any order.</p>
+  <span class="page-facts"><a href="../../key-stage-4/">Year 10 to 13</a>, and it works in Year 9 &middot; tutor time or PSHE &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the downloads
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
@@ -621,56 +626,93 @@
   <section>
     <h2>How it works</h2>
     <div class="sample-card">
-      <p class="sample-kicker">The three things that break the plan</p>
-      <div class="sample-grid" data-cols="3">
-        <div class="sample-item"><span class="n">1</span><h3>Tuesday, late</h3><p>You were up until one, and this morning you slept through the alarm.</p></div>
-        <div class="sample-item"><span class="n">2</span><h3>Thursday, four o’clock</h3><p>Somebody needs you from four until nine, and it is not up to you.</p></div>
-        <div class="sample-item"><span class="n">3</span><h3>Saturday, two o’clock</h3><p>A friend is not okay and asks if you can come over.</p></div>
+      <p class="sample-kicker">The five lessons in Volume One, and the claim each one tests</p>
+      <div class="sample-grid sample-grid--five">
+        <div class="sample-item"><span class="n">1</span><h3>Who Paid for the Science?</h3><p>Sugar is not a problem for your heart. Fat is.</p></div><div class="sample-item"><span class="n">2</span><h3>Complete Safety</h3><p>If a medicine is sold by a big company and prescribed by doctors, it must have been tested properly.</p></div><div class="sample-item"><span class="n">3</span><h3>Doctors&rsquo; Orders</h3><p>If doctors smoke them, cigarettes can&rsquo;t be that bad for you.</p></div><div class="sample-item"><span class="n">4</span><h3>No Real Evidence</h3><p>If nobody has proved something is harmful, it must be safe.</p></div><div class="sample-item"><span class="n">5</span><h3>It&rsquo;s All Vegetable</h3><p>A new food made in a factory by scientists is probably better for you than the old one.</p></div>
       </div>
     </div>
-    <p class="sample-caption">Each one goes up on the board, and each time the plan gets repaired on the sheet rather than thrown away.</p>
     <div class="steps">
       <div class="step">
         <span class="step-num">1</span>
-        <div><strong>It starts with the last plan they made.</strong><p>Two minutes of private writing: the last time you made a revision timetable, how long did it last, and what happened to it? The answers are the same in every room, and the lesson is built on them.</p></div>
+        <div><strong>A front page, and a line.</strong><p>A recreated front page goes up with a claim that was once printed as true, and everybody stands on a line from 0 to 10 to show how much they believe it.</p></div>
       </div>
       <div class="step">
         <span class="step-num">2</span>
-        <div><strong>Four rules, then a real week.</strong><p>Sessions are small, sessions are named, one slot is left empty on purpose, and you plan the next week rather than the whole term. Each student then plans the seven days ahead on the sheet, in pencil.</p></div>
+        <div><strong>Five questions.</strong><p>Who is saying it, who gains, who paid, what is the evidence, and has it been tested. The same five in every lesson, on a card for each table.</p></div>
       </div>
       <div class="step">
         <span class="step-num">3</span>
-        <div><strong>Then the week goes wrong, three times.</strong><p>A late night, a shift that moves, a friend in trouble. After each one they repair the plan on the sheet. At the end they look at which sessions survived all three, and those are the small, named ones.</p></div>
+        <div><strong>Four rounds of evidence.</strong><p>Groups get one card at a time: an advert, a document, a graph, a scientist. Every student logs each card on their own evidence sheet, says which question it answers, and moves on the line.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">4</span>
+        <div><strong>Crunch the numbers.</strong><p>The graph card comes with three questions to work out, from how many times higher one bar is to what percentage something fell, then the answers go up.</p></div>
+      </div>
+      <div class="step">
+        <span class="step-num">5</span>
+        <div><strong>The real front page.</strong><p>Each student, or pair, writes the front page the paper should have printed, using at least two cards and one number. Somebody from another group marks it, and only then does the verdict go up.</p></div>
       </div>
     </div>
-    <p class="callout">Some students will plan around a home that does not give them an evening, and some will not have anywhere quiet to work. The sheet is theirs and is not collected, the slide that says so is in the deck, and the spare slot exists so that a plan can lose an evening without failing.</p>
+    <p class="callout">Lesson 2 is about thalidomide and lesson 3 about smoking. The pack asks you to keep both on the claims and the evidence, with no photographs, and never to ask about home. Lessons 1 and 5 are about how food was sold, not about what anybody should eat. Every quote and every number on a card is real, and each lesson&rsquo;s teacher page lists its sources.</p>
   </section>
 
   <section class="peek" aria-label="A look inside">
     <h2>A look inside</h2>
     <div class="peek-row">
-      <figure class="peek-item"><img src="preview-slide-1.jpg" alt="Slide one" width="1280" height="720" loading="lazy"><figcaption>Slide one</figcaption></figure>
-      <figure class="peek-item"><img src="preview-slide-2.jpg" alt="Slide 9 of 17" width="1280" height="720" loading="lazy"><figcaption>Slide 9 of 17</figcaption></figure>
-      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="Page one of the pack" width="800" height="1132" loading="lazy"><figcaption>Page one of the pack</figcaption></figure>
+      <figure class="peek-item"><img src="preview-slide-1.jpg" alt="The front page" width="1280" height="720" loading="lazy"><figcaption>The front page</figcaption></figure>
+      <figure class="peek-item"><img src="preview-slide-2.jpg" alt="A round of evidence" width="1280" height="720" loading="lazy"><figcaption>A round of evidence</figcaption></figure>
+      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="The evidence cards" width="800" height="1131" loading="lazy"><figcaption>The evidence cards</figcaption></figure>
     </div>
   </section>
 
   <section id="downloads">
-    <h2>Get the lesson</h2>
-    <p class="lede">One sheet per student to print. The lesson is an hour, and the last slide is a two-minute check-in to bring back on the following Mondays for as long as it is useful.</p>
+    <h2>Get the lessons</h2>
+    <p class="lede">For each lesson: one set of evidence cards per group, and an evidence sheet and a front page sheet for each student. Each lesson runs 45 minutes to an hour and stands alone, so run them in any order. Want to know when Volume Two goes up? <a href="#signup">Sign up here</a>.</p>
     <div class="downloads-grid">
-      <a class="download-card" href="downloads/Revision_That_Survives_the_Week.pptx" download data-umami-event="download" data-umami-event-file="Revision_That_Survives_the_Week.pptx">
+      <a class="download-card" href="downloads/Question_the_Headline_Lesson_1.pptx" download data-umami-event="download" data-umami-event-file="Question_the_Headline_Lesson_1.pptx">
         <span class="file-chip">PowerPoint</span>
-        <h3>The lesson slides</h3>
-        <p>Seventeen slides. The lesson, then a two-minute Monday check-in slide for the weeks after.</p>
+        <h3>Lesson 1: Who Paid for the Science?</h3>
+        <p>Sugar is not a problem for your heart. Fat is.</p>
         <span class="download-cta">Download
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
         </span>
       </a>
-      <a class="download-card" href="downloads/Revision_That_Survives_the_Week_Resource_Pack.pdf" download data-umami-event="download" data-umami-event-file="Revision_That_Survives_the_Week_Resource_Pack.pdf">
+      <a class="download-card" href="downloads/Question_the_Headline_Lesson_2.pptx" download data-umami-event="download" data-umami-event-file="Question_the_Headline_Lesson_2.pptx">
+        <span class="file-chip">PowerPoint</span>
+        <h3>Lesson 2: Complete Safety</h3>
+        <p>If a medicine is sold by a big company and prescribed by doctors, it must have been tested properly.</p>
+        <span class="download-cta">Download
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
+        </span>
+      </a>
+      <a class="download-card" href="downloads/Question_the_Headline_Lesson_3.pptx" download data-umami-event="download" data-umami-event-file="Question_the_Headline_Lesson_3.pptx">
+        <span class="file-chip">PowerPoint</span>
+        <h3>Lesson 3: Doctors&rsquo; Orders</h3>
+        <p>If doctors smoke them, cigarettes can&rsquo;t be that bad for you.</p>
+        <span class="download-cta">Download
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
+        </span>
+      </a>
+      <a class="download-card" href="downloads/Question_the_Headline_Lesson_4.pptx" download data-umami-event="download" data-umami-event-file="Question_the_Headline_Lesson_4.pptx">
+        <span class="file-chip">PowerPoint</span>
+        <h3>Lesson 4: No Real Evidence</h3>
+        <p>If nobody has proved something is harmful, it must be safe.</p>
+        <span class="download-cta">Download
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
+        </span>
+      </a>
+      <a class="download-card" href="downloads/Question_the_Headline_Lesson_5.pptx" download data-umami-event="download" data-umami-event-file="Question_the_Headline_Lesson_5.pptx">
+        <span class="file-chip">PowerPoint</span>
+        <h3>Lesson 5: It&rsquo;s All Vegetable</h3>
+        <p>A new food made in a factory by scientists is probably better for you than the old one.</p>
+        <span class="download-cta">Download
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
+        </span>
+      </a>
+      <a class="download-card" href="downloads/Question_the_Headline_Resource_Pack.pdf" download data-umami-event="download" data-umami-event-file="Question_the_Headline_Resource_Pack.pdf">
         <span class="file-chip">Printable PDF</span>
         <h3>Teacher resource pack</h3>
-        <p>Three pages: the guide, the week sheet to print one per student, and the Monday check-in cards.</p>
+        <p>Eighteen pages: the guide, the five questions, the front page sheet, then for each lesson a teacher page, the evidence cards and an evidence sheet.</p>
         <span class="download-cta">Download
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
         </span>
@@ -702,9 +744,9 @@
 <section class="more" aria-label="More from Tutor Time">
   <h2>More from Tutor Time</h2>
   <div class="more-grid">
-      <a class="more-card" href="../after-the-mocks/"><span class="more-title">After the Mocks</span><span class="more-meta"><span>One hour</span><span>cards and a sheet to print</span><span>resilience</span></span><span class="more-hint">Open the lesson &rarr;</span></a>
-      <a class="more-card" href="../the-week-sheet/"><span class="more-title">The Week Sheet</span><span class="more-meta"><span>One week at a time</span><span>one sheet per student</span><span>persistence</span></span><span class="more-hint">Open the printable &rarr;</span></a>
-      <a class="more-card" href="../the-personal-statement/"><span class="more-title">The Personal Statement</span><span class="more-meta"><span>Five tutor times</span><span>five sheets per student</span><span>ambition</span></span><span class="more-hint">Open the resource &rarr;</span></a>
+      <a class="more-card" href="../the-apology/"><span class="more-title">The Apology</span><span class="more-meta"><span>One hour</span><span>four pages to print</span><span>accountability</span></span><span class="more-hint">Open the lesson &rarr;</span></a>
+      <a class="more-card" href="../payday-budgeting-lesson/"><span class="more-title">Payday</span><span class="more-meta"><span>One hour</span><span>three pages to print</span><span>responsibility</span></span><span class="more-hint">Open the lesson &rarr;</span></a>
+      <a class="more-card" href="../motivation-comes-second/"><span class="more-title">Motivation Comes Second</span><span class="more-meta"><span>One hour</span><span>four pages to print</span><span>self-motivation</span></span><span class="more-hint">Open the lesson &rarr;</span></a>
   </div>
   <a class="more-all" href="../">See everything in Tutor Time &rarr;</a>
 </section>

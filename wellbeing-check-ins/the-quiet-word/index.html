@@ -570,6 +570,32 @@
     .signup-support{ flex: 1 1 100%; padding-left: 0; padding-top: 18px; }
   }
   /* == support end == */
+
+/* == human pass start (2 Oct 2026) ==
+   Olivia asked for the site to stop looking AI-built. Small spaced-out capitals
+   above headings, numbered circles in identical cards and line icons beside
+   every footer link are the three most common AI-template habits, so they go.
+   Labels are sentence case at a readable size; steps are a plain list with a
+   serif numeral; footer links are words only. Appended last so it wins on ties. */
+.eyebrow, .page-facts, .sample-kicker, .note-kicker, .site-browse-lead,
+.footer-browse-lead, .browse-group-lead, .ks-lead, .ks-when-lead,
+.folder-note-years, .next-flag, .day-tag{ text-transform: none; letter-spacing: 0; }
+.eyebrow{ font-size: 15px; font-weight: 600; }
+.page-facts{ font-size: 14px; font-weight: 500; }
+.sample-kicker{ font-size: 13.5px; font-weight: 600; font-style: italic; }
+.note-kicker{ font-size: 13px; font-weight: 600; }
+.site-browse-lead, .footer-browse-lead, .browse-group-lead, .ks-when-lead{ font-size: 13.5px; font-weight: 700; }
+.ks-lead{ font-size: 15px; font-weight: 600; }
+.folder-note-years{ font-size: 12.5px; font-weight: 600; }
+.next-flag, .day-tag{ font-size: 13px; }
+.steps{ gap: 0; margin-top: 22px; }
+.sample-caption + .steps, .sample + .steps{ margin-top: 26px; }
+.step{ background: none; box-shadow: none; border-radius: 0; padding: 16px 0; gap: 16px; border-top: 1px solid rgba(46,68,54,0.14); }
+.step:first-child{ border-top: 0; padding-top: 4px; }
+.step-num{ width: auto; min-width: 24px; height: auto; background: none; border-radius: 0; color: var(--accent-deep); font-size: 26px; line-height: 1; display: block; text-align: left; }
+.book-icon{ display: none; }
+.facts-line{ margin: 10px 0 0; padding: 12px 0 0; width: 100%; border-top: 1px solid rgba(46,68,54,0.16); text-align: center; font-size: 15px; font-style: italic; color: var(--ink-soft); }
+/* == human pass end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "LearningResource", "@id": "https://thepastoralguide.com/wellbeing-check-ins/the-quiet-word/#resource", "url": "https://thepastoralguide.com/wellbeing-check-ins/the-quiet-word/", "name": "The Quiet Word", "description": "A printable guide for secondary form tutors on the one to one check-in itself: how to open it, the sentence to say before a student tells you anything, what to do with the silence, what you write down afterwards, and the point at which it goes to the designated safeguarding lead. Five pages, printed once, with a card to cut out for a lanyard.", "inLanguage": "en-GB", "learningResourceType": "Printable", "educationalLevel": ["Key Stage 3", "Key Stage 4", "Key Stage 5"], "typicalAgeRange": "11-18", "audience": {"@type": "EducationalAudience", "educationalRole": "teacher"}, "isAccessibleForFree": true, "isFamilyFriendly": true, "image": "https://thepastoralguide.com/wellbeing-check-ins/the-quiet-word/og.jpg", "provider": {"@id": "https://thepastoralguide.com/#org"}, "author": {"@type": "Person", "name": "Olivia"}, "creativeWorkStatus": "Published", "timeRequired": "PT5M"}, {"@type": "BreadcrumbList", "@id": "https://thepastoralguide.com/wellbeing-check-ins/the-quiet-word/#crumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Pastoral Guide", "item": "https://thepastoralguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Wellbeing Check-Ins", "item": "https://thepastoralguide.com/wellbeing-check-ins/"}, {"@type": "ListItem", "position": 3, "name": "The Quiet Word", "item": "https://thepastoralguide.com/wellbeing-check-ins/the-quiet-word/"}]}, {"@type": "Organization", "@id": "https://thepastoralguide.com/#org", "name": "The Pastoral Guide", "url": "https://thepastoralguide.com/", "logo": "https://thepastoralguide.com/logo.png", "email": "thepastoralguide@gmail.com", "sameAs": ["https://www.instagram.com/thepastoralguide/"], "founder": {"@type": "Person", "name": "Olivia"}}]}</script>
@@ -608,7 +634,7 @@
 <header class="page-header wrap">
   <span class="eyebrow">Wellbeing Check-Ins</span>
   <h1 class="page-title">The Quiet Word</h1>
-  <p class="page-sub">A guide for the tutor to the five minutes of a one-to-one check-in. It covers how to start, what to do with a silence, and when to pass something on. Five pages to print once, including eight better things to say than the phrases everybody reaches for. It is the guidance nobody gives a new form tutor.</p>
+  <p class="page-sub">A guide for the tutor to the five minutes of a one-to-one check-in. It covers how to start, what to do with a silence, and when to pass something on. Five pages to print once, including eight better things to say than the phrases everybody reaches for. It is written for a tutor doing this for the first time.</p>
   <span class="page-facts"><a href="../../key-stage-3/">Year 7 to 13</a> &middot; one to one &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the download
@@ -626,7 +652,7 @@
         <div class="sample-item"><span class="n">1</span><h3>&ldquo;Are you okay?&rdquo;</h3><p>Try <em>&ldquo;You have been quiet this week. I wanted to check.&rdquo;</em> A yes or no question has one polite answer, and it ends the conversation.</p></div>
         <div class="sample-item"><span class="n">2</span><h3>&ldquo;It stays between us, I promise.&rdquo;</h3><p>Try <em>&ldquo;Most of it stays with me. If I am worried about your safety I have to pass it on.&rdquo;</em> Never promise more than that.</p></div>
         <div class="sample-item"><span class="n">3</span><h3>&ldquo;Why did you do that?&rdquo;</h3><p>Try <em>&ldquo;What was going on for you at the time?&rdquo;</em> Why asks for a justification, and gets one.</p></div>
-        <div class="sample-item"><span class="n">4</span><h3>&ldquo;Let me know if you need anything.&rdquo;</h3><p>Try <em>&ldquo;I will find you Thursday, after registration.&rdquo;</em> A named day puts the work on you rather than on them.</p></div>
+        <div class="sample-item"><span class="n">4</span><h3>&ldquo;Let me know if you need anything.&rdquo;</h3><p>Try <em>&ldquo;I will find you Thursday, after registration.&rdquo;</em> A named day means they do not have to come and find you.</p></div>
       </div>
     </div>
     <p class="sample-caption">The other four cover asking about home, filling the silence, telling a student to cheer up, and saying that you know exactly how they feel.</p>
@@ -641,7 +667,7 @@
       </div>
       <div class="step">
         <span class="step-n">3</span>
-        <div><strong>Finish on a named day, and write the note the same day.</strong><p>What you have understood, what happens next and who else will be involved, then one thing you will do with a date on it. Write the note in their words rather than your summary. There are three note slips to a page.</p></div>
+        <div><strong>Finish on a named day, and write the note the same day.</strong><p>What you have understood, what happens next and who else will be involved, then one thing you will do with a date on it. Write the note in their words, as they said it. There are three note slips to a page.</p></div>
       </div>
     </div>
     <p class="callout">Page four is the one to read before you ever need it: the four things that go to your designated safeguarding lead the same day, what you do about each, and the four things you do not do, including investigating it yourself. There is a box for your safeguarding lead&rsquo;s name, and a card to cut out for a lanyard. This is not safeguarding training and it does not replace your school&rsquo;s child protection policy. Where the two disagree, the policy wins.</p>

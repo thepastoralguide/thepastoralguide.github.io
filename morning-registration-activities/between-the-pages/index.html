@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assembly Calendar 2026 to 2027: free printable for secondary schools</title>
-<meta name="description" content="Every awareness day and UN day worth marking in a secondary school, September 2026 to July 2027: 41 dates, each with an idea and a value, free to print.">
+<title>Between the Pages: a reading discussion bookmark for any book</title>
+<meta name="description" content="A free printable reading bookmark with six discussion questions on character, setting, theme, values, language and structure. For form time, English lessons or a school literacy scheme.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://thepastoralguide.com/assemblies-and-events/assembly-calendar/">
-<link rel="canonical" href="https://thepastoralguide.com/assemblies-and-events/assembly-calendar/">
-<meta property="og:image" content="https://thepastoralguide.com/assemblies-and-events/assembly-calendar/og.jpg">
+<meta property="og:url" content="https://thepastoralguide.com/morning-registration-activities/between-the-pages/">
+<link rel="canonical" href="https://thepastoralguide.com/morning-registration-activities/between-the-pages/">
+<meta property="og:image" content="https://thepastoralguide.com/morning-registration-activities/between-the-pages/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Assembly Calendar 2026 to 2027: free printable for secondary schools">
+<meta property="og:image:alt" content="Between the Pages: a reading discussion bookmark for any book">
 <meta property="og:site_name" content="The Pastoral Guide">
 <meta property="article:author" content="Olivia">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://thepastoralguide.com/assemblies-and-events/assembly-calendar/og.jpg">
-<meta property="og:title" content="Assembly Calendar 2026 to 2027: free printable for secondary schools">
-<meta property="og:description" content="Every awareness day and UN day worth marking in a secondary school, September 2026 to July 2027: 41 dates, each with an idea and a value, free to print.">
+<meta name="twitter:image" content="https://thepastoralguide.com/morning-registration-activities/between-the-pages/og.jpg">
+<meta property="og:title" content="Between the Pages: a reading discussion bookmark for any book">
+<meta property="og:description" content="A free printable reading bookmark with six discussion questions on character, setting, theme, values, language and structure. For form time, English lessons or a school literacy scheme.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&amp;family=Karla:wght@400;500;600;700&amp;display=swap">
@@ -29,14 +29,11 @@
     --ink-soft: #5c6552;
     --ink-faint: #8b9179;
 
-    /* The Assembly Calendar's own colour: a clear royal blue, for a page
-       that is mostly dates. Deep #3447b2 is 40 RGB units from its nearest
-       neighbour (Today I Will), clear of the 25 floor. White on the deep
-       is 7.8 to 1, so the file chip keeps the deep, as it already does. */
-    --accent: #eef0fa;
-    --accent-deep: #3447b2;
-    --accent-spine: #6f7fcc;
-    --accent-light: #c2c8ea;
+    /* Between the Pages: forest. Chosen by scoring the colour space against every resource tone on the site and rendering onto its own folder. */
+    --accent: #f3f5f2;
+    --accent-deep: #31511f;
+    --accent-spine: #527e3a;
+    --accent-light: #b2bfaa;
 
     --card: #fffdf7;
     --max-width: 1265px;
@@ -44,109 +41,53 @@
   }
 
   *{ box-sizing: border-box; }
-
   html{ scroll-behavior: smooth; scroll-padding-top: 76px; }
-
-  html, body{
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--ink);
-  }
-
+  html, body{ margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
   body{
     font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
     padding-bottom: 28px;
   }
-
   a{ color: inherit; }
-
-  h1, h2, h3{
-    font-family: 'Libre Caslon Display', Georgia, serif;
-    font-weight: 400;
-    margin: 0;
-  }
-
+  h1, h2, h3{ font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; margin: 0; }
   .wrap{
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding-left: clamp(16px, 3vw, 40px);
-    padding-right: clamp(16px, 3vw, 40px);
+    max-width: var(--max-width); margin: 0 auto;
+    padding-left: clamp(16px, 3vw, 40px); padding-right: clamp(16px, 3vw, 40px);
   }
 
-  /* ---------- NAV ---------- */
   .site-nav{
     padding: clamp(14px, 2.4vh, 22px) clamp(16px, 3vw, 40px) 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
   }
-
   .site-brand{
-    font-family: 'Libre Caslon Display', Georgia, serif;
-    font-size: 14.5px;
-    color: var(--ink-faint);
-    text-decoration: none;
-    letter-spacing: 0.01em;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4em;
+    font-family: 'Libre Caslon Display', Georgia, serif; font-size: 14.5px;
+    color: var(--ink-faint); text-decoration: none; letter-spacing: 0.01em;
+    display: inline-flex; align-items: center; gap: 0.4em;
   }
-
-  .brand-mark{
-    height: 24px;
-    width: auto;
-    flex: none;
-  }
-
+  .brand-mark{ height: 24px; width: auto; flex: none; }
   .site-brand:hover{ color: var(--ink-soft); }
-
   .back-link{
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--ink-soft);
-    text-decoration: none;
-    letter-spacing: 0.01em;
+    display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px;
+    font-weight: 600; color: var(--ink-soft); text-decoration: none; letter-spacing: 0.01em;
   }
-
   .back-link:hover{ color: var(--ink); }
 
-  /* ---------- HEADER ---------- */
   .page-header{
-    text-align: center;
-    padding: clamp(20px, 4vh, 40px) 24px clamp(28px, 4vh, 40px);
-    max-width: 728px;
-    margin: 0 auto;
+    text-align: center; padding: clamp(20px, 4vh, 40px) 24px clamp(28px, 4vh, 40px);
+    max-width: 728px; margin: 0 auto;
   }
-
   .eyebrow{
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    color: var(--accent-deep);
-    margin-bottom: 10px;
+    display: block; font-size: 12px; font-weight: 700; letter-spacing: 0.09em;
+    text-transform: uppercase; color: var(--accent-deep); margin-bottom: 10px;
   }
-
   .page-title{
-    font-size: clamp(30px, 4.2vw, 42px);
-    line-height: 1.1;
-    -webkit-text-stroke: 0.5px currentColor;
-    margin-bottom: 14px;
+    font-size: clamp(30px, 4.2vw, 42px); line-height: 1.1;
+    -webkit-text-stroke: 0.5px currentColor; margin-bottom: 14px;
   }
-
   .page-sub{
-    font-size: 16.5px;
-    line-height: 1.55;
-    color: var(--ink-soft);
-    max-width: 680px;
-    margin: 0 auto;
+    font-size: 16.5px; line-height: 1.55; color: var(--ink-soft);
+    max-width: 680px; margin: 0 auto;
   }
 
   .page-facts a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(46,68,54,0.3); text-underline-offset: 3px; }
@@ -160,309 +101,105 @@
     text-transform: uppercase;
     color: var(--ink-faint);
   }
-
   .jump-link{
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    margin-top: 20px;
-    padding: 9px 18px;
-    background: var(--accent-deep);
-    color: var(--bg);
-    font-size: 13.5px;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    border-radius: 20px;
-    box-shadow: 0 6px 14px -6px rgba(46,68,54,0.4);
+    display: inline-flex; align-items: center; gap: 7px; margin-top: 20px;
+    padding: 9px 18px; background: var(--accent-deep); color: var(--bg);
+    font-size: 13.5px; font-weight: 700; letter-spacing: 0.01em; text-decoration: none;
+    border-radius: 20px; box-shadow: 0 6px 14px -6px rgba(46,68,54,0.4);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
-
   .jump-link:hover, .jump-link:focus-visible{
-    transform: translateY(2px);
-    box-shadow: 0 3px 8px -4px rgba(46,68,54,0.4);
+    transform: translateY(2px); box-shadow: 0 3px 8px -4px rgba(46,68,54,0.4);
   }
-
   .jump-link svg{ width: 13px; height: 13px; }
 
-  /* ---------- CONTENT ---------- */
-  main{
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0 clamp(16px, 3vw, 40px);
-  }
-
+  main{ max-width: 1080px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 40px); }
   section{ margin-top: clamp(36px, 5.5vh, 56px); }
-
-  section > h2, section > p, ul.plain, ul.checklist{
-    max-width: var(--measure);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  section > h2{
-    font-size: 24px;
-    margin-bottom: 14px;
-    -webkit-text-stroke: 0.3px currentColor;
-  }
-
+  section > h2, section > p{ max-width: var(--measure); margin-left: auto; margin-right: auto; }
+  section > h2{ font-size: 24px; margin-bottom: 14px; -webkit-text-stroke: 0.3px currentColor; }
   section > p{ margin: 0 auto 14px; color: var(--ink); }
+  .lede{ font-size: 15.5px; color: var(--ink-soft); margin-bottom: 18px; }
 
-  .lede{
-    font-size: 15.5px;
-    color: var(--ink-soft);
-    margin-bottom: 18px;
-  }
-
-  ul.plain{
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-  }
-
-  ul.plain li{
-    position: relative;
-    padding-left: 22px;
-    margin: 0 0 10px;
-    font-size: 15.5px;
-  }
-
-  ul.plain li::before{
-    content: '';
-    position: absolute;
-    left: 4px;
-    top: 9px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent-spine);
-  }
-
-  /* ---------- THE BAG ---------- */
-  .bag-figure{
-    display: grid;
-    grid-template-columns: minmax(190px, 290px) 1fr;
-    gap: clamp(20px, 4vw, 44px);
-    align-items: center;
-    max-width: var(--measure);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .bag-figure svg{ width: 100%; height: auto; display: block; }
-
-  .bag-parts{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: bagpart;
-  }
-
-  .bag-parts li{
-    position: relative;
-    counter-increment: bagpart;
-    padding-left: 42px;
-    margin: 0 0 16px;
-    font-size: 15.5px;
-    line-height: 1.5;
-  }
-
-  .bag-parts li:last-child{ margin-bottom: 0; }
-
-  .bag-parts li::before{
-    content: counter(bagpart);
-    position: absolute;
-    left: 0;
-    top: 1px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--accent-deep);
-    color: #fff;
-    font-family: 'Libre Caslon Display', Georgia, serif;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* ---------- SAMPLE NOTE ---------- */
   .sample-card{
-    background: var(--card);
-    border: 1px solid var(--accent-light);
-    border-radius: 12px;
-    padding: clamp(26px, 4.4vw, 38px) clamp(22px, 4vw, 40px) clamp(20px, 3.4vw, 30px);
-    max-width: 460px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+    background: var(--card); border: 1px solid var(--accent-light); border-radius: 12px;
+    padding: clamp(26px, 4.4vw, 40px) clamp(22px, 4vw, 40px);
+    max-width: var(--measure); margin-left: auto; margin-right: auto;
     box-shadow: 0 14px 26px -18px rgba(46,68,54,0.3);
   }
-
   .sample-kicker{
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent-deep);
-    margin: 0 0 16px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent-deep); margin: 0 0 16px; text-align: center;
   }
-
-  .sample-to{
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--ink-soft);
-    margin: 0 0 4px;
+  .sample-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .sample-grid[data-cols="2"]{ grid-template-columns: repeat(2, 1fr); }
+  .sample-grid[data-cols="3"]{ grid-template-columns: repeat(3, 1fr); }
+  .sample-grid[data-cols="5"]{ grid-template-columns: repeat(5, 1fr); }
+  .sample-item{ text-align: center; }
+  .sample-item .n{
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: var(--accent-deep); color: #fff;
+    font-family: 'Libre Caslon Display', Georgia, serif; font-size: 15px; margin-bottom: 8px;
   }
-
-  .sample-rule{
-    height: 1px;
-    background: var(--accent-light);
-    margin: 0 0 34px;
-  }
-
-  .sample-from{
-    font-family: 'Libre Caslon Display', Georgia, serif;
-    font-size: 15px;
-    font-style: italic;
-    color: var(--accent-deep);
-    text-align: right;
-    margin: 22px 0 0;
-  }
-
+  .sample-item h3{ font-size: 15px; color: var(--accent-deep); line-height: 1.2; margin-bottom: 5px; }
+  .sample-item p{ margin: 0; font-size: 12.5px; line-height: 1.4; color: var(--ink-soft); }
   .sample-caption{
-    font-size: 13.5px;
-    font-style: italic;
-    color: var(--ink-soft);
-    text-align: center;
-    margin-top: 16px;
+    font-size: 13.5px; font-style: italic; color: var(--ink-soft);
+    text-align: center; margin: 16px auto 0;
   }
 
-  /* ---------- STEPS ---------- */
   .steps{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: var(--measure);
-    margin-left: auto;
-    margin-right: auto;
+    display: flex; flex-direction: column; gap: 12px;
+    max-width: var(--measure); margin-left: auto; margin-right: auto;
   }
-
   .step{
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    background: var(--card);
-    border-radius: 8px;
-    padding: 14px 18px;
-    box-shadow: 0 1px 0 rgba(46,68,54,0.08);
+    display: flex; align-items: flex-start; gap: 16px; background: var(--card);
+    border-radius: 8px; padding: 14px 18px; box-shadow: 0 1px 0 rgba(46,68,54,0.08);
   }
-
   .step-num{
-    flex: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--accent-deep);
-    color: #fff;
-    font-family: 'Libre Caslon Display', Georgia, serif;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: none; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--accent-deep); color: #fff;
+    font-family: 'Libre Caslon Display', Georgia, serif; font-size: 15px;
+    display: flex; align-items: center; justify-content: center;
   }
-
-  .step p{
-    margin: 4px 0 0;
-    font-size: 14.5px;
-    color: var(--ink-soft);
-  }
-
+  .step p{ margin: 4px 0 0; font-size: 14.5px; color: var(--ink-soft); }
   .step strong{ color: var(--ink); font-size: 15.5px; }
 
-  /* ---------- CALLOUT ---------- */
   .callout{
-    background: var(--accent);
-    border-left: 4px solid var(--accent-spine);
-    border-radius: 4px;
-    padding: 16px 18px;
-    font-size: 14.5px;
-    font-style: italic;
-    color: var(--accent-deep);
-    font-weight: 600;
-    max-width: var(--measure);
-    margin: 4px auto 18px;
+    background: var(--accent); border-left: 4px solid var(--accent-spine);
+    border-radius: 4px; padding: 16px 18px; font-size: 14.5px; font-style: italic;
+    color: var(--accent-deep); font-weight: 600;
+    max-width: var(--measure); margin: 4px auto 18px;
   }
 
-  /* ---------- DOWNLOADS ---------- */
   .downloads-grid{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(220px, 330px));
-    justify-content: center;
-    gap: 20px;
+    display: grid; grid-template-columns: repeat(2, minmax(240px, 360px));
+    justify-content: center; gap: 20px;
   }
-
   .download-card{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: var(--card);
-    border: 1px solid rgba(46,68,54,0.12);
-    border-radius: 10px;
-    padding: 18px 18px 16px;
-    text-decoration: none;
-    color: var(--ink);
+    display: flex; flex-direction: column; gap: 10px; background: var(--card);
+    border: 1px solid rgba(46,68,54,0.12); border-radius: 10px; padding: 18px 18px 16px;
+    text-decoration: none; color: var(--ink);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
-
   .download-card:hover, .download-card:focus-visible{
-    transform: translateY(-3px);
-    box-shadow: 0 12px 22px -14px rgba(46,68,54,0.4);
+    transform: translateY(-3px); box-shadow: 0 12px 22px -14px rgba(46,68,54,0.4);
   }
-
   .file-chip{
-    display: inline-flex;
-    align-self: flex-start;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: #fff;
-    background: var(--accent-deep);
-    padding: 3px 8px;
-    border-radius: 4px;
+    display: inline-flex; align-self: flex-start; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.04em; color: #fff; background: var(--accent-deep);
+    padding: 3px 8px; border-radius: 4px;
   }
-
-  .download-card h3{
-    font-size: 17px;
-    line-height: 1.25;
-  }
-
-  .download-card p{
-    margin: 0;
-    font-size: 13.5px;
-    color: var(--ink-soft);
-    flex: 1;
-  }
-
+  .download-card h3{ font-size: 17px; line-height: 1.25; }
+  .download-card p{ margin: 0; font-size: 13.5px; color: var(--ink-soft); flex: 1; }
   .download-cta{
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--accent-deep);
+    display: inline-flex; align-items: center; gap: 6px; font-size: 13px;
+    font-weight: 700; color: var(--accent-deep);
   }
-
   .download-cta svg{ width: 13px; height: 13px; }
 
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 860px){
-    .downloads-grid{ grid-template-columns: repeat(2, minmax(220px, 340px)); }
-  }
-
   @media (max-width: 720px){
-    .bag-figure{ grid-template-columns: 1fr; justify-items: center; }
-    .bag-figure svg{ max-width: 260px; }
+    .sample-grid, .sample-grid[data-cols]{ grid-template-columns: repeat(2, 1fr); }
     .downloads-grid{ grid-template-columns: 1fr; justify-content: stretch; }
   }
 
@@ -767,38 +504,6 @@
   }
   /* == sitesearch end == */
 
-
-  /* ---------- THE CALENDAR ---------- */
-  .key{ max-width: var(--measure); margin: 0 auto 8px; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 13.5px; color: var(--ink-soft); }
-  .key span{ display: inline-flex; align-items: center; gap: 7px; }
-  .kind{ display: inline-block; white-space: nowrap; font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 1px 8px; border-radius: 10px; border: 1.2px solid var(--accent-spine); color: var(--accent-deep); background: var(--card); line-height: 1.6; }
-  .kind--un{ background: var(--accent-deep); border-color: var(--accent-deep); color: #fff; }
-  .term-nav{ max-width: var(--measure); margin: 18px auto 0; display: flex; flex-wrap: wrap; gap: 8px; }
-  .term-nav a{ font-size: 13.5px; font-weight: 700; color: var(--accent-deep); background: var(--accent); border: 1.2px solid var(--accent-light);
-    border-radius: 20px; padding: 6px 14px; text-decoration: none; }
-  .term-nav a:hover, .term-nav a:focus-visible{ background: var(--accent-light); }
-  .term > h2{ text-align: left; }
-  .month{ max-width: var(--measure); margin: 26px auto 0; }
-  .month h3{ font-size: 21px; color: var(--accent-deep); padding-bottom: 6px; border-bottom: 2px solid var(--accent-light); margin-bottom: 4px; }
-  .day{ display: grid; grid-template-columns: 112px 1fr; gap: 4px 18px; padding: 16px 0; border-bottom: 1px solid var(--accent-light); }
-  .day-when{ font-weight: 700; color: var(--accent-deep); font-size: 14.5px; line-height: 1.5; }
-  .day-name{ font-weight: 700; font-size: 17px; line-height: 1.35; margin: 0 0 4px; color: var(--ink); }
-  .day-name .kind{ margin-left: 6px; vertical-align: 2px; }
-  .day-idea{ margin: 0; color: var(--ink-soft); font-size: 15.5px; line-height: 1.55; }
-  .day-foot{ margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13.5px; }
-  .day-value{ color: var(--ink-faint); font-weight: 600; }
-  .day-value b{ color: var(--ink); }
-  .day-link{ color: var(--accent-deep); font-weight: 700; text-decoration: none; border-bottom: 1.5px solid var(--accent-light); }
-  .day-link:hover, .day-link:focus-visible{ border-bottom-color: var(--accent-deep); }
-  .day.is-past{ opacity: 0.55; }
-  .day.is-next{ background: var(--accent); border-radius: 8px; padding-left: 14px; padding-right: 14px; margin: 0 -14px; border-bottom-color: transparent; }
-  .next-flag{ display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 2px; }
-  .cal-note{ max-width: var(--measure); margin: 22px auto 0; font-size: 14px; font-style: italic; color: var(--ink-soft); }
-  @media (max-width: 640px){
-    .day{ grid-template-columns: 1fr; gap: 2px; }
-    .day.is-next{ margin: 0 -10px; padding-left: 10px; padding-right: 10px; }
-  }
   /* == support start == */
 
   /* The support line under the footer's copyright row.
@@ -891,9 +596,21 @@
 .book-icon{ display: none; }
 .facts-line{ margin: 10px 0 0; padding: 12px 0 0; width: 100%; border-top: 1px solid rgba(46,68,54,0.16); text-align: center; font-size: 15px; font-style: italic; color: var(--ink-soft); }
 /* == human pass end == */
+
+/* == step photos (2 Oct 2026) == */
+.steps.flow{ display: block; }
+.steps.flow .step{ display: block; position: relative; padding-left: 40px; }
+.steps.flow .step-num{ position: absolute; left: 0; top: 16px; }
+.steps.flow .step-photo:first-child + .step{ border-top: 0; padding-top: 4px; }
+.steps.flow .step-photo:first-child + .step .step-num{ top: 4px; }
+@media (max-width: 720px){ .steps.flow .step-photo{ margin-top: 10px; } }
+.steps.flow::after{ content: ""; display: block; clear: both; }
+.step-photo{ float: right; width: 300px; margin: 12px 0 10px 26px; position: relative; z-index: 1; background: var(--bg); box-shadow: -26px 0 0 var(--bg); }
+.step-photo img{ width: 100%; height: auto; display: block; border-radius: 6px; }
+@media (max-width: 720px){ .step-photo{ width: 44%; margin-left: 16px; box-shadow: -16px 0 0 var(--bg); } }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/#resource","url":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/","name":"The Assembly Calendar 2026 to 2027","description":"Every awareness day and week worth marking in a secondary school year, from September to July, including the United Nations days that lend themselves to an assembly. Each one has the date, one line on what to do with it, and the value it gets students thinking about. Where the site has a resource for the day, it is linked. There is a printable version for the staffroom wall, one page per term.","inLanguage":"en-GB","learningResourceType":"Calendar","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Assemblies and Events","item":"https://thepastoralguide.com/assemblies-and-events/"},{"@type":"ListItem","position":3,"name":"The Assembly Calendar 2026 to 2027","item":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "LearningResource", "@id": "https://thepastoralguide.com/morning-registration-activities/between-the-pages/#resource", "url": "https://thepastoralguide.com/morning-registration-activities/between-the-pages/", "name": "Between the Pages", "description": "A reading bookmark with six discussion questions, one each for character, setting, theme, values, language and structure, that work on any book students are already reading. For form time, English lessons or a reading or literacy scheme. Everyone reads, the class talks about one question, and next time you pick another. Includes follow-up questions for each one.", "inLanguage": "en-GB", "learningResourceType": "Printable", "educationalLevel": ["Key Stage 3", "Key Stage 4"], "typicalAgeRange": "11-16", "audience": {"@type": "EducationalAudience", "educationalRole": "teacher"}, "isAccessibleForFree": true, "isFamilyFriendly": true, "image": "https://thepastoralguide.com/morning-registration-activities/between-the-pages/og.jpg", "provider": {"@id": "https://thepastoralguide.com/#org"}, "author": {"@type": "Person", "name": "Olivia"}, "creativeWorkStatus": "Published", "timeRequired": "PT15M"}, {"@type": "BreadcrumbList", "@id": "https://thepastoralguide.com/morning-registration-activities/between-the-pages/#crumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Pastoral Guide", "item": "https://thepastoralguide.com/"}, {"@type": "ListItem", "position": 2, "name": "Morning Registration Activities", "item": "https://thepastoralguide.com/morning-registration-activities/"}, {"@type": "ListItem", "position": 3, "name": "Between the Pages", "item": "https://thepastoralguide.com/morning-registration-activities/between-the-pages/"}]}, {"@type": "Organization", "@id": "https://thepastoralguide.com/#org", "name": "The Pastoral Guide", "url": "https://thepastoralguide.com/", "logo": "https://thepastoralguide.com/logo.png", "email": "thepastoralguide@gmail.com", "sameAs": ["https://www.instagram.com/thepastoralguide/"], "founder": {"@type": "Person", "name": "Olivia"}}]}</script>
 </head>
 <body>
 
@@ -901,7 +618,7 @@
   <div class="topbar-inner">
     <div class="topbar-left">
       <a class="brand" href="../../"><img src="data:image/png;base64,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" alt=""><span>The Pastoral Guide</span></a>
-    <a class="back-link" href="../"><span aria-hidden="true">&larr;</span> <span class="back-word">Back to </span>Assemblies and Events</a>
+    <a class="back-link" href="../"><span aria-hidden="true">&larr;</span> <span class="back-word">Back to </span>Morning Registration Activities</a>
     </div>
     <!-- sitesearch start -->
     <div class="sitesearch" id="sitesearch">
@@ -927,12 +644,12 @@
 </nav>
 
 <header class="page-header wrap">
-  <span class="eyebrow">Assemblies and Events</span>
-  <h1 class="page-title">The Assembly Calendar 2026 to 2027</h1>
-  <p class="page-sub">Every awareness day and week worth marking in a secondary school year, from September to July, including the United Nations days that lend themselves to an assembly. Each one has the date, one line on what to do with it, and the value it gets students thinking about. Where the site has a resource for the day, it is linked. There is a printable version for the staffroom wall, one page per term.</p>
-  <span class="page-facts">Year 7 to 13 &middot; assembly or form time &middot; free to download</span>
+  <span class="eyebrow">Morning Registration Activities</span>
+  <h1 class="page-title">Between the Pages</h1>
+  <p class="page-sub">A reading bookmark with six discussion questions, one each for character, setting, theme, values, language and structure, that work on any book your students are already reading. Use it in form time, in English lessons or as part of a reading or literacy scheme. Everyone reads, the class talks about one question, and next time you pick another.</p>
+  <span class="page-facts"><a href="../../key-stage-3/">Year 7 to 11</a> &middot; reading and literacy &middot; free to download</span>
   <a class="jump-link" href="#downloads">
-    Jump to the printable
+    Jump to the download
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
   </a>
 </header>
@@ -941,417 +658,53 @@
 
   <section>
     <h2>How it works</h2>
-    <div class="steps">
+    <div class="sample-card">
+      <p class="sample-kicker">The six questions on the bookmark</p>
+      <div class="sample-grid" data-cols="3">
+        <div class="sample-item"><span class="n">1</span><h3>Character</h3><p>Which character did you learn the most about today, and what did you learn?</p></div>
+        <div class="sample-item"><span class="n">2</span><h3>Setting</h3><p>Where is this part of the book happening, and how does the writer help you picture the place?</p></div>
+        <div class="sample-item"><span class="n">3</span><h3>Theme</h3><p>What big idea is this book about, like friendship, fear or growing up?</p></div>
+        <div class="sample-item"><span class="n">4</span><h3>Values</h3><p>Did a character do something today that you think was right or wrong?</p></div>
+        <div class="sample-item"><span class="n">5</span><h3>Language</h3><p>Which word or phrase stood out to you today, and why?</p></div>
+        <div class="sample-item"><span class="n">6</span><h3>Structure</h3><p>What do you think will happen next, and what clue made you think that?</p></div>
+      </div>
+    </div>
+    <p class="sample-caption">Each label is a word students already use in English, so &ldquo;Today is Setting&rdquo; is enough to start.</p>
+    <div class="steps flow">
+      <div class="step-photo"><img src="bookmark-photo.webp" alt="A Between the Pages bookmark with a student&rsquo;s name on it, lying on an open novel on a classroom desk" width="800" height="533" loading="lazy"></div>
       <div class="step">
         <span class="step-num">1</span>
-        <div><strong>Find the next date.</strong><p>The calendar runs from September to July, a term at a time. The next day coming up is highlighted for you.</p></div>
+        <div><strong>Hand out a bookmark each.</strong><p>Students keep it in whatever they are reading at the moment: a library book, the class reader, something from home. Printed on card, it lasts the year.</p></div>
       </div>
       <div class="step">
         <span class="step-num">2</span>
-        <div><strong>Pick how big to go.</strong><p>Each day has one idea that works in five minutes of form time. If you want a whole assembly or a week, the ready-made resource is linked where there is one.</p></div>
+        <div><strong>Read, then talk about one question.</strong><p>Pairs first for a minute, then two or three share with the room. The pack has follow-up questions for when it goes quiet.</p></div>
       </div>
       <div class="step">
         <span class="step-num">3</span>
-        <div><strong>Put the printable up.</strong><p>One A4 page per term, with a column to write in who is leading each one. It works well on the staffroom wall or in the pastoral team&rsquo;s shared drive.</p></div>
+        <div><strong>Next time, a different question.</strong><p>There is no set order. Go back to one that worked, or let the form choose.</p></div>
       </div>
     </div>
-    <p class="callout">There are 41 dates here, and 26 of them are United Nations international days. Those are on the UN&rsquo;s own list, so they are marked around the world, which makes them a good fit for international schools as well as UK ones. The rest are UK campaigns, worldwide days and a few moments in the school year itself.</p>
-    <nav class="term-nav" aria-label="Jump to a term"><a href="#autumn">Autumn term</a><a href="#spring">Spring term</a><a href="#summer">Summer term</a><a href="#downloads">The printable</a></nav>
-    <div class="key" style="margin-top:16px"><span><span class="kind kind--un">UN day</span> on the United Nations list</span><span><span class="kind">UK</span> a UK campaign</span><span><span class="kind">Worldwide</span> marked worldwide</span><span><span class="kind">School</span> the school year</span></div>
+    <p class="callout">Every question works whatever the book is, so two students reading completely different things can still talk about the same one.</p>
   </section>
-
-  <section class="term" id="autumn">
-    <h2>Autumn term</h2>
-    <div class="month">
-      <h3>September</h3>
-      <div class="day" data-end="2026-09-08">
-        <div class="day-when">Tue 8 September</div>
-        <div>
-          <p class="day-name">International Literacy Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Hand out the reading bookmarks, and ask the form what the last book they chose for themselves was.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-09-21">
-        <div class="day-when">Mon 21 September</div>
-        <div>
-          <p class="day-name">International Day of Peace<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Ask what one thing would make the form room a more peaceful place to start the day, and agree it together.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>October</h3>
-      <div class="day" data-end="2026-10-31">
-        <div class="day-when">All of October</div>
-        <div>
-          <p class="day-name">Black History Month<span class="kind">UK</span></p>
-          <p class="day-idea">One person a week in form time, chosen by students, with a minute on what they did and why it took courage.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-02">
-        <div class="day-when">Fri 2 October</div>
-        <div>
-          <p class="day-name">International Day of Non-Violence<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Gandhi&rsquo;s birthday. Talk about the difference between standing up to something and hitting back.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-05">
-        <div class="day-when">Mon 5 October</div>
-        <div>
-          <p class="day-name">World Teachers&rsquo; Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Students write a short thank-you to a teacher who made a difference, and hand it over that day.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/displays-and-recognition/praise-postcards/">Ready-made: Praise Postcards &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-10">
-        <div class="day-when">Sat 10 October</div>
-        <div>
-          <p class="day-name">World Mental Health Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">It falls on a Saturday this year, so mark it on Friday 9 October with an assembly and a week that follows.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/world-mental-health-day/">Ready-made: World Mental Health Day &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-11">
-        <div class="day-when">Sun 11 October</div>
-        <div>
-          <p class="day-name">International Day of the Girl<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Sunday, so bring it into form time on the Monday: who decides what girls are good at, and does it change what they try?</p>
-          <div class="day-foot"><span class="day-value">Value: <b>ambition</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-16">
-        <div class="day-when">Fri 16 October</div>
-        <div>
-          <p class="day-name">World Food Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Ask what the form actually eats before school, with no judgement, and why a good breakfast helps concentration.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>self-care</b></span><a class="day-link" href="/tutor-time/fuel-and-focus/">Ready-made: Fuel and Focus &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-17">
-        <div class="day-when">Sat 17 October</div>
-        <div>
-          <p class="day-name">International Day for the Eradication of Poverty<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Saturday, so mark it on the Friday: what a month&rsquo;s wage really covers, and how quickly it goes.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/tutor-time/payday-budgeting-lesson/">Ready-made: Payday &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>November</h3>
-      <div class="day" data-end="2026-11-11">
-        <div class="day-when">Wed 11 November</div>
-        <div>
-          <p class="day-name">Armistice Day<span class="kind">UK</span></p>
-          <p class="day-idea">The two-minute silence at 11am. Explain it the day before so nobody is caught out. Remembrance Sunday is 8 November.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-11-13">
-        <div class="day-when">Fri 13 November</div>
-        <div>
-          <p class="day-name">World Kindness Day<span class="kind">Worldwide</span></p>
-          <p class="day-idea">Every student writes one honest compliment for someone else in the form.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/morning-registration-activities/compliment-chain/">Ready-made: Compliment Chain &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-11-20">
-        <div class="day-when">16&ndash;20 November</div>
-        <div>
-          <p class="day-name">Anti-Bullying Week<span class="kind">UK</span></p>
-          <p class="day-idea">This year&rsquo;s theme is Break the Silence, and the week opens with Odd Socks Day on Monday 16 November.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/anti-bullying-week/">Ready-made: Anti-Bullying Week &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-11-16">
-        <div class="day-when">Mon 16 November</div>
-        <div>
-          <p class="day-name">International Day for Tolerance<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">The same Monday as Anti-Bullying Week: where does a joke stop being a joke?</p>
-          <div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/tutor-time/it-was-just-a-joke/">Ready-made: It Was Just a Joke &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-11-20">
-        <div class="day-when">Fri 20 November</div>
-        <div>
-          <p class="day-name">World Children&rsquo;s Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">The day the UN agreed children&rsquo;s rights. Which right does the form think matters most, and why?</p>
-          <div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>December</h3>
-      <div class="day" data-end="2026-12-03">
-        <div class="day-when">Thu 3 December</div>
-        <div>
-          <p class="day-name">International Day of Persons with Disabilities<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Look at one thing in school that is harder than it needs to be for someone, and what the form could change.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-12-05">
-        <div class="day-when">Sat 5 December</div>
-        <div>
-          <p class="day-name">International Volunteer Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Saturday, so mark it on the Friday: plan one small thing the form could do for someone else before the holidays.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-12-10">
-        <div class="day-when">Thu 10 December</div>
-        <div>
-          <p class="day-name">Human Rights Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Put up one statement about rights and let the form stand on a line between agree and disagree.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="term" id="spring">
-    <h2>Spring term</h2>
-    <div class="month">
-      <h3>January</h3>
-      <div class="day" data-end="2027-01-24">
-        <div class="day-when">Sun 24 January</div>
-        <div>
-          <p class="day-name">International Day of Education<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Sunday, so bring it in on the Monday: each student names one thing they want to be true by half term.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>ambition</b></span><a class="day-link" href="/morning-registration-activities/by-half-term/">Ready-made: By Half Term &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-01-27">
-        <div class="day-when">Wed 27 January</div>
-        <div>
-          <p class="day-name">Holocaust Memorial Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A quiet, carefully prepared assembly. Check the Holocaust Memorial Day Trust&rsquo;s theme for the year before planning it.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>February</h3>
-      <div class="day" data-end="2027-02-07">
-        <div class="day-when">1&ndash;7 February</div>
-        <div>
-          <p class="day-name">Children&rsquo;s Mental Health Week<span class="kind">UK</span></p>
-          <p class="day-idea">Place2Be&rsquo;s week. Try five minutes of movement in form time and ask how the next hour felt.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>self-care</b></span><a class="day-link" href="/tutor-time/movement-and-mental-health/">Ready-made: Movement and Mental Health &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-04">
-        <div class="day-when">Thu 4 February</div>
-        <div>
-          <p class="day-name">Time to Talk Day<span class="kind">UK</span></p>
-          <p class="day-idea">Usually the first Thursday of February, so check Mind&rsquo;s site nearer the time. Pair students up with a question to talk about.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>listening</b></span><a class="day-link" href="/wellbeing-check-ins/conversation-starters/">Ready-made: Conversation Starters &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-09">
-        <div class="day-when">Tue 9 February</div>
-        <div>
-          <p class="day-name">Safer Internet Day<span class="kind">Worldwide</span></p>
-          <p class="day-idea">What does the form spend time on online, and what would they change if they could?</p>
-          <div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/pastoral-projects/screen-time/">Ready-made: How Does Screen Time Affect...? &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-14">
-        <div class="day-when">Sun 14 February</div>
-        <div>
-          <p class="day-name">Valentine&rsquo;s Day<span class="kind">Worldwide</span></p>
-          <p class="day-idea">A Sunday, so run a kindness fundraiser in the week before, with notes written for friends.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/valentines-day-sweet-notes/">Ready-made: Sweet Notes &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-20">
-        <div class="day-when">Sat 20 February</div>
-        <div>
-          <p class="day-name">World Day of Social Justice<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Saturday, close to February half term, so mark it the week after: is fair the same as equal? Let the form argue it out.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-21">
-        <div class="day-when">Sun 21 February</div>
-        <div>
-          <p class="day-name">International Mother Language Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Sunday, so bring it in on the Monday: how many languages are spoken at home in the form, and how do you say hello in each?</p>
-          <div class="day-foot"><span class="day-value">Value: <b>belonging</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>March</h3>
-      <div class="day" data-end="2027-03-04">
-        <div class="day-when">Thu 4 March</div>
-        <div>
-          <p class="day-name">World Book Day<span class="kind">UK</span></p>
-          <p class="day-idea">Each student recommends one book to the form in a sentence.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-03-08">
-        <div class="day-when">Mon 8 March</div>
-        <div>
-          <p class="day-name">International Women&rsquo;s Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Students choose a woman they admire, famous or not, and say what she did that took courage.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-03-19">
-        <div class="day-when">15&ndash;19 March</div>
-        <div>
-          <p class="day-name">Neurodiversity Celebration Week<span class="kind">Worldwide</span></p>
-          <p class="day-idea">Everyone&rsquo;s brain works differently. Ask what helps each student concentrate, and notice how different the answers are.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-03-20">
-        <div class="day-when">Sat 20 March</div>
-        <div>
-          <p class="day-name">International Day of Happiness<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Saturday, so mark it on the Friday by adding one small win from the week to the board.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/small-wins-board/">Ready-made: Small Wins Board &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-03-21">
-        <div class="day-when">Sun 21 March</div>
-        <div>
-          <p class="day-name">International Day for the Elimination of Racial Discrimination<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Sunday, so bring it in on the Monday: what would you do if you heard a racist comment passed off as a joke?</p>
-          <div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="term" id="summer">
-    <h2>Summer term</h2>
-    <div class="month">
-      <h3>April</h3>
-      <div class="day" data-end="2027-04-22">
-        <div class="day-when">Thu 22 April</div>
-        <div>
-          <p class="day-name">Earth Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">The UN calls it International Mother Earth Day. Plant something as a form and look after it until the summer.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>May</h3>
-      <div class="day" data-end="2027-05-24">
-        <div class="day-when">Mid-May</div>
-        <div>
-          <p class="day-name">Mental Health Awareness Week<span class="kind">UK</span></p>
-          <p class="day-idea">Usually the second or third week of May. The 2027 dates are not out yet, so check the Mental Health Foundation&rsquo;s site.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/wellbeing-check-ins/mood-scale/">Ready-made: Mood Scale &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-05-24">
-        <div class="day-when">Mid-May</div>
-        <div>
-          <p class="day-name">GCSE and A level exams begin<span class="kind">School</span></p>
-          <p class="day-idea">The exam season starts around the middle of May. Give Year 11 and 13 something to say to themselves before they go in.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/wellbeing-check-ins/before-you-go-in/">Ready-made: Before You Go In &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-05-16">
-        <div class="day-when">Sun 16 May</div>
-        <div>
-          <p class="day-name">International Day of Living Together in Peace<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Sunday, so bring it in on the Monday: what does it take for thirty people to share one room every morning?</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-05-21">
-        <div class="day-when">Fri 21 May</div>
-        <div>
-          <p class="day-name">World Day for Cultural Diversity<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Pair students with someone they know least in the form, and give them two minutes each to find out something new.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>June</h3>
-      <div class="day" data-end="2027-06-30">
-        <div class="day-when">All of June</div>
-        <div>
-          <p class="day-name">Pride Month<span class="kind">Worldwide</span></p>
-          <p class="day-idea">Many schools mark it with a display or an assembly on belonging, and on everyone being able to be themselves at school.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>belonging</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-06-05">
-        <div class="day-when">Sat 5 June</div>
-        <div>
-          <p class="day-name">World Environment Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Saturday, so mark it on the Friday: one thing the form could stop wasting this term, and who will keep an eye on it.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-06-11">
-        <div class="day-when">Fri 11 June</div>
-        <div>
-          <p class="day-name">International Day of Play<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">The newest UN day. Give form time over to a team quiz, and let it be fun for its own sake.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>teamwork</b></span><a class="day-link" href="/morning-registration-activities/form-time-quiz/">Ready-made: The Form Time Quiz &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-06-20">
-        <div class="day-when">14&ndash;20 June</div>
-        <div>
-          <p class="day-name">Refugee Week<span class="kind">UK</span></p>
-          <p class="day-idea">It ends on World Refugee Day, 20 June. Ask what it would take to start again somewhere new, and what would help most.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>kindness</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-06-30">
-        <div class="day-when">June</div>
-        <div>
-          <p class="day-name">Year 11 and Year 13 leave<span class="kind">School</span></p>
-          <p class="day-idea">Usually late May or June, depending on the exam timetable. Five short cards for the form&rsquo;s last week together.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/the-last-five-mornings/">Ready-made: The Last Five Mornings &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>July</h3>
-      <div class="day" data-end="2027-07-18">
-        <div class="day-when">Sun 18 July</div>
-        <div>
-          <p class="day-name">Nelson Mandela International Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">A Sunday near the end of term. Mandela Day asks everyone to give 67 minutes to someone else: what could the form do with them?</p>
-          <div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <p class="cal-note">Dates were checked against each organiser&rsquo;s own site in September 2026. A day that falls at a weekend is best marked on the Friday before or the Monday after. Mental Health Awareness Week, the start of exams and leaving day depend on the year, so check those nearer the time.</p>
 
   <section class="peek" aria-label="A look inside">
     <h2>A look inside</h2>
     <div class="peek-row">
-      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="The autumn term wall chart" width="800" height="1131" loading="lazy"><figcaption>Autumn term, the wall chart</figcaption></figure>
-      <figure class="peek-item"><img src="preview-pack-2.jpg" alt="The spring term wall chart" width="800" height="1131" loading="lazy"><figcaption>Spring term, the wall chart</figcaption></figure>
-      <figure class="peek-item"><img src="preview-pack-3.jpg" alt="The autumn term ideas page" width="800" height="1131" loading="lazy"><figcaption>Autumn term, the ideas</figcaption></figure>
+      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="The teacher guide" width="800" height="1132" loading="lazy"><figcaption>The teacher guide</figcaption></figure>
+      <figure class="peek-item"><img src="preview-pack-2.jpg" alt="The bookmarks" width="800" height="1132" loading="lazy"><figcaption>The bookmarks</figcaption></figure>
+      <figure class="peek-item"><img src="preview-pack-3.jpg" alt="Follow-up questions" width="800" height="1132" loading="lazy"><figcaption>Follow-up questions</figcaption></figure>
     </div>
   </section>
 
   <section id="downloads">
-    <h2>Get the printable</h2>
-    <p class="lede">Six A4 pages. The first three are the wall chart, one per term, with every date, its value and the ready-made resource if there is one, a blank column for who is leading it, and spare rows for your school&rsquo;s own dates. The last three carry the idea for each day, so the file works on its own.</p>
+    <h2>Get the resource</h2>
+    <p class="lede">One sheet makes four bookmarks, eight sheets cover a form of thirty, and the last page is for you.</p>
     <div class="downloads-grid">
-      <a class="download-card download-card--solo" href="downloads/Assembly_Calendar_2026_to_2027.pdf" download data-umami-event="download" data-umami-event-file="Assembly_Calendar_2026_to_2027.pdf">
+      <a class="download-card download-card--solo" href="downloads/Between_the_Pages_Resource_Pack.pdf" download data-umami-event="download" data-umami-event-file="Between_the_Pages_Resource_Pack.pdf">
         <span class="file-chip">Printable PDF</span>
-        <h3>The Assembly Calendar</h3>
-        <p>A wall chart and a page of ideas for each term, September 2026 to July 2027.</p>
+        <h3>Teacher resource pack</h3>
+        <p>Three pages: a one page teacher guide, the bookmarks four to a sheet, and follow-up questions for each one.</p>
         <span class="download-cta">Download
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
         </span>
@@ -1380,14 +733,14 @@
 
 </main>
 
-<section class="more" aria-label="More from Assemblies and Events">
-  <h2>More from Assemblies and Events</h2>
+<section class="more" aria-label="More from Morning Registration Activities">
+  <h2>More from Morning Registration Activities</h2>
   <div class="more-grid">
-      <a class="more-card" href="../valentines-day-sweet-notes/"><span class="more-title">Sweet Notes</span><span class="more-meta"><span>Valentine&rsquo;s Day</span><span>the student council runs it</span><span>kindness</span></span><span class="more-hint">Open the resource &rarr;</span></a>
-      <a class="more-card" href="../anti-bullying-week/"><span class="more-title">Anti-Bullying Week</span><span class="more-meta"><span>A whole week</span><span>a few things to buy and print</span><span>kindness</span></span><span class="more-hint">Open the resource &rarr;</span></a>
-      <a class="more-card" href="../world-mental-health-day/"><span class="more-title">World Mental Health Day</span><span class="more-meta"><span>An assembly, then a week</span><span>some printing and a little shopping</span><span>listening</span></span><span class="more-hint">Open the resource &rarr;</span></a>
+      <a class="more-card" href="../form-time-quiz/"><span class="more-title">The Form Time Quiz</span><span class="more-meta"><span>15 mins</span><span>one sheet per team</span><span>teamwork</span></span><span class="more-hint">Open the activity &rarr;</span></a>
+      <a class="more-card" href="../form-time-quiz-christmas/"><span class="more-title">The Form Time Quiz: Christmas Edition</span><span class="more-meta"><span>15 mins</span><span>one sheet per team</span><span>curiosity</span></span><span class="more-hint">Open the activity &rarr;</span></a>
+      <a class="more-card" href="../busted/"><span class="more-title">Busted</span><span class="more-meta"><span>10 mins</span><span>nothing to print</span><span>questioning</span></span><span class="more-hint">Open the activity &rarr;</span></a>
   </div>
-  <a class="more-all" href="../">See everything in Assemblies and Events &rarr;</a>
+  <a class="more-all" href="../">See everything in Morning Registration Activities &rarr;</a>
 </section>
 
 <nav class="site-browse" aria-label="Browse the site">
@@ -1428,17 +781,6 @@
       }catch(err){ box.querySelector('.signup-err').hidden = false; b.disabled = false; }
     });
   });
-</script>
-<script>
-  /* Dims the days that have gone and flags the next one, by the reader's own date. */
-  (function(){
-    var t = new Date(); t.setHours(0,0,0,0); var next = null;
-    document.querySelectorAll('.day[data-end]').forEach(function(el){
-      var e = new Date(el.getAttribute('data-end') + 'T00:00:00');
-      if (e < t) el.classList.add('is-past'); else if (!next) next = el;
-    });
-    if (next){ next.classList.add('is-next'); var f = document.createElement('span'); f.className = 'next-flag'; f.textContent = 'Coming up next'; next.querySelector('.day-when').prepend(f); }
-  })();
 </script>
 <!-- sitesearch js start -->
 <script>

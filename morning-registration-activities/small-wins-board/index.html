@@ -755,6 +755,19 @@
 .book-icon{ display: none; }
 .facts-line{ margin: 10px 0 0; padding: 12px 0 0; width: 100%; border-top: 1px solid rgba(46,68,54,0.16); text-align: center; font-size: 15px; font-style: italic; color: var(--ink-soft); }
 /* == human pass end == */
+
+/* == step photos (2 Oct 2026) == */
+.steps.flow{ display: block; }
+.steps.flow .step{ display: block; position: relative; padding-left: 40px; }
+.steps.flow .step-num{ position: absolute; left: 0; top: 16px; }
+.steps.flow .step-photo:first-child + .step{ border-top: 0; padding-top: 4px; }
+.steps.flow .step-photo:first-child + .step .step-num{ top: 4px; }
+@media (max-width: 720px){ .steps.flow .step-photo{ margin-top: 10px; } }
+.steps.flow::after{ content: ""; display: block; clear: both; }
+.step-photo{ float: right; width: 300px; margin: 12px 0 10px 26px; position: relative; z-index: 1; background: var(--bg); box-shadow: -26px 0 0 var(--bg); }
+.step-photo img{ width: 100%; height: auto; display: block; border-radius: 6px; }
+.step-photo--second{ clear: right; margin-top: 6px; }
+@media (max-width: 720px){ .step-photo{ width: 44%; margin-left: 16px; box-shadow: -16px 0 0 var(--bg); } }
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/morning-registration-activities/small-wins-board/#resource","url":"https://thepastoralguide.com/morning-registration-activities/small-wins-board/","name":"Small Wins Board","description":"Students notice one thing they’re proud of and add it to a board that keeps growing all year. Five to ten minutes, next to no setup. It gets a form used to noticing their own progress instead of waiting for somebody else to point it out.","inLanguage":"en-GB","learningResourceType":"Activity","educationalLevel":["Key Stage 3", "Key Stage 4"],"typicalAgeRange":"11-16","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/morning-registration-activities/small-wins-board/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published","timeRequired":"PT10M"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/morning-registration-activities/small-wins-board/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Morning Registration Activities","item":"https://thepastoralguide.com/morning-registration-activities/"},{"@type":"ListItem","position":3,"name":"Small Wins Board","item":"https://thepastoralguide.com/morning-registration-activities/small-wins-board/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
@@ -805,14 +818,15 @@
 
   <section>
     <h2>How it works</h2>
-    <div class="steps">
+    <div class="steps flow">
+      <div class="step-photo"><img src="board-photo.webp" alt="A cork board by a classroom door covered in Small Win cards and Post-its around a Small Wins Board header" width="800" height="523" loading="lazy"></div>
       <div class="step">
         <span class="step-num">1</span>
         <div><strong>Set the prompt.</strong><p>Display the first slide: one thing you&rsquo;re proud of, from yesterday or today, big or small.</p></div>
       </div>
       <div class="step">
         <span class="step-num">2</span>
-        <div><strong>Write and add it.</strong><p>Students jot their win on a Post-it or a printable card, then stick it to the board with a bit of Blu Tack. No wall space? Keep the second slide up instead, as a digital board.</p></div>
+        <div><strong>Write and add it.</strong><p>Students jot their win on a Post-it or a printable card, then stick it to the board with Blu Tack or a drawing pin. No wall space? Keep the second slide up instead, as a digital board.</p></div>
       </div>
       <div class="step">
         <span class="step-num">3</span>

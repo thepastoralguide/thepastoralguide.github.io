@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Form Time Quiz: a free form time quiz with answer sheets, KS3 to KS5</title>
-<meta name="description" content="A free ten-question form time quiz with PowerPoint slides and a printable team answer sheet. A quiz each for Year 7 to 9, Year 10 and 11 and sixth form.">
+<title>The Form Time Quiz: free form time quizzes with answer sheets, KS3 to KS5</title>
+<meta name="description" content="Free ten-question form time quizzes with PowerPoint slides and printable team answer sheets, in two volumes, with a quiz each for Year 7 to 9, Year 10 and 11 and sixth form.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://thepastoralguide.com/morning-registration-activities/form-time-quiz/">
 <link rel="canonical" href="https://thepastoralguide.com/morning-registration-activities/form-time-quiz/">
 <meta property="og:image" content="https://thepastoralguide.com/morning-registration-activities/form-time-quiz/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The Form Time Quiz: a free form time quiz with answer sheets, KS3 to KS5">
+<meta property="og:image:alt" content="The Form Time Quiz: free form time quizzes with answer sheets, KS3 to KS5">
 <meta property="og:site_name" content="The Pastoral Guide">
 <meta property="article:author" content="Olivia">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://thepastoralguide.com/morning-registration-activities/form-time-quiz/og.jpg">
-<meta property="og:title" content="The Form Time Quiz: a free form time quiz with answer sheets, KS3 to KS5">
-<meta property="og:description" content="A free ten-question form time quiz with PowerPoint slides and a printable team answer sheet. A quiz each for Year 7 to 9, Year 10 and 11 and sixth form.">
+<meta property="og:title" content="The Form Time Quiz: free form time quizzes with answer sheets, KS3 to KS5">
+<meta property="og:description" content="Free ten-question form time quizzes with PowerPoint slides and printable team answer sheets, in two volumes, with a quiz each for Year 7 to 9, Year 10 and 11 and sixth form.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Karla:wght@400;500;600;700&display=swap">
@@ -792,9 +792,34 @@
 .book-icon{ display: none; }
 .facts-line{ margin: 10px 0 0; padding: 12px 0 0; width: 100%; border-top: 1px solid rgba(46,68,54,0.16); text-align: center; font-size: 15px; font-style: italic; color: var(--ink-soft); }
 /* == human pass end == */
+
+  /* == volume tabs (5 Oct 2026) ==
+     Volume One and Volume Two share this page behind a two-part switch, so the
+     downloads stay four boxes, not eight. Each tab carries its volume's colour:
+     amber for One, teal for Two. Without JavaScript both panels show, each with
+     its own heading. */
+  .vtabs{ display: flex; margin: 4px auto 20px; background: #efece4; border-radius: 999px; padding: 5px; width: max-content; max-width: 100%; }
+  .vtab{ border: 0; background: none; font: inherit; cursor: pointer; padding: 10px 22px; border-radius: 999px; display: flex; flex-direction: column; align-items: center; gap: 2px; color: var(--ink-soft); }
+  .vtab b{ font-size: 15px; font-weight: 700; }
+  .vtab span{ font-size: 12px; }
+  .vtab:hover{ color: var(--ink); }
+  .vtab:focus-visible{ outline: 2px solid var(--tab); outline-offset: 2px; }
+  .vtab[aria-selected="true"]{ background: var(--tab); color: #fff; box-shadow: 0 4px 10px -6px rgba(46,68,54,.6); }
+  .vtabs[hidden]{ display: none; }
+  .vpanel{ scroll-margin-top: 90px; }
+  .vpanel + .vpanel{ margin-top: 26px; }
+  .vpanel-title{ font-size: 19px; margin: 0 0 12px; text-align: center; }
+  .js-tabs .vpanel-title{ position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .js-tabs .vpanel + .vpanel{ margin-top: 0; }
+  .vpanel .downloads-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 920px; margin: 0 auto; }
+  .vpanel--two{ --accent-deep: #2b6573; }
+  .downloads-grid--after{ margin-top: 20px; }
+  @media (max-width: 900px){ .vpanel .downloads-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px){ .vtab{ padding: 9px 16px; } .vtab span{ display: none; } .vpanel .downloads-grid{ grid-template-columns: 1fr; } }
+  /* == volume tabs end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/#resource","url":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/","name":"The Form Time Quiz","description":"A ten-question quiz played in small teams, with a printed answer sheet for each team. Six questions are on a theme and four are general knowledge, then teams swap sheets and mark each other’s as the answers go up. It takes about fifteen minutes, and the only printing is one sheet per team. Each key stage has its own theme, so students come away knowing something useful as well as their score.","inLanguage":"en-GB","learningResourceType":"Quiz","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published","timeRequired":"PT15M"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Morning Registration Activities","item":"https://thepastoralguide.com/morning-registration-activities/"},{"@type":"ListItem","position":3,"name":"The Form Time Quiz","item":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/#resource","url":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/","name":"The Form Time Quiz","description":"A ten-question quiz played in small teams, with a printed answer sheet for each team. Six questions are on a theme and four are general knowledge, then teams swap sheets and mark each other’s as the answers go up. It takes about fifteen minutes, and the only printing is one sheet per team. There are two volumes, each with its own theme for every key stage.","inLanguage":"en-GB","learningResourceType":"Quiz","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published","timeRequired":"PT15M"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Morning Registration Activities","item":"https://thepastoralguide.com/morning-registration-activities/"},{"@type":"ListItem","position":3,"name":"The Form Time Quiz","item":"https://thepastoralguide.com/morning-registration-activities/form-time-quiz/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
 </head>
 <body>
 
@@ -830,7 +855,7 @@
 <header class="page-header wrap">
   <span class="eyebrow">Morning Registration Activities</span>
   <h1 class="page-title">The Form Time Quiz</h1>
-  <p class="page-sub">A ten-question quiz played in small teams, with a printed answer sheet for each team. Six questions are on a theme and four are general knowledge, then teams swap sheets and mark each other&rsquo;s as the answers go up. It takes about fifteen minutes, and the only printing is one sheet per team. Each key stage has its own theme, so students come away knowing something useful as well as their score.</p>
+  <p class="page-sub">A ten-question quiz played in small teams, with a printed answer sheet for each team. Six questions are on a theme and four are general knowledge, then teams swap sheets and mark each other&rsquo;s as the answers go up. It takes about fifteen minutes, and the only printing is one sheet per team. There are two volumes, each with its own theme for every key stage.</p>
   <span class="page-facts">Year 7 to 13, a quiz each for <a href="../../key-stage-3/">Year 7 to 9</a>, <a href="../../key-stage-4/">Year 10 and 11</a> and <a href="../../sixth-form/">sixth form</a> &middot; form time or registration &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the downloads
@@ -858,7 +883,7 @@
       </div>
       <div class="step">
         <span class="step-num">3</span>
-        <div><strong>Swap and mark.</strong><p>Teams swap sheets with the team next to them. The answers go up one at a time, each with a line on why, so give the room a moment on each one.</p></div>
+        <div><strong>Swap and mark.</strong><p>Teams swap sheets with the team next to them. The answers go up one at a time, each with a line on why (and in Volume Two, the study it comes from), so give the room a moment on each one.</p></div>
       </div>
       <div class="step">
         <span class="step-num">4</span>
@@ -878,8 +903,14 @@
 
   <section id="downloads">
     <h2>Get the quiz</h2>
-    <p class="lede">Pick the slides for your form. The only printing is one answer sheet per team. Volume One has one quiz for each key stage, and there is also a <a href="../form-time-quiz-christmas/">Christmas edition</a> for the end of the autumn term. Want to know when Volume Two goes up? <a href="#signup">Sign up here</a>.</p>
-    <div class="downloads-grid">
+    <p class="lede">Pick a volume, then the slides for your form. The only printing is one answer sheet per team. Each volume has its own theme for every key stage, and there is also a <a href="../form-time-quiz-christmas/">Christmas edition</a> for the end of the autumn term. Want to hear when the next one goes up? <a href="#signup">Sign up here</a>.</p>
+    <div class="vtabs" role="tablist" aria-label="Choose a volume" hidden>
+      <button class="vtab" type="button" role="tab" id="tab-volume-one" aria-controls="volume-one" aria-selected="false" style="--tab:#974f16"><b>Volume One</b><span>Healthy habits, revision, life admin</span></button>
+      <button class="vtab" type="button" role="tab" id="tab-volume-two" aria-controls="volume-two" aria-selected="true" style="--tab:#2b6573"><b>Volume Two</b><span>Animal myths, fake news, thinking traps</span></button>
+    </div>
+    <div class="vpanel vpanel--one" id="volume-one" role="tabpanel" aria-labelledby="tab-volume-one">
+      <h3 class="vpanel-title">Volume One: healthy habits, revision and life admin</h3>
+      <div class="downloads-grid">
       <a class="download-card" href="downloads/Form_Time_Quiz_Year_7_to_9.pptx" download data-umami-event="download" data-umami-event-file="Form_Time_Quiz_Year_7_to_9.pptx">
         <span class="file-chip">PowerPoint</span>
         <h3>Quiz for Year 7 to 9</h3>
@@ -912,6 +943,46 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
         </span>
       </a>
+      </div>
+    </div>
+    <div class="vpanel vpanel--two" id="volume-two" role="tabpanel" aria-labelledby="tab-volume-two">
+      <h3 class="vpanel-title">Volume Two: animal myths, fake news and thinking traps</h3>
+      <div class="downloads-grid">
+      <a class="download-card" href="downloads/Form_Time_Quiz_Volume_Two_Year_7_to_9.pptx" download data-umami-event="download" data-umami-event-file="Form_Time_Quiz_Volume_Two_Year_7_to_9.pptx">
+        <span class="file-chip">PowerPoint</span>
+        <h3>Quiz for Year 7 to 9</h3>
+        <p>Animal myths, from blind bats to jumping lemmings, then general knowledge, with two blank slides for your own.</p>
+        <span class="download-cta">Download
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
+        </span>
+      </a>
+      <a class="download-card" href="downloads/Form_Time_Quiz_Volume_Two_Year_10_and_11.pptx" download data-umami-event="download" data-umami-event-file="Form_Time_Quiz_Volume_Two_Year_10_and_11.pptx">
+        <span class="file-chip">PowerPoint</span>
+        <h3>Quiz for Year 10 and 11</h3>
+        <p>Spotting fake news and AI fakes, then general knowledge. Every themed answer names the study it comes from.</p>
+        <span class="download-cta">Download
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
+        </span>
+      </a>
+      <a class="download-card" href="downloads/Form_Time_Quiz_Volume_Two_Sixth_Form.pptx" download data-umami-event="download" data-umami-event-file="Form_Time_Quiz_Volume_Two_Sixth_Form.pptx">
+        <span class="file-chip">PowerPoint</span>
+        <h3>Quiz for sixth form</h3>
+        <p>Thinking traps, from anchoring to the sunk cost trap, then general knowledge.</p>
+        <span class="download-cta">Download
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
+        </span>
+      </a>
+      <a class="download-card" href="downloads/Form_Time_Quiz_Volume_Two_Resource_Pack.pdf" download data-umami-event="download" data-umami-event-file="Form_Time_Quiz_Volume_Two_Resource_Pack.pdf">
+        <span class="file-chip">Printable PDF</span>
+        <h3>Teacher resource pack</h3>
+        <p>Six pages: the guide, an answer key with sources, spare questions on each theme, and a team answer sheet for each key stage.</p>
+        <span class="download-cta">Download
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
+        </span>
+      </a>
+      </div>
+    </div>
+    <div class="downloads-grid downloads-grid--after">
       <div class="signup" id="signup">
         <div class="signup-main">
         <p>New resources go up as they are made. Leave your email and you will get one message when something new lands, and nothing else.</p>
@@ -1133,5 +1204,27 @@
 </script>
 <!-- sitesearch js end -->
 
+<script>
+/* Volume tabs. Opens on Volume Two unless the address ends #volume-one. */
+(function(){
+  var box = document.getElementById('downloads'); if (!box) return;
+  var tabs = [].slice.call(box.querySelectorAll('.vtab')), panels = [].slice.call(box.querySelectorAll('.vpanel'));
+  function show(id, focus){
+    tabs.forEach(function(t){ var on = t.getAttribute('aria-controls') === id; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus(); });
+    panels.forEach(function(p){ p.hidden = p.id !== id; });
+  }
+  box.classList.add('js-tabs'); box.querySelector('.vtabs').hidden = false;
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ show(t.getAttribute('aria-controls')); });
+    t.addEventListener('keydown', function(e){
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft'){ e.preventDefault(); var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; show(n.getAttribute('aria-controls'), true); }
+    });
+  });
+  function fromHash(){ var h = location.hash.slice(1); if (h === 'volume-one' || h === 'volume-two'){ show(h); box.scrollIntoView(); } }
+  show(location.hash === '#volume-one' ? 'volume-one' : 'volume-two');
+  if (location.hash === '#volume-one' || location.hash === '#volume-two') setTimeout(function(){ box.scrollIntoView(); }, 0);
+  window.addEventListener('hashchange', fromHash);
+})();
+</script>
 </body>
 </html>

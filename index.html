@@ -1101,18 +1101,18 @@
           <span class="note-line">Ten new questions in teams, with a quiz for each key stage.</span>
           <span class="note-arrow" aria-hidden="true">&rarr;</span>
         </a>
-        <a class="note note--first" href="morning-registration-activities/register-reply/">
+        <a class="note note--first" href="morning-registration-activities/mystery-fact-of-the-day/">
           <span class="note-bar" aria-hidden="true"></span>
           <span class="note-kicker">Try this first</span>
-          <span class="note-title">The Register Reply</span>
-          <span class="note-line">A question students answer instead of saying &ldquo;here&rdquo;, as you call the register.</span>
+          <span class="note-title">Mystery Fact of the Day</span>
+          <span class="note-line">Read out a strange fact, the form votes true or false, then finds out. Nothing to prepare.</span>
           <span class="note-arrow" aria-hidden="true">&rarr;</span>
         </a>
       </aside>
     </div>
     <ul class="facts">
       <li><b>6</b><span>categories on the shelf</span></li>
-      <li><b>49</b><span>resources to download</span></li>
+      <li><b>50</b><span>resources to download</span></li>
       <li><b>Free</b><span>for any form tutor</span></li>
       <li><b>One teacher</b><span class="byline">Made by Olivia, a form tutor whose students are still watering their plants.</span></li>
     </ul>
@@ -1262,12 +1262,13 @@
 </div>
 
 <script>
-  // Coming up: shows a dated page from 30 days before it until it ends, then hides. Only the two big dates in the pastoral year are listed. Anti-Bullying Week moves each year, so its dates are pinned to a year and need updating when the next year's are announced.
+  // Coming up: shows a dated page from 30 days before it until it ends, then hides. Only the big dates in the pastoral year are listed. Anti-Bullying Week moves each year, so its dates are pinned to a year and need updating when the next year's are announced.
   (function(){
     var el=document.getElementById('coming-up'); if(!el) return;
     var t=new Date(); t.setHours(0,0,0,0); var y=t.getFullYear();
     var ev=[
       {s:[10,10], e:[10,10], when:'10 October', title:'World Mental Health Day', sub:'An assembly, a week of lunchtimes and a PSHE lesson.', href:'assemblies-and-events/world-mental-health-day/'},
+      {s:[11,13], e:[11,13], when:'13 November', title:'World Kindness Day', sub:'An assembly, then a week of compliments, postcards and shout-outs.', href:'assemblies-and-events/world-kindness-day/'},
       {s:[11,16], e:[11,20], when:'16 to 20 November', title:'Anti-Bullying Week', sub:'An assembly on the Monday, then four themed lunchtimes.', href:'assemblies-and-events/anti-bullying-week/', year:2026}
     ];
     var best=null;

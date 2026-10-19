@@ -857,7 +857,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
       <span class="dl-button-label">Download</span>
     </a>
-    <p class="dl-started" hidden>Your download has started.</p>
+    <p class="dl-started" hidden>Your download has started. If nothing happens, click the button.</p>
   </div>
   <noscript><p class="page-sub">This page needs JavaScript to show the file. Every download is also on its resource page, on <a href="/">the shelf</a>.</p></noscript>
 </header>
@@ -948,17 +948,23 @@
       b.querySelector('.dl-button-label').textContent = 'Download the ' + kind;
       b.hidden = false;
       b.addEventListener('click', function () {
-        var started = document.querySelector('.dl-started');
-        started.hidden = false;
-        $('dl-next-lede').textContent = 'Your download has started. Here are three more resources that go well with ' + data.res[from].t + '.';
-        setTimeout(function () { $('dl-next').scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 700);
+        showStarted();
+        if (!auto) setTimeout(function () { $('dl-next').scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 700);
       });
     });
+    var auto = false;
+    function showStarted() {
+      document.querySelector('.dl-started').hidden = false;
+      $('dl-next-lede').textContent = 'Your download has started. Here are three more resources that go well with ' + data.res[from].t + '.';
+    }
 
     /* the preview: the file itself on a laptop, the page's own previews on a phone */
     var frame = $('dl-frame'), note = $('dl-note');
     var wide = window.matchMedia('(min-width: 760px)').matches;
-    if (wide) {
+    /* A browser set to download PDFs instead of showing them would download
+       the file a second time from the preview, so it gets the pictures. */
+    var canShow = ext !== 'pdf' || navigator.pdfViewerEnabled !== false;
+    if (wide && canShow) {
       var src = ext === 'pdf' ? f + '#view=FitH'
         : 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(SITE + f);
       if (ext !== 'pdf') frame.classList.add('dl-frame--slides');
@@ -977,8 +983,8 @@
         });
       }
       note.textContent = ext === 'pdf'
-        ? 'This is the file itself, so you can scroll through every page before you download it.'
-        : 'The preview uses Microsoft’s free online viewer. The download is the ' + kind + ' itself, ready to edit. If the preview does not load, the button below still downloads the file.';
+        ? 'This is the file itself, so you can look through every page.'
+        : 'The preview uses Microsoft’s free online viewer. The download is the ' + kind + ' itself, ready to edit.';
     } else {
       frame.classList.add('dl-frame--images');
       var want = ext === 'pptx' ? 'slide' : ext === 'xlsx' ? 'tracker' : 'pack';
@@ -1005,6 +1011,19 @@
         '<span class="more-hint">Open the resource &rarr;</span></a>';
     }).join('');
     $('dl-next').hidden = false;
+
+    /* Start the download straight away on a laptop or desktop, so one click
+       on the resource page still gets the file (19 Oct). Phones keep the
+       button, because a phone browser can open the file over this page.
+       Wait a moment for the visitor counter, so the download is counted. */
+    if (wide) {
+      var tries = 0;
+      (function go() {
+        if (!window.umami && tries++ < 15) { setTimeout(go, 100); return; }
+        auto = true;
+        $('dl-button-top').click();
+      })();
+    }
   })['catch'](function () { missing(); });
 })();
 

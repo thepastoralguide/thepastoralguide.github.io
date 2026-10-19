@@ -963,6 +963,19 @@
         : 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(SITE + f);
       if (ext !== 'pdf') frame.classList.add('dl-frame--slides');
       frame.innerHTML = '<iframe src="' + esc(src) + '" title="' + esc(file.n) + ', a preview" loading="eager"></iframe>';
+      /* Microsoft's viewer takes focus as it loads, which scrolls the page
+         down past the heading. For the first few seconds, until the teacher
+         scrolls or clicks themselves, keep the page at the top. */
+      if (ext !== 'pdf') {
+        var touched = false, until = Date.now() + 6000;
+        ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
+          window.addEventListener(ev, function () { touched = true; }, { passive: true, once: true });
+        });
+        window.addEventListener('scroll', function hold() {
+          if (touched || Date.now() > until) { window.removeEventListener('scroll', hold); return; }
+          if (window.scrollY > 0) window.scrollTo(0, 0);
+        });
+      }
       note.textContent = ext === 'pdf'
         ? 'This is the file itself, so you can scroll through every page before you download it.'
         : 'The preview uses Microsoft’s free online viewer. The download is the ' + kind + ' itself, ready to edit. If the preview does not load, the button below still downloads the file.';

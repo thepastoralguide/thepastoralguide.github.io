@@ -947,6 +947,89 @@
   }
   /* == sitesearch end == */
 
+    /* == home scroll start == (9 Nov 2026: browse switch and "One from each shelf") */
+  .browse{ margin-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+  .browse-top{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .browse-lead{ font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 24px; color: var(--ink); }
+  .switch{ display: inline-flex; border: 1px solid var(--ink); border-radius: 999px; padding: 3px; }
+  .switch button{ border: 0; border-radius: 999px; padding: 8px 20px; min-height: 40px; font: inherit; font-size: 16px; font-weight: 700; background: transparent; color: var(--ink); cursor: pointer; }
+  .switch button[aria-pressed="true"]{ background: var(--ink); color: var(--bg); }
+  .switch button:focus-visible{ outline: 2px solid var(--oat-line); outline-offset: 2px; }
+  .browse-row{ display: flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 10px 26px; font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 22px; }
+  .browse-row[hidden]{ display: none; }
+  .browse-row a{ color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; text-decoration-color: var(--oat-line); }
+  .browse-row a:hover, .browse-row a:focus-visible{ text-decoration-color: var(--ink); }
+  .browse-dot{ color: var(--oat-line); }
+  .picks{ margin-top: 56px; }
+  .picks-h{ font-size: 28px; }
+  .spread{ margin-top: 24px; background: var(--band); }
+  .spread--mra{ --band: #f1f6ef; --pages: #e4efe1; --spine: #6f9a66; --deep: #2e4436; }
+  .spread--tt{ --band: #f7f2e8; --pages: #f2ebdc; --spine: #a9895a; --deep: #6b5a34; }
+  .spread--pp{ --band: #fbf5e2; --pages: #f7ecc8; --spine: #c2984a; --deep: #5b4720; }
+  .spread--ae{ --band: #f9efe5; --pages: #f3dfcc; --spine: #ab7a4f; --deep: #6e4a2a; }
+  .spread--wc{ --band: #f1f3e8; --pages: #e2e7cf; --spine: #7c8752; --deep: #4f5732; }
+  .spread--dr{ --band: #eff4ee; --pages: #e1eadf; --spine: #7c9877; --deep: #3f5a3b; }
+  .spread-inner{ display: flex; flex-wrap: wrap; gap: 44px; align-items: center; padding-top: 36px; padding-bottom: 36px; }
+  .spread--rev .spread-inner{ flex-direction: row-reverse; }
+  .spread-img{ flex: 1 1 420px; max-width: 520px; height: 260px; border-radius: 12px; background: var(--pages); display: flex; align-items: center; justify-content: center; padding: 22px; overflow: hidden; }
+  .spread-img img{ width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 8px 18px rgba(46,68,54,0.15)); }
+  .spread-img--photo{ padding: 0; }
+  .spread-img--photo img{ object-fit: cover; filter: none; }
+  .spread-text{ flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; text-align: left; }
+  .spread-cat{ display: inline-flex; align-items: center; gap: 10px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--deep); text-decoration: none; }
+  .spread-cat span{ width: 8px; height: 22px; border-radius: 2px; background: var(--spine); }
+  .spread-title{ font-size: 32px; line-height: 1.15; }
+  .spread-title a{ text-decoration: none; color: var(--ink); }
+  .spread-title a:hover, .spread-title a:focus-visible{ text-decoration: underline; text-underline-offset: 5px; }
+  .spread-desc{ margin: 0; font-size: 17px; line-height: 1.5; color: #44503f; }
+  .spread-facts{ margin: 0; font-size: 15px; color: var(--deep); }
+  .spread-btns{ display: flex; gap: 12px; flex-wrap: wrap; margin-top: 2px; }
+  .sbtn{ display: inline-flex; align-items: center; min-height: 44px; border: 1px solid var(--ink); border-radius: 999px; padding: 0 22px; font-weight: 700; font-size: 15px; text-decoration: none; color: var(--ink); }
+  .sbtn--solid{ background: var(--ink); color: var(--bg); }
+  .sbtn:hover, .sbtn:focus-visible{ box-shadow: 0 0 0 4px rgba(46,68,54,0.15); }
+  .spread-more{ align-self: stretch; margin-top: 10px; border-top: 1px solid var(--spine); padding-top: 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+  .spread-more-lead{ font-size: 14px; color: var(--ink-soft); }
+  .more-item{ display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .more-item:hover .more-t, .more-item:focus-visible .more-t{ text-decoration: underline; text-underline-offset: 3px; }
+  .more-thumb{ flex: 0 0 60px; width: 60px; height: 42px; background: var(--pages); border-radius: 4px; padding: 3px; }
+  .more-thumb img{ width: 100%; height: 100%; object-fit: contain; display: block; }
+  .more-t{ display: block; font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 16px; line-height: 1.25; }
+  .more-f{ display: block; font-size: 13px; color: var(--ink-soft); }
+  .more-all{ font-weight: 700; font-size: 15px; color: var(--deep); }
+  @media (max-width: 800px){
+    .spread-inner, .spread--rev .spread-inner{ flex-direction: column; align-items: stretch; gap: 20px; padding-top: 28px; padding-bottom: 28px; }
+    .spread-img{ flex: none; max-width: none; height: 200px; }
+    .spread-title{ font-size: 26px; }
+    .browse-row{ font-size: 20px; gap: 8px 18px; }
+  }
+  /* == home scroll end == */
+  /* == big footer start == */ (9 Nov 2026: shelf, age, time and about links on every page, for people and for search) */
+  .sf{ margin-top: auto; background: #f4f1e8; border-top: 1px solid rgba(46,68,54,0.16); color: #5c6552; font-family: Calibri, Carlito, 'Segoe UI', -apple-system, sans-serif; text-align: left; }
+  .sf-top{ max-width: var(--max-width, 1265px); margin: 0 auto; padding: 44px clamp(16px, 3vw, 40px) 24px; display: flex; flex-wrap: wrap; gap: 32px 40px; }
+  .sf-brand{ flex: 2 1 260px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .sf-name{ display: flex; align-items: center; gap: 10px; font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 22px; color: #2e4436; text-decoration: none; }
+  .sf-name img{ height: 30px; width: auto; }
+  .sf-about{ margin: 0; font-size: 16px; line-height: 1.5; max-width: 300px; }
+  .sf-support{ margin: 6px 0 0; font-size: 15px; line-height: 1.5; max-width: 320px; }
+  .sf-btn{ display: inline-flex; align-items: center; gap: 8px; min-height: 44px; border: 1px solid #2e4436; border-radius: 999px; padding: 0 18px; font-size: 15px; font-weight: 700; color: #2e4436; text-decoration: none; margin-top: 2px; }
+  .sf-btn:hover, .sf-btn:focus-visible{ background: #2e4436; color: #faf8f3; }
+  .sf-btn svg, .sf-col svg{ width: 18px; height: 18px; flex: none; }
+  .sf-col{ flex: 1 1 150px; }
+  .sf-col--about{ flex: 1 1 230px; }
+  .sf-h{ margin: 0 0 10px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #5c6552; }
+  .sf-col ul{ list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.35; }
+  .sf-col a{ color: #2e4436; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+  .sf-col a span{ overflow-wrap: anywhere; }
+  .sf-col a:hover, .sf-col a:focus-visible{ text-decoration: underline; text-underline-offset: 3px; }
+  .sf-bottom{ max-width: var(--max-width, 1265px); margin: 0 auto; padding: 16px clamp(16px, 3vw, 40px) 28px; border-top: 1px solid rgba(46,68,54,0.12); display: flex; justify-content: flex-end; gap: 28px; font-size: 15px; }
+  .sf-bottom a{ color: #2e4436; }
+  @media (max-width: 700px){
+    .sf-top{ padding-top: 32px; gap: 24px 28px; }
+    .sf-brand{ flex-basis: 100%; }
+    .sf-bottom{ justify-content: flex-start; }
+  }
+  /* == big footer end == */
+
   /* == hero balance start == */
   /* Olivia, 22 Sep: the noticeboard sat 110px below the top bar and 11px above
      the facts band, so it read as pinned to the band with a hole above it.
@@ -1084,7 +1167,7 @@
           <h1 class="site-name">The Pastoral Guide</h1>
         </div>
         <p class="tagline">Values-based resources for your form room</p>
-        <p class="sub">Activities, lessons and projects for form time, with the slides and printables already made. Each one gets students doing something with a value, like kindness or honesty.</p>
+        <p class="sub">Activities, lessons and projects for form time, with the slides and printables already made.</p>
         <a class="cta cta--big" href="morning-registration-activities/">Start here: a five-minute activity <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <aside class="noticeboard" aria-label="What is on at the moment">
@@ -1113,7 +1196,7 @@
     </div>
     <ul class="facts">
       <li><b>6</b><span>categories on the shelf</span></li>
-      <li><b>52</b><span>resources to download</span></li>
+      <li><b>55</b><span>resources to download</span></li>
       <li><b>Free</b><span>for any form tutor</span></li>
       <li><b>One teacher</b><span class="byline">Made by Olivia, a form tutor whose students are still watering their plants.</span></li>
     </ul>
@@ -1234,30 +1317,196 @@
 
     <div class="plank" aria-hidden="true"></div>
 
-    <p class="ks-lead" id="by-age">Or browse by age or time</p>
-    <div class="browse-groups">
-      <nav class="browse-group" aria-label="Browse by age"><span class="browse-group-lead">Age</span><a class="pill pill--ks3" href="key-stage-3/">Year 7 to 9</a><a class="pill pill--ks4" href="key-stage-4/">Year 10 and 11</a><a class="pill pill--ks5" href="sixth-form/">Sixth form</a></nav>
-      <nav class="browse-group" aria-label="Browse by time"><span class="browse-group-lead">Time</span><a class="pill" href="by-time/#five-minutes">Five minutes</a><a class="pill" href="by-time/#an-hour">An hour</a><a class="pill" href="by-time/#a-few-weeks">A few weeks</a><a class="pill" href="by-time/#no-slot-needed">No slot needed</a><a class="pill" href="by-time/#on-a-date">On a date</a></nav>
+    <div class="browse" id="by-age">
+      <div class="browse-top">
+        <span class="browse-lead" id="browse-lead">Browse by</span>
+        <div class="switch" role="group" aria-labelledby="browse-lead">
+          <button type="button" data-show="age" aria-pressed="true">age</button><button type="button" data-show="time" aria-pressed="false">time</button>
+        </div>
+      </div>
+      <nav class="browse-row" data-row="age" aria-label="Browse by age"><a href="key-stage-3/">Year 7 to 9</a><span class="browse-dot" aria-hidden="true">&middot;</span><a href="key-stage-4/">Year 10 and 11</a><span class="browse-dot" aria-hidden="true">&middot;</span><a href="sixth-form/">Sixth form</a></nav>
+      <nav class="browse-row" data-row="time" aria-label="Browse by time" hidden><a href="by-time/#five-minutes">Five minutes</a><span class="browse-dot" aria-hidden="true">&middot;</span><a href="by-time/#an-hour">An hour</a><span class="browse-dot" aria-hidden="true">&middot;</span><a href="by-time/#a-few-weeks">A few weeks</a><span class="browse-dot" aria-hidden="true">&middot;</span><a href="by-time/#no-slot-needed">No slot needed</a><span class="browse-dot" aria-hidden="true">&middot;</span><a href="by-time/#on-a-date">On a date</a></nav>
     </div>
+
   </section>
 
 </div>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-left">
-    <p class="footer-copy">&copy; 2026 The Pastoral Guide</p>
+<section class="picks" aria-labelledby="picks-h">
+  <div class="wrap"><h2 class="picks-h" id="picks-h">One from each shelf</h2></div>
+  <article class="spread spread--mra" aria-labelledby="pick-mra">
+    <div class="wrap spread-inner">
+      <a class="spread-img" href="morning-registration-activities/two-minute-interview/" tabindex="-1" aria-hidden="true"><img src="morning-registration-activities/two-minute-interview/preview-slide-1.jpg" alt="The first slide of The Two-Minute Interview" width="1280" height="720" loading="lazy" decoding="async"></a>
+      <div class="spread-text">
+        <a class="spread-cat" href="morning-registration-activities/"><span aria-hidden="true"></span>Morning Registration Activities</a>
+        <h3 class="spread-title" id="pick-mra"><a href="morning-registration-activities/two-minute-interview/">The Two-Minute Interview</a></h3>
+        <p class="spread-desc">Students pair up, one asks a question from the cards and listens for a full minute, then they swap. Twelve cards to cut out once and use all year.</p>
+        <p class="spread-facts">5 minutes &middot; Year 7 to 9 &middot; Slides and printable cards</p>
+        <div class="spread-btns">
+          <a class="sbtn sbtn--solid" href="/download/?r=morning-registration-activities/two-minute-interview&amp;f=/morning-registration-activities/two-minute-interview/downloads/Two_Minute_Interview.pptx" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Two_Minute_Interview.pptx" data-umami-event-from="home">Download the slides</a>
+          <a class="sbtn" href="morning-registration-activities/two-minute-interview/">How it works</a>
+        </div>
+        <div class="spread-more">
+          <span class="spread-more-lead">Also on this shelf</span>
+          <a class="more-item" href="morning-registration-activities/weekly-wonder/"><span class="more-thumb"><img src="morning-registration-activities/weekly-wonder/preview-slide-1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span><span class="more-t">Weekly Wonder</span><span class="more-f">5 to 10 minutes &middot; Year 7 to 13</span></span></a>
+          <a class="more-item" href="morning-registration-activities/busted/"><span class="more-thumb"><img src="morning-registration-activities/busted/preview-slide-1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span><span class="more-t">Busted</span><span class="more-f">10 minutes &middot; Year 10 to 13</span></span></a>
+          <a class="more-all" href="morning-registration-activities/">See all 17</a>
+        </div>
+      </div>
     </div>
-    <nav class="footer-links" aria-label="Contact and follow">
-      <a href="about/"><span>About Olivia</span></a>
-      <a href="https://instagram.com/thepastoralguide" target="_blank" rel="noopener"><span>@thepastoralguide</span></a>
-      <a href="https://pinterest.com/thepastoralguide/" target="_blank" rel="noopener" data-umami-event="pinterest-footer"><span>Pinterest</span></a>
-      <a href="mailto:thepastoralguide@gmail.com"><span>thepastoralguide@gmail.com</span></a>
-      <a href="privacy/"><span>Privacy</span></a>
+  </article>
+  <article class="spread spread--tt spread--rev" aria-labelledby="pick-tt">
+    <div class="wrap spread-inner">
+      <a class="spread-img" href="tutor-time/bystander-to-upstander/" tabindex="-1" aria-hidden="true"><img src="tutor-time/bystander-to-upstander/preview-slide-1.jpg" alt="The first slide of Bystander to Upstander" width="1280" height="720" loading="lazy" decoding="async"></a>
+      <div class="spread-text">
+        <a class="spread-cat" href="tutor-time/"><span aria-hidden="true"></span>Tutor Time</a>
+        <h3 class="spread-title" id="pick-tt"><a href="tutor-time/bystander-to-upstander/">Bystander to Upstander</a></h3>
+        <p class="spread-desc">A lesson about the people who watch when someone is picked on: the five roles they can play, and the words to use when stepping in.</p>
+        <p class="spread-facts">One hour &middot; Year 7 to 11 &middot; Slides and a pack</p>
+        <div class="spread-btns">
+          <a class="sbtn sbtn--solid" href="/download/?r=tutor-time/bystander-to-upstander&amp;f=/tutor-time/bystander-to-upstander/downloads/Bystander_to_Upstander.pptx" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Bystander_to_Upstander.pptx" data-umami-event-from="home">Download the slides</a>
+          <a class="sbtn" href="tutor-time/bystander-to-upstander/">How it works</a>
+        </div>
+        <div class="spread-more">
+          <span class="spread-more-lead">Also on this shelf</span>
+          <a class="more-item" href="tutor-time/it-was-just-a-joke/"><span class="more-thumb"><img src="tutor-time/it-was-just-a-joke/preview-slide-1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span><span class="more-t">It Was Just a Joke</span><span class="more-f">One hour &middot; Year 7 to 11</span></span></a>
+          <a class="more-item" href="tutor-time/revision-that-survives-the-week/"><span class="more-thumb"><img src="tutor-time/revision-that-survives-the-week/preview-slide-1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span><span class="more-t">Revision That Survives the Week</span><span class="more-f">One hour &middot; Year 10 to 13</span></span></a>
+          <a class="more-all" href="tutor-time/">See all 13</a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="spread spread--pp" aria-labelledby="pick-pp">
+    <div class="wrap spread-inner">
+      <a class="spread-img spread-img--photo" href="pastoral-projects/the-planting-project/" tabindex="-1" aria-hidden="true"><img src="pastoral-projects/the-planting-project/planting-strip.webp" alt="Herbs growing in pots on a classroom windowsill" width="1500" height="469" loading="lazy" decoding="async"></a>
+      <div class="spread-text">
+        <a class="spread-cat" href="pastoral-projects/"><span aria-hidden="true"></span>Pastoral Projects</a>
+        <h3 class="spread-title" id="pick-pp"><a href="pastoral-projects/the-planting-project/">The Planting Project</a></h3>
+        <p class="spread-desc">Pairs grow a herb from seed and look after it together for six weeks, then take it home and cook with it.</p>
+        <p class="spread-facts">Six weeks &middot; Year 7 to 9 &middot; Slides, a pack and a tracker</p>
+        <div class="spread-btns">
+          <a class="sbtn sbtn--solid" href="/download/?r=pastoral-projects/the-planting-project&amp;f=/pastoral-projects/the-planting-project/downloads/The_Planting_Project.pptx" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="The_Planting_Project.pptx" data-umami-event-from="home">Download the slides</a>
+          <a class="sbtn" href="pastoral-projects/the-planting-project/">How it works</a>
+        </div>
+        <div class="spread-more">
+          <span class="spread-more-lead">Also on this shelf</span>
+          <a class="more-item" href="pastoral-projects/screen-time/"><span class="more-thumb"><img src="pastoral-projects/screen-time/preview-slide-1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span><span class="more-t">How Does Screen Time Affect&hellip;?</span><span class="more-f">Three sessions over a term &middot; Year 7 to 11</span></span></a>
+          <a class="more-all" href="pastoral-projects/">See all 5</a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="spread spread--ae spread--rev" id="home-event" aria-labelledby="pick-ae">
+    <div class="wrap spread-inner">
+      <a class="spread-img" href="assemblies-and-events/anti-bullying-week/" tabindex="-1" aria-hidden="true"><img src="assemblies-and-events/anti-bullying-week/preview-slide-2.jpg" alt="The Odd Socks Day slide from Anti-Bullying Week" width="1280" height="720" loading="lazy" decoding="async"></a>
+      <div class="spread-text">
+        <a class="spread-cat" href="assemblies-and-events/"><span aria-hidden="true"></span>Assemblies and Events</a>
+        <h3 class="spread-title" id="pick-ae"><a href="assemblies-and-events/anti-bullying-week/">Anti-Bullying Week</a></h3>
+        <p class="spread-desc">An assembly and Odd Socks Day on the Monday, then a themed activity on each of the next four days, on this year&rsquo;s theme, Break the Silence.</p>
+        <p class="spread-facts">16 to 20 November &middot; Year 7 to 11 &middot; Slides and a pack</p>
+        <div class="spread-btns">
+          <a class="sbtn sbtn--solid" href="/download/?r=assemblies-and-events/anti-bullying-week&amp;f=/assemblies-and-events/anti-bullying-week/downloads/Anti_Bullying_Week.pptx" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Anti_Bullying_Week.pptx" data-umami-event-from="home">Download the slides</a>
+          <a class="sbtn" href="assemblies-and-events/anti-bullying-week/">How it works</a>
+        </div>
+        <div class="spread-more">
+          <span class="spread-more-lead">Also on this shelf</span>
+          <a class="more-item" href="assemblies-and-events/assembly-calendar/"><span class="more-thumb"><img src="assemblies-and-events/assembly-calendar/preview-pack-1.jpg" alt="" width="800" height="1131" loading="lazy" decoding="async"></span><span><span class="more-t">The Assembly Calendar</span><span class="more-f">September to July &middot; Year 7 to 13</span></span></a>
+          <a class="more-item" id="home-event-next" href="assemblies-and-events/new-year-values-week/"><span class="more-thumb"><img src="assemblies-and-events/new-year-values-week/preview-slide-1.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async"></span><span><span class="more-t">The New Year Values Week</span><span class="more-f">The first week of January &middot; Year 7 to 13</span></span></a>
+          <a class="more-all" href="assemblies-and-events/">See all 7</a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="spread spread--wc" aria-labelledby="pick-wc">
+    <div class="wrap spread-inner">
+      <a class="spread-img" href="wellbeing-check-ins/mood-scale/" tabindex="-1" aria-hidden="true"><img src="wellbeing-check-ins/mood-scale/preview-pack-2.jpg" alt="The printable 1 to 5 Mood Scale" width="800" height="566" loading="lazy" decoding="async"></a>
+      <div class="spread-text">
+        <a class="spread-cat" href="wellbeing-check-ins/"><span aria-hidden="true"></span>Wellbeing Check-Ins</a>
+        <h3 class="spread-title" id="pick-wc"><a href="wellbeing-check-ins/mood-scale/">Mood Scale</a></h3>
+        <p class="spread-desc">A printable 1 to 5 scale, from really struggling to a great day. A student points to a number, and you have somewhere to start the conversation.</p>
+        <p class="spread-facts">1 minute &middot; Year 7 to 9 &middot; A printable PDF</p>
+        <div class="spread-btns">
+          <a class="sbtn sbtn--solid" href="/download/?r=wellbeing-check-ins/mood-scale&amp;f=/wellbeing-check-ins/mood-scale/downloads/Mood_Scale_Resource_Pack.pdf" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Mood_Scale_Resource_Pack.pdf" data-umami-event-from="home">Download the PDF</a>
+          <a class="sbtn" href="wellbeing-check-ins/mood-scale/">How it works</a>
+        </div>
+        <div class="spread-more">
+          <span class="spread-more-lead">Also on this shelf</span>
+          <a class="more-item" href="wellbeing-check-ins/conversation-starters/"><span class="more-thumb"><img src="wellbeing-check-ins/conversation-starters/preview-pack-2.jpg" alt="" width="800" height="1131" loading="lazy" decoding="async"></span><span><span class="more-t">Conversation Starters</span><span class="more-f">2 minutes or longer &middot; Year 7 to 13</span></span></a>
+          <a class="more-item" href="wellbeing-check-ins/tell-me-later/"><span class="more-thumb"><img src="wellbeing-check-ins/tell-me-later/preview-pack-2.jpg" alt="" width="800" height="1131" loading="lazy" decoding="async"></span><span><span class="more-t">Tell Me Later</span><span class="more-f">Daily, once it is up &middot; Year 7 to 11</span></span></a>
+          <a class="more-all" href="wellbeing-check-ins/">See all 8</a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="spread spread--dr spread--rev" aria-labelledby="pick-dr">
+    <div class="wrap spread-inner">
+      <a class="spread-img spread-img--photo" href="displays-and-recognition/the-shout-out-board/" tabindex="-1" aria-hidden="true"><img src="displays-and-recognition/the-shout-out-board/board-photo.webp" alt="A Shout-Out Board full of handwritten slips on a classroom wall" width="800" height="608" loading="lazy" decoding="async"></a>
+      <div class="spread-text">
+        <a class="spread-cat" href="displays-and-recognition/"><span aria-hidden="true"></span>Displays and Recognition</a>
+        <h3 class="spread-title" id="pick-dr"><a href="displays-and-recognition/the-shout-out-board/">The Shout-Out Board</a></h3>
+        <p class="spread-desc">A Friday board where students thank each other on slips. Print the board once, then refill the slips each week.</p>
+        <p class="spread-facts">2 minutes on a Friday &middot; Year 7 to 11 &middot; A printable PDF</p>
+        <div class="spread-btns">
+          <a class="sbtn sbtn--solid" href="/download/?r=displays-and-recognition/the-shout-out-board&amp;f=/displays-and-recognition/the-shout-out-board/downloads/The_Shout-Out_Board_Resource_Pack.pdf" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="The_Shout-Out_Board_Resource_Pack.pdf" data-umami-event-from="home">Download the PDF</a>
+          <a class="sbtn" href="displays-and-recognition/the-shout-out-board/">How it works</a>
+        </div>
+        <div class="spread-more">
+          <span class="spread-more-lead">Also on this shelf</span>
+          <a class="more-item" href="displays-and-recognition/praise-postcards/"><span class="more-thumb"><img src="displays-and-recognition/praise-postcards/preview-pack-2.jpg" alt="" width="800" height="1131" loading="lazy" decoding="async"></span><span><span class="more-t">Praise Postcards</span><span class="more-f">Any time &middot; Year 7 to 11</span></span></a>
+          <a class="more-all" href="displays-and-recognition/">See all 5</a>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<footer class="sf">
+  <div class="sf-top">
+    <div class="sf-brand">
+      <a class="sf-name" href="/"><img src="/logo.png" alt="" width="26" height="30" loading="lazy" decoding="async">The Pastoral Guide</a>
+      <p class="sf-about">Free form time and tutor time resources for secondary schools, made by a form tutor.</p>
+      <p class="sf-support">These resources are free and will stay that way. If one of them saved you some planning time, a small donation helps keep the site going.</p>
+      <a class="sf-btn" href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support-footer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z"/><path d="M16 11h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3.5c0 1 1 1.5 1 2.5M12 3.5c0 1 1 1.5 1 2.5"/></svg>Support the site</a>
+    </div>
+    <nav class="sf-col" aria-label="The shelf">
+      <p class="sf-h">The shelf</p>
+      <ul>
+        <li><a href="/morning-registration-activities/">Morning Registration Activities</a></li>
+        <li><a href="/tutor-time/">Tutor Time</a></li>
+        <li><a href="/pastoral-projects/">Pastoral Projects</a></li>
+        <li><a href="/assemblies-and-events/">Assemblies and Events</a></li>
+        <li><a href="/wellbeing-check-ins/">Wellbeing Check-Ins</a></li>
+        <li><a href="/displays-and-recognition/">Displays and Recognition</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="By age">
+      <p class="sf-h">By age</p>
+      <ul>
+        <li><a href="/key-stage-3/">Year 7 to 9</a></li>
+        <li><a href="/key-stage-4/">Year 10 and 11</a></li>
+        <li><a href="/sixth-form/">Sixth form</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col" aria-label="By time">
+      <p class="sf-h">By time</p>
+      <ul>
+        <li><a href="/by-time/#five-minutes">Five minutes</a></li>
+        <li><a href="/by-time/#an-hour">An hour</a></li>
+        <li><a href="/by-time/#a-few-weeks">A few weeks</a></li>
+        <li><a href="/by-time/#no-slot-needed">No slot needed</a></li>
+        <li><a href="/by-time/#on-a-date">On a date</a></li>
+      </ul>
+    </nav>
+    <nav class="sf-col sf-col--about" aria-label="About">
+      <p class="sf-h">About</p>
+      <ul>
+        <li><a href="/about/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span>About Olivia</span></a></li>
+        <li><a href="https://instagram.com/thepastoralguide" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg><span>@thepastoralguide</span></a></li>
+        <li><a href="https://pinterest.com/thepastoralguide/" target="_blank" rel="noopener" data-umami-event="pinterest-footer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10.5 20l1.6-7.2"/><path d="M9.6 13.6c-.5-.7-.7-1.5-.6-2.4.2-1.9 1.8-3.2 3.7-3 1.8.2 3 1.6 2.8 3.4-.2 1.9-1.4 3.3-2.8 3.2-.8 0-1.3-.6-1.2-1.4"/></svg><span>Pinterest</span></a></li>
+        <li><a href="mailto:thepastoralguide@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></svg><span>thepastoralguide@gmail.com</span></a></li>
+      </ul>
     </nav>
   </div>
-  <!-- support footer start -->
-  <p class="footer-support">These resources are free and will stay that way. If one of them saved you some planning time, <a href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support-footer">a small donation</a> helps keep the site going.</p>
-  <!-- support footer end -->
+  <div class="sf-bottom"><span>&copy; 2026 The Pastoral Guide</span><a href="/privacy/">Privacy</a></div>
 </footer>
 
 </div>
@@ -1285,6 +1534,58 @@
       el.querySelector('.note-title').textContent=best.e.title;
       el.querySelector('.note-line').textContent=best.e.sub;
       el.hidden=false; } else { el.hidden=true; }
+  })();
+</script>
+<script>
+  // Browse by age or time: one row of links at a time. Both rows are in the HTML.
+  (function(){
+    var btns=document.querySelectorAll('.switch button'), rows=document.querySelectorAll('.browse-row');
+    Array.prototype.forEach.call(btns,function(b){ b.addEventListener('click',function(){
+      var m=b.getAttribute('data-show');
+      Array.prototype.forEach.call(btns,function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); });
+      Array.prototype.forEach.call(rows,function(r){ r.hidden = r.getAttribute('data-row')!==m; });
+    }); });
+  })();
+  // "One from each shelf", Assemblies and Events: shows the next event after the one in "Coming up",
+  // so the two never repeat and the spread never shows a date that has passed. Same dates as the
+  // Coming up list above; Anti-Bullying Week and Children's Mental Health Week are pinned to a year.
+  (function(){
+    var box=document.getElementById('home-event'); if(!box) return;
+    var t=new Date(); t.setHours(0,0,0,0); var y=t.getFullYear();
+    var A='assemblies-and-events/';
+    var ev=[
+      {s:[10,10],e:[10,10],slug:'world-mental-health-day',title:'World Mental Health Day',when:'10 October',age:'Year 7 to 13',files:'Slides, a lesson and a pack',img:'preview-slide-1.jpg',dl:'World_Mental_Health_Day_Assembly.pptx',desc:'An assembly, a week of lunchtimes and a PSHE lesson.'},
+      {s:[11,13],e:[11,13],slug:'world-kindness-day',title:'World Kindness Day',when:'13 November',age:'Year 7 to 13',files:'Slides and a pack',img:'preview-slide-1.jpg',dl:'World_Kindness_Day_Assembly.pptx',desc:'An assembly, then a week of compliments, postcards and shout-outs.'},
+      {s:[11,16],e:[11,20],year:2026,slug:'anti-bullying-week',title:'Anti-Bullying Week',when:'16 to 20 November',age:'Year 7 to 11',files:'Slides and a pack',img:'preview-slide-2.jpg',dl:'Anti_Bullying_Week.pptx',desc:'An assembly and Odd Socks Day on the Monday, then a themed activity on each of the next four days, on this year\u2019s theme, Break the Silence.'},
+      {s:[1,4],e:[1,8],slug:'new-year-values-week',title:'The New Year Values Week',when:'The first week of January',age:'Year 7 to 13',files:'Slides, a pack and a student sheet',img:'preview-slide-1.jpg',dl:'New_Year_Values_Week_Slides.pptx',desc:'An assembly, a value a day, and a goal sheet to half term.'},
+      {s:[2,1],e:[2,7],year:2027,slug:'childrens-mental-health-week',title:'Children\u2019s Mental Health Week',when:'1 to 7 February',age:'Year 7 to 13',files:'Slides and a pack',img:'preview-slide-1.jpg',dl:'Childrens_Mental_Health_Week_Slides.pptx',desc:'An assembly, then something different every lunchtime.'}
+    ];
+    var up=[];
+    ev.forEach(function(e){ [y,y+1].forEach(function(yy){
+      if(e.year && e.year!==yy) return;
+      var s=new Date(yy,e.s[0]-1,e.s[1]), en=new Date(yy,e.e[0]-1,e.e[1]);
+      if(en>=t) up.push({s:s,e:e});
+    }); });
+    up.sort(function(a,b){ return a.s-b.s; });
+    var cu=document.getElementById('coming-up'), cuHref=(cu && !cu.hidden)?cu.getAttribute('href'):'';
+    var list=up.filter(function(u){ return A+u.e.slug+'/'!==cuHref; });
+    if(!list.length) return;
+    var f=list[0].e, p=A+f.slug;
+    var img=box.querySelector('.spread-img img');
+    if(img.getAttribute('src')!==p+'/'+f.img){ img.src=p+'/'+f.img; img.alt='A slide from '+f.title; }
+    box.querySelector('.spread-img').href=p+'/';
+    var ttl=box.querySelector('.spread-title a'); ttl.href=p+'/'; ttl.textContent=f.title;
+    box.querySelector('.spread-desc').textContent=f.desc;
+    box.querySelector('.spread-facts').textContent=f.when+' \u00b7 '+f.age+' \u00b7 '+f.files;
+    var b=box.querySelectorAll('.sbtn');
+    b[0].href='/download/?r='+p+'&f=/'+p+'/downloads/'+f.dl; b[0].setAttribute('data-umami-event-file',f.dl);
+    b[1].href=p+'/';
+    var nx=document.getElementById('home-event-next'), n=list[1];
+    if(nx && n){ var q=A+n.e.slug; nx.href=q+'/';
+      nx.querySelector('img').src=q+'/'+n.e.img;
+      nx.querySelector('.more-t').textContent=n.e.title;
+      nx.querySelector('.more-f').textContent=n.e.when+' \u00b7 '+n.e.age; }
+    else if(nx){ nx.hidden=true; }
   })();
 </script>
 <!-- sitesearch js start -->

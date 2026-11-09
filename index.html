@@ -948,7 +948,7 @@
   /* == sitesearch end == */
 
     /* == home scroll start == (9 Nov 2026: browse switch and "One from each shelf") */
-  .browse{ margin-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+  .browse{ margin-top: 18px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
   .browse-top{ display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center; }
   .browse-lead{ font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 24px; color: var(--ink); }
   .switch{ display: inline-flex; border: 1px solid var(--ink); border-radius: 999px; padding: 3px; }
@@ -960,8 +960,14 @@
   .browse-row a{ color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; text-decoration-color: var(--oat-line); }
   .browse-row a:hover, .browse-row a:focus-visible{ text-decoration-color: var(--ink); }
   .browse-dot{ color: var(--oat-line); }
-  .picks{ margin-top: 56px; }
-  .picks-h{ font-size: 28px; }
+  .picks{ margin-top: 22px; }
+  .picks-head{ text-align: center; }
+  .picks-line{ display: flex; align-items: center; justify-content: center; gap: 24px; }
+  .picks-line span{ flex: 1 1 80px; max-width: 220px; height: 1px; background: var(--oat-line); }
+  .picks-h{ font-size: 46px; line-height: 1.1; }
+  .picks-sub{ margin: 10px 0 0; font-size: 18px; color: var(--ink-soft); }
+  .picks-arrow{ display: block; margin: 12px auto 0; width: 22px; height: 22px; }
+  @media (max-width: 700px){ .picks-h{ font-size: 34px; } .picks-line{ gap: 14px; } .picks-line span{ max-width: 40px; } }
   .spread{ margin-top: 24px; background: var(--band); }
   .spread--mra{ --band: #f1f6ef; --pages: #e4efe1; --spine: #6f9a66; --deep: #2e4436; }
   .spread--tt{ --band: #f7f2e8; --pages: #f2ebdc; --spine: #a9895a; --deep: #6b5a34; }
@@ -1004,7 +1010,7 @@
   }
   /* == home scroll end == */
   /* == big footer start == */ (9 Nov 2026: shelf, age, time and about links on every page, for people and for search) */
-  .sf{ margin-top: auto; background: #f4f1e8; border-top: 1px solid rgba(46,68,54,0.16); color: #5c6552; font-family: Calibri, Carlito, 'Segoe UI', -apple-system, sans-serif; text-align: left; }
+  .sf{ margin-top: auto; background: #e6e2d8; border-top: 1px solid rgba(46,68,54,0.22); color: #5c6552; font-family: Calibri, Carlito, 'Segoe UI', -apple-system, sans-serif; text-align: left; }
   .sf-top{ max-width: var(--max-width, 1265px); margin: 0 auto; padding: 44px clamp(16px, 3vw, 40px) 24px; display: flex; flex-wrap: wrap; gap: 32px 40px; }
   .sf-brand{ flex: 2 1 260px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
   .sf-name{ display: flex; align-items: center; gap: 10px; font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 22px; color: #2e4436; text-decoration: none; }
@@ -1021,7 +1027,7 @@
   .sf-col a{ color: #2e4436; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
   .sf-col a span{ overflow-wrap: anywhere; }
   .sf-col a:hover, .sf-col a:focus-visible{ text-decoration: underline; text-underline-offset: 3px; }
-  .sf-bottom{ max-width: var(--max-width, 1265px); margin: 0 auto; padding: 16px clamp(16px, 3vw, 40px) 28px; border-top: 1px solid rgba(46,68,54,0.12); display: flex; justify-content: flex-end; gap: 28px; font-size: 15px; }
+  .sf-bottom{ max-width: var(--max-width, 1265px); margin: 0 auto; padding: 16px clamp(16px, 3vw, 40px) 28px; border-top: 1px solid rgba(46,68,54,0.18); display: flex; justify-content: flex-end; gap: 28px; font-size: 15px; }
   .sf-bottom a{ color: #2e4436; }
   @media (max-width: 700px){
     .sf-top{ padding-top: 32px; gap: 24px 28px; }
@@ -1051,7 +1057,7 @@
   }
   .hero-top{ margin-bottom: max(0px, calc((var(--hero-slack) - var(--hero-under)) / 2)); }
   @media (max-height: 940px) and (min-width: 701px){
-    .hero{ --hero-slack: clamp(6px, calc(100vh - 687px), 110px); --hero-under: 11px; }
+    .hero{ --hero-slack: clamp(6px, calc(100vh - 820px), 60px); --hero-under: 11px; } /* 9 Nov: less slack so the browse switch and the top of "Ready to try this week" peek above the fold */
   }
   /* Below 900px the board is stacked under the hero, so there is nothing to
      balance it against: the original top padding comes back and the extra
@@ -1332,7 +1338,11 @@
 
 </div>
 <section class="picks" aria-labelledby="picks-h">
-  <div class="wrap"><h2 class="picks-h" id="picks-h">One from each shelf</h2></div>
+  <div class="wrap picks-head">
+    <div class="picks-line"><span aria-hidden="true"></span><h2 class="picks-h" id="picks-h">Ready to try this week</h2><span aria-hidden="true"></span></div>
+    <p class="picks-sub">Everything here is free to download.</p>
+    <svg class="picks-arrow" viewBox="0 0 24 24" fill="none" stroke="#c2984a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+  </div>
   <article class="spread spread--mra" aria-labelledby="pick-mra">
     <div class="wrap spread-inner">
       <a class="spread-img" href="morning-registration-activities/two-minute-interview/" tabindex="-1" aria-hidden="true"><img src="morning-registration-activities/two-minute-interview/preview-slide-1.jpg" alt="The first slide of The Two-Minute Interview" width="1280" height="720" loading="lazy" decoding="async"></a>

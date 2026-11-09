@@ -693,8 +693,23 @@
   .more h2, .more-grid, .more-all{ max-width: none; }
   .more{ padding-bottom: 56px; }
   .more-all{ margin-top: 22px; font-size: 16px; }
+  /* 9 Nov, 20:47: one title size; many downloads in even rows; taster cards as a list, not tiny columns */
+  .page-header.r3h .page-title{ font-size: 44px; }
+  @media (min-width: 1001px){
+    main.r3 .downloads-grid.dg-c5, main.r3 .downloads-grid.dg-c6{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    main.r3 .downloads-grid.dg-c4, main.r3 .downloads-grid.dg-c7, main.r3 .downloads-grid.dg-c8{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+  main.r3 .how-side .sample-grid{ display: flex; flex-direction: column; gap: 12px; }
+  main.r3 .how-side .sample-card:has(.sample-grid) .sample-kicker{ text-align: left; }
+  main.r3 .how-side .sample-item{ display: grid; grid-template-columns: 30px minmax(0, 1fr); column-gap: 12px; align-items: start; text-align: left; }
+  main.r3 .how-side .sample-item > .n{ grid-row: 1 / span 2; margin: 0; }
+  main.r3 .how-side .sample-item h3{ margin: 0 0 2px; font-size: 15px; }
+  main.r3 .how-side .sample-item p{ font-size: 14px; line-height: 1.45; }
+  .how-side > .how-card:has(> .sample-caption:only-child){ order: 2; }
+  .how-side > .how-card > .sample-caption:only-child{ margin: 0; text-align: left; }
   @media (max-width: 700px){
     main.r3 .downloads-grid.dg-2, main.r3 .downloads-grid.dg-3{ grid-template-columns: 1fr; }
+    .page-header.r3h .page-title{ font-size: 32px; }
     main.r3 .download-card--solo{ display: flex; }
     main.r3 .download-card--solo .card-prev{ margin: -20px -18px 4px; height: 200px; min-height: 0; }
     .glance{ max-width: none; }
@@ -714,7 +729,7 @@
   /* == page gaps end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/tutor-time/question-the-headline/#resource","url":"https://thepastoralguide.com/tutor-time/question-the-headline/","name":"Question the Headline","description":"Five lessons on questioning what you read, each built around a claim that was printed as true and later fell apart. Students show how much they believe the claim, work through four rounds of evidence, then write the front page the paper should have printed. Each lesson takes 45 minutes to an hour, and they can be taught in any order.","inLanguage":"en-GB","learningResourceType":"Lesson plan","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"13-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/tutor-time/question-the-headline/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/tutor-time/question-the-headline/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Tutor Time","item":"https://thepastoralguide.com/tutor-time/"},{"@type":"ListItem","position":3,"name":"Question the Headline","item":"https://thepastoralguide.com/tutor-time/question-the-headline/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/tutor-time/question-the-headline/#resource","url":"https://thepastoralguide.com/tutor-time/question-the-headline/","name":"Question the Headline","description":"Five lessons on questioning what you read, each built around a claim that was printed as true and later fell apart. Students show how much they believe the claim, work through four rounds of evidence, then write the front page the paper should have printed. Each lesson takes 45 minutes to an hour, and they can be taught in any order.","inLanguage":"en-GB","learningResourceType":"Lesson plan","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"13-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/tutor-time/question-the-headline/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/tutor-time/question-the-headline/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Tutor Time","item":"https://thepastoralguide.com/tutor-time/"},{"@type":"ListItem","position":3,"name":"Question the Headline","item":"https://thepastoralguide.com/tutor-time/question-the-headline/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"hello@thepastoralguide.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
 </head>
 <body>
 
@@ -742,7 +757,7 @@
         id="sitesearch-toggle" aria-label="Search the resources" aria-expanded="false"
         aria-controls="sitesearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></button><!-- sitesearch toggle end -->
       
-      <a class="btn btn--ghost" href="mailto:thepastoralguide@gmail.com?subject=A%20resource%20I%27d%20like&body=Hi%20Olivia%2C%0A%0AI%27d%20love%20a%20resource%20on%3A%20%0A%0AYear%20group%3A%20%0AWhere%20it%20would%20be%20used%20(form%20time%2C%20assembly%2C%20etc.)%3A%20%0A%0AThanks!"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2.2h5c.1-1 .5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg><span>Have a resource you&rsquo;d like?</span></a>
+      <a class="btn btn--ghost" href="mailto:hello@thepastoralguide.com?subject=A%20resource%20I%27d%20like&body=Hi%20Olivia%2C%0A%0AI%27d%20love%20a%20resource%20on%3A%20%0A%0AYear%20group%3A%20%0AWhere%20it%20would%20be%20used%20(form%20time%2C%20assembly%2C%20etc.)%3A%20%0A%0AThanks!"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2.2h5c.1-1 .5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg><span>Have a resource you&rsquo;d like?</span></a>
     </div>
   </div>
 </nav>
@@ -792,7 +807,7 @@
 <section id="downloads">
 <h2>Get the lessons</h2>
 <p class="lede">For each lesson: one set of evidence cards per group, and an evidence sheet and a front page sheet for each student. Each lesson runs 45 minutes to an hour and stands alone, so run them in any order. Want to know when Volume Two goes up? <a href="#signup">Sign up here</a>.</p>
-<div class="downloads-grid dg-many">
+<div class="downloads-grid dg-many dg-c6">
 <a class="download-card" data-umami-event="download-open" data-umami-event-file="Question_the_Headline_Lesson_1.pptx" href="/download/?r=tutor-time/question-the-headline&amp;f=/tutor-time/question-the-headline/downloads/Question_the_Headline_Lesson_1.pptx" rel="noopener" target="_blank">
 <span class="file-chip">PowerPoint</span>
 <h3>Lesson 1: Who Paid for the Science?</h3>
@@ -849,7 +864,7 @@
 <button data-umami-event="signup" type="submit">Keep me posted</button>
 </form>
 <p class="signup-done" hidden="">Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
-<p class="signup-err" hidden="">Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
+<p class="signup-err" hidden="">Sorry, that did not go through. Please try again, or email hello@thepastoralguide.com and I will add you by hand.</p>
 <p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
 </div>
 <!-- support panel start -->
@@ -917,7 +932,7 @@
         <li><a href="/about/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span>About Olivia</span></a></li>
         <li><a href="https://instagram.com/thepastoralguide" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg><span>@thepastoralguide</span></a></li>
         <li><a href="https://pinterest.com/thepastoralguide/" target="_blank" rel="noopener" data-umami-event="pinterest-footer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10.5 20l1.6-7.2"/><path d="M9.6 13.6c-.5-.7-.7-1.5-.6-2.4.2-1.9 1.8-3.2 3.7-3 1.8.2 3 1.6 2.8 3.4-.2 1.9-1.4 3.3-2.8 3.2-.8 0-1.3-.6-1.2-1.4"/></svg><span>Pinterest</span></a></li>
-        <li><a href="mailto:thepastoralguide@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></svg><span>thepastoralguide@gmail.com</span></a></li>
+        <li><a href="mailto:hello@thepastoralguide.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></svg><span>hello@thepastoralguide.com</span></a></li>
       </ul>
     </nav>
   </div>
@@ -1018,7 +1033,7 @@
     if (!hits.length) {
       note('Nothing matches &ldquo;' + esc(input.value.trim()) + '&rdquo;. Try a word from the title, ' +
            'or browse <a href="/">the shelf</a>. If it does not exist yet, ' +
-           '<a href="mailto:thepastoralguide@gmail.com?subject=A%20resource%20I%27d%20like">ask for it</a>.');
+           '<a href="mailto:hello@thepastoralguide.com?subject=A%20resource%20I%27d%20like">ask for it</a>.');
       return;
     }
 

@@ -991,6 +991,59 @@
     .how-pic{ flex: none; height: 240px; min-height: 0; }
   }
   /* == r3 layout end == */
+
+  /* == calendar start == (9 Nov 2026: month at a time, C1) */
+  .cal{ max-width: var(--max-width); }
+  .cA-tabs{ display: flex; flex-wrap: wrap; gap: 18px 28px; margin: 6px 0 22px; }
+  .cA-group{ display: flex; flex-direction: column; gap: 6px; }
+  .cA-group > span{ font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+  .cA-group > div{ display: flex; gap: 6px; }
+  .cA-tab{ font-size: 14px; font-weight: 700; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--accent-light); background: var(--card); color: var(--ink-soft); text-decoration: none; }
+  .cA-tab:hover, .cA-tab:focus-visible{ border-color: var(--accent-deep); color: var(--accent-deep); }
+  .cA-tab[aria-current=true]{ background: var(--accent-deep); border-color: var(--accent-deep); color: #fff; }
+  .cA-nav{ display: none; }
+  .cA-month{ margin-top: 40px; }
+  .cA-month:first-of-type{ margin-top: 0; }
+  .cA-head{ display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .cA-title{ font-size: 26px; color: var(--accent-deep); margin: 0; border: 0; padding: 0; }
+  .cA-arrow{ font: inherit; font-size: 18px; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--accent-light); background: var(--card); color: var(--accent-deep); cursor: pointer; }
+  .cA-arrow:disabled{ opacity: .35; cursor: default; }
+  .cA-all{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .cA-all a{ background: var(--accent); border: 1px solid var(--accent-light); border-radius: 8px; padding: 7px 12px; font-size: 14px; color: var(--ink); text-decoration: none; }
+  .cA-all b{ color: var(--accent-deep); }
+  .cA-grid{ display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)) repeat(2, minmax(0, .6fr)); border: 1px solid var(--accent-light); border-radius: 12px; overflow: hidden; background: var(--card); }
+  .cA-dow{ font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); padding: 10px; border-bottom: 1px solid var(--accent-light); }
+  .cA-cell{ min-height: 84px; padding: 8px 8px 10px; border-right: 1px solid #ece9df; border-bottom: 1px solid #ece9df; display: flex; flex-direction: column; gap: 5px; }
+  .cA-cell:nth-child(7n){ border-right: 0; }
+  .cA-cell.we{ background: #f6f4ee; }
+  .cA-cell.range{ background: var(--accent); }
+  .cA-num{ font-size: 13px; font-weight: 700; color: var(--ink-soft); align-self: flex-start; }
+  .cA-cell.today .cA-num{ background: var(--ink); color: #fff; border-radius: 999px; padding: 1px 8px; }
+  .cA-chip{ display: block; font-size: 13px; line-height: 1.25; font-weight: 700; padding: 5px 7px; border-radius: 6px; background: var(--accent-light); color: var(--ink); text-decoration: none; }
+  .cA-chip.un{ background: var(--accent-deep); color: #fff; }
+  .cA-chip:hover, .cA-chip:focus-visible{ filter: brightness(.94); }
+  .cA-chip.next{ outline: 2px solid #c99a2e; outline-offset: 1px; }
+  .cA-list{ max-width: none; margin: 30px 0 0; }
+  .cA-in{ font-size: 21px; color: var(--accent-deep); padding-bottom: 6px; border-bottom: 2px solid var(--accent-light); margin: 0 0 4px; font-weight: 400; font-family: Georgia, Gelasio, serif; }
+  .cA-list .day, .cA-list .day.is-next{ margin: 0; padding-left: 14px; padding-right: 14px; }
+  .cA-list .day{ scroll-margin-top: 110px; transition: background .4s; }
+  .cA-list .day.flash{ background: var(--accent); }
+  .cA-carry{ font-size: 14px; color: var(--ink-soft); margin: 14px 0 0; }
+  .cA-carry a{ font-weight: 700; color: var(--accent-deep); }
+  .cal .cal-note{ max-width: none; margin: 22px 0 0; }
+  .js-cal .cA-month{ display: none; margin-top: 0; }
+  .js-cal .cA-month.on{ display: block; }
+  .js-cal .cA-nav{ display: flex; gap: 10px; float: right; margin-top: -6px; }
+  @media (max-width: 700px){
+    .cA-tabs{ gap: 12px; } .cA-group > div{ flex-wrap: wrap; }
+    .cA-cell{ min-height: 52px; padding: 5px; }
+    .cA-chip{ font-size: 0; padding: 0; width: 10px; height: 10px; border-radius: 50%; }
+    .cA-dow{ padding: 8px 4px; font-size: 10px; letter-spacing: 0; }
+    .cA-title{ font-size: 22px; }
+    .js-cal .cA-nav{ margin-top: -2px; }
+    .cA-list .day, .cA-list .day.is-next{ padding-left: 10px; padding-right: 10px; }
+  }
+  /* == calendar end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/#resource","url":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/","name":"The Assembly Calendar 2026 to 2027","description":"Every awareness day and week worth marking in a secondary school year, from September to July, including the United Nations days that lend themselves to an assembly. Each one has the date, one line on what to do with it, and the value it gets students thinking about. Where the site has a resource for the day, it is linked. There is a printable version for the staffroom wall, one page per term.","inLanguage":"en-GB","learningResourceType":"Calendar","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Assemblies and Events","item":"https://thepastoralguide.com/assemblies-and-events/"},{"@type":"ListItem","position":3,"name":"The Assembly Calendar 2026 to 2027","item":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
@@ -1041,10 +1094,10 @@
 
 <main class="r3">
 <section class="how">
-<h2>How it works</h2><nav aria-label="Jump to a term" class="term-nav"><a href="#autumn">Autumn term</a><a href="#spring">Spring term</a><a href="#summer">Summer term</a><a href="#downloads">The printable</a></nav><div class="key" style="margin-top:16px"><span><span class="kind kind--un">UN day</span> on the United Nations list</span><span><span class="kind">UK</span> a UK campaign</span><span><span class="kind">Worldwide</span> marked worldwide</span><span><span class="kind">School</span> the school year</span></div><div class="how-row"><div class="how-main"><div class="steps">
+<h2>How it works</h2><div class="key" style="margin-top:16px"><span><span class="kind kind--un">UN day</span> on the United Nations list</span><span><span class="kind">UK</span> a UK campaign</span><span><span class="kind">Worldwide</span> marked worldwide</span><span><span class="kind">School</span> the school year</span></div><div class="how-row"><div class="how-main"><div class="steps">
 <div class="step">
 <span class="step-num">1</span>
-<div><strong>Find the next date.</strong><p>The calendar runs from September to July and is split into terms. The next day coming up is highlighted so you can find it quickly.</p></div>
+<div><strong>Find the next date.</strong><p>The calendar opens on this month, with the next day coming up highlighted. Use the month buttons to look ahead, and tap a day to read the idea for it.</p></div>
 </div>
 <div class="step">
 <span class="step-num">2</span>
@@ -1060,385 +1113,333 @@
 
 
 </section>
-<section class="term" id="autumn">
-<h2>Autumn term</h2>
-<div class="month">
-<h3>September</h3>
-<div class="day" data-end="2026-09-08">
+<section class="term cal" id="calendar">
+<h2>The calendar</h2>
+<nav class="cA-tabs" aria-label="Choose a month"><div class="cA-group" id="autumn"><span>Autumn term</span><div><a class="cA-tab" href="#september-2026">Sep</a><a class="cA-tab" href="#october-2026">Oct</a><a class="cA-tab" href="#november-2026">Nov</a><a class="cA-tab" href="#december-2026">Dec</a></div></div><div class="cA-group" id="spring"><span>Spring term</span><div><a class="cA-tab" href="#january-2027">Jan</a><a class="cA-tab" href="#february-2027">Feb</a><a class="cA-tab" href="#march-2027">Mar</a></div></div><div class="cA-group" id="summer"><span>Summer term</span><div><a class="cA-tab" href="#april-2027">Apr</a><a class="cA-tab" href="#may-2027">May</a><a class="cA-tab" href="#june-2027">Jun</a><a class="cA-tab" href="#july-2027">Jul</a></div></div></nav>
+<div class="cA-nav"><button class="cA-arrow" data-d="-1" aria-label="Previous month" hidden>←</button><button class="cA-arrow" data-d="1" aria-label="Next month" hidden>→</button></div>
+<div class="cA-month" id="september-2026" data-ym="2026-09">
+<div class="cA-head"><h3 class="cA-title">September 2026</h3></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell" data-date="2026-09-01"><span class="cA-num">1</span></div><div class="cA-cell" data-date="2026-09-02"><span class="cA-num">2</span></div><div class="cA-cell" data-date="2026-09-03"><span class="cA-num">3</span></div><div class="cA-cell" data-date="2026-09-04"><span class="cA-num">4</span></div><div class="cA-cell we" data-date="2026-09-05"><span class="cA-num">5</span></div><div class="cA-cell we" data-date="2026-09-06"><span class="cA-num">6</span></div><div class="cA-cell" data-date="2026-09-07"><span class="cA-num">7</span></div><div class="cA-cell" data-date="2026-09-08"><span class="cA-num">8</span><a class="cA-chip un" href="#d-international-literacy-day-0908">International Literacy Day</a></div><div class="cA-cell" data-date="2026-09-09"><span class="cA-num">9</span></div><div class="cA-cell" data-date="2026-09-10"><span class="cA-num">10</span></div><div class="cA-cell" data-date="2026-09-11"><span class="cA-num">11</span></div><div class="cA-cell we" data-date="2026-09-12"><span class="cA-num">12</span></div><div class="cA-cell we" data-date="2026-09-13"><span class="cA-num">13</span></div><div class="cA-cell" data-date="2026-09-14"><span class="cA-num">14</span></div><div class="cA-cell" data-date="2026-09-15"><span class="cA-num">15</span></div><div class="cA-cell" data-date="2026-09-16"><span class="cA-num">16</span></div><div class="cA-cell" data-date="2026-09-17"><span class="cA-num">17</span></div><div class="cA-cell" data-date="2026-09-18"><span class="cA-num">18</span></div><div class="cA-cell we" data-date="2026-09-19"><span class="cA-num">19</span></div><div class="cA-cell we" data-date="2026-09-20"><span class="cA-num">20</span></div><div class="cA-cell" data-date="2026-09-21"><span class="cA-num">21</span><a class="cA-chip un" href="#d-international-day-of-peace-0921">International Day of Peace</a></div><div class="cA-cell" data-date="2026-09-22"><span class="cA-num">22</span></div><div class="cA-cell" data-date="2026-09-23"><span class="cA-num">23</span></div><div class="cA-cell" data-date="2026-09-24"><span class="cA-num">24</span></div><div class="cA-cell" data-date="2026-09-25"><span class="cA-num">25</span></div><div class="cA-cell we" data-date="2026-09-26"><span class="cA-num">26</span></div><div class="cA-cell we" data-date="2026-09-27"><span class="cA-num">27</span></div><div class="cA-cell" data-date="2026-09-28"><span class="cA-num">28</span></div><div class="cA-cell" data-date="2026-09-29"><span class="cA-num">29</span></div><div class="cA-cell" data-date="2026-09-30"><span class="cA-num">30</span></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out we"></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In September</h4>
+<div class="day" id="d-international-literacy-day-0908" data-end="2026-09-08">
 <div class="day-when">Tue 8 September</div>
-<div>
-<p class="day-name">International Literacy Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Literacy Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Hand out the reading bookmarks, and ask the form what the last book they chose for themselves was.</p>
-<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-09-21">
+<div class="day" id="d-international-day-of-peace-0921" data-end="2026-09-21">
 <div class="day-when">Mon 21 September</div>
-<div>
-<p class="day-name">International Day of Peace<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day of Peace<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Ask what one thing would make the form room a more peaceful place to start the day, and agree it together.</p>
-<div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet →</a></div></div>
 </div>
 </div>
 </div>
-<div class="month">
-<h3>October</h3>
-<div class="day" data-end="2026-10-31">
+<div class="cA-month" id="october-2026" data-ym="2026-10">
+<div class="cA-head"><h3 class="cA-title">October 2026</h3></div>
+<div class="cA-all"><a href="#d-black-history-month-1001"><b>All month:</b> Black History Month</a></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell" data-date="2026-10-01"><span class="cA-num">1</span></div><div class="cA-cell" data-date="2026-10-02"><span class="cA-num">2</span><a class="cA-chip un" href="#d-international-day-of-non-violence-1002">International Day of Non-Violence</a></div><div class="cA-cell we" data-date="2026-10-03"><span class="cA-num">3</span></div><div class="cA-cell we" data-date="2026-10-04"><span class="cA-num">4</span></div><div class="cA-cell" data-date="2026-10-05"><span class="cA-num">5</span><a class="cA-chip un" href="#d-world-teachers-day-1005">World Teachers’ Day</a></div><div class="cA-cell" data-date="2026-10-06"><span class="cA-num">6</span></div><div class="cA-cell" data-date="2026-10-07"><span class="cA-num">7</span></div><div class="cA-cell" data-date="2026-10-08"><span class="cA-num">8</span></div><div class="cA-cell" data-date="2026-10-09"><span class="cA-num">9</span></div><div class="cA-cell we" data-date="2026-10-10"><span class="cA-num">10</span><a class="cA-chip un" href="#d-world-mental-health-day-1010">World Mental Health Day</a></div><div class="cA-cell we" data-date="2026-10-11"><span class="cA-num">11</span><a class="cA-chip un" href="#d-international-day-of-the-girl-1011">International Day of the Girl</a></div><div class="cA-cell" data-date="2026-10-12"><span class="cA-num">12</span></div><div class="cA-cell" data-date="2026-10-13"><span class="cA-num">13</span></div><div class="cA-cell" data-date="2026-10-14"><span class="cA-num">14</span></div><div class="cA-cell" data-date="2026-10-15"><span class="cA-num">15</span></div><div class="cA-cell" data-date="2026-10-16"><span class="cA-num">16</span><a class="cA-chip un" href="#d-world-food-day-1016">World Food Day</a></div><div class="cA-cell we" data-date="2026-10-17"><span class="cA-num">17</span><a class="cA-chip un" href="#d-international-day-for-the-eradication-of-poverty-1017">Day for the Eradication of Poverty</a></div><div class="cA-cell we" data-date="2026-10-18"><span class="cA-num">18</span></div><div class="cA-cell" data-date="2026-10-19"><span class="cA-num">19</span></div><div class="cA-cell" data-date="2026-10-20"><span class="cA-num">20</span></div><div class="cA-cell" data-date="2026-10-21"><span class="cA-num">21</span></div><div class="cA-cell" data-date="2026-10-22"><span class="cA-num">22</span></div><div class="cA-cell" data-date="2026-10-23"><span class="cA-num">23</span></div><div class="cA-cell we" data-date="2026-10-24"><span class="cA-num">24</span></div><div class="cA-cell we" data-date="2026-10-25"><span class="cA-num">25</span></div><div class="cA-cell" data-date="2026-10-26"><span class="cA-num">26</span></div><div class="cA-cell" data-date="2026-10-27"><span class="cA-num">27</span></div><div class="cA-cell" data-date="2026-10-28"><span class="cA-num">28</span></div><div class="cA-cell" data-date="2026-10-29"><span class="cA-num">29</span></div><div class="cA-cell" data-date="2026-10-30"><span class="cA-num">30</span></div><div class="cA-cell we" data-date="2026-10-31"><span class="cA-num">31</span></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In October</h4>
+<div class="day" id="d-black-history-month-1001" data-end="2026-10-31">
 <div class="day-when">All of October</div>
-<div>
-<p class="day-name">Black History Month<span class="kind">UK</span></p>
+<div><p class="day-name">Black History Month<span class="kind">UK</span></p>
 <p class="day-idea">Once a week in form time, students choose one person to talk about for a minute, covering what they did and why it took courage.</p>
-<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-10-02">
+<div class="day" id="d-international-day-of-non-violence-1002" data-end="2026-10-02">
 <div class="day-when">Fri 2 October</div>
-<div>
-<p class="day-name">International Day of Non-Violence<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day of Non-Violence<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">The day falls on Gandhi’s birthday. Talk with the form about the difference between standing up to something and hitting back.</p>
-<div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-10-05">
+<div class="day" id="d-world-teachers-day-1005" data-end="2026-10-05">
 <div class="day-when">Mon 5 October</div>
-<div>
-<p class="day-name">World Teachers’ Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">World Teachers’ Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Students write a short thank-you to a teacher who made a difference, and hand it over that day.</p>
-<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/displays-and-recognition/praise-postcards/">Ready-made: Praise Postcards →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/displays-and-recognition/praise-postcards/">Ready-made: Praise Postcards →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-10-10">
+<div class="day" id="d-world-mental-health-day-1010" data-end="2026-10-10">
 <div class="day-when">Sat 10 October</div>
-<div>
-<p class="day-name">World Mental Health Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">World Mental Health Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">It falls on a Saturday this year, so mark it on Friday 9 October with an assembly, followed by a week of activities.</p>
-<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/world-mental-health-day/">Ready-made: World Mental Health Day →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/world-mental-health-day/">Ready-made: World Mental Health Day →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-10-11">
+<div class="day" id="d-international-day-of-the-girl-1011" data-end="2026-10-11">
 <div class="day-when">Sun 11 October</div>
-<div>
-<p class="day-name">International Day of the Girl<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day of the Girl<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Sunday, so bring it into form time on the Monday. Ask the form who decides what girls are good at, and whether that changes what they try.</p>
-<div class="day-foot"><span class="day-value">Value: <b>ambition</b></span></div>
+<div class="day-foot"><span class="day-value">Value: <b>ambition</b></span></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-10-16">
+<div class="day" id="d-world-food-day-1016" data-end="2026-10-16">
 <div class="day-when">Fri 16 October</div>
-<div>
-<p class="day-name">World Food Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">World Food Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Ask the form what they usually eat before school, without any judgement, and talk about why a good breakfast helps concentration.</p>
-<div class="day-foot"><span class="day-value">Value: <b>self-care</b></span><a class="day-link" href="/tutor-time/fuel-and-focus/">Ready-made: Fuel and Focus →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>self-care</b></span><a class="day-link" href="/tutor-time/fuel-and-focus/">Ready-made: Fuel and Focus →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-10-17">
+<div class="day" id="d-international-day-for-the-eradication-of-poverty-1017" data-end="2026-10-17">
 <div class="day-when">Sat 17 October</div>
-<div>
-<p class="day-name">International Day for the Eradication of Poverty<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day for the Eradication of Poverty<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Saturday, so mark it on the Friday. Talk about what a month’s wage covers, and how quickly it goes.</p>
-<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/tutor-time/payday-budgeting-lesson/">Ready-made: Payday →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/tutor-time/payday-budgeting-lesson/">Ready-made: Payday →</a></div></div>
 </div>
 </div>
 </div>
-<div class="month">
-<h3>November</h3>
-<div class="day" data-end="2026-11-11">
+<div class="cA-month" id="november-2026" data-ym="2026-11">
+<div class="cA-head"><h3 class="cA-title">November 2026</h3></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out we"></div><div class="cA-cell we" data-date="2026-11-01"><span class="cA-num">1</span></div><div class="cA-cell" data-date="2026-11-02"><span class="cA-num">2</span></div><div class="cA-cell" data-date="2026-11-03"><span class="cA-num">3</span></div><div class="cA-cell" data-date="2026-11-04"><span class="cA-num">4</span></div><div class="cA-cell" data-date="2026-11-05"><span class="cA-num">5</span></div><div class="cA-cell" data-date="2026-11-06"><span class="cA-num">6</span></div><div class="cA-cell we" data-date="2026-11-07"><span class="cA-num">7</span></div><div class="cA-cell we" data-date="2026-11-08"><span class="cA-num">8</span></div><div class="cA-cell" data-date="2026-11-09"><span class="cA-num">9</span></div><div class="cA-cell" data-date="2026-11-10"><span class="cA-num">10</span></div><div class="cA-cell" data-date="2026-11-11"><span class="cA-num">11</span><a class="cA-chip" href="#d-armistice-day-1111">Armistice Day</a></div><div class="cA-cell" data-date="2026-11-12"><span class="cA-num">12</span></div><div class="cA-cell" data-date="2026-11-13"><span class="cA-num">13</span><a class="cA-chip" href="#d-world-kindness-day-1113">World Kindness Day</a></div><div class="cA-cell we" data-date="2026-11-14"><span class="cA-num">14</span></div><div class="cA-cell we" data-date="2026-11-15"><span class="cA-num">15</span></div><div class="cA-cell range" data-date="2026-11-16"><span class="cA-num">16</span><a class="cA-chip" href="#d-anti-bullying-week-1116">Anti-Bullying Week (16–20)</a><a class="cA-chip un" href="#d-international-day-for-tolerance-1116">International Day for Tolerance</a></div><div class="cA-cell range" data-date="2026-11-17"><span class="cA-num">17</span></div><div class="cA-cell range" data-date="2026-11-18"><span class="cA-num">18</span></div><div class="cA-cell range" data-date="2026-11-19"><span class="cA-num">19</span></div><div class="cA-cell range" data-date="2026-11-20"><span class="cA-num">20</span><a class="cA-chip un" href="#d-world-childrens-day-1120">World Children’s Day</a></div><div class="cA-cell we" data-date="2026-11-21"><span class="cA-num">21</span></div><div class="cA-cell we" data-date="2026-11-22"><span class="cA-num">22</span></div><div class="cA-cell" data-date="2026-11-23"><span class="cA-num">23</span></div><div class="cA-cell" data-date="2026-11-24"><span class="cA-num">24</span></div><div class="cA-cell" data-date="2026-11-25"><span class="cA-num">25</span></div><div class="cA-cell" data-date="2026-11-26"><span class="cA-num">26</span></div><div class="cA-cell" data-date="2026-11-27"><span class="cA-num">27</span></div><div class="cA-cell we" data-date="2026-11-28"><span class="cA-num">28</span></div><div class="cA-cell we" data-date="2026-11-29"><span class="cA-num">29</span></div><div class="cA-cell" data-date="2026-11-30"><span class="cA-num">30</span></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out we"></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In November</h4>
+<div class="day" id="d-armistice-day-1111" data-end="2026-11-11">
 <div class="day-when">Wed 11 November</div>
-<div>
-<p class="day-name">Armistice Day<span class="kind">UK</span></p>
+<div><p class="day-name">Armistice Day<span class="kind">UK</span></p>
 <p class="day-idea">Mark the two-minute silence at 11am, and explain it to the form the day before so nobody is caught out. Remembrance Sunday is 8 November.</p>
-<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-11-13">
+<div class="day" id="d-world-kindness-day-1113" data-end="2026-11-13">
 <div class="day-when">Fri 13 November</div>
-<div>
-<p class="day-name">World Kindness Day<span class="kind">Worldwide</span></p>
+<div><p class="day-name">World Kindness Day<span class="kind">Worldwide</span></p>
 <p class="day-idea">Start with an assembly on the Monday, then use form time during the week for a compliment, a postcard and a shout-out.</p>
-<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/world-kindness-day/">Ready-made: World Kindness Day →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/world-kindness-day/">Ready-made: World Kindness Day →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-11-20">
+<div class="day" id="d-anti-bullying-week-1116" data-end="2026-11-20">
 <div class="day-when">16–20 November</div>
-<div>
-<p class="day-name">Anti-Bullying Week<span class="kind">UK</span></p>
+<div><p class="day-name">Anti-Bullying Week<span class="kind">UK</span></p>
 <p class="day-idea">This year’s theme is Break the Silence, and the week opens with Odd Socks Day on Monday 16 November.</p>
-<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/anti-bullying-week/">Ready-made: Anti-Bullying Week →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/anti-bullying-week/">Ready-made: Anti-Bullying Week →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-11-16">
+<div class="day" id="d-international-day-for-tolerance-1116" data-end="2026-11-16">
 <div class="day-when">Mon 16 November</div>
-<div>
-<p class="day-name">International Day for Tolerance<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day for Tolerance<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on the same Monday that Anti-Bullying Week begins. Ask the form where a joke stops being a joke.</p>
-<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/tutor-time/it-was-just-a-joke/">Ready-made: It Was Just a Joke →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/tutor-time/it-was-just-a-joke/">Ready-made: It Was Just a Joke →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-11-20">
+<div class="day" id="d-world-childrens-day-1120" data-end="2026-11-20">
 <div class="day-when">Fri 20 November</div>
-<div>
-<p class="day-name">World Children’s Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">World Children’s Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This marks the day the UN agreed children’s rights. Ask the form which right they think is most important, and why.</p>
-<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div></div>
 </div>
 </div>
 </div>
-<div class="month">
-<h3>December</h3>
-<div class="day" data-end="2026-12-03">
+<div class="cA-month" id="december-2026" data-ym="2026-12">
+<div class="cA-head"><h3 class="cA-title">December 2026</h3></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell" data-date="2026-12-01"><span class="cA-num">1</span></div><div class="cA-cell" data-date="2026-12-02"><span class="cA-num">2</span></div><div class="cA-cell" data-date="2026-12-03"><span class="cA-num">3</span><a class="cA-chip un" href="#d-international-day-of-persons-with-disabilities-1203">Day of Persons with Disabilities</a></div><div class="cA-cell" data-date="2026-12-04"><span class="cA-num">4</span></div><div class="cA-cell we" data-date="2026-12-05"><span class="cA-num">5</span><a class="cA-chip un" href="#d-international-volunteer-day-1205">International Volunteer Day</a></div><div class="cA-cell we" data-date="2026-12-06"><span class="cA-num">6</span></div><div class="cA-cell" data-date="2026-12-07"><span class="cA-num">7</span></div><div class="cA-cell" data-date="2026-12-08"><span class="cA-num">8</span></div><div class="cA-cell" data-date="2026-12-09"><span class="cA-num">9</span></div><div class="cA-cell" data-date="2026-12-10"><span class="cA-num">10</span><a class="cA-chip un" href="#d-human-rights-day-1210">Human Rights Day</a></div><div class="cA-cell" data-date="2026-12-11"><span class="cA-num">11</span></div><div class="cA-cell we" data-date="2026-12-12"><span class="cA-num">12</span></div><div class="cA-cell we" data-date="2026-12-13"><span class="cA-num">13</span></div><div class="cA-cell" data-date="2026-12-14"><span class="cA-num">14</span></div><div class="cA-cell" data-date="2026-12-15"><span class="cA-num">15</span></div><div class="cA-cell" data-date="2026-12-16"><span class="cA-num">16</span></div><div class="cA-cell" data-date="2026-12-17"><span class="cA-num">17</span></div><div class="cA-cell" data-date="2026-12-18"><span class="cA-num">18</span></div><div class="cA-cell we" data-date="2026-12-19"><span class="cA-num">19</span></div><div class="cA-cell we" data-date="2026-12-20"><span class="cA-num">20</span></div><div class="cA-cell" data-date="2026-12-21"><span class="cA-num">21</span></div><div class="cA-cell" data-date="2026-12-22"><span class="cA-num">22</span></div><div class="cA-cell" data-date="2026-12-23"><span class="cA-num">23</span></div><div class="cA-cell" data-date="2026-12-24"><span class="cA-num">24</span></div><div class="cA-cell" data-date="2026-12-25"><span class="cA-num">25</span></div><div class="cA-cell we" data-date="2026-12-26"><span class="cA-num">26</span></div><div class="cA-cell we" data-date="2026-12-27"><span class="cA-num">27</span></div><div class="cA-cell" data-date="2026-12-28"><span class="cA-num">28</span></div><div class="cA-cell" data-date="2026-12-29"><span class="cA-num">29</span></div><div class="cA-cell" data-date="2026-12-30"><span class="cA-num">30</span></div><div class="cA-cell" data-date="2026-12-31"><span class="cA-num">31</span></div><div class="cA-cell out"></div><div class="cA-cell out we"></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In December</h4>
+<div class="day" id="d-international-day-of-persons-with-disabilities-1203" data-end="2026-12-03">
 <div class="day-when">Thu 3 December</div>
-<div>
-<p class="day-name">International Day of Persons with Disabilities<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day of Persons with Disabilities<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Pick one thing in school that is harder than it needs to be for someone, and talk about what the form could change.</p>
-<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-12-05">
+<div class="day" id="d-international-volunteer-day-1205" data-end="2026-12-05">
 <div class="day-when">Sat 5 December</div>
-<div>
-<p class="day-name">International Volunteer Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Volunteer Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Saturday, so mark it on the Friday by planning one small thing the form could do for someone else before the holidays.</p>
-<div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2026-12-10">
+<div class="day" id="d-human-rights-day-1210" data-end="2026-12-10">
 <div class="day-when">Thu 10 December</div>
-<div>
-<p class="day-name">Human Rights Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">Human Rights Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Put up one statement about rights and ask students to stand on a line between agree and disagree, depending on what they think.</p>
-<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div></div>
 </div>
 </div>
 </div>
-</section>
-<section class="term" id="spring">
-<h2>Spring term</h2>
-<div class="month">
-<h3>January</h3>
-<div class="day" data-end="2027-01-08">
+<div class="cA-month" id="january-2027" data-ym="2027-01">
+<div class="cA-head"><h3 class="cA-title">January 2027</h3></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell" data-date="2027-01-01"><span class="cA-num">1</span></div><div class="cA-cell we" data-date="2027-01-02"><span class="cA-num">2</span></div><div class="cA-cell we" data-date="2027-01-03"><span class="cA-num">3</span></div><div class="cA-cell range" data-date="2027-01-04"><span class="cA-num">4</span><a class="cA-chip" href="#d-the-new-year-values-week-0104">The New Year Values Week (First week)</a></div><div class="cA-cell range" data-date="2027-01-05"><span class="cA-num">5</span></div><div class="cA-cell range" data-date="2027-01-06"><span class="cA-num">6</span></div><div class="cA-cell range" data-date="2027-01-07"><span class="cA-num">7</span></div><div class="cA-cell range" data-date="2027-01-08"><span class="cA-num">8</span></div><div class="cA-cell we" data-date="2027-01-09"><span class="cA-num">9</span></div><div class="cA-cell we" data-date="2027-01-10"><span class="cA-num">10</span></div><div class="cA-cell" data-date="2027-01-11"><span class="cA-num">11</span></div><div class="cA-cell" data-date="2027-01-12"><span class="cA-num">12</span></div><div class="cA-cell" data-date="2027-01-13"><span class="cA-num">13</span></div><div class="cA-cell" data-date="2027-01-14"><span class="cA-num">14</span></div><div class="cA-cell" data-date="2027-01-15"><span class="cA-num">15</span></div><div class="cA-cell we" data-date="2027-01-16"><span class="cA-num">16</span></div><div class="cA-cell we" data-date="2027-01-17"><span class="cA-num">17</span></div><div class="cA-cell" data-date="2027-01-18"><span class="cA-num">18</span></div><div class="cA-cell" data-date="2027-01-19"><span class="cA-num">19</span></div><div class="cA-cell" data-date="2027-01-20"><span class="cA-num">20</span></div><div class="cA-cell" data-date="2027-01-21"><span class="cA-num">21</span></div><div class="cA-cell" data-date="2027-01-22"><span class="cA-num">22</span></div><div class="cA-cell we" data-date="2027-01-23"><span class="cA-num">23</span></div><div class="cA-cell we" data-date="2027-01-24"><span class="cA-num">24</span><a class="cA-chip un" href="#d-international-day-of-education-0124">International Day of Education</a></div><div class="cA-cell" data-date="2027-01-25"><span class="cA-num">25</span></div><div class="cA-cell" data-date="2027-01-26"><span class="cA-num">26</span></div><div class="cA-cell" data-date="2027-01-27"><span class="cA-num">27</span><a class="cA-chip un" href="#d-holocaust-memorial-day-0127">Holocaust Memorial Day</a></div><div class="cA-cell" data-date="2027-01-28"><span class="cA-num">28</span></div><div class="cA-cell" data-date="2027-01-29"><span class="cA-num">29</span></div><div class="cA-cell we" data-date="2027-01-30"><span class="cA-num">30</span></div><div class="cA-cell we" data-date="2027-01-31"><span class="cA-num">31</span></div></div>
+<div class="month cA-list"><h4 class="cA-in">In January</h4>
+<div class="day" id="d-the-new-year-values-week-0104" data-end="2027-01-08">
 <div class="day-when">First week back</div>
-<div>
-<p class="day-name">The New Year Values Week<span class="kind">School</span></p>
+<div><p class="day-name">The New Year Values Week<span class="kind">School</span></p>
 <p class="day-idea">The week starts with an assembly, then looks at one value a day in form time, building up to a goal, a plan and an evidence tracker.</p>
-<div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/assemblies-and-events/new-year-values-week/">Ready-made: The New Year Values Week →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/assemblies-and-events/new-year-values-week/">Ready-made: The New Year Values Week →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-01-24">
+<div class="day" id="d-international-day-of-education-0124" data-end="2027-01-24">
 <div class="day-when">Sun 24 January</div>
-<div>
-<p class="day-name">International Day of Education<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day of Education<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask each student to name one thing they want to be true by half term.</p>
-<div class="day-foot"><span class="day-value">Value: <b>ambition</b></span><a class="day-link" href="/morning-registration-activities/by-half-term/">Ready-made: By Half Term →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>ambition</b></span><a class="day-link" href="/morning-registration-activities/by-half-term/">Ready-made: By Half Term →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-01-27">
+<div class="day" id="d-holocaust-memorial-day-0127" data-end="2027-01-27">
 <div class="day-when">Wed 27 January</div>
-<div>
-<p class="day-name">Holocaust Memorial Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">Holocaust Memorial Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Mark this day with a quiet, carefully prepared assembly. Before you plan it, check the Holocaust Memorial Day Trust’s theme for the year.</p>
-<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div></div>
 </div>
 </div>
 </div>
-<div class="month">
-<h3>February</h3>
-<div class="day" data-end="2027-02-07">
+<div class="cA-month" id="february-2027" data-ym="2027-02">
+<div class="cA-head"><h3 class="cA-title">February 2027</h3></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell range" data-date="2027-02-01"><span class="cA-num">1</span><a class="cA-chip" href="#d-childrens-mental-health-week-0201">Children’s Mental Health Week (1–7)</a></div><div class="cA-cell range" data-date="2027-02-02"><span class="cA-num">2</span></div><div class="cA-cell range" data-date="2027-02-03"><span class="cA-num">3</span></div><div class="cA-cell range" data-date="2027-02-04"><span class="cA-num">4</span><a class="cA-chip" href="#d-time-to-talk-day-0204">Time to Talk Day</a></div><div class="cA-cell range" data-date="2027-02-05"><span class="cA-num">5</span></div><div class="cA-cell we range" data-date="2027-02-06"><span class="cA-num">6</span></div><div class="cA-cell we range" data-date="2027-02-07"><span class="cA-num">7</span></div><div class="cA-cell" data-date="2027-02-08"><span class="cA-num">8</span></div><div class="cA-cell" data-date="2027-02-09"><span class="cA-num">9</span><a class="cA-chip" href="#d-safer-internet-day-0209">Safer Internet Day</a></div><div class="cA-cell" data-date="2027-02-10"><span class="cA-num">10</span></div><div class="cA-cell" data-date="2027-02-11"><span class="cA-num">11</span></div><div class="cA-cell" data-date="2027-02-12"><span class="cA-num">12</span></div><div class="cA-cell we" data-date="2027-02-13"><span class="cA-num">13</span></div><div class="cA-cell we" data-date="2027-02-14"><span class="cA-num">14</span><a class="cA-chip" href="#d-valentines-day-0214">Valentine’s Day</a></div><div class="cA-cell" data-date="2027-02-15"><span class="cA-num">15</span></div><div class="cA-cell" data-date="2027-02-16"><span class="cA-num">16</span></div><div class="cA-cell" data-date="2027-02-17"><span class="cA-num">17</span></div><div class="cA-cell" data-date="2027-02-18"><span class="cA-num">18</span></div><div class="cA-cell" data-date="2027-02-19"><span class="cA-num">19</span></div><div class="cA-cell we" data-date="2027-02-20"><span class="cA-num">20</span><a class="cA-chip un" href="#d-world-day-of-social-justice-0220">World Day of Social Justice</a></div><div class="cA-cell we" data-date="2027-02-21"><span class="cA-num">21</span><a class="cA-chip un" href="#d-international-mother-language-day-0221">International Mother Language Day</a></div><div class="cA-cell" data-date="2027-02-22"><span class="cA-num">22</span></div><div class="cA-cell" data-date="2027-02-23"><span class="cA-num">23</span></div><div class="cA-cell" data-date="2027-02-24"><span class="cA-num">24</span></div><div class="cA-cell" data-date="2027-02-25"><span class="cA-num">25</span></div><div class="cA-cell" data-date="2027-02-26"><span class="cA-num">26</span></div><div class="cA-cell we" data-date="2027-02-27"><span class="cA-num">27</span></div><div class="cA-cell we" data-date="2027-02-28"><span class="cA-num">28</span></div></div>
+<div class="month cA-list"><h4 class="cA-in">In February</h4>
+<div class="day" id="d-childrens-mental-health-week-0201" data-end="2027-02-07">
 <div class="day-when">1–7 February</div>
-<div>
-<p class="day-name">Children’s Mental Health Week<span class="kind">UK</span></p>
+<div><p class="day-name">Children’s Mental Health Week<span class="kind">UK</span></p>
 <p class="day-idea">This week is run by Place2Be, and the 2027 theme is Step into Our World. Start with an assembly, then run something different every lunchtime.</p>
-<div class="day-foot"><span class="day-value">Value: <b>empathy</b></span><a class="day-link" href="/assemblies-and-events/childrens-mental-health-week/">Ready-made: Children’s Mental Health Week →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>empathy</b></span><a class="day-link" href="/assemblies-and-events/childrens-mental-health-week/">Ready-made: Children’s Mental Health Week →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-02-04">
+<div class="day" id="d-time-to-talk-day-0204" data-end="2027-02-04">
 <div class="day-when">Thu 4 February</div>
-<div>
-<p class="day-name">Time to Talk Day<span class="kind">UK</span></p>
+<div><p class="day-name">Time to Talk Day<span class="kind">UK</span></p>
 <p class="day-idea">This is usually the first Thursday of February, so check Mind’s site nearer the time. On the day, pair students up and give each pair a question to talk about.</p>
-<div class="day-foot"><span class="day-value">Value: <b>listening</b></span><a class="day-link" href="/wellbeing-check-ins/conversation-starters/">Ready-made: Conversation Starters →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>listening</b></span><a class="day-link" href="/wellbeing-check-ins/conversation-starters/">Ready-made: Conversation Starters →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-02-09">
+<div class="day" id="d-safer-internet-day-0209" data-end="2027-02-09">
 <div class="day-when">Tue 9 February</div>
-<div>
-<p class="day-name">Safer Internet Day<span class="kind">Worldwide</span></p>
+<div><p class="day-name">Safer Internet Day<span class="kind">Worldwide</span></p>
 <p class="day-idea">Ask the form what they spend their time on online, and what they would change if they could.</p>
-<div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/pastoral-projects/screen-time/">Ready-made: How Does Screen Time Affect...? →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/pastoral-projects/screen-time/">Ready-made: How Does Screen Time Affect...? →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-02-14">
+<div class="day" id="d-valentines-day-0214" data-end="2027-02-14">
 <div class="day-when">Sun 14 February</div>
-<div>
-<p class="day-name">Valentine’s Day<span class="kind">Worldwide</span></p>
+<div><p class="day-name">Valentine’s Day<span class="kind">Worldwide</span></p>
 <p class="day-idea">This falls on a Sunday, so run a kindness fundraiser in the week before, where students write notes for their friends.</p>
-<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/valentines-day-sweet-notes/">Ready-made: Sweet Notes →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/valentines-day-sweet-notes/">Ready-made: Sweet Notes →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-02-20">
+<div class="day" id="d-world-day-of-social-justice-0220" data-end="2027-02-20">
 <div class="day-when">Sat 20 February</div>
-<div>
-<p class="day-name">World Day of Social Justice<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">World Day of Social Justice<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Saturday close to February half term, so mark it the week after. Ask the form whether fair is the same as equal, and let them debate it.</p>
-<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-02-21">
+<div class="day" id="d-international-mother-language-day-0221" data-end="2027-02-21">
 <div class="day-when">Sun 21 February</div>
-<div>
-<p class="day-name">International Mother Language Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Mother Language Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Find out how many languages are spoken at home across the form, and how to say hello in each one.</p>
-<div class="day-foot"><span class="day-value">Value: <b>belonging</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>belonging</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview →</a></div></div>
 </div>
 </div>
 </div>
-<div class="month">
-<h3>March</h3>
-<div class="day" data-end="2027-03-04">
+<div class="cA-month" id="march-2027" data-ym="2027-03">
+<div class="cA-head"><h3 class="cA-title">March 2027</h3></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell" data-date="2027-03-01"><span class="cA-num">1</span></div><div class="cA-cell" data-date="2027-03-02"><span class="cA-num">2</span></div><div class="cA-cell" data-date="2027-03-03"><span class="cA-num">3</span></div><div class="cA-cell" data-date="2027-03-04"><span class="cA-num">4</span><a class="cA-chip" href="#d-world-book-day-0304">World Book Day</a></div><div class="cA-cell" data-date="2027-03-05"><span class="cA-num">5</span></div><div class="cA-cell we" data-date="2027-03-06"><span class="cA-num">6</span></div><div class="cA-cell we" data-date="2027-03-07"><span class="cA-num">7</span></div><div class="cA-cell" data-date="2027-03-08"><span class="cA-num">8</span><a class="cA-chip un" href="#d-international-womens-day-0308">International Women’s Day</a></div><div class="cA-cell" data-date="2027-03-09"><span class="cA-num">9</span></div><div class="cA-cell" data-date="2027-03-10"><span class="cA-num">10</span></div><div class="cA-cell" data-date="2027-03-11"><span class="cA-num">11</span></div><div class="cA-cell" data-date="2027-03-12"><span class="cA-num">12</span></div><div class="cA-cell we" data-date="2027-03-13"><span class="cA-num">13</span></div><div class="cA-cell we" data-date="2027-03-14"><span class="cA-num">14</span></div><div class="cA-cell range" data-date="2027-03-15"><span class="cA-num">15</span><a class="cA-chip" href="#d-neurodiversity-celebration-week-0315">Neurodiversity Celebration Week (15–19)</a></div><div class="cA-cell range" data-date="2027-03-16"><span class="cA-num">16</span></div><div class="cA-cell range" data-date="2027-03-17"><span class="cA-num">17</span></div><div class="cA-cell range" data-date="2027-03-18"><span class="cA-num">18</span></div><div class="cA-cell range" data-date="2027-03-19"><span class="cA-num">19</span></div><div class="cA-cell we" data-date="2027-03-20"><span class="cA-num">20</span><a class="cA-chip un" href="#d-international-day-of-happiness-0320">International Day of Happiness</a></div><div class="cA-cell we" data-date="2027-03-21"><span class="cA-num">21</span><a class="cA-chip un" href="#d-international-day-for-the-elimination-of-racial-discrimination-0321">Day against Racial Discrimination</a></div><div class="cA-cell" data-date="2027-03-22"><span class="cA-num">22</span></div><div class="cA-cell" data-date="2027-03-23"><span class="cA-num">23</span></div><div class="cA-cell" data-date="2027-03-24"><span class="cA-num">24</span></div><div class="cA-cell" data-date="2027-03-25"><span class="cA-num">25</span></div><div class="cA-cell" data-date="2027-03-26"><span class="cA-num">26</span></div><div class="cA-cell we" data-date="2027-03-27"><span class="cA-num">27</span></div><div class="cA-cell we" data-date="2027-03-28"><span class="cA-num">28</span></div><div class="cA-cell" data-date="2027-03-29"><span class="cA-num">29</span></div><div class="cA-cell" data-date="2027-03-30"><span class="cA-num">30</span></div><div class="cA-cell" data-date="2027-03-31"><span class="cA-num">31</span></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out we"></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In March</h4>
+<div class="day" id="d-world-book-day-0304" data-end="2027-03-04">
 <div class="day-when">Thu 4 March</div>
-<div>
-<p class="day-name">World Book Day<span class="kind">UK</span></p>
+<div><p class="day-name">World Book Day<span class="kind">UK</span></p>
 <p class="day-idea">Ask each student to recommend one book to the form in a single sentence.</p>
-<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-03-08">
+<div class="day" id="d-international-womens-day-0308" data-end="2027-03-08">
 <div class="day-when">Mon 8 March</div>
-<div>
-<p class="day-name">International Women’s Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Women’s Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Students choose a woman they admire, famous or not, and say what she did that took courage.</p>
-<div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-03-19">
+<div class="day" id="d-neurodiversity-celebration-week-0315" data-end="2027-03-19">
 <div class="day-when">15–19 March</div>
-<div>
-<p class="day-name">Neurodiversity Celebration Week<span class="kind">Worldwide</span></p>
+<div><p class="day-name">Neurodiversity Celebration Week<span class="kind">Worldwide</span></p>
 <p class="day-idea">Start from the idea that everyone’s brain works differently. Ask each student what helps them concentrate, and notice together how different the answers are.</p>
-<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span></div>
+<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-03-20">
+<div class="day" id="d-international-day-of-happiness-0320" data-end="2027-03-20">
 <div class="day-when">Sat 20 March</div>
-<div>
-<p class="day-name">International Day of Happiness<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day of Happiness<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Saturday, so mark it on the Friday by adding one small win from the week to the board.</p>
-<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/small-wins-board/">Ready-made: Small Wins Board →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/small-wins-board/">Ready-made: Small Wins Board →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-03-21">
+<div class="day" id="d-international-day-for-the-elimination-of-racial-discrimination-0321" data-end="2027-03-21">
 <div class="day-when">Sun 21 March</div>
-<div>
-<p class="day-name">International Day for the Elimination of Racial Discrimination<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day for the Elimination of Racial Discrimination<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask the form what they would do if they heard a racist comment passed off as a joke.</p>
-<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander →</a></div></div>
 </div>
 </div>
 </div>
-</section>
-<section class="term" id="summer">
-<h2>Summer term</h2>
-<div class="month">
-<h3>April</h3>
-<div class="day" data-end="2027-04-22">
+<div class="cA-month" id="april-2027" data-ym="2027-04">
+<div class="cA-head"><h3 class="cA-title">April 2027</h3></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell" data-date="2027-04-01"><span class="cA-num">1</span></div><div class="cA-cell" data-date="2027-04-02"><span class="cA-num">2</span></div><div class="cA-cell we" data-date="2027-04-03"><span class="cA-num">3</span></div><div class="cA-cell we" data-date="2027-04-04"><span class="cA-num">4</span></div><div class="cA-cell" data-date="2027-04-05"><span class="cA-num">5</span></div><div class="cA-cell" data-date="2027-04-06"><span class="cA-num">6</span></div><div class="cA-cell" data-date="2027-04-07"><span class="cA-num">7</span></div><div class="cA-cell" data-date="2027-04-08"><span class="cA-num">8</span></div><div class="cA-cell" data-date="2027-04-09"><span class="cA-num">9</span></div><div class="cA-cell we" data-date="2027-04-10"><span class="cA-num">10</span></div><div class="cA-cell we" data-date="2027-04-11"><span class="cA-num">11</span></div><div class="cA-cell" data-date="2027-04-12"><span class="cA-num">12</span></div><div class="cA-cell" data-date="2027-04-13"><span class="cA-num">13</span></div><div class="cA-cell" data-date="2027-04-14"><span class="cA-num">14</span></div><div class="cA-cell" data-date="2027-04-15"><span class="cA-num">15</span></div><div class="cA-cell" data-date="2027-04-16"><span class="cA-num">16</span></div><div class="cA-cell we" data-date="2027-04-17"><span class="cA-num">17</span></div><div class="cA-cell we" data-date="2027-04-18"><span class="cA-num">18</span></div><div class="cA-cell" data-date="2027-04-19"><span class="cA-num">19</span></div><div class="cA-cell" data-date="2027-04-20"><span class="cA-num">20</span></div><div class="cA-cell" data-date="2027-04-21"><span class="cA-num">21</span></div><div class="cA-cell" data-date="2027-04-22"><span class="cA-num">22</span><a class="cA-chip un" href="#d-earth-day-0422">Earth Day</a></div><div class="cA-cell" data-date="2027-04-23"><span class="cA-num">23</span></div><div class="cA-cell we" data-date="2027-04-24"><span class="cA-num">24</span></div><div class="cA-cell we" data-date="2027-04-25"><span class="cA-num">25</span></div><div class="cA-cell" data-date="2027-04-26"><span class="cA-num">26</span></div><div class="cA-cell" data-date="2027-04-27"><span class="cA-num">27</span></div><div class="cA-cell" data-date="2027-04-28"><span class="cA-num">28</span></div><div class="cA-cell" data-date="2027-04-29"><span class="cA-num">29</span></div><div class="cA-cell" data-date="2027-04-30"><span class="cA-num">30</span></div><div class="cA-cell out we"></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In April</h4>
+<div class="day" id="d-earth-day-0422" data-end="2027-04-22">
 <div class="day-when">Thu 22 April</div>
-<div>
-<p class="day-name">Earth Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">Earth Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">The UN calls it International Mother Earth Day. Plant something together as a form and look after it until the summer.</p>
-<div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project →</a></div></div>
 </div>
 </div>
 </div>
-<div class="month">
-<h3>May</h3>
-<div class="day" data-end="2027-05-24">
+<div class="cA-month" id="may-2027" data-ym="2027-05">
+<div class="cA-head"><h3 class="cA-title">May 2027</h3></div>
+<div class="cA-all"><a href="#d-mental-health-awareness-week-0524"><b>Mid-May:</b> Mental Health Awareness Week</a><a href="#d-gcse-and-a-level-exams-begin-0524"><b>Mid-May:</b> GCSE and A level exams begin</a></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell we" data-date="2027-05-01"><span class="cA-num">1</span></div><div class="cA-cell we" data-date="2027-05-02"><span class="cA-num">2</span></div><div class="cA-cell" data-date="2027-05-03"><span class="cA-num">3</span></div><div class="cA-cell" data-date="2027-05-04"><span class="cA-num">4</span></div><div class="cA-cell" data-date="2027-05-05"><span class="cA-num">5</span></div><div class="cA-cell" data-date="2027-05-06"><span class="cA-num">6</span></div><div class="cA-cell" data-date="2027-05-07"><span class="cA-num">7</span></div><div class="cA-cell we" data-date="2027-05-08"><span class="cA-num">8</span></div><div class="cA-cell we" data-date="2027-05-09"><span class="cA-num">9</span></div><div class="cA-cell" data-date="2027-05-10"><span class="cA-num">10</span></div><div class="cA-cell" data-date="2027-05-11"><span class="cA-num">11</span></div><div class="cA-cell" data-date="2027-05-12"><span class="cA-num">12</span></div><div class="cA-cell" data-date="2027-05-13"><span class="cA-num">13</span></div><div class="cA-cell" data-date="2027-05-14"><span class="cA-num">14</span></div><div class="cA-cell we" data-date="2027-05-15"><span class="cA-num">15</span></div><div class="cA-cell we" data-date="2027-05-16"><span class="cA-num">16</span><a class="cA-chip un" href="#d-international-day-of-living-together-in-peace-0516">International Day of Living Together in Peace</a></div><div class="cA-cell" data-date="2027-05-17"><span class="cA-num">17</span></div><div class="cA-cell" data-date="2027-05-18"><span class="cA-num">18</span></div><div class="cA-cell" data-date="2027-05-19"><span class="cA-num">19</span></div><div class="cA-cell" data-date="2027-05-20"><span class="cA-num">20</span></div><div class="cA-cell" data-date="2027-05-21"><span class="cA-num">21</span><a class="cA-chip un" href="#d-world-day-for-cultural-diversity-0521">World Day for Cultural Diversity</a></div><div class="cA-cell we" data-date="2027-05-22"><span class="cA-num">22</span></div><div class="cA-cell we" data-date="2027-05-23"><span class="cA-num">23</span></div><div class="cA-cell" data-date="2027-05-24"><span class="cA-num">24</span></div><div class="cA-cell" data-date="2027-05-25"><span class="cA-num">25</span></div><div class="cA-cell" data-date="2027-05-26"><span class="cA-num">26</span></div><div class="cA-cell" data-date="2027-05-27"><span class="cA-num">27</span></div><div class="cA-cell" data-date="2027-05-28"><span class="cA-num">28</span></div><div class="cA-cell we" data-date="2027-05-29"><span class="cA-num">29</span></div><div class="cA-cell we" data-date="2027-05-30"><span class="cA-num">30</span></div><div class="cA-cell" data-date="2027-05-31"><span class="cA-num">31</span></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out we"></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In May</h4>
+<div class="day" id="d-mental-health-awareness-week-0524" data-end="2027-05-24">
 <div class="day-when">Mid-May</div>
-<div>
-<p class="day-name">Mental Health Awareness Week<span class="kind">UK</span></p>
+<div><p class="day-name">Mental Health Awareness Week<span class="kind">UK</span></p>
 <p class="day-idea">This is usually in the second or third week of May. The 2027 dates have not been announced yet, so check the Mental Health Foundation’s site nearer the time.</p>
-<div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/wellbeing-check-ins/mood-scale/">Ready-made: Mood Scale →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/wellbeing-check-ins/mood-scale/">Ready-made: Mood Scale →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-05-24">
+<div class="day" id="d-gcse-and-a-level-exams-begin-0524" data-end="2027-05-24">
 <div class="day-when">Mid-May</div>
-<div>
-<p class="day-name">GCSE and A level exams begin<span class="kind">School</span></p>
+<div><p class="day-name">GCSE and A level exams begin<span class="kind">School</span></p>
 <p class="day-idea">The exam season starts around the middle of May. Give Year 11 and Year 13 something they can say to themselves before they go into each exam.</p>
-<div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/wellbeing-check-ins/before-you-go-in/">Ready-made: Before You Go In →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/wellbeing-check-ins/before-you-go-in/">Ready-made: Before You Go In →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-05-16">
+<div class="day" id="d-international-day-of-living-together-in-peace-0516" data-end="2027-05-16">
 <div class="day-when">Sun 16 May</div>
-<div>
-<p class="day-name">International Day of Living Together in Peace<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day of Living Together in Peace<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask the form what it takes for thirty people to share one room every morning.</p>
-<div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-05-21">
+<div class="day" id="d-world-day-for-cultural-diversity-0521" data-end="2027-05-21">
 <div class="day-when">Fri 21 May</div>
-<div>
-<p class="day-name">World Day for Cultural Diversity<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">World Day for Cultural Diversity<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">Pair each student with the person they know least in the form, and give them two minutes each to find out something new about each other.</p>
-<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview →</a></div></div>
 </div>
 </div>
 </div>
-<div class="month">
-<h3>June</h3>
-<div class="day" data-end="2027-06-30">
+<div class="cA-month" id="june-2027" data-ym="2027-06">
+<div class="cA-head"><h3 class="cA-title">June 2027</h3></div>
+<div class="cA-all"><a href="#d-pride-month-0601"><b>All month:</b> Pride Month</a><a href="#d-year-11-and-year-13-leave-0630"><b>June:</b> Year 11 and Year 13 leave</a></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell" data-date="2027-06-01"><span class="cA-num">1</span></div><div class="cA-cell" data-date="2027-06-02"><span class="cA-num">2</span></div><div class="cA-cell" data-date="2027-06-03"><span class="cA-num">3</span></div><div class="cA-cell" data-date="2027-06-04"><span class="cA-num">4</span></div><div class="cA-cell we" data-date="2027-06-05"><span class="cA-num">5</span><a class="cA-chip un" href="#d-world-environment-day-0605">World Environment Day</a></div><div class="cA-cell we" data-date="2027-06-06"><span class="cA-num">6</span></div><div class="cA-cell" data-date="2027-06-07"><span class="cA-num">7</span></div><div class="cA-cell" data-date="2027-06-08"><span class="cA-num">8</span></div><div class="cA-cell" data-date="2027-06-09"><span class="cA-num">9</span></div><div class="cA-cell" data-date="2027-06-10"><span class="cA-num">10</span></div><div class="cA-cell" data-date="2027-06-11"><span class="cA-num">11</span><a class="cA-chip un" href="#d-international-day-of-play-0611">International Day of Play</a></div><div class="cA-cell we" data-date="2027-06-12"><span class="cA-num">12</span></div><div class="cA-cell we" data-date="2027-06-13"><span class="cA-num">13</span></div><div class="cA-cell range" data-date="2027-06-14"><span class="cA-num">14</span><a class="cA-chip" href="#d-refugee-week-0614">Refugee Week (14–20)</a></div><div class="cA-cell range" data-date="2027-06-15"><span class="cA-num">15</span></div><div class="cA-cell range" data-date="2027-06-16"><span class="cA-num">16</span></div><div class="cA-cell range" data-date="2027-06-17"><span class="cA-num">17</span></div><div class="cA-cell range" data-date="2027-06-18"><span class="cA-num">18</span></div><div class="cA-cell we range" data-date="2027-06-19"><span class="cA-num">19</span></div><div class="cA-cell we range" data-date="2027-06-20"><span class="cA-num">20</span></div><div class="cA-cell" data-date="2027-06-21"><span class="cA-num">21</span></div><div class="cA-cell" data-date="2027-06-22"><span class="cA-num">22</span></div><div class="cA-cell" data-date="2027-06-23"><span class="cA-num">23</span></div><div class="cA-cell" data-date="2027-06-24"><span class="cA-num">24</span></div><div class="cA-cell" data-date="2027-06-25"><span class="cA-num">25</span></div><div class="cA-cell we" data-date="2027-06-26"><span class="cA-num">26</span></div><div class="cA-cell we" data-date="2027-06-27"><span class="cA-num">27</span></div><div class="cA-cell" data-date="2027-06-28"><span class="cA-num">28</span></div><div class="cA-cell" data-date="2027-06-29"><span class="cA-num">29</span></div><div class="cA-cell" data-date="2027-06-30"><span class="cA-num">30</span></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out we"></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In June</h4>
+<div class="day" id="d-pride-month-0601" data-end="2027-06-30">
 <div class="day-when">All of June</div>
-<div>
-<p class="day-name">Pride Month<span class="kind">Worldwide</span></p>
+<div><p class="day-name">Pride Month<span class="kind">Worldwide</span></p>
 <p class="day-idea">Many schools mark it with a display or an assembly on belonging, and on everyone being able to be themselves at school.</p>
-<div class="day-foot"><span class="day-value">Value: <b>belonging</b></span></div>
+<div class="day-foot"><span class="day-value">Value: <b>belonging</b></span></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-06-05">
+<div class="day" id="d-world-environment-day-0605" data-end="2027-06-05">
 <div class="day-when">Sat 5 June</div>
-<div>
-<p class="day-name">World Environment Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">World Environment Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Saturday, so mark it on the Friday. Agree one thing the form could stop wasting this term, and decide who will keep an eye on it.</p>
-<div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-06-11">
+<div class="day" id="d-international-day-of-play-0611" data-end="2027-06-11">
 <div class="day-when">Fri 11 June</div>
-<div>
-<p class="day-name">International Day of Play<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">International Day of Play<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This is the newest UN day. Give form time over to a team quiz and let students simply enjoy it.</p>
-<div class="day-foot"><span class="day-value">Value: <b>teamwork</b></span><a class="day-link" href="/morning-registration-activities/form-time-quiz/">Ready-made: The Form Time Quiz →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>teamwork</b></span><a class="day-link" href="/morning-registration-activities/form-time-quiz/">Ready-made: The Form Time Quiz →</a></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-06-20">
+<div class="day" id="d-refugee-week-0614" data-end="2027-06-20">
 <div class="day-when">14–20 June</div>
-<div>
-<p class="day-name">Refugee Week<span class="kind">UK</span></p>
+<div><p class="day-name">Refugee Week<span class="kind">UK</span></p>
 <p class="day-idea">The week ends on World Refugee Day, 20 June. Ask the form what it would take to start again somewhere new, and what would help most.</p>
-<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span></div>
+<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span></div></div>
 </div>
-</div>
-<div class="day" data-end="2027-06-30">
+<div class="day" id="d-year-11-and-year-13-leave-0630" data-end="2027-06-30">
 <div class="day-when">June</div>
-<div>
-<p class="day-name">Year 11 and Year 13 leave<span class="kind">School</span></p>
+<div><p class="day-name">Year 11 and Year 13 leave<span class="kind">School</span></p>
 <p class="day-idea">This is usually in late May or June, depending on the exam timetable. The ready-made resource has five short cards for the form’s last week together.</p>
-<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/the-last-five-mornings/">Ready-made: The Last Five Mornings →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/the-last-five-mornings/">Ready-made: The Last Five Mornings →</a></div></div>
 </div>
 </div>
 </div>
-<div class="month">
-<h3>July</h3>
-<div class="day" data-end="2027-07-18">
+<div class="cA-month" id="july-2027" data-ym="2027-07">
+<div class="cA-head"><h3 class="cA-title">July 2027</h3></div>
+<div class="cA-grid"><div class="cA-dow">Mon</div><div class="cA-dow">Tue</div><div class="cA-dow">Wed</div><div class="cA-dow">Thu</div><div class="cA-dow">Fri</div><div class="cA-dow">Sat</div><div class="cA-dow">Sun</div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell out"></div><div class="cA-cell" data-date="2027-07-01"><span class="cA-num">1</span></div><div class="cA-cell" data-date="2027-07-02"><span class="cA-num">2</span></div><div class="cA-cell we" data-date="2027-07-03"><span class="cA-num">3</span></div><div class="cA-cell we" data-date="2027-07-04"><span class="cA-num">4</span></div><div class="cA-cell" data-date="2027-07-05"><span class="cA-num">5</span></div><div class="cA-cell" data-date="2027-07-06"><span class="cA-num">6</span></div><div class="cA-cell" data-date="2027-07-07"><span class="cA-num">7</span></div><div class="cA-cell" data-date="2027-07-08"><span class="cA-num">8</span></div><div class="cA-cell" data-date="2027-07-09"><span class="cA-num">9</span></div><div class="cA-cell we" data-date="2027-07-10"><span class="cA-num">10</span></div><div class="cA-cell we" data-date="2027-07-11"><span class="cA-num">11</span></div><div class="cA-cell" data-date="2027-07-12"><span class="cA-num">12</span></div><div class="cA-cell" data-date="2027-07-13"><span class="cA-num">13</span></div><div class="cA-cell" data-date="2027-07-14"><span class="cA-num">14</span></div><div class="cA-cell" data-date="2027-07-15"><span class="cA-num">15</span></div><div class="cA-cell" data-date="2027-07-16"><span class="cA-num">16</span></div><div class="cA-cell we" data-date="2027-07-17"><span class="cA-num">17</span></div><div class="cA-cell we" data-date="2027-07-18"><span class="cA-num">18</span><a class="cA-chip un" href="#d-nelson-mandela-international-day-0718">Nelson Mandela International Day</a></div><div class="cA-cell" data-date="2027-07-19"><span class="cA-num">19</span></div><div class="cA-cell" data-date="2027-07-20"><span class="cA-num">20</span></div><div class="cA-cell" data-date="2027-07-21"><span class="cA-num">21</span></div><div class="cA-cell" data-date="2027-07-22"><span class="cA-num">22</span></div><div class="cA-cell" data-date="2027-07-23"><span class="cA-num">23</span></div><div class="cA-cell we" data-date="2027-07-24"><span class="cA-num">24</span></div><div class="cA-cell we" data-date="2027-07-25"><span class="cA-num">25</span></div><div class="cA-cell" data-date="2027-07-26"><span class="cA-num">26</span></div><div class="cA-cell" data-date="2027-07-27"><span class="cA-num">27</span></div><div class="cA-cell" data-date="2027-07-28"><span class="cA-num">28</span></div><div class="cA-cell" data-date="2027-07-29"><span class="cA-num">29</span></div><div class="cA-cell" data-date="2027-07-30"><span class="cA-num">30</span></div><div class="cA-cell we" data-date="2027-07-31"><span class="cA-num">31</span></div><div class="cA-cell out we"></div></div>
+<div class="month cA-list"><h4 class="cA-in">In July</h4>
+<div class="day" id="d-nelson-mandela-international-day-0718" data-end="2027-07-18">
 <div class="day-when">Sun 18 July</div>
-<div>
-<p class="day-name">Nelson Mandela International Day<span class="kind kind--un">UN day</span></p>
+<div><p class="day-name">Nelson Mandela International Day<span class="kind kind--un">UN day</span></p>
 <p class="day-idea">This falls on a Sunday near the end of term. Mandela Day asks everyone to give 67 minutes of their time to someone else, so ask the form how they could spend those 67 minutes.</p>
-<div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div>
+<div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div></div>
 </div>
 </div>
 </div>
-</section>
 <p class="cal-note">Dates were checked against each organiser’s own site in September 2026. A day that falls at a weekend is best marked on the Friday before or the Monday after. Mental Health Awareness Week, the start of exams and leaving day depend on the year, so check those nearer the time.</p>
+</section>
 
 <section id="downloads">
 <h2>Get the printable</h2>
@@ -1560,6 +1561,39 @@
     if (next){ next.classList.add('is-next'); var f = document.createElement('span'); f.className = 'next-flag'; f.textContent = 'Coming up next'; next.querySelector('.day-when').prepend(f); }
   })();
 </script>
+<script>
+  /* Assembly Calendar: one month at a time, opening on this month (9 Nov 2026). Without this, every month shows in turn. */
+  (function(){
+    var cal = document.getElementById('calendar'); if (!cal) return;
+    cal.classList.add('js-cal');
+    var ms = [].slice.call(cal.querySelectorAll('.cA-month')), tabs = [].slice.call(cal.querySelectorAll('.cA-tab'));
+    var arrows = [].slice.call(cal.querySelectorAll('.cA-arrow'));
+    var t = new Date(), key = t.getFullYear() + '-' + ('0' + (t.getMonth() + 1)).slice(-2);
+    var iso = key + '-' + ('0' + t.getDate()).slice(-2);
+    var cur = 0; ms.forEach(function(m, i){ if (m.getAttribute('data-ym') <= key) cur = i; });
+    var td = cal.querySelector('.cA-cell[data-date="' + iso + '"]'); if (td) td.classList.add('today');
+    var nx = cal.querySelector('.day.is-next');
+    if (nx) cal.querySelectorAll('.cA-chip[href="#' + nx.id + '"]').forEach(function(c){ c.classList.add('next'); });
+    function show(i){
+      cur = Math.max(0, Math.min(ms.length - 1, i));
+      ms.forEach(function(m, j){ m.classList.toggle('on', j === cur); });
+      tabs.forEach(function(a, j){ if (j === cur) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+      arrows[0].disabled = cur === 0; arrows[1].disabled = cur === ms.length - 1;
+    }
+    arrows.forEach(function(b){ b.hidden = false; b.addEventListener('click', function(){ show(cur + (+b.getAttribute('data-d'))); }); });
+    tabs.forEach(function(a, j){ a.addEventListener('click', function(e){ e.preventDefault(); show(j); }); });
+    cal.addEventListener('click', function(e){
+      var a = e.target.closest('.cA-chip, .cA-all a, .cA-carry a'); if (!a) return;
+      var el = document.getElementById(a.getAttribute('href').slice(1)); if (!el) return;
+      e.preventDefault();
+      var m = el.closest('.cA-month'); show(ms.indexOf(m));
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('flash'); setTimeout(function(){ el.classList.remove('flash'); }, 1600);
+    });
+    show(cur);
+  })();
+</script>
+
 <!-- sitesearch js start -->
 <script>
 /* Header search. The index is /search-index.json, written by

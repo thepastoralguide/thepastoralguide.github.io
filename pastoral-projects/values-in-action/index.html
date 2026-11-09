@@ -869,6 +869,75 @@
     .sf-bottom{ justify-content: flex-start; }
   }
   /* == big footer end == */
+  /* == r3 layout start == (9 Nov 2026: At a glance, How it works with pictures beside it, download cards with previews) */
+  :root{ --accent-deep: #b0582b; }
+  main.r3{ max-width: var(--max-width, 1265px); }
+  main.r3 section > h2, main.r3 section > p, main.r3 .lede{ max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
+  main.r3 .lede{ max-width: 860px; }
+  .page-header.r3h{ display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: flex-start; text-align: left; max-width: var(--max-width, 1265px); padding-left: 40px; padding-right: 40px; padding-bottom: 12px; }
+  main.r3 > section.how{ margin-top: 32px; }
+  .r3h-main{ flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+  .r3h .eyebrow, .r3h .page-title, .r3h .page-sub{ text-align: left; margin-left: 0; margin-right: 0; }
+  .r3h .page-sub{ max-width: 760px; }
+  .glance{ flex: 1 1 300px; max-width: 380px; background: #fffdf8; border: 1px solid rgba(46,68,54,0.14); border-radius: 12px; padding: 16px 22px 8px; }
+  .glance-h{ margin: 0 0 2px; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--accent-deep); }
+  .glance-list{ margin: 0; }
+  .glance-row{ display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 9px 0; border-bottom: 1px solid rgba(46,68,54,0.10); font-size: 14.5px; line-height: 1.35; }
+  .glance-row:last-child{ border-bottom: 0; }
+  .glance-row dt{ flex: none; color: var(--ink-soft); }
+  .glance-row dd{ margin: 0; font-weight: 700; text-align: right; color: var(--ink); }
+  .glance-row dd a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(46,68,54,0.3); text-underline-offset: 3px; }
+  main.r3 .how-intro{ margin: 0 0 18px; }
+  main.r3 .how .week-grid, main.r3 .how .session-grid, main.r3 .how .menu-grid, main.r3 .how .scale-preview, main.r3 .how .values-grid, main.r3 .how .key, main.r3 .how .term-nav{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.r3 .how .week-caption{ max-width: none; margin-left: 0; text-align: left; }
+  .how-row{ display: flex; flex-wrap: wrap; gap: 24px 44px; align-items: stretch; margin-top: 22px; }
+  .how-main{ flex: 3 1 460px; min-width: 0; }
+  .how-side{ flex: 2 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+  main.r3 .how-main .steps{ margin: 0; max-width: none; }
+  main.r3 .how-main .step{ display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(46,68,54,0.14); background: none; box-shadow: none; border-radius: 0; }
+  main.r3 .how-main .step:first-child{ border-top: 0; padding-top: 4px; }
+  main.r3 .how-main .step-num{ flex: none; min-width: 24px; font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 26px; line-height: 1; color: var(--accent-deep); background: none; width: auto; height: auto; }
+  main.r3 .how-main .step strong{ font-size: 15.5px; color: var(--ink); }
+  main.r3 .how-main .step p{ margin: 4px 0 0; font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
+  main.r3 .how-side .sample-card{ margin: 0; max-width: none; }
+  main.r3 .how-side .sample-caption{ margin: 10px 0 0; font-size: 13.5px; color: var(--ink-soft); text-align: left; max-width: none; }
+  .how-side > .how-card{ flex: none; }
+  .how-side--card{ justify-content: center; }
+  .how-fig{ margin: 0; flex: 1 1 0; min-height: 240px; display: flex; flex-direction: column; gap: 8px; }
+  .how-pic{ position: relative; flex: 1 1 0; min-height: 200px; border-radius: 12px; overflow: hidden; }
+  .how-pic img{ position: absolute; display: block; }
+  .how-pic--photo img{ inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .how-pic--preview{ background: var(--accent); }
+  .how-pic--preview img{ inset: 20px; width: calc(100% - 40px); height: calc(100% - 40px); object-fit: contain; filter: drop-shadow(0 8px 14px rgba(46,68,54,0.22)); }
+  .how-fig figcaption{ flex: none; font-size: 13.5px; color: var(--ink-soft); }
+  main.r3 .downloads-grid{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.r3 .downloads-grid.dg-1{ grid-template-columns: 1fr; }
+  main.r3 .downloads-grid.dg-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  main.r3 .downloads-grid.dg-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  main.r3 .downloads-grid.dg-many{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  main.r3 .download-card{ overflow: hidden; }
+  .card-prev{ display: flex; align-items: center; justify-content: center; gap: 12px; height: 200px; margin: -20px -18px 4px; padding: 18px; background: var(--accent); color: var(--accent-deep); }
+  .card-prev img{ max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 4px; box-shadow: 0 8px 18px -10px rgba(46,68,54,0.45); background: #fff; }
+  .card-prev--photo{ padding: 0; }
+  .card-prev--photo img{ width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
+  .card-prev svg{ width: 64px; height: 64px; opacity: 0.7; }
+  main.r3 .download-card--solo{ display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); grid-auto-rows: min-content; column-gap: 26px; row-gap: 10px; max-width: none; width: 100%; justify-self: stretch; align-content: center; }
+  main.r3 .download-card--solo{ align-items: center; }
+  main.r3 .download-card--solo .card-prev{ grid-column: 1; grid-row: 1 / span 5; height: 260px; min-height: 0; margin: -20px 0 -18px -18px; align-self: stretch; }
+  main.r3 .download-card--solo > :not(.card-prev){ grid-column: 2; justify-self: start; }
+  main.r3 .signup{ background: #e6e2d8; border: 0; }
+  .more{ max-width: var(--max-width, 1265px); }
+  .more h2, .more-grid, .more-all{ max-width: none; }
+  @media (max-width: 700px){
+    main.r3 .downloads-grid.dg-2, main.r3 .downloads-grid.dg-3{ grid-template-columns: 1fr; }
+    main.r3 .download-card--solo{ display: flex; }
+    main.r3 .download-card--solo .card-prev{ margin: -20px -18px 4px; height: 200px; min-height: 0; }
+    .glance{ max-width: none; }
+    .page-header.r3h{ padding-left: 16px; padding-right: 16px; }
+    .how-fig{ flex: none; min-height: 0; }
+    .how-pic{ flex: none; height: 240px; min-height: 0; }
+  }
+  /* == r3 layout end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/pastoral-projects/values-in-action/#resource","url":"https://thepastoralguide.com/pastoral-projects/values-in-action/","name":"Values in Action","description":"Students choose a role model, name two values that person shows, then act on those values themselves for a week, either through a small daily practice or something built once that lasts. It closes with each student giving a two-minute presentation to the form. It is a project about living a value for a week rather than naming one in a lesson.","inLanguage":"en-GB","learningResourceType":"Project","educationalLevel":["Key Stage 3", "Key Stage 4"],"typicalAgeRange":"11-16","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/pastoral-projects/values-in-action/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/pastoral-projects/values-in-action/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Pastoral Projects","item":"https://thepastoralguide.com/pastoral-projects/"},{"@type":"ListItem","position":3,"name":"Values in Action","item":"https://thepastoralguide.com/pastoral-projects/values-in-action/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
@@ -904,144 +973,98 @@
   </div>
 </nav>
 
-<header class="page-header wrap">
+<header class="page-header wrap r3h">
+  <div class="r3h-main">
   <span class="eyebrow">Pastoral Projects</span>
   <h1 class="page-title">Values in Action</h1>
   <p class="page-sub">Students choose a role model, name two values that person shows, then act on those values themselves for a week. It closes with each student giving a two-minute presentation to the form. A week of form time, with slides, a printable project planner and a tracker spreadsheet. For a week, students put a value into practice.</p>
-  <span class="page-facts"><a href="../../key-stage-3/">Year 7 to 11, best in Year 7 to 9</a> &middot; form time or PSHE &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the downloads
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
-  </a>
+    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6"></path></svg>
+</a>
+  </div>
+  <aside class="glance" aria-label="At a glance"><p class="glance-h">At a glance</p><dl class="glance-list"><div class="glance-row"><dt>Time</dt><dd>Two sessions, a week apart</dd></div><div class="glance-row"><dt>Year groups</dt><dd><a href="../../key-stage-3/">Year 7 to 11, best in Year 7 to 9</a></dd></div><div class="glance-row"><dt>Use</dt><dd>Form time or PSHE</dd></div><div class="glance-row"><dt>Value</dt><dd>A value of their choice</dd></div><div class="glance-row"><dt>To prepare</dt><dd>Nothing to buy</dd></div><div class="glance-row"><dt>Files</dt><dd>A PowerPoint, a spreadsheet and a PDF</dd></div></dl></aside>
 </header>
 
-<main>
+<main class="r3">
+<section class="how">
+<h2>How the two sessions work</h2><p class="lede how-intro">Session one sets the project up and session two is presentation day. They sit a week apart by default, though you can stretch that gap if your form needs longer. There’s nothing to buy or gather beforehand.</p><div class="how-row"><div class="how-main"><div class="session-grid">
+<div class="session-card">
+<span class="eyebrow">Session 1 · launch</span>
+<h3>Choosing and committing</h3>
+<ul>
+<li>Activity 1: students choose a role model and say what they admire about them.</li>
+<li>The values menu, followed by an explanation of the two tracks.</li>
+<li>Activity 2: students commit to a track and make a specific plan for the week.</li>
+<li>An introduction to the tracker and a preview of presentation day.</li>
+</ul>
+</div>
+<div class="session-card">
+<span class="eyebrow">Session 2 · presentation day</span>
+<h3>Two minutes, to the form</h3>
+<ul>
+<li>How the day runs: each student has two minutes and brings their evidence with them.</li>
+<li>Every student presents their role model, values, service, evidence and reflection.</li>
+<li>Both tracks count equally. There is no ranking and no award for this one.</li>
+</ul>
+</div>
+</div></div><div class="how-side"><figure class="how-fig"><div class="how-pic how-pic--preview"><img alt="Slide one" height="720" loading="lazy" src="preview-slide-1.jpg" width="1280"/></div><figcaption>Slide one</figcaption></figure></div></div>
 
-  <section>
-    <h2>How the two sessions work</h2>
-    <p class="lede">Session one sets the project up and session two is presentation day. They sit a week apart by default, though you can stretch that gap if your form needs longer. There&rsquo;s nothing to buy or gather beforehand.</p>
-    <div class="session-grid">
-      <div class="session-card">
-        <span class="eyebrow">Session 1 &middot; launch</span>
-        <h3>Choosing and committing</h3>
-        <ul>
-          <li>Activity 1: students choose a role model and say what they admire about them.</li>
-          <li>The values menu, followed by an explanation of the two tracks.</li>
-          <li>Activity 2: students commit to a track and make a specific plan for the week.</li>
-          <li>An introduction to the tracker and a preview of presentation day.</li>
-        </ul>
-      </div>
-      <div class="session-card">
-        <span class="eyebrow">Session 2 &middot; presentation day</span>
-        <h3>Two minutes, to the form</h3>
-        <ul>
-          <li>How the day runs: each student has two minutes and brings their evidence with them.</li>
-          <li>Every student presents their role model, values, service, evidence and reflection.</li>
-          <li>Both tracks count equally. There is no ranking and no award for this one.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <section>
-    <h2>The two tracks</h2>
-    <p class="lede">There are two tracks, and students choose whichever fits their values best.</p>
-    <div class="tracks-grid">
-      <div class="track-card">
-        <h3>Daily Practice</h3>
-        <p>A small act tied to your values, repeated every day this week.</p>
-        <ul>
-          <li>Washing the dishes every evening</li>
-          <li>Writing a friend a positivity note each day</li>
-          <li>Cooking a meal for your family</li>
-        </ul>
-      </div>
-      <div class="track-card">
-        <h3>Lasting Change</h3>
-        <p>Something you build once, that keeps giving after this week ends.</p>
-        <ul>
-          <li>A no-questions-asked stationery basket</li>
-          <li>A class kindness noticeboard</li>
-          <li>A lending shelf for revision guides</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+</section>
 
-  <section>
-    <h2>The tracker</h2>
-    <p class="lede">One workbook with three sheets. The first is a class roster with each student&rsquo;s role model, values and track. The other two are the logs: a day-by-day evidence log for Daily Practice, and a four-stage milestone log (planned, built, launched, response) for Lasting Change. Totals and counts fill in automatically.</p>
-  </section>
 
-  <section>
-    <h2>Before your first session</h2>
-    <ul class="checklist">
-      <li><span class="check-box" aria-hidden="true"></span> Read through the slides, so you know the order things come up in</li>
-      <li><span class="check-box" aria-hidden="true"></span> Add your form&rsquo;s names to the tracker</li>
-      <li><span class="check-box" aria-hidden="true"></span> Decide how long the week of action will run: a week by default, longer if Lasting Change projects need it</li>
-      <li><span class="check-box" aria-hidden="true"></span> Print the Project Planner and Reflection Sheet, only if your form prefers paper</li>
-    </ul>
-  </section>
 
-  <section class="peek" aria-label="A look inside">
-    <h2>A look inside</h2>
-    <div class="peek-row">
-      <figure class="peek-item"><img src="preview-slide-1.jpg" alt="Slide one" width="1280" height="720" loading="lazy"><figcaption>Slide one</figcaption></figure>
-      <figure class="peek-item"><img src="preview-slide-2.jpg" alt="Slide 5 of 12" width="1280" height="720" loading="lazy"><figcaption>Slide 5 of 12</figcaption></figure>
-      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="Page one of the pack" width="800" height="1131" loading="lazy"><figcaption>Page one of the pack</figcaption></figure>
-    </div>
-  </section>
 
-  <section id="downloads">
-    <h2>Get the full project</h2>
-    <p class="lede">Everything for both sessions, ready to download and edit for your own form.</p>
-    <div class="downloads-grid">
-      <a class="download-card" href="/download/?r=pastoral-projects/values-in-action&amp;f=/pastoral-projects/values-in-action/downloads/Values_in_Action.pptx" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Values_in_Action.pptx">
-        <span class="file-chip deep">PPTX</span>
-        <h3>The project slides</h3>
-        <p>Both sessions in one deck: choosing a role model and values, the two tracks, the tracker, and presentation day.</p>
-        <span class="download-cta">Download
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
-        </span>
-      </a>
-      <a class="download-card" href="/download/?r=pastoral-projects/values-in-action&amp;f=/pastoral-projects/values-in-action/downloads/Values_in_Action_Tracker.xlsx" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Values_in_Action_Tracker.xlsx">
-        <span class="file-chip">Excel</span>
-        <h3>Values in Action Tracker</h3>
-        <p>A class roster plus a matching log for each track, with evidence and counts kept&nbsp;automatically.</p>
-        <span class="download-cta">Download
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
-        </span>
-      </a>
-      <a class="download-card" href="/download/?r=pastoral-projects/values-in-action&amp;f=/pastoral-projects/values-in-action/downloads/Values_in_Action_Project_Planner.pdf" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Values_in_Action_Project_Planner.pdf">
-        <span class="file-chip">Printable PDF</span>
-        <h3>Project Planner + Reflection Sheet</h3>
-        <p>A one-page planner for the week, plus an end-of-project reflection sheet, ready to print.</p>
-        <span class="download-cta">Download
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
-        </span>
-      </a>
-      <div class="signup" id="signup">
-        <div class="signup-main">
-        <p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
-        <form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
-          <input type="email" name="email_address" placeholder="Your email address" aria-label="Your email address" required autocomplete="email">
-          <button type="submit" data-umami-event="signup">Keep me posted</button>
-        </form>
-        <p class="signup-done" hidden>Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
-        <p class="signup-err" hidden>Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
-        <p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
-        </div>
-        <!-- support panel start -->
-        <div class="signup-divider" aria-hidden="true"></div>
-        <div class="signup-support">
-          <p>This is free to download, the same as everything else here. If it saved you some prep time, you&rsquo;re welcome to leave something toward the site&rsquo;s running costs.</p>
-          <a class="btn btn--support" href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg><span>Support the site</span></a>
-        </div>
-        <!-- support panel end -->
-      </div>
-    </div>
-  </section>
-
+<section id="downloads">
+<h2>Get the full project</h2>
+<p class="lede">Everything for both sessions, ready to download and edit for your own form.</p>
+<div class="downloads-grid dg-3">
+<a class="download-card" data-umami-event="download-open" data-umami-event-file="Values_in_Action.pptx" href="/download/?r=pastoral-projects/values-in-action&amp;f=/pastoral-projects/values-in-action/downloads/Values_in_Action.pptx" rel="noopener" target="_blank"><span class="card-prev"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24"><path d="M6 3h8l5 5v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v5h5"></path><path d="M8 13h8M8 17h5"></path></svg></span>
+<span class="file-chip deep">PPTX</span>
+<h3>The project slides</h3>
+<p>Both sessions in one deck: choosing a role model and values, the two tracks, the tracker, and presentation day.</p>
+<span class="download-cta">Download
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"></path></svg>
+</span>
+</a>
+<a class="download-card" data-umami-event="download-open" data-umami-event-file="Values_in_Action_Tracker.xlsx" href="/download/?r=pastoral-projects/values-in-action&amp;f=/pastoral-projects/values-in-action/downloads/Values_in_Action_Tracker.xlsx" rel="noopener" target="_blank"><span class="card-prev"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24"><path d="M6 3h8l5 5v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"></path><path d="M14 3v5h5"></path><path d="M8 13h8M8 17h5"></path></svg></span>
+<span class="file-chip">Excel</span>
+<h3>Values in Action Tracker</h3>
+<p>A class roster plus a matching log for each track, with evidence and counts kept automatically.</p>
+<span class="download-cta">Download
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"></path></svg>
+</span>
+</a>
+<a class="download-card" data-umami-event="download-open" data-umami-event-file="Values_in_Action_Project_Planner.pdf" href="/download/?r=pastoral-projects/values-in-action&amp;f=/pastoral-projects/values-in-action/downloads/Values_in_Action_Project_Planner.pdf" rel="noopener" target="_blank"><span class="card-prev"><img alt="" loading="lazy" src="preview-pack-1.jpg"/></span>
+<span class="file-chip">Printable PDF</span>
+<h3>Project Planner + Reflection Sheet</h3>
+<p>A one-page planner for the week, plus an end-of-project reflection sheet, ready to print.</p>
+<span class="download-cta">Download
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"></path></svg>
+</span>
+</a>
+<div class="signup" id="signup">
+<div class="signup-main">
+<p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
+<form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
+<input aria-label="Your email address" autocomplete="email" name="email_address" placeholder="Your email address" required="" type="email"/>
+<button data-umami-event="signup" type="submit">Keep me posted</button>
+</form>
+<p class="signup-done" hidden="">Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
+<p class="signup-err" hidden="">Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
+<p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
+</div>
+<!-- support panel start -->
+<div aria-hidden="true" class="signup-divider"></div>
+<div class="signup-support">
+<p>This is free to download, the same as everything else here. If it saved you some prep time, you’re welcome to leave something toward the site’s running costs.</p>
+<a class="btn btn--support" data-umami-event="support" href="https://ko-fi.com/thepastoralguide" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"></path></svg><span>Support the site</span></a>
+</div>
+<!-- support panel end -->
+</div>
+</div>
+</section>
 </main>
 
 <section class="more" aria-label="More from Pastoral Projects">

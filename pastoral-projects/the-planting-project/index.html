@@ -809,6 +809,75 @@
     .sf-bottom{ justify-content: flex-start; }
   }
   /* == big footer end == */
+  /* == r3 layout start == (9 Nov 2026: At a glance, How it works with pictures beside it, download cards with previews) */
+  :root{ --accent-deep: #527960; }
+  main.r3{ max-width: var(--max-width, 1265px); }
+  main.r3 section > h2, main.r3 section > p, main.r3 .lede{ max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
+  main.r3 .lede{ max-width: 860px; }
+  .page-header.r3h{ display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: flex-start; text-align: left; max-width: var(--max-width, 1265px); padding-left: 40px; padding-right: 40px; padding-bottom: 12px; }
+  main.r3 > section.how{ margin-top: 32px; }
+  .r3h-main{ flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+  .r3h .eyebrow, .r3h .page-title, .r3h .page-sub{ text-align: left; margin-left: 0; margin-right: 0; }
+  .r3h .page-sub{ max-width: 760px; }
+  .glance{ flex: 1 1 300px; max-width: 380px; background: #fffdf8; border: 1px solid rgba(46,68,54,0.14); border-radius: 12px; padding: 16px 22px 8px; }
+  .glance-h{ margin: 0 0 2px; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--accent-deep); }
+  .glance-list{ margin: 0; }
+  .glance-row{ display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 9px 0; border-bottom: 1px solid rgba(46,68,54,0.10); font-size: 14.5px; line-height: 1.35; }
+  .glance-row:last-child{ border-bottom: 0; }
+  .glance-row dt{ flex: none; color: var(--ink-soft); }
+  .glance-row dd{ margin: 0; font-weight: 700; text-align: right; color: var(--ink); }
+  .glance-row dd a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(46,68,54,0.3); text-underline-offset: 3px; }
+  main.r3 .how-intro{ margin: 0 0 18px; }
+  main.r3 .how .week-grid, main.r3 .how .session-grid, main.r3 .how .menu-grid, main.r3 .how .scale-preview, main.r3 .how .values-grid, main.r3 .how .key, main.r3 .how .term-nav{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.r3 .how .week-caption{ max-width: none; margin-left: 0; text-align: left; }
+  .how-row{ display: flex; flex-wrap: wrap; gap: 24px 44px; align-items: stretch; margin-top: 22px; }
+  .how-main{ flex: 3 1 460px; min-width: 0; }
+  .how-side{ flex: 2 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+  main.r3 .how-main .steps{ margin: 0; max-width: none; }
+  main.r3 .how-main .step{ display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(46,68,54,0.14); background: none; box-shadow: none; border-radius: 0; }
+  main.r3 .how-main .step:first-child{ border-top: 0; padding-top: 4px; }
+  main.r3 .how-main .step-num{ flex: none; min-width: 24px; font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 26px; line-height: 1; color: var(--accent-deep); background: none; width: auto; height: auto; }
+  main.r3 .how-main .step strong{ font-size: 15.5px; color: var(--ink); }
+  main.r3 .how-main .step p{ margin: 4px 0 0; font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
+  main.r3 .how-side .sample-card{ margin: 0; max-width: none; }
+  main.r3 .how-side .sample-caption{ margin: 10px 0 0; font-size: 13.5px; color: var(--ink-soft); text-align: left; max-width: none; }
+  .how-side > .how-card{ flex: none; }
+  .how-side--card{ justify-content: center; }
+  .how-fig{ margin: 0; flex: 1 1 0; min-height: 240px; display: flex; flex-direction: column; gap: 8px; }
+  .how-pic{ position: relative; flex: 1 1 0; min-height: 200px; border-radius: 12px; overflow: hidden; }
+  .how-pic img{ position: absolute; display: block; }
+  .how-pic--photo img{ inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .how-pic--preview{ background: var(--accent); }
+  .how-pic--preview img{ inset: 20px; width: calc(100% - 40px); height: calc(100% - 40px); object-fit: contain; filter: drop-shadow(0 8px 14px rgba(46,68,54,0.22)); }
+  .how-fig figcaption{ flex: none; font-size: 13.5px; color: var(--ink-soft); }
+  main.r3 .downloads-grid{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.r3 .downloads-grid.dg-1{ grid-template-columns: 1fr; }
+  main.r3 .downloads-grid.dg-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  main.r3 .downloads-grid.dg-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  main.r3 .downloads-grid.dg-many{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  main.r3 .download-card{ overflow: hidden; }
+  .card-prev{ display: flex; align-items: center; justify-content: center; gap: 12px; height: 200px; margin: -20px -18px 4px; padding: 18px; background: var(--accent); color: var(--accent-deep); }
+  .card-prev img{ max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 4px; box-shadow: 0 8px 18px -10px rgba(46,68,54,0.45); background: #fff; }
+  .card-prev--photo{ padding: 0; }
+  .card-prev--photo img{ width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
+  .card-prev svg{ width: 64px; height: 64px; opacity: 0.7; }
+  main.r3 .download-card--solo{ display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); grid-auto-rows: min-content; column-gap: 26px; row-gap: 10px; max-width: none; width: 100%; justify-self: stretch; align-content: center; }
+  main.r3 .download-card--solo{ align-items: center; }
+  main.r3 .download-card--solo .card-prev{ grid-column: 1; grid-row: 1 / span 5; height: 260px; min-height: 0; margin: -20px 0 -18px -18px; align-self: stretch; }
+  main.r3 .download-card--solo > :not(.card-prev){ grid-column: 2; justify-self: start; }
+  main.r3 .signup{ background: #e6e2d8; border: 0; }
+  .more{ max-width: var(--max-width, 1265px); }
+  .more h2, .more-grid, .more-all{ max-width: none; }
+  @media (max-width: 700px){
+    main.r3 .downloads-grid.dg-2, main.r3 .downloads-grid.dg-3{ grid-template-columns: 1fr; }
+    main.r3 .download-card--solo{ display: flex; }
+    main.r3 .download-card--solo .card-prev{ margin: -20px -18px 4px; height: 200px; min-height: 0; }
+    .glance{ max-width: none; }
+    .page-header.r3h{ padding-left: 16px; padding-right: 16px; }
+    .how-fig{ flex: none; min-height: 0; }
+    .how-pic{ flex: none; height: 240px; min-height: 0; }
+  }
+  /* == r3 layout end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/pastoral-projects/the-planting-project/#resource","url":"https://thepastoralguide.com/pastoral-projects/the-planting-project/","name":"The Planting Project","description":"Students grow a herb from seed in pairs, look after it together for six weeks, then cook with it at home. A hands-on way to build responsibility and care, and my own form loved it.","inLanguage":"en-GB","learningResourceType":"Project","educationalLevel":["Key Stage 3","Key Stage 4"],"typicalAgeRange":"11-16","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/pastoral-projects/the-planting-project/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published","timeRequired":"P6W"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/pastoral-projects/the-planting-project/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Pastoral Projects","item":"https://thepastoralguide.com/pastoral-projects/"},{"@type":"ListItem","position":3,"name":"The Planting Project","item":"https://thepastoralguide.com/pastoral-projects/the-planting-project/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
@@ -844,153 +913,79 @@
   </div>
 </nav>
 
-<header class="page-header wrap">
+<header class="page-header wrap r3h">
+  <div class="r3h-main">
   <span class="eyebrow">Pastoral Projects</span>
   <h1 class="page-title">The Planting Project</h1>
   <p class="page-sub">Students grow a herb from seed in pairs, look after it together for six weeks, then cook with it at home. Six weeks of form time, with slides, a printable pack and a tracker spreadsheet. A hands-on way to build responsibility and care, and my own form loved it.</p>
-  <span class="page-facts"><a href="../../key-stage-3/">Year 7 to 11, best in Year 7 to 9</a> &middot; form time or PSHE &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the downloads
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
-  </a>
+    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6"></path></svg>
+</a>
+  </div>
+  <aside class="glance" aria-label="At a glance"><p class="glance-h">At a glance</p><dl class="glance-list"><div class="glance-row"><dt>Time</dt><dd>Six weeks</dd></div><div class="glance-row"><dt>Year groups</dt><dd><a href="../../key-stage-3/">Year 7 to 11, best in Year 7 to 9</a></dd></div><div class="glance-row"><dt>Use</dt><dd>Form time or PSHE</dd></div><div class="glance-row"><dt>Value</dt><dd>Responsibility</dd></div><div class="glance-row"><dt>To prepare</dt><dd>Pots, compost and seeds</dd></div><div class="glance-row"><dt>Files</dt><dd>A PowerPoint, a spreadsheet and a PDF</dd></div></dl></aside>
 </header>
 
-<main>
+<main class="r3">
+<section class="how">
+<h2>How the six weeks work</h2><p class="lede how-intro">The project starts with one planting session, followed by a short check-in each week until there’s enough to harvest. Here is what the slides cover, so you can answer questions without having to re-read them mid-lesson.</p><div class="how-row"><div class="how-main"><div class="steps"><div class="step"><span class="step-num">1</span><div><strong>Session 1, planting</strong><p>Pairs research their herb (depth, light, watering, germination time), agree a plan, then fill a labelled pot with compost, moisten it, and sow their seeds.</p></div></div><div class="step"><span class="step-num">2</span><div><strong>Weekly check-ins</strong><p>Pairs check the compost, water as needed, watch for shoots, thin out overcrowded seedlings, and log progress in their tracker tab.</p></div></div><div class="step"><span class="step-num">3</span><div><p>Photos each week help pairs build a visual record and make the final writeup easier.</p></div></div><div class="step"><span class="step-num">4</span><div><p>The family cooking challenge happens at home once there’s enough to harvest. Pairs cook something using their herb and reflect on the experience back in class.</p></div></div></div></div><div class="how-side"><figure class="how-fig"><div class="how-pic how-pic--photo"><img alt="A student misting basil and parsley seedlings with a small spray bottle" height="507" loading="lazy" src="planting-misting.webp" width="760"/></div><figcaption>The weekly check-in: feel the compost and give it a mist.</figcaption></figure></div></div>
 
-  <section>
-    <h2>How the six weeks work</h2>
-    <p class="lede">The project starts with one planting session, followed by a short check-in each week until there’s enough to harvest. Here is what the slides cover, so you can answer questions without having to re-read them mid-lesson.</p>
-    <figure class="photo photo--strip">
-      <img src="planting-strip.webp" alt="Five white pots of young herbs on a classroom windowsill, each with a MY POT label filled in by the pair who grew it" width="1500" height="469" loading="lazy">
-      <figcaption>Each pot gets a MY POT label, printed from the hidden slide 6 in the deck.</figcaption>
-    </figure>
-    <div class="with-photo">
-      <ul class="plain">
-      <li><strong>Session 1, planting:</strong> pairs research their herb (depth, light, watering, germination time), agree a plan, then fill a labelled pot with compost, moisten it, and sow their seeds.</li>
-      <li><strong>Weekly check-ins:</strong> pairs check the compost, water as needed, watch for shoots, thin out overcrowded seedlings, and log progress in their tracker tab.</li>
-      <li>Photos each week help pairs build a visual record and make the final writeup easier.</li>
-      <li>The family cooking challenge happens at home once there&rsquo;s enough to harvest. Pairs cook something using their herb and reflect on the experience back in class.</li>
-    </ul>
-      <div class="photo-stack">
-        <figure class="photo">
-          <img src="planting-misting.webp" alt="A student misting basil and parsley seedlings with a small spray bottle" width="760" height="507" loading="lazy">
-          <figcaption>The weekly check-in: feel the compost and give it a mist.</figcaption>
-        </figure>
-        <figure class="photo">
-          <img src="planting-laptop.webp" alt="A student filling in the herb log tracker on a laptop, next to their basil pot" width="760" height="507" loading="lazy">
-          <figcaption>Then log it in the pair&rsquo;s tab of the tracker.</figcaption>
-        </figure>
-      </div>
-    </div>
-    <p class="callout">Worth flagging to parents or carers in advance: pairs will bring a small amount of homegrown herb home to cook with, and an adult should help or supervise.</p>
-  </section>
 
-  <section>
-    <h2>Before you begin: what to gather</h2>
-    <p class="lede">The project is set up for ten pairs, each growing a different herb. Most of what you need is inexpensive and easy to find at a supermarket or garden centre. Order or gather it at least a week before your first session, so seeds and compost have time to arrive.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Item</th><th>Quantity</th><th>Notes</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Small plant pots (or a divided seed tray)</td><td>10</td><td>One per pair. Around 8&ndash;10cm wide is plenty for a herb.</td></tr>
-          <tr><td>Multi-purpose or seed compost</td><td>1 large bag</td><td>Enough to fill 10 pots, with a little spare for topping up.</td></tr>
-          <tr><td>Seed packets, one per herb</td><td>10 packets</td><td>See the herb list below. Garden centres and supermarkets both stock these.</td></tr>
-          <tr><td>Plant labels or masking tape and a pen</td><td>10</td><td>So each pair can mark their pot with their herb and planting date.</td></tr>
-          <tr><td>Watering can or spray bottle</td><td>1&ndash;2, shared</td><td>A spray bottle gives more control for younger pairs and delicate seedlings.</td></tr>
-          <tr><td>Saucers or a tray to catch drips</td><td>10 (or 1 large tray)</td><td>These protect windowsills and shelves. It is worth checking with site staff first.</td></tr>
-          <tr><td>A sunny windowsill or shelf</td><td>Enough space for 10 pots</td><td>Most of these herbs want good light. Group pots together if space is tight.</td></tr>
-          <tr><td>The tracker</td><td>Printed, or shared digitally</td><td>One tab per pair. You can download it below.</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="callout">This project does involve a small amount of preparation, and possibly a modest spend on compost and seeds. Everything else, the slides, the tracker and the resource pack, is ready for you.</p>
-  </section>
 
-  <section>
-    <h2>The ten herbs</h2>
-    <p class="lede">Allocate one herb per pair. Herbs are listed with a simple dish idea for the family cooking challenge, though pairs aren&rsquo;t limited to these.</p>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Herb</th><th>A dish it suits</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Italian basil</td><td>Pesto and pasta</td></tr>
-          <tr><td>Thai basil</td><td>Stir-fries and noodles</td></tr>
-          <tr><td>Rosemary</td><td>Roast potatoes</td></tr>
-          <tr><td>Peppermint</td><td>Tea and fresh salads</td></tr>
-          <tr><td>Coriander</td><td>Salsas and curries</td></tr>
-          <tr><td>Flat-leaf parsley</td><td>Garnish and tabbouleh</td></tr>
-          <tr><td>Thyme</td><td>Roast chicken and soup</td></tr>
-          <tr><td>Common chives</td><td>Scrambled eggs</td></tr>
-          <tr><td>Oregano</td><td>Pizza and tomato sauce</td></tr>
-          <tr><td>Dill</td><td>Dill potatoes and fish</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
 
-  <section class="peek" aria-label="A look inside">
-    <h2>A look inside</h2>
-    <div class="peek-row">
-      <figure class="peek-item"><img src="preview-slide-1.jpg" alt="Slide one" width="1280" height="720" loading="lazy"><figcaption>Slide one</figcaption></figure>
-      <figure class="peek-item"><img src="preview-slide-2.jpg" alt="Slide 5 of 12" width="1280" height="720" loading="lazy"><figcaption>Slide 5 of 12</figcaption></figure>
-      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="Page one of the pack" width="800" height="1131" loading="lazy"><figcaption>Page one of the pack</figcaption></figure>
-    </div>
-  </section>
+</section>
 
-  <section id="downloads">
-    <h2>Get the full project</h2>
-    <p class="lede">Everything a teacher needs for this project, ready to download and use with your form.</p>
-    <div class="downloads-grid">
-      <a class="download-card" href="/download/?r=pastoral-projects/the-planting-project&amp;f=/pastoral-projects/the-planting-project/downloads/The_Planting_Project.pptx" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="The_Planting_Project.pptx">
-        <span class="file-chip">PowerPoint</span>
-        <h3>The project slides</h3>
-        <p>The full deck for every session with your form, from planting through to the family cooking challenge.</p>
-        <span class="download-cta">Download
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
-        </span>
-      </a>
-      <a class="download-card" href="/download/?r=pastoral-projects/the-planting-project&amp;f=/pastoral-projects/the-planting-project/downloads/The_Planting_Project_Tracker.xlsx" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="The_Planting_Project_Tracker.xlsx">
-        <span class="file-chip">Excel</span>
-        <h3>Weekly tracker</h3>
-        <p>One tab per pair, for logging progress every week from planting to harvest.</p>
-        <span class="download-cta">Download
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
-        </span>
-      </a>
-      <a class="download-card" href="/download/?r=pastoral-projects/the-planting-project&amp;f=/pastoral-projects/the-planting-project/downloads/The_Planting_Project_Resource_Pack.pdf" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="The_Planting_Project_Resource_Pack.pdf">
-        <span class="file-chip">Printable PDF</span>
-        <h3>Teacher resource pack</h3>
-        <p>Materials list, checklist and session notes, ready to print before your first session.</p>
-        <span class="download-cta">Download
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
-        </span>
-      </a>
-      <div class="signup" id="signup">
-        <div class="signup-main">
-        <p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
-        <form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
-          <input type="email" name="email_address" placeholder="Your email address" aria-label="Your email address" required autocomplete="email">
-          <button type="submit" data-umami-event="signup">Keep me posted</button>
-        </form>
-        <p class="signup-done" hidden>Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
-        <p class="signup-err" hidden>Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
-        <p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
-        </div>
-        <!-- support panel start -->
-        <div class="signup-divider" aria-hidden="true"></div>
-        <div class="signup-support">
-          <p>This is free to download, the same as everything else here. If it saved you some prep time, you&rsquo;re welcome to leave something toward the site&rsquo;s running costs.</p>
-          <a class="btn btn--support" href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg><span>Support the site</span></a>
-        </div>
-        <!-- support panel end -->
-      </div>
-    </div>
-  </section>
 
+
+<section id="downloads">
+<h2>Get the full project</h2>
+<p class="lede">Everything a teacher needs for this project, ready to download and use with your form.</p>
+<div class="downloads-grid dg-3">
+<a class="download-card" data-umami-event="download-open" data-umami-event-file="The_Planting_Project.pptx" href="/download/?r=pastoral-projects/the-planting-project&amp;f=/pastoral-projects/the-planting-project/downloads/The_Planting_Project.pptx" rel="noopener" target="_blank"><span class="card-prev"><img alt="" loading="lazy" src="preview-slide-1.jpg"/></span>
+<span class="file-chip">PowerPoint</span>
+<h3>The project slides</h3>
+<p>The full deck for every session with your form, from planting through to the family cooking challenge.</p>
+<span class="download-cta">Download
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"></path></svg>
+</span>
+</a>
+<a class="download-card" data-umami-event="download-open" data-umami-event-file="The_Planting_Project_Tracker.xlsx" href="/download/?r=pastoral-projects/the-planting-project&amp;f=/pastoral-projects/the-planting-project/downloads/The_Planting_Project_Tracker.xlsx" rel="noopener" target="_blank"><span class="card-prev card-prev--photo"><img alt="" loading="lazy" src="planting-laptop.webp"/></span>
+<span class="file-chip">Excel</span>
+<h3>Weekly tracker</h3>
+<p>One tab per pair, for logging progress every week from planting to harvest.</p>
+<span class="download-cta">Download
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"></path></svg>
+</span>
+</a>
+<a class="download-card" data-umami-event="download-open" data-umami-event-file="The_Planting_Project_Resource_Pack.pdf" href="/download/?r=pastoral-projects/the-planting-project&amp;f=/pastoral-projects/the-planting-project/downloads/The_Planting_Project_Resource_Pack.pdf" rel="noopener" target="_blank"><span class="card-prev"><img alt="" loading="lazy" src="preview-pack-1.jpg"/></span>
+<span class="file-chip">Printable PDF</span>
+<h3>Teacher resource pack</h3>
+<p>Materials list, checklist and session notes, ready to print before your first session.</p>
+<span class="download-cta">Download
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"></path></svg>
+</span>
+</a>
+<div class="signup" id="signup">
+<div class="signup-main">
+<p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
+<form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
+<input aria-label="Your email address" autocomplete="email" name="email_address" placeholder="Your email address" required="" type="email"/>
+<button data-umami-event="signup" type="submit">Keep me posted</button>
+</form>
+<p class="signup-done" hidden="">Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
+<p class="signup-err" hidden="">Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
+<p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
+</div>
+<!-- support panel start -->
+<div aria-hidden="true" class="signup-divider"></div>
+<div class="signup-support">
+<p>This is free to download, the same as everything else here. If it saved you some prep time, you’re welcome to leave something toward the site’s running costs.</p>
+<a class="btn btn--support" data-umami-event="support" href="https://ko-fi.com/thepastoralguide" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"></path></svg><span>Support the site</span></a>
+</div>
+<!-- support panel end -->
+</div>
+</div>
+</section>
 </main>
 
 <section class="more" aria-label="More from Pastoral Projects">

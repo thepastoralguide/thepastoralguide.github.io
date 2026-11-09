@@ -918,6 +918,74 @@
     .sf-bottom{ justify-content: flex-start; }
   }
   /* == big footer end == */
+  /* == r3 layout start == (9 Nov 2026: At a glance, How it works with pictures beside it, download cards with previews) */
+  main.r3{ max-width: var(--max-width, 1265px); }
+  main.r3 section > h2, main.r3 section > p, main.r3 .lede{ max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
+  main.r3 .lede{ max-width: 860px; }
+  .page-header.r3h{ display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: flex-start; text-align: left; max-width: var(--max-width, 1265px); padding-left: 40px; padding-right: 40px; padding-bottom: 12px; }
+  main.r3 > section.how{ margin-top: 32px; }
+  .r3h-main{ flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+  .r3h .eyebrow, .r3h .page-title, .r3h .page-sub{ text-align: left; margin-left: 0; margin-right: 0; }
+  .r3h .page-sub{ max-width: 760px; }
+  .glance{ flex: 1 1 300px; max-width: 380px; background: #fffdf8; border: 1px solid rgba(46,68,54,0.14); border-radius: 12px; padding: 16px 22px 8px; }
+  .glance-h{ margin: 0 0 2px; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--accent-deep); }
+  .glance-list{ margin: 0; }
+  .glance-row{ display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 9px 0; border-bottom: 1px solid rgba(46,68,54,0.10); font-size: 14.5px; line-height: 1.35; }
+  .glance-row:last-child{ border-bottom: 0; }
+  .glance-row dt{ flex: none; color: var(--ink-soft); }
+  .glance-row dd{ margin: 0; font-weight: 700; text-align: right; color: var(--ink); }
+  .glance-row dd a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(46,68,54,0.3); text-underline-offset: 3px; }
+  main.r3 .how-intro{ margin: 0 0 18px; }
+  main.r3 .how .week-grid, main.r3 .how .session-grid, main.r3 .how .menu-grid, main.r3 .how .scale-preview, main.r3 .how .values-grid, main.r3 .how .key, main.r3 .how .term-nav{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.r3 .how .week-caption{ max-width: none; margin-left: 0; text-align: left; }
+  .how-row{ display: flex; flex-wrap: wrap; gap: 24px 44px; align-items: stretch; margin-top: 22px; }
+  .how-main{ flex: 3 1 460px; min-width: 0; }
+  .how-side{ flex: 2 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+  main.r3 .how-main .steps{ margin: 0; max-width: none; }
+  main.r3 .how-main .step{ display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(46,68,54,0.14); background: none; box-shadow: none; border-radius: 0; }
+  main.r3 .how-main .step:first-child{ border-top: 0; padding-top: 4px; }
+  main.r3 .how-main .step-num{ flex: none; min-width: 24px; font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 26px; line-height: 1; color: var(--accent-deep); background: none; width: auto; height: auto; }
+  main.r3 .how-main .step strong{ font-size: 15.5px; color: var(--ink); }
+  main.r3 .how-main .step p{ margin: 4px 0 0; font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
+  main.r3 .how-side .sample-card{ margin: 0; max-width: none; }
+  main.r3 .how-side .sample-caption{ margin: 10px 0 0; font-size: 13.5px; color: var(--ink-soft); text-align: left; max-width: none; }
+  .how-side > .how-card{ flex: none; }
+  .how-side--card{ justify-content: center; }
+  .how-fig{ margin: 0; flex: 1 1 0; min-height: 240px; display: flex; flex-direction: column; gap: 8px; }
+  .how-pic{ position: relative; flex: 1 1 0; min-height: 200px; border-radius: 12px; overflow: hidden; }
+  .how-pic img{ position: absolute; display: block; }
+  .how-pic--photo img{ inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .how-pic--preview{ background: var(--accent); }
+  .how-pic--preview img{ inset: 20px; width: calc(100% - 40px); height: calc(100% - 40px); object-fit: contain; filter: drop-shadow(0 8px 14px rgba(46,68,54,0.22)); }
+  .how-fig figcaption{ flex: none; font-size: 13.5px; color: var(--ink-soft); }
+  main.r3 .downloads-grid{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.r3 .downloads-grid.dg-1{ grid-template-columns: 1fr; }
+  main.r3 .downloads-grid.dg-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  main.r3 .downloads-grid.dg-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  main.r3 .downloads-grid.dg-many{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  main.r3 .download-card{ overflow: hidden; }
+  .card-prev{ display: flex; align-items: center; justify-content: center; gap: 12px; height: 200px; margin: -20px -18px 4px; padding: 18px; background: var(--accent); color: var(--accent-deep); }
+  .card-prev img{ max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 4px; box-shadow: 0 8px 18px -10px rgba(46,68,54,0.45); background: #fff; }
+  .card-prev--photo{ padding: 0; }
+  .card-prev--photo img{ width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
+  .card-prev svg{ width: 64px; height: 64px; opacity: 0.7; }
+  main.r3 .download-card--solo{ display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); grid-auto-rows: min-content; column-gap: 26px; row-gap: 10px; max-width: none; width: 100%; justify-self: stretch; align-content: center; }
+  main.r3 .download-card--solo{ align-items: center; }
+  main.r3 .download-card--solo .card-prev{ grid-column: 1; grid-row: 1 / span 5; height: 260px; min-height: 0; margin: -20px 0 -18px -18px; align-self: stretch; }
+  main.r3 .download-card--solo > :not(.card-prev){ grid-column: 2; justify-self: start; }
+  main.r3 .signup{ background: #e6e2d8; border: 0; }
+  .more{ max-width: var(--max-width, 1265px); }
+  .more h2, .more-grid, .more-all{ max-width: none; }
+  @media (max-width: 700px){
+    main.r3 .downloads-grid.dg-2, main.r3 .downloads-grid.dg-3{ grid-template-columns: 1fr; }
+    main.r3 .download-card--solo{ display: flex; }
+    main.r3 .download-card--solo .card-prev{ margin: -20px -18px 4px; height: 200px; min-height: 0; }
+    .glance{ max-width: none; }
+    .page-header.r3h{ padding-left: 16px; padding-right: 16px; }
+    .how-fig{ flex: none; min-height: 0; }
+    .how-pic{ flex: none; height: 240px; min-height: 0; }
+  }
+  /* == r3 layout end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/#resource","url":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/","name":"The Assembly Calendar 2026 to 2027","description":"Every awareness day and week worth marking in a secondary school year, from September to July, including the United Nations days that lend themselves to an assembly. Each one has the date, one line on what to do with it, and the value it gets students thinking about. Where the site has a resource for the day, it is linked. There is a printable version for the staffroom wall, one page per term.","inLanguage":"en-GB","learningResourceType":"Calendar","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Assemblies and Events","item":"https://thepastoralguide.com/assemblies-and-events/"},{"@type":"ListItem","position":3,"name":"The Assembly Calendar 2026 to 2027","item":"https://thepastoralguide.com/assemblies-and-events/assembly-calendar/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
@@ -953,466 +1021,453 @@
   </div>
 </nav>
 
-<header class="page-header wrap">
+<header class="page-header wrap r3h">
+  <div class="r3h-main">
   <span class="eyebrow">Assemblies and Events</span>
   <h1 class="page-title">The Assembly Calendar 2026 to 2027</h1>
   <p class="page-sub">Every awareness day and week worth marking in a secondary school year, from September to July, including the United Nations days that lend themselves to an assembly. Each one has the date, one line on what to do with it, and the value it gets students thinking about. Where the site has a resource for the day, it is linked. There is a printable version for the staffroom wall, one page per term.</p>
-  <span class="page-facts">Year 7 to 13 &middot; assembly or form time &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the printable
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
-  </a>
+    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6"></path></svg>
+</a>
+  </div>
+  <aside class="glance" aria-label="At a glance"><p class="glance-h">At a glance</p><dl class="glance-list"><div class="glance-row"><dt>Time</dt><dd>All year</dd></div><div class="glance-row"><dt>Year groups</dt><dd>Year 7 to 13</dd></div><div class="glance-row"><dt>Use</dt><dd>Assembly or form time</dd></div><div class="glance-row"><dt>Value</dt><dd>Community</dd></div><div class="glance-row"><dt>To prepare</dt><dd>Six pages to print</dd></div><div class="glance-row"><dt>Files</dt><dd>A PDF</dd></div></dl></aside>
 </header>
 
-<main>
+<main class="r3">
+<section class="how">
+<h2>How it works</h2><nav aria-label="Jump to a term" class="term-nav"><a href="#autumn">Autumn term</a><a href="#spring">Spring term</a><a href="#summer">Summer term</a><a href="#downloads">The printable</a></nav><div class="key" style="margin-top:16px"><span><span class="kind kind--un">UN day</span> on the United Nations list</span><span><span class="kind">UK</span> a UK campaign</span><span><span class="kind">Worldwide</span> marked worldwide</span><span><span class="kind">School</span> the school year</span></div><div class="how-row"><div class="how-main"><div class="steps">
+<div class="step">
+<span class="step-num">1</span>
+<div><strong>Find the next date.</strong><p>The calendar runs from September to July and is split into terms. The next day coming up is highlighted so you can find it quickly.</p></div>
+</div>
+<div class="step">
+<span class="step-num">2</span>
+<div><strong>Pick how big to go.</strong><p>Each day comes with one idea that you can run in five minutes of form time. If you would rather run a whole assembly or a full week, the ready-made resource is linked wherever there is one.</p></div>
+</div>
+<div class="step">
+<span class="step-num">3</span>
+<div><strong>Put the printable up.</strong><p>There is one A4 page for each term, with a column where you can write in who is leading each day. It works well pinned on the staffroom wall or saved in the pastoral team’s shared drive.</p></div>
+</div>
+</div></div><div class="how-side"><figure class="how-fig"><div class="how-pic how-pic--preview"><img alt="The spring term wall chart" height="1131" loading="lazy" src="preview-pack-2.jpg" width="800"/></div><figcaption>Spring term, the wall chart</figcaption></figure></div></div>
 
-  <section>
-    <h2>How it works</h2>
-    <div class="steps">
-      <div class="step">
-        <span class="step-num">1</span>
-        <div><strong>Find the next date.</strong><p>The calendar runs from September to July and is split into terms. The next day coming up is highlighted so you can find it quickly.</p></div>
-      </div>
-      <div class="step">
-        <span class="step-num">2</span>
-        <div><strong>Pick how big to go.</strong><p>Each day comes with one idea that you can run in five minutes of form time. If you would rather run a whole assembly or a full week, the ready-made resource is linked wherever there is one.</p></div>
-      </div>
-      <div class="step">
-        <span class="step-num">3</span>
-        <div><strong>Put the printable up.</strong><p>There is one A4 page for each term, with a column where you can write in who is leading each day. It works well pinned on the staffroom wall or saved in the pastoral team’s shared drive.</p></div>
-      </div>
-    </div>
-    <p class="callout">There are 42 dates here, and 26 of them are United Nations international days. Those are on the UN&rsquo;s own list, so they are marked around the world, which makes them a good fit for international schools as well as UK ones. The rest are UK campaigns, worldwide days and a few moments in the school year itself.</p>
-    <nav class="term-nav" aria-label="Jump to a term"><a href="#autumn">Autumn term</a><a href="#spring">Spring term</a><a href="#summer">Summer term</a><a href="#downloads">The printable</a></nav>
-    <div class="key" style="margin-top:16px"><span><span class="kind kind--un">UN day</span> on the United Nations list</span><span><span class="kind">UK</span> a UK campaign</span><span><span class="kind">Worldwide</span> marked worldwide</span><span><span class="kind">School</span> the school year</span></div>
-  </section>
 
-  <section class="term" id="autumn">
-    <h2>Autumn term</h2>
-    <div class="month">
-      <h3>September</h3>
-      <div class="day" data-end="2026-09-08">
-        <div class="day-when">Tue 8 September</div>
-        <div>
-          <p class="day-name">International Literacy Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Hand out the reading bookmarks, and ask the form what the last book they chose for themselves was.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-09-21">
-        <div class="day-when">Mon 21 September</div>
-        <div>
-          <p class="day-name">International Day of Peace<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Ask what one thing would make the form room a more peaceful place to start the day, and agree it together.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>October</h3>
-      <div class="day" data-end="2026-10-31">
-        <div class="day-when">All of October</div>
-        <div>
-          <p class="day-name">Black History Month<span class="kind">UK</span></p>
-          <p class="day-idea">Once a week in form time, students choose one person to talk about for a minute, covering what they did and why it took courage.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-02">
-        <div class="day-when">Fri 2 October</div>
-        <div>
-          <p class="day-name">International Day of Non-Violence<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">The day falls on Gandhi’s birthday. Talk with the form about the difference between standing up to something and hitting back.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-05">
-        <div class="day-when">Mon 5 October</div>
-        <div>
-          <p class="day-name">World Teachers&rsquo; Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Students write a short thank-you to a teacher who made a difference, and hand it over that day.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/displays-and-recognition/praise-postcards/">Ready-made: Praise Postcards &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-10">
-        <div class="day-when">Sat 10 October</div>
-        <div>
-          <p class="day-name">World Mental Health Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">It falls on a Saturday this year, so mark it on Friday 9 October with an assembly, followed by a week of activities.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/world-mental-health-day/">Ready-made: World Mental Health Day &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-11">
-        <div class="day-when">Sun 11 October</div>
-        <div>
-          <p class="day-name">International Day of the Girl<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Sunday, so bring it into form time on the Monday. Ask the form who decides what girls are good at, and whether that changes what they try.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>ambition</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-16">
-        <div class="day-when">Fri 16 October</div>
-        <div>
-          <p class="day-name">World Food Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Ask the form what they usually eat before school, without any judgement, and talk about why a good breakfast helps concentration.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>self-care</b></span><a class="day-link" href="/tutor-time/fuel-and-focus/">Ready-made: Fuel and Focus &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-10-17">
-        <div class="day-when">Sat 17 October</div>
-        <div>
-          <p class="day-name">International Day for the Eradication of Poverty<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Saturday, so mark it on the Friday. Talk about what a month’s wage covers, and how quickly it goes.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/tutor-time/payday-budgeting-lesson/">Ready-made: Payday &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>November</h3>
-      <div class="day" data-end="2026-11-11">
-        <div class="day-when">Wed 11 November</div>
-        <div>
-          <p class="day-name">Armistice Day<span class="kind">UK</span></p>
-          <p class="day-idea">Mark the two-minute silence at 11am, and explain it to the form the day before so nobody is caught out. Remembrance Sunday is 8 November.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-11-13">
-        <div class="day-when">Fri 13 November</div>
-        <div>
-          <p class="day-name">World Kindness Day<span class="kind">Worldwide</span></p>
-          <p class="day-idea">Start with an assembly on the Monday, then use form time during the week for a compliment, a postcard and a shout-out.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/world-kindness-day/">Ready-made: World Kindness Day &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-11-20">
-        <div class="day-when">16&ndash;20 November</div>
-        <div>
-          <p class="day-name">Anti-Bullying Week<span class="kind">UK</span></p>
-          <p class="day-idea">This year&rsquo;s theme is Break the Silence, and the week opens with Odd Socks Day on Monday 16 November.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/anti-bullying-week/">Ready-made: Anti-Bullying Week &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-11-16">
-        <div class="day-when">Mon 16 November</div>
-        <div>
-          <p class="day-name">International Day for Tolerance<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on the same Monday that Anti-Bullying Week begins. Ask the form where a joke stops being a joke.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/tutor-time/it-was-just-a-joke/">Ready-made: It Was Just a Joke &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-11-20">
-        <div class="day-when">Fri 20 November</div>
-        <div>
-          <p class="day-name">World Children&rsquo;s Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This marks the day the UN agreed children’s rights. Ask the form which right they think is most important, and why.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>December</h3>
-      <div class="day" data-end="2026-12-03">
-        <div class="day-when">Thu 3 December</div>
-        <div>
-          <p class="day-name">International Day of Persons with Disabilities<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Pick one thing in school that is harder than it needs to be for someone, and talk about what the form could change.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-12-05">
-        <div class="day-when">Sat 5 December</div>
-        <div>
-          <p class="day-name">International Volunteer Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Saturday, so mark it on the Friday by planning one small thing the form could do for someone else before the holidays.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2026-12-10">
-        <div class="day-when">Thu 10 December</div>
-        <div>
-          <p class="day-name">Human Rights Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Put up one statement about rights and ask students to stand on a line between agree and disagree, depending on what they think.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="term" id="spring">
-    <h2>Spring term</h2>
-    <div class="month">
-      <h3>January</h3>
-      <div class="day" data-end="2027-01-08">
-        <div class="day-when">First week back</div>
-        <div>
-          <p class="day-name">The New Year Values Week<span class="kind">School</span></p>
-          <p class="day-idea">The week starts with an assembly, then looks at one value a day in form time, building up to a goal, a plan and an evidence tracker.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/assemblies-and-events/new-year-values-week/">Ready-made: The New Year Values Week &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-01-24">
-        <div class="day-when">Sun 24 January</div>
-        <div>
-          <p class="day-name">International Day of Education<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask each student to name one thing they want to be true by half term.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>ambition</b></span><a class="day-link" href="/morning-registration-activities/by-half-term/">Ready-made: By Half Term &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-01-27">
-        <div class="day-when">Wed 27 January</div>
-        <div>
-          <p class="day-name">Holocaust Memorial Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Mark this day with a quiet, carefully prepared assembly. Before you plan it, check the Holocaust Memorial Day Trust’s theme for the year.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>February</h3>
-      <div class="day" data-end="2027-02-07">
-        <div class="day-when">1&ndash;7 February</div>
-        <div>
-          <p class="day-name">Children&rsquo;s Mental Health Week<span class="kind">UK</span></p>
-          <p class="day-idea">This week is run by Place2Be, and the 2027 theme is Step into Our World. Start with an assembly, then run something different every lunchtime.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>empathy</b></span><a class="day-link" href="/assemblies-and-events/childrens-mental-health-week/">Ready-made: Children&rsquo;s Mental Health Week &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-04">
-        <div class="day-when">Thu 4 February</div>
-        <div>
-          <p class="day-name">Time to Talk Day<span class="kind">UK</span></p>
-          <p class="day-idea">This is usually the first Thursday of February, so check Mind’s site nearer the time. On the day, pair students up and give each pair a question to talk about.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>listening</b></span><a class="day-link" href="/wellbeing-check-ins/conversation-starters/">Ready-made: Conversation Starters &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-09">
-        <div class="day-when">Tue 9 February</div>
-        <div>
-          <p class="day-name">Safer Internet Day<span class="kind">Worldwide</span></p>
-          <p class="day-idea">Ask the form what they spend their time on online, and what they would change if they could.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/pastoral-projects/screen-time/">Ready-made: How Does Screen Time Affect...? &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-14">
-        <div class="day-when">Sun 14 February</div>
-        <div>
-          <p class="day-name">Valentine&rsquo;s Day<span class="kind">Worldwide</span></p>
-          <p class="day-idea">This falls on a Sunday, so run a kindness fundraiser in the week before, where students write notes for their friends.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/valentines-day-sweet-notes/">Ready-made: Sweet Notes &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-20">
-        <div class="day-when">Sat 20 February</div>
-        <div>
-          <p class="day-name">World Day of Social Justice<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Saturday close to February half term, so mark it the week after. Ask the form whether fair is the same as equal, and let them debate it.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-02-21">
-        <div class="day-when">Sun 21 February</div>
-        <div>
-          <p class="day-name">International Mother Language Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Find out how many languages are spoken at home across the form, and how to say hello in each one.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>belonging</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>March</h3>
-      <div class="day" data-end="2027-03-04">
-        <div class="day-when">Thu 4 March</div>
-        <div>
-          <p class="day-name">World Book Day<span class="kind">UK</span></p>
-          <p class="day-idea">Ask each student to recommend one book to the form in a single sentence.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-03-08">
-        <div class="day-when">Mon 8 March</div>
-        <div>
-          <p class="day-name">International Women&rsquo;s Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Students choose a woman they admire, famous or not, and say what she did that took courage.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-03-19">
-        <div class="day-when">15&ndash;19 March</div>
-        <div>
-          <p class="day-name">Neurodiversity Celebration Week<span class="kind">Worldwide</span></p>
-          <p class="day-idea">Start from the idea that everyone’s brain works differently. Ask each student what helps them concentrate, and notice together how different the answers are.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-03-20">
-        <div class="day-when">Sat 20 March</div>
-        <div>
-          <p class="day-name">International Day of Happiness<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Saturday, so mark it on the Friday by adding one small win from the week to the board.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/small-wins-board/">Ready-made: Small Wins Board &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-03-21">
-        <div class="day-when">Sun 21 March</div>
-        <div>
-          <p class="day-name">International Day for the Elimination of Racial Discrimination<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask the form what they would do if they heard a racist comment passed off as a joke.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="term" id="summer">
-    <h2>Summer term</h2>
-    <div class="month">
-      <h3>April</h3>
-      <div class="day" data-end="2027-04-22">
-        <div class="day-when">Thu 22 April</div>
-        <div>
-          <p class="day-name">Earth Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">The UN calls it International Mother Earth Day. Plant something together as a form and look after it until the summer.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>May</h3>
-      <div class="day" data-end="2027-05-24">
-        <div class="day-when">Mid-May</div>
-        <div>
-          <p class="day-name">Mental Health Awareness Week<span class="kind">UK</span></p>
-          <p class="day-idea">This is usually in the second or third week of May. The 2027 dates have not been announced yet, so check the Mental Health Foundation’s site nearer the time.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/wellbeing-check-ins/mood-scale/">Ready-made: Mood Scale &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-05-24">
-        <div class="day-when">Mid-May</div>
-        <div>
-          <p class="day-name">GCSE and A level exams begin<span class="kind">School</span></p>
-          <p class="day-idea">The exam season starts around the middle of May. Give Year 11 and Year 13 something they can say to themselves before they go into each exam.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/wellbeing-check-ins/before-you-go-in/">Ready-made: Before You Go In &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-05-16">
-        <div class="day-when">Sun 16 May</div>
-        <div>
-          <p class="day-name">International Day of Living Together in Peace<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask the form what it takes for thirty people to share one room every morning.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-05-21">
-        <div class="day-when">Fri 21 May</div>
-        <div>
-          <p class="day-name">World Day for Cultural Diversity<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">Pair each student with the person they know least in the form, and give them two minutes each to find out something new about each other.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>June</h3>
-      <div class="day" data-end="2027-06-30">
-        <div class="day-when">All of June</div>
-        <div>
-          <p class="day-name">Pride Month<span class="kind">Worldwide</span></p>
-          <p class="day-idea">Many schools mark it with a display or an assembly on belonging, and on everyone being able to be themselves at school.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>belonging</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-06-05">
-        <div class="day-when">Sat 5 June</div>
-        <div>
-          <p class="day-name">World Environment Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Saturday, so mark it on the Friday. Agree one thing the form could stop wasting this term, and decide who will keep an eye on it.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-06-11">
-        <div class="day-when">Fri 11 June</div>
-        <div>
-          <p class="day-name">International Day of Play<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This is the newest UN day. Give form time over to a team quiz and let students simply enjoy it.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>teamwork</b></span><a class="day-link" href="/morning-registration-activities/form-time-quiz/">Ready-made: The Form Time Quiz &rarr;</a></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-06-20">
-        <div class="day-when">14&ndash;20 June</div>
-        <div>
-          <p class="day-name">Refugee Week<span class="kind">UK</span></p>
-          <p class="day-idea">The week ends on World Refugee Day, 20 June. Ask the form what it would take to start again somewhere new, and what would help most.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>kindness</b></span></div>
-        </div>
-      </div>
-      <div class="day" data-end="2027-06-30">
-        <div class="day-when">June</div>
-        <div>
-          <p class="day-name">Year 11 and Year 13 leave<span class="kind">School</span></p>
-          <p class="day-idea">This is usually in late May or June, depending on the exam timetable. The ready-made resource has five short cards for the form’s last week together.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/the-last-five-mornings/">Ready-made: The Last Five Mornings &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="month">
-      <h3>July</h3>
-      <div class="day" data-end="2027-07-18">
-        <div class="day-when">Sun 18 July</div>
-        <div>
-          <p class="day-name">Nelson Mandela International Day<span class="kind kind--un">UN day</span></p>
-          <p class="day-idea">This falls on a Sunday near the end of term. Mandela Day asks everyone to give 67 minutes of their time to someone else, so ask the form how they could spend those 67 minutes.</p>
-          <div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action &rarr;</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
+</section>
+<section class="term" id="autumn">
+<h2>Autumn term</h2>
+<div class="month">
+<h3>September</h3>
+<div class="day" data-end="2026-09-08">
+<div class="day-when">Tue 8 September</div>
+<div>
+<p class="day-name">International Literacy Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Hand out the reading bookmarks, and ask the form what the last book they chose for themselves was.</p>
+<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-09-21">
+<div class="day-when">Mon 21 September</div>
+<div>
+<p class="day-name">International Day of Peace<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Ask what one thing would make the form room a more peaceful place to start the day, and agree it together.</p>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet →</a></div>
+</div>
+</div>
+</div>
+<div class="month">
+<h3>October</h3>
+<div class="day" data-end="2026-10-31">
+<div class="day-when">All of October</div>
+<div>
+<p class="day-name">Black History Month<span class="kind">UK</span></p>
+<p class="day-idea">Once a week in form time, students choose one person to talk about for a minute, covering what they did and why it took courage.</p>
+<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-10-02">
+<div class="day-when">Fri 2 October</div>
+<div>
+<p class="day-name">International Day of Non-Violence<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">The day falls on Gandhi’s birthday. Talk with the form about the difference between standing up to something and hitting back.</p>
+<div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-10-05">
+<div class="day-when">Mon 5 October</div>
+<div>
+<p class="day-name">World Teachers’ Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Students write a short thank-you to a teacher who made a difference, and hand it over that day.</p>
+<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/displays-and-recognition/praise-postcards/">Ready-made: Praise Postcards →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-10-10">
+<div class="day-when">Sat 10 October</div>
+<div>
+<p class="day-name">World Mental Health Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">It falls on a Saturday this year, so mark it on Friday 9 October with an assembly, followed by a week of activities.</p>
+<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/world-mental-health-day/">Ready-made: World Mental Health Day →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-10-11">
+<div class="day-when">Sun 11 October</div>
+<div>
+<p class="day-name">International Day of the Girl<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Sunday, so bring it into form time on the Monday. Ask the form who decides what girls are good at, and whether that changes what they try.</p>
+<div class="day-foot"><span class="day-value">Value: <b>ambition</b></span></div>
+</div>
+</div>
+<div class="day" data-end="2026-10-16">
+<div class="day-when">Fri 16 October</div>
+<div>
+<p class="day-name">World Food Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Ask the form what they usually eat before school, without any judgement, and talk about why a good breakfast helps concentration.</p>
+<div class="day-foot"><span class="day-value">Value: <b>self-care</b></span><a class="day-link" href="/tutor-time/fuel-and-focus/">Ready-made: Fuel and Focus →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-10-17">
+<div class="day-when">Sat 17 October</div>
+<div>
+<p class="day-name">International Day for the Eradication of Poverty<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Saturday, so mark it on the Friday. Talk about what a month’s wage covers, and how quickly it goes.</p>
+<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/tutor-time/payday-budgeting-lesson/">Ready-made: Payday →</a></div>
+</div>
+</div>
+</div>
+<div class="month">
+<h3>November</h3>
+<div class="day" data-end="2026-11-11">
+<div class="day-when">Wed 11 November</div>
+<div>
+<p class="day-name">Armistice Day<span class="kind">UK</span></p>
+<p class="day-idea">Mark the two-minute silence at 11am, and explain it to the form the day before so nobody is caught out. Remembrance Sunday is 8 November.</p>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
+</div>
+</div>
+<div class="day" data-end="2026-11-13">
+<div class="day-when">Fri 13 November</div>
+<div>
+<p class="day-name">World Kindness Day<span class="kind">Worldwide</span></p>
+<p class="day-idea">Start with an assembly on the Monday, then use form time during the week for a compliment, a postcard and a shout-out.</p>
+<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/world-kindness-day/">Ready-made: World Kindness Day →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-11-20">
+<div class="day-when">16–20 November</div>
+<div>
+<p class="day-name">Anti-Bullying Week<span class="kind">UK</span></p>
+<p class="day-idea">This year’s theme is Break the Silence, and the week opens with Odd Socks Day on Monday 16 November.</p>
+<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/assemblies-and-events/anti-bullying-week/">Ready-made: Anti-Bullying Week →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-11-16">
+<div class="day-when">Mon 16 November</div>
+<div>
+<p class="day-name">International Day for Tolerance<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on the same Monday that Anti-Bullying Week begins. Ask the form where a joke stops being a joke.</p>
+<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/tutor-time/it-was-just-a-joke/">Ready-made: It Was Just a Joke →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-11-20">
+<div class="day-when">Fri 20 November</div>
+<div>
+<p class="day-name">World Children’s Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This marks the day the UN agreed children’s rights. Ask the form which right they think is most important, and why.</p>
+<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div>
+</div>
+</div>
+</div>
+<div class="month">
+<h3>December</h3>
+<div class="day" data-end="2026-12-03">
+<div class="day-when">Thu 3 December</div>
+<div>
+<p class="day-name">International Day of Persons with Disabilities<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Pick one thing in school that is harder than it needs to be for someone, and talk about what the form could change.</p>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
+</div>
+</div>
+<div class="day" data-end="2026-12-05">
+<div class="day-when">Sat 5 December</div>
+<div>
+<p class="day-name">International Volunteer Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Saturday, so mark it on the Friday by planning one small thing the form could do for someone else before the holidays.</p>
+<div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div>
+</div>
+</div>
+<div class="day" data-end="2026-12-10">
+<div class="day-when">Thu 10 December</div>
+<div>
+<p class="day-name">Human Rights Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Put up one statement about rights and ask students to stand on a line between agree and disagree, depending on what they think.</p>
+<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div>
+</div>
+</div>
+</div>
+</section>
+<section class="term" id="spring">
+<h2>Spring term</h2>
+<div class="month">
+<h3>January</h3>
+<div class="day" data-end="2027-01-08">
+<div class="day-when">First week back</div>
+<div>
+<p class="day-name">The New Year Values Week<span class="kind">School</span></p>
+<p class="day-idea">The week starts with an assembly, then looks at one value a day in form time, building up to a goal, a plan and an evidence tracker.</p>
+<div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/assemblies-and-events/new-year-values-week/">Ready-made: The New Year Values Week →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-01-24">
+<div class="day-when">Sun 24 January</div>
+<div>
+<p class="day-name">International Day of Education<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask each student to name one thing they want to be true by half term.</p>
+<div class="day-foot"><span class="day-value">Value: <b>ambition</b></span><a class="day-link" href="/morning-registration-activities/by-half-term/">Ready-made: By Half Term →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-01-27">
+<div class="day-when">Wed 27 January</div>
+<div>
+<p class="day-name">Holocaust Memorial Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Mark this day with a quiet, carefully prepared assembly. Before you plan it, check the Holocaust Memorial Day Trust’s theme for the year.</p>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span></div>
+</div>
+</div>
+</div>
+<div class="month">
+<h3>February</h3>
+<div class="day" data-end="2027-02-07">
+<div class="day-when">1–7 February</div>
+<div>
+<p class="day-name">Children’s Mental Health Week<span class="kind">UK</span></p>
+<p class="day-idea">This week is run by Place2Be, and the 2027 theme is Step into Our World. Start with an assembly, then run something different every lunchtime.</p>
+<div class="day-foot"><span class="day-value">Value: <b>empathy</b></span><a class="day-link" href="/assemblies-and-events/childrens-mental-health-week/">Ready-made: Children’s Mental Health Week →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-02-04">
+<div class="day-when">Thu 4 February</div>
+<div>
+<p class="day-name">Time to Talk Day<span class="kind">UK</span></p>
+<p class="day-idea">This is usually the first Thursday of February, so check Mind’s site nearer the time. On the day, pair students up and give each pair a question to talk about.</p>
+<div class="day-foot"><span class="day-value">Value: <b>listening</b></span><a class="day-link" href="/wellbeing-check-ins/conversation-starters/">Ready-made: Conversation Starters →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-02-09">
+<div class="day-when">Tue 9 February</div>
+<div>
+<p class="day-name">Safer Internet Day<span class="kind">Worldwide</span></p>
+<p class="day-idea">Ask the form what they spend their time on online, and what they would change if they could.</p>
+<div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/pastoral-projects/screen-time/">Ready-made: How Does Screen Time Affect...? →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-02-14">
+<div class="day-when">Sun 14 February</div>
+<div>
+<p class="day-name">Valentine’s Day<span class="kind">Worldwide</span></p>
+<p class="day-idea">This falls on a Sunday, so run a kindness fundraiser in the week before, where students write notes for their friends.</p>
+<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span><a class="day-link" href="/assemblies-and-events/valentines-day-sweet-notes/">Ready-made: Sweet Notes →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-02-20">
+<div class="day-when">Sat 20 February</div>
+<div>
+<p class="day-name">World Day of Social Justice<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Saturday close to February half term, so mark it the week after. Ask the form whether fair is the same as equal, and let them debate it.</p>
+<div class="day-foot"><span class="day-value">Value: <b>fairness</b></span><a class="day-link" href="/morning-registration-activities/opinion-line/">Ready-made: The Opinion Line →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-02-21">
+<div class="day-when">Sun 21 February</div>
+<div>
+<p class="day-name">International Mother Language Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Find out how many languages are spoken at home across the form, and how to say hello in each one.</p>
+<div class="day-foot"><span class="day-value">Value: <b>belonging</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview →</a></div>
+</div>
+</div>
+</div>
+<div class="month">
+<h3>March</h3>
+<div class="day" data-end="2027-03-04">
+<div class="day-when">Thu 4 March</div>
+<div>
+<p class="day-name">World Book Day<span class="kind">UK</span></p>
+<p class="day-idea">Ask each student to recommend one book to the form in a single sentence.</p>
+<div class="day-foot"><span class="day-value">Value: <b>curiosity</b></span><a class="day-link" href="/morning-registration-activities/between-the-pages/">Ready-made: Between the Pages →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-03-08">
+<div class="day-when">Mon 8 March</div>
+<div>
+<p class="day-name">International Women’s Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Students choose a woman they admire, famous or not, and say what she did that took courage.</p>
+<div class="day-foot"><span class="day-value">Value: <b>courage</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-03-19">
+<div class="day-when">15–19 March</div>
+<div>
+<p class="day-name">Neurodiversity Celebration Week<span class="kind">Worldwide</span></p>
+<p class="day-idea">Start from the idea that everyone’s brain works differently. Ask each student what helps them concentrate, and notice together how different the answers are.</p>
+<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span></div>
+</div>
+</div>
+<div class="day" data-end="2027-03-20">
+<div class="day-when">Sat 20 March</div>
+<div>
+<p class="day-name">International Day of Happiness<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Saturday, so mark it on the Friday by adding one small win from the week to the board.</p>
+<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/small-wins-board/">Ready-made: Small Wins Board →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-03-21">
+<div class="day-when">Sun 21 March</div>
+<div>
+<p class="day-name">International Day for the Elimination of Racial Discrimination<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask the form what they would do if they heard a racist comment passed off as a joke.</p>
+<div class="day-foot"><span class="day-value">Value: <b>speaking up</b></span><a class="day-link" href="/tutor-time/bystander-to-upstander/">Ready-made: Bystander to Upstander →</a></div>
+</div>
+</div>
+</div>
+</section>
+<section class="term" id="summer">
+<h2>Summer term</h2>
+<div class="month">
+<h3>April</h3>
+<div class="day" data-end="2027-04-22">
+<div class="day-when">Thu 22 April</div>
+<div>
+<p class="day-name">Earth Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">The UN calls it International Mother Earth Day. Plant something together as a form and look after it until the summer.</p>
+<div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project →</a></div>
+</div>
+</div>
+</div>
+<div class="month">
+<h3>May</h3>
+<div class="day" data-end="2027-05-24">
+<div class="day-when">Mid-May</div>
+<div>
+<p class="day-name">Mental Health Awareness Week<span class="kind">UK</span></p>
+<p class="day-idea">This is usually in the second or third week of May. The 2027 dates have not been announced yet, so check the Mental Health Foundation’s site nearer the time.</p>
+<div class="day-foot"><span class="day-value">Value: <b>self-awareness</b></span><a class="day-link" href="/wellbeing-check-ins/mood-scale/">Ready-made: Mood Scale →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-05-24">
+<div class="day-when">Mid-May</div>
+<div>
+<p class="day-name">GCSE and A level exams begin<span class="kind">School</span></p>
+<p class="day-idea">The exam season starts around the middle of May. Give Year 11 and Year 13 something they can say to themselves before they go into each exam.</p>
+<div class="day-foot"><span class="day-value">Value: <b>resilience</b></span><a class="day-link" href="/wellbeing-check-ins/before-you-go-in/">Ready-made: Before You Go In →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-05-16">
+<div class="day-when">Sun 16 May</div>
+<div>
+<p class="day-name">International Day of Living Together in Peace<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Sunday, so bring it in on the Monday. Ask the form what it takes for thirty people to share one room every morning.</p>
+<div class="day-foot"><span class="day-value">Value: <b>respect</b></span><a class="day-link" href="/wellbeing-check-ins/the-repair-sheet/">Ready-made: The Repair Sheet →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-05-21">
+<div class="day-when">Fri 21 May</div>
+<div>
+<p class="day-name">World Day for Cultural Diversity<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">Pair each student with the person they know least in the form, and give them two minutes each to find out something new about each other.</p>
+<div class="day-foot"><span class="day-value">Value: <b>open-mindedness</b></span><a class="day-link" href="/morning-registration-activities/two-minute-interview/">Ready-made: The Two-Minute Interview →</a></div>
+</div>
+</div>
+</div>
+<div class="month">
+<h3>June</h3>
+<div class="day" data-end="2027-06-30">
+<div class="day-when">All of June</div>
+<div>
+<p class="day-name">Pride Month<span class="kind">Worldwide</span></p>
+<p class="day-idea">Many schools mark it with a display or an assembly on belonging, and on everyone being able to be themselves at school.</p>
+<div class="day-foot"><span class="day-value">Value: <b>belonging</b></span></div>
+</div>
+</div>
+<div class="day" data-end="2027-06-05">
+<div class="day-when">Sat 5 June</div>
+<div>
+<p class="day-name">World Environment Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Saturday, so mark it on the Friday. Agree one thing the form could stop wasting this term, and decide who will keep an eye on it.</p>
+<div class="day-foot"><span class="day-value">Value: <b>responsibility</b></span><a class="day-link" href="/pastoral-projects/the-planting-project/">Ready-made: The Planting Project →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-06-11">
+<div class="day-when">Fri 11 June</div>
+<div>
+<p class="day-name">International Day of Play<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This is the newest UN day. Give form time over to a team quiz and let students simply enjoy it.</p>
+<div class="day-foot"><span class="day-value">Value: <b>teamwork</b></span><a class="day-link" href="/morning-registration-activities/form-time-quiz/">Ready-made: The Form Time Quiz →</a></div>
+</div>
+</div>
+<div class="day" data-end="2027-06-20">
+<div class="day-when">14–20 June</div>
+<div>
+<p class="day-name">Refugee Week<span class="kind">UK</span></p>
+<p class="day-idea">The week ends on World Refugee Day, 20 June. Ask the form what it would take to start again somewhere new, and what would help most.</p>
+<div class="day-foot"><span class="day-value">Value: <b>kindness</b></span></div>
+</div>
+</div>
+<div class="day" data-end="2027-06-30">
+<div class="day-when">June</div>
+<div>
+<p class="day-name">Year 11 and Year 13 leave<span class="kind">School</span></p>
+<p class="day-idea">This is usually in late May or June, depending on the exam timetable. The ready-made resource has five short cards for the form’s last week together.</p>
+<div class="day-foot"><span class="day-value">Value: <b>gratitude</b></span><a class="day-link" href="/morning-registration-activities/the-last-five-mornings/">Ready-made: The Last Five Mornings →</a></div>
+</div>
+</div>
+</div>
+<div class="month">
+<h3>July</h3>
+<div class="day" data-end="2027-07-18">
+<div class="day-when">Sun 18 July</div>
+<div>
+<p class="day-name">Nelson Mandela International Day<span class="kind kind--un">UN day</span></p>
+<p class="day-idea">This falls on a Sunday near the end of term. Mandela Day asks everyone to give 67 minutes of their time to someone else, so ask the form how they could spend those 67 minutes.</p>
+<div class="day-foot"><span class="day-value">Value: <b>generosity</b></span><a class="day-link" href="/pastoral-projects/values-in-action/">Ready-made: Values in Action →</a></div>
+</div>
+</div>
+</div>
+</section>
+<p class="cal-note">Dates were checked against each organiser’s own site in September 2026. A day that falls at a weekend is best marked on the Friday before or the Monday after. Mental Health Awareness Week, the start of exams and leaving day depend on the year, so check those nearer the time.</p>
 
-  <p class="cal-note">Dates were checked against each organiser&rsquo;s own site in September 2026. A day that falls at a weekend is best marked on the Friday before or the Monday after. Mental Health Awareness Week, the start of exams and leaving day depend on the year, so check those nearer the time.</p>
-
-  <section class="peek" aria-label="A look inside">
-    <h2>A look inside</h2>
-    <div class="peek-row">
-      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="The autumn term wall chart" width="800" height="1131" loading="lazy"><figcaption>Autumn term, the wall chart</figcaption></figure>
-      <figure class="peek-item"><img src="preview-pack-2.jpg" alt="The spring term wall chart" width="800" height="1131" loading="lazy"><figcaption>Spring term, the wall chart</figcaption></figure>
-      <figure class="peek-item"><img src="preview-pack-3.jpg" alt="The autumn term ideas page" width="800" height="1131" loading="lazy"><figcaption>Autumn term, the ideas</figcaption></figure>
-    </div>
-  </section>
-
-  <section id="downloads">
-    <h2>Get the printable</h2>
-    <p class="lede">The download is six A4 pages. The first three are the wall chart, one per term, with every date, its value and the ready-made resource if there is one, a blank column for who is leading it, and spare rows for your school&rsquo;s own dates. The last three give the idea for each day, so you can use the file on its own.</p>
-    <div class="downloads-grid">
-      <a class="download-card download-card--solo" href="/download/?r=assemblies-and-events/assembly-calendar&amp;f=/assemblies-and-events/assembly-calendar/downloads/Assembly_Calendar_2026_to_2027.pdf" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Assembly_Calendar_2026_to_2027.pdf">
-        <span class="file-chip">Printable PDF</span>
-        <h3>The Assembly Calendar</h3>
-        <p>A wall chart and a page of ideas for each term, September 2026 to July 2027.</p>
-        <span class="download-cta">Download
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
-        </span>
-      </a>
-      <div class="signup" id="signup">
-        <div class="signup-main">
-        <p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
-        <form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
-          <input type="email" name="email_address" placeholder="Your email address" aria-label="Your email address" required autocomplete="email">
-          <button type="submit" data-umami-event="signup">Keep me posted</button>
-        </form>
-        <p class="signup-done" hidden>Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
-        <p class="signup-err" hidden>Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
-        <p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
-        </div>
-        <!-- support panel start -->
-        <div class="signup-divider" aria-hidden="true"></div>
-        <div class="signup-support">
-          <p>This is free to download, the same as everything else here. If it saved you some prep time, you&rsquo;re welcome to leave something toward the site&rsquo;s running costs.</p>
-          <a class="btn btn--support" href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg><span>Support the site</span></a>
-        </div>
-        <!-- support panel end -->
-      </div>
-    </div>
-  </section>
-
+<section id="downloads">
+<h2>Get the printable</h2>
+<p class="lede">The download is six A4 pages. The first three are the wall chart, one per term, with every date, its value and the ready-made resource if there is one, a blank column for who is leading it, and spare rows for your school’s own dates. The last three give the idea for each day, so you can use the file on its own.</p>
+<div class="downloads-grid dg-1">
+<a class="download-card download-card--solo" data-umami-event="download-open" data-umami-event-file="Assembly_Calendar_2026_to_2027.pdf" href="/download/?r=assemblies-and-events/assembly-calendar&amp;f=/assemblies-and-events/assembly-calendar/downloads/Assembly_Calendar_2026_to_2027.pdf" rel="noopener" target="_blank"><span class="card-prev"><img alt="" loading="lazy" src="preview-pack-1.jpg"/></span>
+<span class="file-chip">Printable PDF</span>
+<h3>The Assembly Calendar</h3>
+<p>A wall chart and a page of ideas for each term, September 2026 to July 2027.</p>
+<span class="download-cta">Download
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"></path></svg>
+</span>
+</a>
+<div class="signup" id="signup">
+<div class="signup-main">
+<p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
+<form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
+<input aria-label="Your email address" autocomplete="email" name="email_address" placeholder="Your email address" required="" type="email"/>
+<button data-umami-event="signup" type="submit">Keep me posted</button>
+</form>
+<p class="signup-done" hidden="">Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
+<p class="signup-err" hidden="">Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
+<p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
+</div>
+<!-- support panel start -->
+<div aria-hidden="true" class="signup-divider"></div>
+<div class="signup-support">
+<p>This is free to download, the same as everything else here. If it saved you some prep time, you’re welcome to leave something toward the site’s running costs.</p>
+<a class="btn btn--support" data-umami-event="support" href="https://ko-fi.com/thepastoralguide" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"></path></svg><span>Support the site</span></a>
+</div>
+<!-- support panel end -->
+</div>
+</div>
+</section>
 </main>
 
 <section class="more" aria-label="More from Assemblies and Events">

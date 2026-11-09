@@ -879,6 +879,74 @@
     .sf-bottom{ justify-content: flex-start; }
   }
   /* == big footer end == */
+  /* == r3 layout start == (9 Nov 2026: At a glance, How it works with pictures beside it, download cards with previews) */
+  main.r3{ max-width: var(--max-width, 1265px); }
+  main.r3 section > h2, main.r3 section > p, main.r3 .lede{ max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
+  main.r3 .lede{ max-width: 860px; }
+  .page-header.r3h{ display: flex; flex-wrap: wrap; gap: 28px 48px; align-items: flex-start; text-align: left; max-width: var(--max-width, 1265px); padding-left: 40px; padding-right: 40px; padding-bottom: 12px; }
+  main.r3 > section.how{ margin-top: 32px; }
+  .r3h-main{ flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; }
+  .r3h .eyebrow, .r3h .page-title, .r3h .page-sub{ text-align: left; margin-left: 0; margin-right: 0; }
+  .r3h .page-sub{ max-width: 760px; }
+  .glance{ flex: 1 1 300px; max-width: 380px; background: #fffdf8; border: 1px solid rgba(46,68,54,0.14); border-radius: 12px; padding: 16px 22px 8px; }
+  .glance-h{ margin: 0 0 2px; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--accent-deep); }
+  .glance-list{ margin: 0; }
+  .glance-row{ display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 9px 0; border-bottom: 1px solid rgba(46,68,54,0.10); font-size: 14.5px; line-height: 1.35; }
+  .glance-row:last-child{ border-bottom: 0; }
+  .glance-row dt{ flex: none; color: var(--ink-soft); }
+  .glance-row dd{ margin: 0; font-weight: 700; text-align: right; color: var(--ink); }
+  .glance-row dd a{ color: inherit; text-decoration: underline; text-decoration-color: rgba(46,68,54,0.3); text-underline-offset: 3px; }
+  main.r3 .how-intro{ margin: 0 0 18px; }
+  main.r3 .how .week-grid, main.r3 .how .session-grid, main.r3 .how .menu-grid, main.r3 .how .scale-preview, main.r3 .how .values-grid, main.r3 .how .key, main.r3 .how .term-nav{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.r3 .how .week-caption{ max-width: none; margin-left: 0; text-align: left; }
+  .how-row{ display: flex; flex-wrap: wrap; gap: 24px 44px; align-items: stretch; margin-top: 22px; }
+  .how-main{ flex: 3 1 460px; min-width: 0; }
+  .how-side{ flex: 2 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+  main.r3 .how-main .steps{ margin: 0; max-width: none; }
+  main.r3 .how-main .step{ display: flex; align-items: baseline; gap: 16px; padding: 16px 0; border-top: 1px solid rgba(46,68,54,0.14); background: none; box-shadow: none; border-radius: 0; }
+  main.r3 .how-main .step:first-child{ border-top: 0; padding-top: 4px; }
+  main.r3 .how-main .step-num{ flex: none; min-width: 24px; font-family: Georgia, Gelasio, 'Times New Roman', serif; font-size: 26px; line-height: 1; color: var(--accent-deep); background: none; width: auto; height: auto; }
+  main.r3 .how-main .step strong{ font-size: 15.5px; color: var(--ink); }
+  main.r3 .how-main .step p{ margin: 4px 0 0; font-size: 15px; line-height: 1.55; color: var(--ink-soft); }
+  main.r3 .how-side .sample-card{ margin: 0; max-width: none; }
+  main.r3 .how-side .sample-caption{ margin: 10px 0 0; font-size: 13.5px; color: var(--ink-soft); text-align: left; max-width: none; }
+  .how-side > .how-card{ flex: none; }
+  .how-side--card{ justify-content: center; }
+  .how-fig{ margin: 0; flex: 1 1 0; min-height: 240px; display: flex; flex-direction: column; gap: 8px; }
+  .how-pic{ position: relative; flex: 1 1 0; min-height: 200px; border-radius: 12px; overflow: hidden; }
+  .how-pic img{ position: absolute; display: block; }
+  .how-pic--photo img{ inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .how-pic--preview{ background: var(--accent); }
+  .how-pic--preview img{ inset: 20px; width: calc(100% - 40px); height: calc(100% - 40px); object-fit: contain; filter: drop-shadow(0 8px 14px rgba(46,68,54,0.22)); }
+  .how-fig figcaption{ flex: none; font-size: 13.5px; color: var(--ink-soft); }
+  main.r3 .downloads-grid{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.r3 .downloads-grid.dg-1{ grid-template-columns: 1fr; }
+  main.r3 .downloads-grid.dg-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  main.r3 .downloads-grid.dg-3{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  main.r3 .downloads-grid.dg-many{ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  main.r3 .download-card{ overflow: hidden; }
+  .card-prev{ display: flex; align-items: center; justify-content: center; gap: 12px; height: 200px; margin: -20px -18px 4px; padding: 18px; background: var(--accent); color: var(--accent-deep); }
+  .card-prev img{ max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 4px; box-shadow: 0 8px 18px -10px rgba(46,68,54,0.45); background: #fff; }
+  .card-prev--photo{ padding: 0; }
+  .card-prev--photo img{ width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
+  .card-prev svg{ width: 64px; height: 64px; opacity: 0.7; }
+  main.r3 .download-card--solo{ display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); grid-auto-rows: min-content; column-gap: 26px; row-gap: 10px; max-width: none; width: 100%; justify-self: stretch; align-content: center; }
+  main.r3 .download-card--solo{ align-items: center; }
+  main.r3 .download-card--solo .card-prev{ grid-column: 1; grid-row: 1 / span 5; height: 260px; min-height: 0; margin: -20px 0 -18px -18px; align-self: stretch; }
+  main.r3 .download-card--solo > :not(.card-prev){ grid-column: 2; justify-self: start; }
+  main.r3 .signup{ background: #e6e2d8; border: 0; }
+  .more{ max-width: var(--max-width, 1265px); }
+  .more h2, .more-grid, .more-all{ max-width: none; }
+  @media (max-width: 700px){
+    main.r3 .downloads-grid.dg-2, main.r3 .downloads-grid.dg-3{ grid-template-columns: 1fr; }
+    main.r3 .download-card--solo{ display: flex; }
+    main.r3 .download-card--solo .card-prev{ margin: -20px -18px 4px; height: 200px; min-height: 0; }
+    .glance{ max-width: none; }
+    .page-header.r3h{ padding-left: 16px; padding-right: 16px; }
+    .how-fig{ flex: none; min-height: 0; }
+    .how-pic{ flex: none; height: 240px; min-height: 0; }
+  }
+  /* == r3 layout end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LearningResource","@id":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/#resource","url":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/","name":"Self-Care Menu","description":"Three printable menus of small resets a student can choose from when they need one. Each is a single sheet, sized to fit in a pencil case. Five minutes to talk one through, and then it is theirs. It makes self-care something small and practical that the student chooses.","inLanguage":"en-GB","learningResourceType":"Printable","educationalLevel":["Key Stage 3", "Key Stage 4", "Key Stage 5"],"typicalAgeRange":"11-18","audience":{"@type":"EducationalAudience","educationalRole":"teacher"},"isAccessibleForFree":true,"isFamilyFriendly":true,"image":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/og.jpg","provider":{"@id":"https://thepastoralguide.com/#org"},"author":{"@type":"Person","name":"Olivia"},"creativeWorkStatus":"Published"},{"@type":"BreadcrumbList","@id":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/#crumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"The Pastoral Guide","item":"https://thepastoralguide.com/"},{"@type":"ListItem","position":2,"name":"Wellbeing Check-Ins","item":"https://thepastoralguide.com/wellbeing-check-ins/"},{"@type":"ListItem","position":3,"name":"Self-Care Menu","item":"https://thepastoralguide.com/wellbeing-check-ins/self-care-menu/"}]},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>
@@ -914,184 +982,170 @@
   </div>
 </nav>
 
-<header class="page-header wrap">
+<header class="page-header wrap r3h">
+  <div class="r3h-main">
   <span class="eyebrow">Wellbeing Check-Ins</span>
   <h1 class="page-title">Self-Care Menu</h1>
   <p class="page-sub">Three printable menus of small resets a student can choose from when they need one. Each is a single sheet, sized to fit in a pencil case. Five minutes to talk one through, and then it is theirs. It makes self-care something small and practical that the student chooses.</p>
-  <span class="page-facts"><a href="../../key-stage-3/">Year 7 to 13, best in Year 7 to 11</a> &middot; one to one or small group &middot; free to download</span>
   <a class="jump-link" href="#downloads">
     Jump to the download
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14M6 12l6 6 6-6"/></svg>
-  </a>
+    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6"></path></svg>
+</a>
+  </div>
+  <aside class="glance" aria-label="At a glance"><p class="glance-h">At a glance</p><dl class="glance-list"><div class="glance-row"><dt>Time</dt><dd>Whenever it’s needed</dd></div><div class="glance-row"><dt>Year groups</dt><dd><a href="../../key-stage-3/">Year 7 to 13, best in Year 7 to 11</a></dd></div><div class="glance-row"><dt>Use</dt><dd>One to one or small group</dd></div><div class="glance-row"><dt>Value</dt><dd>Self-care</dd></div><div class="glance-row"><dt>To prepare</dt><dd>Print a stack</dd></div><div class="glance-row"><dt>Files</dt><dd>A PDF</dd></div></dl></aside>
 </header>
 
-<main>
+<main class="r3">
+<section class="how">
+<h2>How it works</h2><p class="lede how-intro">Each menu has nine small resets in three “courses”: quick ones, ones that take a bit longer, and the familiar things that help. Menu I leans creative, Menu II active and Menu III practical. The menus do not say this, so you can hand a student the one that suits them without making a thing of it.</p><div class="menu-grid">
+<div class="menu-card menu-card--rose">
+<p class="menu-card-kicker">MENU I</p>
+<div class="menu-course">
+<p class="menu-course-title">Quick Bites</p>
+<p class="menu-course-sub">two minutes or less</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"></path><path d="M7.6 11h8.8"></path></svg> A glass of water</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"></path><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"></path></svg> Five slow breaths</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"></path></svg> A moment outside</div>
+</div>
+</div>
+<p class="menu-divider">· · ·</p>
+<div class="menu-course">
+<p class="menu-course-title">Something More</p>
+<p class="menu-course-sub">a bit more time</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="m4 20 2-6.5L16.5 3l4 4L10 17.5 4 20Z"></path></svg> Doodle or draw for a bit</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="7.5" cy="17.5" r="2.6"></circle><path d="M10.1 17.5V5.5l7-1.7v10"></path><path d="M17.1 13.8c1.5 0 2.6 1 2.6 2.4s-1.1 2.4-2.6 2.4"></path></svg> A favourite song</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 6.5v13"></path><path d="M12 6.5C10.5 5 8 4.3 4.5 4.5v12.5c3.5-.2 6 .5 7.5 2 1.5-1.5 4-2.2 7.5-2V4.5C16 4.3 13.5 5 12 6.5Z"></path></svg> Flip through a favourite book</div>
+</div>
+</div>
+<p class="menu-divider">· · ·</p>
+<div class="menu-course">
+<p class="menu-course-title">Comfort Food</p>
+<p class="menu-course-sub">the familiar things that help</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="12" rx="2.2" width="11" x="6.5" y="3.5"></rect><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"></path></svg> Your favourite spot</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="16" cy="9" r="2.6"></circle><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"></path></svg> Someone you trust</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 20.5S3.8 15.4 3.8 9.6C3.8 6.8 6 4.7 8.6 4.7c1.5 0 2.8.7 3.4 1.9.6-1.2 1.9-1.9 3.4-1.9 2.6 0 4.8 2.1 4.8 4.9 0 5.8-8.2 10.9-8.2 10.9Z"></path></svg> Something cosy to wrap up in</div>
+</div>
+</div>
+</div>
+<div class="menu-card menu-card--orange">
+<p class="menu-card-kicker">MENU II</p>
+<div class="menu-course">
+<p class="menu-course-title">Quick Bites</p>
+<p class="menu-course-sub">two minutes or less</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"></path><path d="M7.6 11h8.8"></path></svg> A glass of water</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"></path><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"></path></svg> Five slow breaths</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"></circle><path d="M12 8v6M12 9l-4-4M12 9l4-4M12 14l-3 5M12 14l3 5"></path></svg> A big stretch</div>
+</div>
+</div>
+<p class="menu-divider">· · ·</p>
+<div class="menu-course">
+<p class="menu-course-title">Something More</p>
+<p class="menu-course-sub">a bit more time</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="4.5" r="1.8"></circle><path d="M12 8v5l-4 6M12 13l4.5 4M8.5 10.5 12 8l5-1.5M8 15l-2.5 2"></path></svg> A short walk</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="13" cy="4.5" r="1.8"></circle><path d="M13 8l-1.5 5.5M13 9l4-2M13 9l-4 1M11.5 13.5l3 5M11.5 13.5l-4.5 3"></path></svg> Get moving for a few minutes</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 8.5c-2.5-2-6-1-6 3 0 4 3 8.5 6 8.5s6-4.5 6-8.5c0-4-3.5-5-6-3Z"></path><path d="M12 8.5V5.5"></path><path d="M12 6c1-1.2 2.5-1.3 3-1"></path></svg> A snack</div>
+</div>
+</div>
+<p class="menu-divider">· · ·</p>
+<div class="menu-course">
+<p class="menu-course-title">Comfort Food</p>
+<p class="menu-course-sub">the familiar things that help</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="12" rx="2.2" width="11" x="6.5" y="3.5"></rect><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"></path></svg> Your favourite spot</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="16" cy="9" r="2.6"></circle><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"></path></svg> Someone you trust</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 20.5S3.8 15.4 3.8 9.6C3.8 6.8 6 4.7 8.6 4.7c1.5 0 2.8.7 3.4 1.9.6-1.2 1.9-1.9 3.4-1.9 2.6 0 4.8 2.1 4.8 4.9 0 5.8-8.2 10.9-8.2 10.9Z"></path></svg> Something cosy to wrap up in</div>
+</div>
+</div>
+</div>
+<div class="menu-card menu-card--slate">
+<p class="menu-card-kicker">MENU III</p>
+<div class="menu-course">
+<p class="menu-course-title">Quick Bites</p>
+<p class="menu-course-sub">two minutes or less</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"></path><path d="M7.6 11h8.8"></path></svg> A glass of water</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"></path><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"></path></svg> Five slow breaths</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 9.5h16"></path><path d="M5.5 9.5 4 17h16l-1.5-7.5"></path><path d="M12 9.5V17"></path></svg> Clear your workspace for a minute</div>
+</div>
+</div>
+<p class="menu-divider">· · ·</p>
+<div class="menu-course">
+<p class="menu-course-title">Something More</p>
+<p class="menu-course-sub">a bit more time</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="16" rx="3" width="16" x="4" y="4"></rect><path d="m8 12.5 2.5 2.5 5.5-6"></path></svg> Tick off one small job</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 7h2M8 7h12M4 12h2M8 12h12M4 17h2M8 17h12"></path></svg> Write a short list</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 9.5h16"></path><path d="M5.5 9.5 4 17h16l-1.5-7.5"></path><path d="M12 9.5V17"></path></svg> Get one thing ready for tomorrow</div>
+</div>
+</div>
+<p class="menu-divider">· · ·</p>
+<div class="menu-course">
+<p class="menu-course-title">Comfort Food</p>
+<p class="menu-course-sub">the familiar things that help</p>
+<div class="menu-items">
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="12" rx="2.2" width="11" x="6.5" y="3.5"></rect><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"></path></svg> Your favourite spot</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><circle cx="16" cy="9" r="2.6"></circle><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"></path></svg> Someone you trust</div>
+<div class="menu-item"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="16" rx="3" width="16" x="4" y="4"></rect><path d="m8 12.5 2.5 2.5 5.5-6"></path></svg> The satisfaction of a job well done</div>
+</div>
+</div>
+</div>
+</div><div class="how-row"><div class="how-main"><div class="steps">
+<div class="step">
+<span class="step-num">1</span>
+<div><strong>Notice a student needs a reset.</strong><p>Look out for a student who seems low on energy or overwhelmed, or who is just having a hard morning, however small the sign.</p></div>
+</div>
+<div class="step">
+<span class="step-num">2</span>
+<div><strong>They choose.</strong><p>The student picks something from their menu. All three menus work the same way, and there is no wrong choice.</p></div>
+</div>
+<div class="step">
+<span class="step-num">3</span>
+<div><strong>They just do it.</strong><p>The student just gets on with it. There is no need to check back afterwards, though let them know you are there if they want to talk.</p></div>
+</div>
+</div></div><div class="how-side"><figure class="how-fig"><div class="how-pic how-pic--preview"><img alt="Page two of 4" height="1131" loading="lazy" src="preview-pack-2.jpg" width="800"/></div><figcaption>Page two of 4</figcaption></figure></div></div>
 
-  <section>
-    <h2>How it works</h2>
-    <p class="lede">Each menu has nine small resets in three &ldquo;courses&rdquo;: quick ones, ones that take a bit longer, and the familiar things that help. Menu I leans creative, Menu II active and Menu III practical. The menus do not say this, so you can hand a student the one that suits them without making a thing of it.</p>
 
-    <div class="menu-grid">
 
-      <div class="menu-card menu-card--rose">
-        <p class="menu-card-kicker">MENU I</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Quick Bites</p>
-          <p class="menu-course-sub">two minutes or less</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"/><path d="M7.6 11h8.8"/></svg> A glass of water</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg> Five slow breaths</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg> A moment outside</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Something More</p>
-          <p class="menu-course-sub">a bit more time</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 20 2-6.5L16.5 3l4 4L10 17.5 4 20Z"/></svg> Doodle or draw for a bit</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="17.5" r="2.6"/><path d="M10.1 17.5V5.5l7-1.7v10"/><path d="M17.1 13.8c1.5 0 2.6 1 2.6 2.4s-1.1 2.4-2.6 2.4"/></svg> A favourite song</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5v13"/><path d="M12 6.5C10.5 5 8 4.3 4.5 4.5v12.5c3.5-.2 6 .5 7.5 2 1.5-1.5 4-2.2 7.5-2V4.5C16 4.3 13.5 5 12 6.5Z"/></svg> Flip through a favourite book</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Comfort Food</p>
-          <p class="menu-course-sub">the familiar things that help</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="3.5" width="11" height="12" rx="2.2"/><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"/></svg> Your favourite spot</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"/></svg> Someone you trust</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.8 15.4 3.8 9.6C3.8 6.8 6 4.7 8.6 4.7c1.5 0 2.8.7 3.4 1.9.6-1.2 1.9-1.9 3.4-1.9 2.6 0 4.8 2.1 4.8 4.9 0 5.8-8.2 10.9-8.2 10.9Z"/></svg> Something cosy to wrap up in</div>
-          </div>
-        </div>
-      </div>
+</section>
 
-      <div class="menu-card menu-card--orange">
-        <p class="menu-card-kicker">MENU II</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Quick Bites</p>
-          <p class="menu-course-sub">two minutes or less</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"/><path d="M7.6 11h8.8"/></svg> A glass of water</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg> Five slow breaths</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 8v6M12 9l-4-4M12 9l4-4M12 14l-3 5M12 14l3 5"/></svg> A big stretch</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Something More</p>
-          <p class="menu-course-sub">a bit more time</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="1.8"/><path d="M12 8v5l-4 6M12 13l4.5 4M8.5 10.5 12 8l5-1.5M8 15l-2.5 2"/></svg> A short walk</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="1.8"/><path d="M13 8l-1.5 5.5M13 9l4-2M13 9l-4 1M11.5 13.5l3 5M11.5 13.5l-4.5 3"/></svg> Get moving for a few minutes</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8.5c-2.5-2-6-1-6 3 0 4 3 8.5 6 8.5s6-4.5 6-8.5c0-4-3.5-5-6-3Z"/><path d="M12 8.5V5.5"/><path d="M12 6c1-1.2 2.5-1.3 3-1"/></svg> A snack</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Comfort Food</p>
-          <p class="menu-course-sub">the familiar things that help</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="3.5" width="11" height="12" rx="2.2"/><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"/></svg> Your favourite spot</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"/></svg> Someone you trust</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S3.8 15.4 3.8 9.6C3.8 6.8 6 4.7 8.6 4.7c1.5 0 2.8.7 3.4 1.9.6-1.2 1.9-1.9 3.4-1.9 2.6 0 4.8 2.1 4.8 4.9 0 5.8-8.2 10.9-8.2 10.9Z"/></svg> Something cosy to wrap up in</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-card menu-card--slate">
-        <p class="menu-card-kicker">MENU III</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Quick Bites</p>
-          <p class="menu-course-sub">two minutes or less</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l-1.2 15a1 1 0 0 1-1 1H9.2a1 1 0 0 1-1-1L7 4Z"/><path d="M7.6 11h8.8"/></svg> A glass of water</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/><path d="M3 14c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0"/></svg> Five slow breaths</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h16"/><path d="M5.5 9.5 4 17h16l-1.5-7.5"/><path d="M12 9.5V17"/></svg> Clear your workspace for a minute</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Something More</p>
-          <p class="menu-course-sub">a bit more time</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12.5 2.5 2.5 5.5-6"/></svg> Tick off one small job</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h2M8 7h12M4 12h2M8 12h12M4 17h2M8 17h12"/></svg> Write a short list</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h16"/><path d="M5.5 9.5 4 17h16l-1.5-7.5"/><path d="M12 9.5V17"/></svg> Get one thing ready for tomorrow</div>
-          </div>
-        </div>
-        <p class="menu-divider">&middot; &middot; &middot;</p>
-        <div class="menu-course">
-          <p class="menu-course-title">Comfort Food</p>
-          <p class="menu-course-sub">the familiar things that help</p>
-          <div class="menu-items">
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="3.5" width="11" height="12" rx="2.2"/><path d="M6.5 9.5h11M8.5 15.5V19M15.5 15.5V19"/></svg> Your favourite spot</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.6"/><path d="M3.5 19c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5M15 14c2.4.2 4.2 2 4.5 4.6"/></svg> Someone you trust</div>
-            <div class="menu-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12.5 2.5 2.5 5.5-6"/></svg> The satisfaction of a job well done</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="steps">
-      <div class="step">
-        <span class="step-num">1</span>
-        <div><strong>Notice a student needs a reset.</strong><p>Look out for a student who seems low on energy or overwhelmed, or who is just having a hard morning, however small the sign.</p></div>
-      </div>
-      <div class="step">
-        <span class="step-num">2</span>
-        <div><strong>They choose.</strong><p>The student picks something from their menu. All three menus work the same way, and there is no wrong choice.</p></div>
-      </div>
-      <div class="step">
-        <span class="step-num">3</span>
-        <div><strong>They just do it.</strong><p>The student just gets on with it. There is no need to check back afterwards, though let them know you are there if they want to talk.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="peek" aria-label="A look inside">
-    <h2>A look inside</h2>
-    <div class="peek-row">
-      <figure class="peek-item"><img src="preview-pack-1.jpg" alt="Page one of the pack" width="800" height="1131" loading="lazy"><figcaption>Page one of the pack</figcaption></figure>
-      <figure class="peek-item"><img src="preview-pack-2.jpg" alt="Page two of 4" width="800" height="1131" loading="lazy"><figcaption>Page two of 4</figcaption></figure>
-    </div>
-  </section>
-
-  <section id="downloads">
-    <h2>Get the activity</h2>
-    <p class="lede">Print a small stack of each in advance. They work best when a student keeps theirs in a pencil case or planner and goes back to it. It also works well alongside the Mood Scale.</p>
-    <div class="downloads-grid">
-      <a class="download-card download-card--solo" href="/download/?r=wellbeing-check-ins/self-care-menu&amp;f=/wellbeing-check-ins/self-care-menu/downloads/Self_Care_Menu_Resource_Pack.pdf" target="_blank" rel="noopener" data-umami-event="download-open" data-umami-event-file="Self_Care_Menu_Resource_Pack.pdf">
-        <span class="file-chip">Printable PDF</span>
-        <h3>Teacher resource pack</h3>
-        <p>A one-page teacher guide, plus all three printable Self-Care Menus, ready to print and keep.</p>
-        <span class="download-cta">Download
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"/></svg>
-        </span>
-      </a>
-      <div class="signup" id="signup">
-        <div class="signup-main">
-        <p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
-        <form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
-          <input type="email" name="email_address" placeholder="Your email address" aria-label="Your email address" required autocomplete="email">
-          <button type="submit" data-umami-event="signup">Keep me posted</button>
-        </form>
-        <p class="signup-done" hidden>Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
-        <p class="signup-err" hidden>Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
-        <p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
-        </div>
-        <!-- support panel start -->
-        <div class="signup-divider" aria-hidden="true"></div>
-        <div class="signup-support">
-          <p>This is free to download, the same as everything else here. If it saved you some prep time, you&rsquo;re welcome to leave something toward the site&rsquo;s running costs.</p>
-          <a class="btn btn--support" href="https://ko-fi.com/thepastoralguide" target="_blank" rel="noopener" data-umami-event="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg><span>Support the site</span></a>
-        </div>
-        <!-- support panel end -->
-      </div>
-    </div>
-  </section>
-
+<section id="downloads">
+<h2>Get the activity</h2>
+<p class="lede">Print a small stack of each in advance. They work best when a student keeps theirs in a pencil case or planner and goes back to it. It also works well alongside the Mood Scale.</p>
+<div class="downloads-grid dg-1">
+<a class="download-card download-card--solo" data-umami-event="download-open" data-umami-event-file="Self_Care_Menu_Resource_Pack.pdf" href="/download/?r=wellbeing-check-ins/self-care-menu&amp;f=/wellbeing-check-ins/self-care-menu/downloads/Self_Care_Menu_Resource_Pack.pdf" rel="noopener" target="_blank"><span class="card-prev"><img alt="" loading="lazy" src="preview-pack-1.jpg"/></span>
+<span class="file-chip">Printable PDF</span>
+<h3>Teacher resource pack</h3>
+<p>A one-page teacher guide, plus all three printable Self-Care Menus, ready to print and keep.</p>
+<span class="download-cta">Download
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 4v12M6 12l6 6 6-6M4 20h16"></path></svg>
+</span>
+</a>
+<div class="signup" id="signup">
+<div class="signup-main">
+<p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
+<form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
+<input aria-label="Your email address" autocomplete="email" name="email_address" placeholder="Your email address" required="" type="email"/>
+<button data-umami-event="signup" type="submit">Keep me posted</button>
+</form>
+<p class="signup-done" hidden="">Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
+<p class="signup-err" hidden="">Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
+<p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
+</div>
+<!-- support panel start -->
+<div aria-hidden="true" class="signup-divider"></div>
+<div class="signup-support">
+<p>This is free to download, the same as everything else here. If it saved you some prep time, you’re welcome to leave something toward the site’s running costs.</p>
+<a class="btn btn--support" data-umami-event="support" href="https://ko-fi.com/thepastoralguide" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"></path></svg><span>Support the site</span></a>
+</div>
+<!-- support panel end -->
+</div>
+</div>
+</section>
 </main>
 
 <section class="more" aria-label="More from Wellbeing Check-Ins">

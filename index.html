@@ -1129,6 +1129,18 @@
 .facts-line{ margin: 10px 0 0; padding: 12px 0 0; width: 100%; border-top: 1px solid rgba(46,68,54,0.16); text-align: center; font-size: 15px; font-style: italic; color: var(--ink-soft); }
 /* == human pass end == */
   body{ text-wrap: pretty; } /* no single-word last lines, 6 Oct 2026 */
+  /* == page gaps start == */
+  /* 9 Nov 2026: 56px under the header and above the footer, 40px on a phone */
+  .hero{ padding-top: 41.5px !important; }
+  body > div.screen > section.picks{ padding-bottom: 32px !important; }
+  @media (max-width: 700px){
+    .hero{ padding-top: 40px !important; }
+    body > div.screen > section.picks{ padding-bottom: 16px !important; }
+  }
+  @media (min-width: 701px) and (max-width: 900px){
+    .hero{ padding-top: 61px !important; }
+  }
+  /* == page gaps end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://thepastoralguide.com/#website","url":"https://thepastoralguide.com/","name":"The Pastoral Guide","description":"Free form time and tutor time resources for secondary form tutors: activities, lessons, projects and check-ins, with the PowerPoint and printables made.","inLanguage":"en-GB","publisher":{"@id":"https://thepastoralguide.com/#org"}},{"@type":"Organization","@id":"https://thepastoralguide.com/#org","name":"The Pastoral Guide","url":"https://thepastoralguide.com/","logo":"https://thepastoralguide.com/logo.png","email":"thepastoralguide@gmail.com","sameAs":["https://www.instagram.com/thepastoralguide/"],"founder":{"@type":"Person","name":"Olivia"}}]}</script>

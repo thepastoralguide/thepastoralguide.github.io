@@ -619,6 +619,25 @@
     .sf-bottom{ justify-content: flex-start; }
   }
   /* == big footer end == */
+  /* == age and time a2 start == */
+  main.nl{ max-width: var(--max-width, 1265px); margin: 0 auto; padding: 0 40px; }
+  main.nl > section, main.nl > p, main.nl > nav{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.nl section > h2, main.nl section > p{ max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
+  main.nl .ks-paper{ max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; }
+  main.nl .ks-chips{ max-width: none; margin-left: 0; margin-right: 0; }
+  main.nl .ks-others .more-grid{ max-width: none; margin: 0; }
+  main.nl > section{ margin-top: 56px; }
+  @media (max-width: 700px){ main.nl{ padding: 0 16px; } }
+  /* == age and time a2 end == */
+  /* == page gaps start == */
+  /* 9 Nov 2026: 56px under the header and above the footer, 40px on a phone */
+  body > header.page-header.wrap{ padding-top: 53px !important; }
+  body > main.nl{ padding-bottom: 56px !important; }
+  @media (max-width: 700px){
+    body > header.page-header.wrap{ padding-top: 37px !important; }
+    body > main.nl{ padding-bottom: 40px !important; }
+  }
+  /* == page gaps end == */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Form time activities by time: five minutes, an hour, a term", "description": "Free form time and tutor time resources sorted by how long they take: five minute activities, one hour lessons, projects over a few weeks, and printables that need no slot at all.", "url": "https://thepastoralguide.com/by-time/", "inLanguage": "en-GB", "isPartOf": {"@type": "WebSite", "name": "The Pastoral Guide", "url": "https://thepastoralguide.com/"}, "about": {"@type": "EducationalAudience", "educationalRole": "teacher"}, "author": {"@type": "Person", "name": "Olivia"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Pastoral Guide", "item": "https://thepastoralguide.com/"}, {"@type": "ListItem", "position": 2, "name": "How long have you got?", "item": "https://thepastoralguide.com/by-time/"}]}</script>
@@ -661,7 +680,7 @@
   <span class="page-facts">Five bands &middot; four moments &middot; every resource on the site &middot; all free</span>
 </header>
 
-<main>
+<main class="nl">
 
   <nav class="ks-jump tl-jump" aria-label="Jump to a section">
     <a href="#five-minutes">Five minutes</a>

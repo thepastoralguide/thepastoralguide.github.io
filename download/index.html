@@ -839,6 +839,39 @@
     .sf-bottom{ justify-content: flex-start; }
   }
   /* == big footer end == */
+  /* == download d1 start == */
+  main.nl.dl-main{ max-width: var(--max-width, 1265px); margin: 0 auto; padding: 0 40px; }
+  .dl-split{ display: flex; gap: 48px; align-items: flex-start; }
+  .dl-split .dl-header{ flex: 1 1 0; min-width: 0; max-width: none; margin: 0; padding: 0; text-align: left; }
+  .dl-split .dl-header > *{ text-align: left; margin-left: 0; margin-right: 0; }
+  .dl-split .dl-actions{ align-items: flex-start; }
+  .dl-split .dl-started{ max-width: none; }
+  .dl-split .dl-preview{ flex: 1.3 1 0; min-width: 0; max-width: none; margin: 0; padding: 0; }
+  .dl-split .dl-frame iframe{ height: auto; aspect-ratio: 4 / 3; max-height: none; }
+  .dl-split .dl-frame--slides iframe{ aspect-ratio: 16 / 10.2; }
+  .dl-split .dl-note{ margin: 10px 0 0; max-width: none; text-align: left; }
+  .dl-split .dl-actions--below{ display: none !important; }
+  .dl-backline{ margin: 16px 0 0; font-size: 14.5px; line-height: 1.5; color: var(--ink-soft); }
+  .dl-backline a{ font-weight: 700; color: var(--accent-deep); }
+  .nl-signup{ margin-top: 48px; }
+  .nl-signup .signup{ background: #e6e2d8; border: 0; margin: 0; }
+  main.nl .dl-next{ max-width: none; margin: 48px 0 0; padding: 0; }
+  main.nl .dl-next h2, main.nl .dl-next .dl-next-lede, main.nl .dl-next .more-grid, main.nl .dl-next .more-all{ max-width: none; margin-left: 0; margin-right: 0; text-align: left; }
+  main.nl .dl-next .more-all{ margin-top: 22px; font-size: 16px; }
+  @media (max-width: 800px){
+    main.nl.dl-main{ padding: 0 16px; }
+    .dl-split{ flex-direction: column; align-items: stretch; gap: 28px; }
+  }
+  /* == download d1 end == */
+  /* == page gaps start == */
+  /* 9 Nov 2026: 56px under the header and above the footer, 40px on a phone */
+  body > main.nl.dl-main{ padding-top: 56px !important; }
+  body > main.nl.dl-main{ padding-bottom: 52px !important; }
+  @media (max-width: 700px){
+    body > main.nl.dl-main{ padding-top: 37px !important; }
+    body > main.nl.dl-main{ padding-bottom: 36px !important; }
+  }
+  /* == page gaps end == */
 </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="156268ca-fe6c-4442-85ba-938b18e52adb"></script>
 </head>
@@ -873,7 +906,9 @@
   </div>
 </nav>
 
-<header class="page-header wrap dl-header">
+<main class="nl dl-main">
+<div class="dl-split">
+<header class="page-header dl-header">
   <span class="eyebrow" id="dl-eyebrow">Your download</span>
   <h1 class="page-title" id="dl-title">Your download</h1>
   <p class="dl-file" id="dl-file" hidden></p>
@@ -885,11 +920,10 @@
     </a>
     <p class="dl-started" hidden>Your download has started. If nothing happens, click the button.</p>
   </div>
+  <p class="dl-backline" id="dl-backline" hidden><a href="/">Back to the resource page</a> for how to run it and the other downloads.</p>
   <noscript><p class="page-sub">This page needs JavaScript to show the file. Every download is also on its resource page, on <a href="/">the shelf</a>.</p></noscript>
 </header>
-
-<main>
-  <section class="dl-preview" id="dl-preview" hidden>
+<section class="dl-preview" id="dl-preview" hidden>
     <div class="dl-frame" id="dl-frame"></div>
     <p class="dl-note" id="dl-note"></p>
     <div class="dl-actions dl-actions--below">
@@ -899,6 +933,28 @@
       </a>
     </div>
   </section>
+</div>
+<section class="nl-signup">
+<div class="signup" id="signup">
+<div class="signup-main">
+<p>New resources are added as they are made. Leave your email and you will get one email each time something new goes up, and nothing else.</p>
+<form action="https://app.kit.com/forms/9905751/subscriptions" method="post">
+<input aria-label="Your email address" autocomplete="email" name="email_address" placeholder="Your email address" required="" type="email"/>
+<button data-umami-event="signup" type="submit">Keep me posted</button>
+</form>
+<p class="signup-done" hidden="">Thank you. A confirmation email is on its way to you, and once you click the link in it, you will be on the list.</p>
+<p class="signup-err" hidden="">Sorry, that did not go through. Please try again, or email thepastoralguide@gmail.com and I will add you by hand.</p>
+<p class="signup-note">There are no newsletters, and your address is never shared. <a href="/privacy/">How your details are handled</a>.</p>
+</div>
+<!-- support panel start -->
+<div aria-hidden="true" class="signup-divider"></div>
+<div class="signup-support">
+<p>This is free to download, the same as everything else here. If it saved you some prep time, you’re welcome to leave something toward the site’s running costs.</p>
+<a class="btn btn--support" data-umami-event="support" href="https://ko-fi.com/thepastoralguide" rel="noopener" target="_blank"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"></path></svg><span>Support the site</span></a>
+</div>
+<!-- support panel end -->
+</div>
+</section>
 
   <section class="more dl-next" id="dl-next" aria-labelledby="dl-next-title" hidden>
     <h2 id="dl-next-title">While that downloads</h2>
@@ -963,6 +1019,7 @@
     if (mx !== mn && hue >= 22 && hue <= 55) document.body.classList.add('dl-mustard');
     $('dl-back').href = '/' + file.r + '/';
     $('dl-back-name').textContent = owner.t;
+    var backline = $('dl-backline'); backline.querySelector('a').href = '/' + file.r + '/'; backline.hidden = false;
 
     var kind = ext === 'pptx' ? 'PowerPoint' : ext === 'xlsx' ? 'spreadsheet' : 'PDF';
     ['dl-button-top', 'dl-button-bottom'].forEach(function (id) {

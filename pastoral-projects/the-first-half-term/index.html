@@ -703,13 +703,18 @@
   .card-prev--photo{ padding: 0; }
   .card-prev--photo img{ width: 100%; height: 100%; object-fit: cover; border-radius: 0; box-shadow: none; }
   .card-prev svg{ width: 64px; height: 64px; opacity: 0.7; }
-  main.r3 .download-card--solo{ display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); grid-auto-rows: min-content; column-gap: 26px; row-gap: 10px; max-width: none; width: 100%; justify-self: stretch; align-content: center; }
-  main.r3 .download-card--solo{ align-items: center; }
-  main.r3 .download-card--solo .card-prev{ grid-column: 1; grid-row: 1 / span 5; height: 260px; min-height: 0; margin: -20px 0 -18px -18px; align-self: stretch; }
-  main.r3 .download-card--solo > :not(.card-prev){ grid-column: 2; justify-self: start; }
+  main.r3 .download-card--solo{ max-width: none; width: 100%; justify-self: stretch; }
+  @media (min-width: 701px){
+    main.r3 .download-card--solo{ position: relative; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px; min-height: 260px; padding-left: 384px; }
+    main.r3 .download-card--solo .card-prev{ position: absolute; left: 0; top: 0; bottom: 0; width: 340px; height: auto; margin: 0; }
+    main.r3 .download-card--solo > :not(.card-prev){ margin: 0; flex-grow: 0; }
+    main.r3 .download-card--solo .download-cta{ margin-top: 6px; }
+  }
   main.r3 .signup{ background: #e6e2d8; border: 0; }
   .more{ max-width: var(--max-width, 1265px); }
   .more h2, .more-grid, .more-all{ max-width: none; }
+  .more{ padding-bottom: 56px; }
+  .more-all{ margin-top: 22px; font-size: 16px; }
   @media (max-width: 700px){
     main.r3 .downloads-grid.dg-2, main.r3 .downloads-grid.dg-3{ grid-template-columns: 1fr; }
     main.r3 .download-card--solo{ display: flex; }

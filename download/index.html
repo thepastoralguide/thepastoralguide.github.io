@@ -1022,7 +1022,7 @@
     $('dl-back-name').textContent = owner.t;
     var backline = $('dl-backline'); backline.querySelector('a').href = '/' + file.r + '/'; backline.hidden = false;
 
-    var kind = ext === 'pptx' ? 'PowerPoint' : ext === 'xlsx' ? 'spreadsheet' : 'PDF';
+    var kind = ext === 'pptx' ? 'PowerPoint' : ext === 'xlsx' ? 'spreadsheet' : ext === 'docx' ? 'Word document' : 'PDF';
     ['dl-button-top', 'dl-button-bottom'].forEach(function (id) {
       var b = $(id);
       b.href = f;
@@ -1051,7 +1051,7 @@
     if (wide && canShow) {
       var src = ext === 'pdf' ? f + '#view=FitH'
         : 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(SITE + f);
-      if (ext !== 'pdf') frame.classList.add('dl-frame--slides');
+      if (ext !== 'pdf' && ext !== 'docx') frame.classList.add('dl-frame--slides');
       frame.innerHTML = '<iframe src="' + esc(src) + '" title="' + esc(file.n) + ', a preview" loading="eager"></iframe>';
       /* Microsoft's viewer takes focus as it loads, which scrolls the page
          down past the heading. For the first few seconds, until the teacher
